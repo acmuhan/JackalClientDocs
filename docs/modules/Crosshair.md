@@ -24,8 +24,8 @@ Crosshair（准星线）用于暂无描述。
  类型：布尔；默认：true
  说明：这是该模块的核心行为开关。默认值 true 通常更稳，建议先验证默认策略再尝试其他模式。
 - Advanced Mode Hotkey（高级模式快捷键）
- 类型：按键/复合；默认：`{ { "Keybind", {VK_LMENU, VK_RMENU } }`}
- 说明：这是该模块的核心行为开关。默认值 \{\{"Keybind", {VK_LMENU, VK_RMENU}}} 通常更稳，建议先验证默认策略再尝试其他模式。
+ 类型：按键/复合；默认：`Keybind(VK_LMENU, VK_RMENU)`
+ 说明：这是该模块的核心行为开关。默认值 `Keybind(VK_LMENU, VK_RMENU)` 通常更稳，建议先验证默认策略再尝试其他模式。
 - Advanced Mode Allow No Focus（高级模式允许没有焦点）
  类型：布尔；默认：false
  说明：这是该模块的核心行为开关。默认值 false 通常更稳，建议先验证默认策略再尝试其他模式。
