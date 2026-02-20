@@ -1,0 +1,23 @@
+请为我的软件写文档，放在docs/modules内，一个模块一个Markdown文件，文件名为模块名称，软件项目位于D:
+  \Wormwaker\PROGRAMS\C、C++\System\JackalClient，你可以阅读代码来理解相关模块的功能。你可以看jc_moduleid.h查看所有模
+  块，jc_modesc.h查看模块描述，jc_translation.h查看模块翻译。每一个Markdown文件，按下面的格式写：
+  <ModuleName>
+  <ChineseName>
+  <如果是PRO独有，则在此注明[PRO]>
+  分类：<分类名，例如Combat，你可以在jc_globals.h里找到unordered_map<string, vector<ModuleID>> tabs字段查看>
+  描述：<Description>
+
+  介绍
+  <填写详细的介绍>
+
+  备注
+  <这里填写补充的信息>
+
+  相关命令
+  <jc_shell.h里面相关的命令，你可以参考COMMANDS.txt里的，大多数的模块是没有相关命令的>
+
+  相关模块
+  <这里列举相关模块的跳转链接>
+
+  相关资料
+  <这里暂时不填，填写无即可>
