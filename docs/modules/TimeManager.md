@@ -15,33 +15,70 @@ TimeManager
 TimeManager（时间管理）用于调整系统时间及其流速。
 适合在日常管理与自动化场景中按需启用。
 建议先以管理员身份运行客户端。
-初次使用可优先调整：Mode、Sync Method (Disabling Offset)、Sync Method (Disabling Set)。
+初次使用可优先调整：Mode、Sync Method (Disabling Freeze)、Sync Method (Disabling Set)。
 
 配置项
-- Offset Year（中文：偏移年）：类型=数值，默认=0
-- Set Day（中文：指定日）：类型=数值，默认=28
-- Async（中文：异步）：类型=布尔，默认=true
-- Set Month（中文：指定月份）：类型=数值，默认=2
-- Offset Minute（中文：偏移分钟）：类型=数值，默认=0
-- Set Hour（中文：指定时）：类型=数值，默认=12
-- Set Second（中文：指定秒）：类型=数值，默认=0
-- Mode（中文：模式）：类型=枚举，默认="Offset Toggle"
-  可选：Freeze（冻结）；Set Once（单次设置时间点）；Offset Once（单次偏移）；Offset Toggle（偏移切换）；Online Sync Once（单次联网同步）；Online Sync Keep（保持联网同步）；Set Accelerated（时间点变速）；Offset Accelerated（偏移变速）；Accelerated（纯变速）
-- Sync Method (Disabling Offset)（中文：同步方式 (当禁用偏移模式时)）：类型=枚举，默认="Config"
-  可选：Off（关闭）；Config（配置）；Web（网络）
-- Offset Month（中文：偏移月）：类型=数值，默认=0
-- Offset Second（中文：偏移秒钟）：类型=数值，默认=0
-- Sync Method (Disabling Set)（中文：同步方式 (禁用时间点模式时)）：类型=枚举，默认="Memory"
-  可选：Off（关闭）；Memory（内存）；Web（网络）
-- Sync Method (Disabling Freeze)（中文：同步方式 (禁用冻结时)）：类型=枚举，默认="Memory"
-  可选：Off（关闭）；Memory（内存）；Web（网络）
-- Online Sync Cooldown (ms)（中文：联网同步冷却 (毫秒)）：类型=数值，默认=30000L
-- Offset Hour（中文：偏移小时）：类型=数值，默认=12
-- Set Minute（中文：指定分）：类型=数值，默认=0
-- Set Year（中文：指定年份）：类型=数值，默认=2025
-- Acceleration Speed（中文：加速速率）：类型=数值，默认=1.0f
-- Offset Day（中文：偏移日）：类型=数值，默认=0
-
+- Async（异步）
+ 类型：布尔；默认：true
+ 说明：用于控制是否异步处理。默认值 true 通常能减少主线程卡顿；若你遇到并发相关问题，可回退到更保守设置测试。
+- Mode（模式）
+ 类型：枚举；默认："Offset Toggle"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Offset Toggle ，确认稳定后再逐项切换比较效果。
+ 可选：Freeze（冻结）；Set Once（单次设置时间点）；Offset Once（单次偏移）；Offset Toggle（偏移切换）；Online Sync Once（单次联网同步）；Online Sync Keep（保持联网同步）；Set Accelerated（时间点变速）；Offset Accelerated（偏移变速）；Accelerated（纯变速）
+- Sync Method (Disabling Freeze)（同步方式 (禁用冻结时)）
+ 类型：枚举；默认："Memory"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Memory ，确认稳定后再逐项切换比较效果。
+ 可选：Off（关闭）；Memory（内存）；Web（网络）
+- Sync Method (Disabling Set)（同步方式 (禁用时间点模式时)）
+ 类型：枚举；默认："Memory"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Memory ，确认稳定后再逐项切换比较效果。
+ 可选：Off（关闭）；Memory（内存）；Web（网络）
+- Sync Method (Disabling Offset)（同步方式 (当禁用偏移模式时)）
+ 类型：枚举；默认："Config"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Config ，确认稳定后再逐项切换比较效果。
+ 可选：Off（关闭）；Config（配置）；Web（网络）
+- Online Sync Cooldown (ms)（联网同步冷却 (毫秒)）
+ 类型：数值；默认：30000L
+ 说明：用于控制检测/刷新/动画节奏。默认值 30000L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Acceleration Speed（加速速率）
+ 类型：数值；默认：1.0f
+ 说明：这是数值型配置。默认值 1.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Set Year（指定年份）
+ 类型：数值；默认：2025
+ 说明：这是数值型配置。默认值 2025 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Set Month（指定月份）
+ 类型：数值；默认：2
+ 说明：这是数值型配置。默认值 2 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Set Day（指定日）
+ 类型：数值；默认：28
+ 说明：这是数值型配置。默认值 28 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Set Hour（指定时）
+ 类型：数值；默认：12
+ 说明：这是数值型配置。默认值 12 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Set Minute（指定分）
+ 类型：数值；默认：0
+ 说明：这是数值型配置。默认值 0 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Set Second（指定秒）
+ 类型：数值；默认：0
+ 说明：这是数值型配置。默认值 0 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Offset Year（偏移年）
+ 类型：数值；默认：0
+ 说明：这是数值型配置。默认值 0 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Offset Month（偏移月）
+ 类型：数值；默认：0
+ 说明：这是数值型配置。默认值 0 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Offset Day（偏移日）
+ 类型：数值；默认：0
+ 说明：这是数值型配置。默认值 0 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Offset Hour（偏移小时）
+ 类型：数值；默认：12
+ 说明：这是数值型配置。默认值 12 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Offset Minute（偏移分钟）
+ 类型：数值；默认：0
+ 说明：这是数值型配置。默认值 0 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Offset Second（偏移秒钟）
+ 类型：数值；默认：0
+ 说明：这是数值型配置。默认值 0 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
 历史更新
 - 2. 尝试修复 TimeManager 模块设置时间有时会发生错误的问题。添加时间修改数据的持久化。
 - 3. 为 TimeManager 的 Mode 模式添加：Accelerated，仅加速模式。

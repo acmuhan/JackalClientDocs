@@ -17,11 +17,14 @@ CapsGuard（大写守护）用于暂无描述。
 初次使用可优先调整：Caps Lock Operation、Caps Lock When。
 
 配置项
-- Caps Lock Operation（中文：大写锁定操作）：类型=枚举，默认="Disable"
-  可选：Ignore（忽略）；Disable（禁用）；Enable（启用）
-- Caps Lock When（中文：大写锁定何时）：类型=枚举，默认="Always"
-  可选：Always（总是）；Chinese Input Method（中文输入法）；Non-chinese Input Method（非中文输入法）
-
+- Caps Lock Operation（大写锁定操作）
+ 类型：枚举；默认："Disable"
+ 说明：这是选项型配置。默认值 Disable 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Ignore（忽略）；Disable（禁用）；Enable（启用）
+- Caps Lock When（大写锁定何时）
+ 类型：枚举；默认："Always"
+ 说明：这是选项型配置。默认值 Always 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Always（总是）；Chinese Input Method（中文输入法）；Non-chinese Input Method（非中文输入法）
 历史更新
 - 44. 添加模块：Caps Guard，保持大写锁定键状态。
 

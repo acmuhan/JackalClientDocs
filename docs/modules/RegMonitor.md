@@ -14,18 +14,29 @@ RegMonitor
 介绍
 RegMonitor（注册表监视）用于监视注册表变化。（维护中）。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Item Filter RegExp、Key Filter RegExp、Value Filter RegExp。
+初次使用可优先调整：Cooldown (ms)。
 该模块处于 WIP 阶段，行为可能不稳定，建议先小范围测试。
 
 配置项
-- Item Filter RegExp（中文：项筛选正则表达式）：类型=通用，默认=""s
-- Path（中文：路径）：类型=通用，默认=""s
-- Key Filter RegExp（中文：键筛选正则表达式）：类型=通用，默认=""s
-- Value Filter RegExp（中文：值筛选正则表达式）：类型=通用，默认=""s
-- Cooldown (ms)（中文：冷却 (毫秒)）：类型=数值，默认=1000U
-- HKEY（中文：主键：）：类型=枚举，默认="HKEY_LOCAL_MACHINE"
-  可选：HKEY_LOCAL_MACHINE（主键：_本地_MACHINE）；HKEY_CURRENT_USER（主键：_当前_用户）；HKEY_CLASSES_ROOT（主键：_CLASSES_ROOT）；HKEY_CURRENT_CONFIG（主键：_当前_配置）；HKEY_USERS（主键：_USERS）
-
+- HKEY（主键：）
+ 类型：枚举；默认："HKEY_LOCAL_MACHINE"
+ 说明：这是选项型配置。默认值 HKEY_LOCAL_MACHINE 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：HKEY_LOCAL_MACHINE（主键：_本地_MACHINE）；HKEY_CURRENT_USER（主键：_当前_用户）；HKEY_CLASSES_ROOT（主键：_CLASSES_ROOT）；HKEY_CURRENT_CONFIG（主键：_当前_配置）；HKEY_USERS（主键：_USERS）
+- Path（路径）
+ 类型：通用；默认：""s
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- Item Filter RegExp（项筛选正则表达式）
+ 类型：通用；默认：""s
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- Key Filter RegExp（键筛选正则表达式）
+ 类型：通用；默认：""s
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- Value Filter RegExp（值筛选正则表达式）
+ 类型：通用；默认：""s
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- Cooldown (ms)（冷却 (毫秒)）
+ 类型：数值；默认：1000U
+ 说明：用于控制检测/刷新/动画节奏。默认值 1000U 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
 历史更新
 - 28. 添加模块：RegMonitor，注册表监视。还没有做的很好。
 

@@ -14,19 +14,32 @@ Tint
 介绍
 Tint（染色）用于应用全局颜色到客户端纹理。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Screen Capture Cooldown (ms)、Mode。
+初次使用可优先调整：Mode、Screen Capture Cooldown (ms)。
 
 配置项
-- Screen Capture Cooldown (ms)（中文：屏幕捕获冷却（毫秒））：类型=数值，默认=1000L
-- Preset Color（中文：预设颜色）：类型=枚举，默认="Aqua-Pink"
-  可选：Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- (Current Color)（中文：(当前颜色)）：类型=文本，默认="255;255;255"
-- Mode（中文：模式）：类型=枚举，默认="Preset"
-  可选：Static（静态）；Preset（预设）
-- Static Color（中文：静态颜色）：类型=文本，默认="200;210;255"
-- Screen Samples（中文：屏幕采样数）：类型=数值，默认=1024
-- Coefficient（中文：系数）：类型=数值，默认=1.0f
-
+- Mode（模式）
+ 类型：枚举；默认："Preset"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Preset ，确认稳定后再逐项切换比较效果。
+ 可选：Static（静态）；Preset（预设）
+- (Current Color)（(当前颜色)）
+ 类型：文本；默认："255;255;255"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Static Color（静态颜色）
+ 类型：文本；默认："200;210;255"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Preset Color（预设颜色）
+ 类型：枚举；默认："Aqua-Pink"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Screen Capture Cooldown (ms)（屏幕捕获冷却（毫秒））
+ 类型：数值；默认：1000L
+ 说明：用于控制检测/刷新/动画节奏。默认值 1000L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Screen Samples（屏幕采样数）
+ 类型：数值；默认：1024
+ 说明：这是数值型配置。默认值 1024 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Coefficient（系数）
+ 类型：数值；默认：1.0f
+ 说明：这是数值型配置。默认值 1.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
 历史更新
 无（HISTORY 中暂无明确记录）
 

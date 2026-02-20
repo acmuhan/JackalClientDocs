@@ -14,18 +14,29 @@ Spotlight
 介绍
 Spotlight（聚光灯）用于暂无描述。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Circle Color、Circle Alpha (0~1)、Circle Radius。
+初次使用可优先调整：Mask Alpha (0~1)、Circle Alpha (0~1)、Animation Duration (ms)。
 
 配置项
-- Circle Color（中文：圆圈颜色）：类型=枚举，默认="White"
-  可选：Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Circle Alpha (0~1)（中文：圆圈不透明度 (0~1)）：类型=数值，默认=0.7f
-- Circle Radius（中文：圆圈半径）：类型=数值，默认=75.0f
-- Mask Color（中文：遮罩颜色）：类型=枚举，默认="Black"
-  可选：Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Animation Duration (ms)（中文：动画持续时间 (毫秒)）：类型=数值，默认=700L
-- Mask Alpha (0~1)（中文：遮罩不透明度 (0~1)）：类型=数值，默认=0.75f
-
+- Mask Alpha (0~1)（遮罩不透明度 (0~1)）
+ 类型：数值；默认：0.75f
+ 说明：这是数值型配置。默认值 0.75f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Circle Alpha (0~1)（圆圈不透明度 (0~1)）
+ 类型：数值；默认：0.7f
+ 说明：这是数值型配置。默认值 0.7f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Animation Duration (ms)（动画持续时间 (毫秒)）
+ 类型：数值；默认：700L
+ 说明：用于控制检测/刷新/动画节奏。默认值 700L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Circle Radius（圆圈半径）
+ 类型：数值；默认：75.0f
+ 说明：用于细调显示样式和间距。默认值 75.0f 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Mask Color（遮罩颜色）
+ 类型：枚举；默认："Black"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Circle Color（圆圈颜色）
+ 类型：枚举；默认："White"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
 历史更新
 - 27. 为 Spotlight 模块添加配置：
 - 2. Spotlight 模块现在只能通过双击左Ctrl触发。

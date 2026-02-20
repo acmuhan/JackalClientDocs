@@ -17,8 +17,9 @@ Taskmgr（任务管理器）用于打开任务管理器。
 初次使用可优先调整：No Wow64 Redirection。
 
 配置项
-- No Wow64 Redirection（中文：禁用 Wow64 重定向）：类型=布尔，默认=true
-
+- No Wow64 Redirection（禁用 Wow64 重定向）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
 历史更新
 - 5. 检查 taskmgr, regedit, cmd 是否被禁用如果失败将不会输出错误信息了，以免刷屏。
 - 2. 修复了 NoCmd, NoPowerShell, NoTaskmgr, NoRegedit 无效的问题。

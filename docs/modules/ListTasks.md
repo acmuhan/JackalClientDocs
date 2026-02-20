@@ -14,14 +14,19 @@ ListTasks
 介绍
 ListTasks（枚举计划任务）用于暂无描述。
 适合进程观测、控制与排障场景。
-初次使用可优先调整：Style。
+初次使用可优先调整：Async、Auto Console、Style。
 
 配置项
-- Auto Console（中文：自动启用控制台）：类型=布尔，默认=true
-- Async（中文：异步）：类型=布尔，默认=true
-- Style（中文：风格）：类型=枚举，默认="Normal"
-  可选：Normal（普通）；Vanilla (List)（原版 (列表)）；Vanilla (XML)（原版 (XML)）；Vanilla (CSV)（原版 (CSV)）
-
+- Async（异步）
+ 类型：布尔；默认：true
+ 说明：用于控制是否异步处理。默认值 true 通常能减少主线程卡顿；若你遇到并发相关问题，可回退到更保守设置测试。
+- Auto Console（自动启用控制台）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Style（风格）
+ 类型：枚举；默认："Normal"
+ 说明：这是选项型配置。默认值 Normal 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Normal（普通）；Vanilla (List)（原版 (列表)）；Vanilla (XML)（原版 (XML)）；Vanilla (CSV)（原版 (CSV)）
 历史更新
 - 8. 添加模块 ListTasks, 枚举所有计划任务信息。
 

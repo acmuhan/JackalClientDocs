@@ -14,26 +14,53 @@ Actionbar
 介绍
 Actionbar（行为栏）用于显示一条动作栏消息。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Y Rate、Auto Focus、Text Duration。
+初次使用可优先调整：Module Status Auto Switch、Auto Focus、Check Topmost。
 
 配置项
-- Y Rate（中文：纵坐标比例）：类型=数值，默认=0.8f
-- Auto Focus（中文：自动取得焦点）：类型=布尔，默认=false
-- Text Duration（中文：文本持续时间）：类型=数值，默认=4500L
-- Draw Prev Text During Animation（中文：动画时绘制上一个文本）：类型=布尔，默认=true
-- Hide When Menu On（中文：菜单打开时不显示）：类型=布尔，默认=false
-- Text Color（中文：文本颜色）：类型=枚举，默认="Green"
-  可选：Flow（流动）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Text Animation（中文：文本动画）：类型=枚举，默认="Slide (Left
-- Fixed Text（中文：固定文本）：类型=文本，默认="NEVER GONNA GIVE YOU UP"
-- Text Base Opacity (0~1)（中文：文本基础不透明度 (0~1)）：类型=数值，默认=1.0f
-- Text Font Size（中文：文本字号）：类型=数值，默认=36
-- Module Status Auto Switch（中文：模块状态自动切换）：类型=布尔，默认=true
-- Check Topmost（中文：检查置顶）：类型=布尔，默认=true
-- Text Animation Duration (ms)（中文：文本动画时长 (毫秒)）：类型=数值，默认=1600L
-- Text Background（中文：文本背景）：类型=枚举，默认="Simple"
-  可选：Off（关闭）；Simple（简易）；Fancy（优美）
-
+- Module Status Auto Switch（模块状态自动切换）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Auto Focus（自动取得焦点）
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Check Topmost（检查置顶）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Draw Prev Text During Animation（动画时绘制上一个文本）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Fixed Text（固定文本）
+ 类型：文本；默认："NEVER GONNA GIVE YOU UP"
+ 说明：该配置用于调整模块行为细节。建议先按默认值运行，确认需求后再逐步调整。
+- Hide When Menu On（菜单打开时不显示）
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Y Rate（纵坐标比例）
+ 类型：数值；默认：0.8f
+ 说明：用于控制界面元素在屏幕中的相对位置。默认值 0.8f 一般是作者调过的稳定布局；建议每次只改一个轴，避免元素跑出可视区域。
+- Text Background（文本背景）
+ 类型：枚举；默认："Simple"
+ 说明：这是选项型配置。默认值 Simple 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Off（关闭）；Simple（简易）；Fancy（优美）
+- Text Animation（文本动画）
+ 类型：枚举；默认："Slide (Left
+ 说明：这是选项型配置。默认值 Slide (Left 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+- Text Animation Duration (ms)（文本动画时长 (毫秒)）
+ 类型：数值；默认：1600L
+ 说明：用于控制检测/刷新/动画节奏。默认值 1600L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Text Base Opacity (0~1)（文本基础不透明度 (0~1)）
+ 类型：数值；默认：1.0f
+ 说明：用于控制透明度。默认值 1.0f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Text Duration（文本持续时间）
+ 类型：数值；默认：4500L
+ 说明：用于控制检测/刷新/动画节奏。默认值 4500L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Text Font Size（文本字号）
+ 类型：数值；默认：36
+ 说明：用于控制文本可读性。默认字号 36 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+- Text Color（文本颜色）
+ 类型：枚举；默认："Green"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：Flow（流动）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
 历史更新
 - 47. 为 Actionbar 模块添加配置：
 - 70. 为 Actionbar 模块添加配置：

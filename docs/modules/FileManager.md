@@ -14,111 +14,278 @@ FileManager
 介绍
 FileManager（文件管理器）用于暂无描述。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：File Enum Max Cooldown (ms)、Directory Status Update Cooldown (ms)、Drive Enum Larger Cooldown (ms)。
+初次使用可优先调整：File Enum Min Cooldown (ms)、File Enum Max Cooldown (ms)、File Attributes Update Cooldown (ms)。
 
 配置项
-- Menu Icons（中文：菜单图标）：类型=布尔，默认=true
-- Calc Selected Folder Size（中文：计算已选择文件夹总大小）：类型=枚举，默认="Off"
-  可选：Off（关闭）；Async（异步）；Sync（同步）
-- Cancel Selection Hotkey（中文：取消选择快捷键）：类型=按键/复合，默认={{"Keybind", {VK_ESCAPE}}}
-- File Enum Max Cooldown (ms)（中文：文件枚举最大冷却 (毫秒)）：类型=数值，默认=10000L
-- Directory Status Update Cooldown (ms)（中文：目录状态更新冷却（毫秒））：类型=数值，默认=3000L
-- Async File Enum（中文：异步文件枚举）：类型=布尔，默认=true
-- Tab Switcher Round Corners（中文：标签页切换器启用圆角）：类型=布尔，默认=true
-- Menu Round Corners（中文：菜单圆角）：类型=布尔，默认=true
-- Menu Background Color 2（中文：菜单背景颜色 2）：类型=文本，默认="69;139;0;220"
-- Tab Font Size（中文：标签页字号）：类型=数值，默认=30U
-- Open Selected With Single Click（中文：单击打开选中文件）：类型=布尔，默认=true
-- Tab Switcher Shadow Color（中文：标签切换器阴影颜色）：类型=枚举，默认="Black"
-  可选：Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Drive Show Serial Number（中文：驱动器显示序列号）：类型=布尔，默认=true
-- Menu Background Color 1（中文：菜单背景颜色 1）：类型=文本，默认="16;78;139;220"
-- Selected Item Outline Color（中文：选择项轮廓色）：类型=文本，默认="18;74;143;200"
-- Drive Enum Larger Cooldown (ms)（中文：驱动器枚举更高的冷却 (毫秒)）：类型=数值，默认=3000L
-- Tab Switcher Font Size（中文：标签页切换器字号）：类型=数值，默认=30U
-- Drive Enum Cooldown (ms)（中文：驱动器枚举冷却 (毫秒)）：类型=数值，默认=1000L
-- Slow File Enum Item Size Threshold（中文：减慢枚举文件的项目文件阈值）：类型=数值，默认=50
-- File Time Colorful Highlight (PRO)（中文：文件时间彩色高亮（专业版））：类型=枚举，默认="Modified Time"
-  可选：Off（关闭）；Modified Time（修改时间）
-- UAC Bypass Method（中文：UAC 绕过方式）：类型=枚举，默认="Computerdefaults Legit"
-  可选：Computerdefaults（未收录）；Computerdefaults Legit（未收录）；Fodhelper（未收录）；Fodhelper Legit（未收录）；Cmstp（未收录）；PCA (PRO)（未收录）；Sdclt（未收录）；Sdclt Legit（未收录）；Slui（未收录）；Slui Legit（未收录）
-- Menu Line Gap（中文：菜单行距）：类型=数值，默认=10
-- Tab Switcher Shadow Opacity (0~1)（中文：标签页切换器阴影不透明度 (0~1））：类型=数值，默认=0.5f
-- Tab Switcher Shadow（中文：标签页切换器启用阴影）：类型=布尔，默认=true
-- File Item Font Size（中文：文件项目字号）：类型=数值，默认=35
-- Drive Space Bar Color Start（中文：驱动器空间条初始颜色）：类型=文本，默认="86;156;214;220"
-- Drive Space Bar Absolute Coefficient (px/GB)（中文：驱动器空间条绝对系数 (像素每GB)）：类型=数值，默认=1.1f
-- Menu Roundness（中文：菜单圆滑程度）：类型=数值，默认=0.1f
-- Drive Show Volume Label（中文：驱动器显示卷标）：类型=布尔，默认=true
-- File Item Line Gap（中文：文件项目行距）：类型=数值，默认=5
-- Tab Switcher Color（中文：标签切换器颜色）：类型=枚举，默认="Black"
-  可选：Flow（流动）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Show File Size（中文：显示文件大小）：类型=布尔，默认=true
-- Show Modified Time（中文：显示修改时间）：类型=布尔，默认=true
-- Drive Font Size（中文：驱动器字号）：类型=数值，默认=30
-- Show File Time Difference (PRO)（中文：显示文件时间差（专业版））：类型=布尔，默认=true
-- Menu Easing Speed (0~1)（中文：菜单缓动速率 (0~1)）：类型=数值，默认=0.1f
-- Info Font Size（中文：信息字号）：类型=数值，默认=30
-- Menu Mask Alpha (0~1)（中文：菜单遮罩不透明度 (0~1)）：类型=数值，默认=0.3f
-- Hovered Item Background Color（中文：悬停项背景色）：类型=文本，默认="239;200;244;90"
-- Move Selection Cooldown (ms)（中文：移动选择冷却 (毫秒)）：类型=数值，默认=100L
-- Menu Shadow（中文：菜单阴影）：类型=布尔，默认=true
-- Check Directory Is Empty（中文：检查目录是否为空）：类型=布尔，默认=true
-- Apply Folder Attributes（中文：应用目录属性）：类型=枚举，默认="Query"
-  可选：Query（询问）；Only Folder（仅文件夹）；Recursive（递归）
-- Enable Night Module（中文：启用夜间模块）：类型=布尔，默认=true
-- Stop File Enum Item Size Threshold（中文：停止枚举文件的项目数量阈值）：类型=数值，默认=200
-- Drive Space Bar Height（中文：驱动器空间条高）：类型=数值，默认=25
-- Drive Icon Size（中文：驱动器图标大小）：类型=数值，默认=50
-- Drive Space Bar Color End（中文：驱动器空间条最终颜色）：类型=文本，默认="255;0;0;220"
-- Menu Background Darkness (0~1)（中文：菜单背景黑暗程度 (0~1)）：类型=数值，默认=0.8f
-- Menu Shadow Opacity (0~1)（中文：菜单阴影不透明度 (0~1)）：类型=数值，默认=0.5f
-- Show Hidden Files（中文：显示隐藏的文件）：类型=布尔，默认=true
-- Sort Order（中文：排序顺序）：类型=枚举，默认="Ascending"
-  可选：Ascending（升序）；Descending（降序）
-- Sort By（中文：排序依据）：类型=枚举，默认="Name"
-  可选：Name（名称）；Type（类型）；Size（大小）；Modified Time（修改时间）
-- Drive Show File System（中文：驱动器显示文件系统）：类型=布尔，默认=true
-- Multiple File Open（中文：多个文件的打开）：类型=枚举，默认="Allow"
-  可选：Off（关闭）；Allow（允许）
-- Drive Space Bar Width（中文：驱动器空间条宽）：类型=数值，默认=300
-- Wheel Sensitivity（中文：滚轮灵敏度）：类型=数值，默认=200.0f
-- Apply Multifile Attributes（中文：应用多文件属性）：类型=枚举，默认="Unify"
-  可选：Unify（统一化）；Toggle（切换）
-- Show System Files（中文：显示系统文件）：类型=布尔，默认=true
-- Selected Item Background Color（中文：选择项背景色）：类型=文本，默认="66;90;123;200"
-- Deletion Confirmation（中文：删除时确认）：类型=枚举，默认="Always"
-  可选：Off（关闭）；Only Force（仅强制）；Always（总是）
-- Hovered Item Outline Color（中文：悬停项轮廓色）：类型=文本，默认="151;4;148;200"
-- Menu Outline Color（中文：菜单轮廓颜色）：类型=文本，默认="255;185;15;255"
-- Tab Switcher Roundness（中文：标签页切换器圆滑程度）：类型=数值，默认=0.3f
-- File Enum Min Cooldown (ms)（中文：文件枚举最小冷却 (毫秒)）：类型=数值，默认=500L
-- File Attributes Update Cooldown (ms)（中文：文件属性更新冷却（毫秒））：类型=数值，默认=1000L
-- Menu Animation Duration (ms)（中文：菜单动画时长（毫秒））：类型=数值，默认=200L
-- File Filter（中文：文件筛选器）：类型=文本，默认="*.*"
-- Calc Selected Total Size（中文：计算已选择总大小）：类型=布尔，默认=true
-- Drive Space Text Format（中文：驱动器空间文字格式）：类型=枚举，默认="Free / Total"
-  可选：Free / Total（可用 / 总计）；Used / Total（已用 / 总计）
-- Menu Shadow Thickness（中文：菜单阴影厚度）：类型=数值，默认=30.0f
-- Menu Basic Alpha (0~1)（中文：菜单基础不透明度 (0~1)）：类型=数值，默认=0.8f
-- Menu Shadow Color（中文：菜单阴影颜色）：类型=枚举，默认="Black"
-  可选：Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Toolbar Color（中文：工具栏颜色）：类型=枚举，默认="White"
-  可选：Flow（流动）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Tab Switcher Shadow Thickness（中文：标签页切换器阴影厚度）：类型=数值，默认=40.0f
-- Show Attributes（中文：显示属性）：类型=布尔，默认=true
-- File Operation API（中文：文件操作 API）：类型=枚举，默认="COM"
-  可选：COM（未收录）；Win32（未收录）
-- Drive Space Bar Style（中文：驱动器空间条风格）：类型=枚举，默认="Classic"
-  可选：Classic（经典）；Absolute（绝对）
-- Sort Files（中文：给文件排序）：类型=布尔，默认=true
-- Tab Switcher Opacity (0~1)（中文：标签页切换器不透明度 (0~1)）：类型=数值，默认=0.7f
-- Tab Height（中文：标签页高度）：类型=数值，默认=40U
-- Go to Parent Folder Hotkey（中文：前往父文件夹快捷键）：类型=按键/复合，默认={{"Keybind", {VK_BACK}}}
-- Menu Font Size（中文：菜单字号）：类型=数值，默认=30
-- Icon Style（中文：图标风格）：类型=枚举，默认="Character"
-  可选：Off（关闭）；Character（字符）；Normal（普通）；Full（未收录）
-
+- Async File Enum（异步文件枚举）
+ 类型：布尔；默认：true
+ 说明：用于控制是否异步处理。默认值 true 通常能减少主线程卡顿；若你遇到并发相关问题，可回退到更保守设置测试。
+- Icon Style（图标风格）
+ 类型：枚举；默认："Character"
+ 说明：这是选项型配置。默认值 Character 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Off（关闭）；Character（字符）；Normal（普通）；Full（未收录）
+- File Operation API（文件操作 API）
+ 类型：枚举；默认："COM"
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+ 可选：COM（未收录）；Win32（未收录）
+- Multiple File Open（多个文件的打开）
+ 类型：枚举；默认："Allow"
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+ 可选：Off（关闭）；Allow（允许）
+- Info Font Size（信息字号）
+ 类型：数值；默认：30
+ 说明：用于控制文本可读性。默认字号 30 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+- File Enum Min Cooldown (ms)（文件枚举最小冷却 (毫秒)）
+ 类型：数值；默认：500L
+ 说明：用于控制检测/刷新/动画节奏。默认值 500L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- File Enum Max Cooldown (ms)（文件枚举最大冷却 (毫秒)）
+ 类型：数值；默认：10000L
+ 说明：用于控制检测/刷新/动画节奏。默认值 10000L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Slow File Enum Item Size Threshold（减慢枚举文件的项目文件阈值）
+ 类型：数值；默认：50
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- Stop File Enum Item Size Threshold（停止枚举文件的项目数量阈值）
+ 类型：数值；默认：200
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- File Attributes Update Cooldown (ms)（文件属性更新冷却（毫秒））
+ 类型：数值；默认：1000L
+ 说明：用于控制检测/刷新/动画节奏。默认值 1000L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Directory Status Update Cooldown (ms)（目录状态更新冷却（毫秒））
+ 类型：数值；默认：3000L
+ 说明：用于控制检测/刷新/动画节奏。默认值 3000L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- File Item Font Size（文件项目字号）
+ 类型：数值；默认：35
+ 说明：用于控制文本可读性。默认字号 35 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+- File Item Line Gap（文件项目行距）
+ 类型：数值；默认：5
+ 说明：用于细调显示样式和间距。默认值 5 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Move Selection Cooldown (ms)（移动选择冷却 (毫秒)）
+ 类型：数值；默认：100L
+ 说明：用于控制检测/刷新/动画节奏。默认值 100L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Wheel Sensitivity（滚轮灵敏度）
+ 类型：数值；默认：200.0f
+ 说明：这是数值型配置。默认值 200.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Sort Files（给文件排序）
+ 类型：布尔；默认：true
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- File Filter（文件筛选器）
+ 类型：文本；默认："*.*"
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- File Time Colorful Highlight (PRO)（文件时间彩色高亮（专业版））
+ 类型：枚举；默认："Modified Time"
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+ 可选：Off（关闭）；Modified Time（修改时间）
+- Check Directory Is Empty（检查目录是否为空）
+ 类型：布尔；默认：true
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- Show Hidden Files（显示隐藏的文件）
+ 类型：布尔；默认：true
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- Show System Files（显示系统文件）
+ 类型：布尔；默认：true
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- Show Modified Time（显示修改时间）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show Attributes（显示属性）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show File Size（显示文件大小）
+ 类型：布尔；默认：true
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- Open Selected With Single Click（单击打开选中文件）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Show File Time Difference (PRO)（显示文件时间差（专业版））
+ 类型：布尔；默认：true
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- Drive Enum Cooldown (ms)（驱动器枚举冷却 (毫秒)）
+ 类型：数值；默认：1000L
+ 说明：用于控制检测/刷新/动画节奏。默认值 1000L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Drive Enum Larger Cooldown (ms)（驱动器枚举更高的冷却 (毫秒)）
+ 类型：数值；默认：3000L
+ 说明：用于控制检测/刷新/动画节奏。默认值 3000L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Drive Icon Size（驱动器图标大小）
+ 类型：数值；默认：50
+ 说明：这是数值型配置。默认值 50 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Drive Font Size（驱动器字号）
+ 类型：数值；默认：30
+ 说明：用于控制文本可读性。默认字号 30 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+- Drive Space Bar Style（驱动器空间条风格）
+ 类型：枚举；默认："Classic"
+ 说明：这是选项型配置。默认值 Classic 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Classic（经典）；Absolute（绝对）
+- Drive Space Text Format（驱动器空间文字格式）
+ 类型：枚举；默认："Free / Total"
+ 说明：这是选项型配置。默认值 Free / Total 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Free / Total（可用 / 总计）；Used / Total（已用 / 总计）
+- Drive Space Bar Absolute Coefficient (px/GB)（驱动器空间条绝对系数 (像素每GB)）
+ 类型：数值；默认：1.1f
+ 说明：这是数值型配置。默认值 1.1f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Drive Space Bar Width（驱动器空间条宽）
+ 类型：数值；默认：300
+ 说明：这是数值型配置。默认值 300 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Drive Space Bar Height（驱动器空间条高）
+ 类型：数值；默认：25
+ 说明：这是数值型配置。默认值 25 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Drive Space Bar Color Start（驱动器空间条初始颜色）
+ 类型：文本；默认："86;156;214;220"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Drive Space Bar Color End（驱动器空间条最终颜色）
+ 类型：文本；默认："255;0;0;220"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Drive Show Serial Number（驱动器显示序列号）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Drive Show Volume Label（驱动器显示卷标）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Drive Show File System（驱动器显示文件系统）
+ 类型：布尔；默认：true
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- Calc Selected Total Size（计算已选择总大小）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Calc Selected Folder Size（计算已选择文件夹总大小）
+ 类型：枚举；默认："Off"
+ 说明：这是选项型配置。默认值 Off 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Off（关闭）；Async（异步）；Sync（同步）
+- Deletion Confirmation（删除时确认）
+ 类型：枚举；默认："Always"
+ 说明：这是选项型配置。默认值 Always 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Off（关闭）；Only Force（仅强制）；Always（总是）
+- Sort By（排序依据）
+ 类型：枚举；默认："Name"
+ 说明：这是选项型配置。默认值 Name 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Name（名称）；Type（类型）；Size（大小）；Modified Time（修改时间）
+- Sort Order（排序顺序）
+ 类型：枚举；默认："Ascending"
+ 说明：这是选项型配置。默认值 Ascending 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Ascending（升序）；Descending（降序）
+- UAC Bypass Method（UAC 绕过方式）
+ 类型：枚举；默认："Computerdefaults Legit"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Computerdefaults Legit ，确认稳定后再逐项切换比较效果。
+ 可选：Computerdefaults（未收录）；Computerdefaults Legit（未收录）；Fodhelper（未收录）；Fodhelper Legit（未收录）；Cmstp（未收录）；PCA (PRO)（未收录）；Sdclt（未收录）；Sdclt Legit（未收录）；Slui（未收录）；Slui Legit（未收录）
+- Selected Item Background Color（选择项背景色）
+ 类型：文本；默认："66;90;123;200"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Hovered Item Background Color（悬停项背景色）
+ 类型：文本；默认："239;200;244;90"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Selected Item Outline Color（选择项轮廓色）
+ 类型：文本；默认："18;74;143;200"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Hovered Item Outline Color（悬停项轮廓色）
+ 类型：文本；默认："151;4;148;200"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Menu Outline Color（菜单轮廓颜色）
+ 类型：文本；默认："255;185;15;255"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Menu Background Color 1（菜单背景颜色 1）
+ 类型：文本；默认："16;78;139;220"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Menu Background Color 2（菜单背景颜色 2）
+ 类型：文本；默认："69;139;0;220"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Menu Background Darkness (0~1)（菜单背景黑暗程度 (0~1)）
+ 类型：数值；默认：0.8f
+ 说明：这是数值型配置。默认值 0.8f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Menu Basic Alpha (0~1)（菜单基础不透明度 (0~1)）
+ 类型：数值；默认：0.8f
+ 说明：这是数值型配置。默认值 0.8f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Menu Mask Alpha (0~1)（菜单遮罩不透明度 (0~1)）
+ 类型：数值；默认：0.3f
+ 说明：这是数值型配置。默认值 0.3f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Menu Shadow（菜单阴影）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Menu Shadow Thickness（菜单阴影厚度）
+ 类型：数值；默认：30.0f
+ 说明：用于细调显示样式和间距。默认值 30.0f 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Menu Shadow Opacity (0~1)（菜单阴影不透明度 (0~1)）
+ 类型：数值；默认：0.5f
+ 说明：用于控制透明度。默认值 0.5f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Menu Shadow Color（菜单阴影颜色）
+ 类型：枚举；默认："Black"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Menu Font Size（菜单字号）
+ 类型：数值；默认：30
+ 说明：用于控制文本可读性。默认字号 30 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+- Menu Line Gap（菜单行距）
+ 类型：数值；默认：10
+ 说明：用于细调显示样式和间距。默认值 10 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Menu Animation Duration (ms)（菜单动画时长（毫秒））
+ 类型：数值；默认：200L
+ 说明：用于控制检测/刷新/动画节奏。默认值 200L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Menu Easing Speed (0~1)（菜单缓动速率 (0~1)）
+ 类型：数值；默认：0.1f
+ 说明：这是数值型配置。默认值 0.1f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Menu Round Corners（菜单圆角）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Menu Roundness（菜单圆滑程度）
+ 类型：数值；默认：0.1f
+ 说明：用于细调显示样式和间距。默认值 0.1f 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Menu Icons（菜单图标）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Tab Font Size（标签页字号）
+ 类型：数值；默认：30U
+ 说明：用于控制文本可读性。默认字号 30U 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+- Tab Height（标签页高度）
+ 类型：数值；默认：40U
+ 说明：这是数值型配置。默认值 40U 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Tab Switcher Font Size（标签页切换器字号）
+ 类型：数值；默认：30U
+ 说明：用于控制文本可读性。默认字号 30U 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+- Tab Switcher Round Corners（标签页切换器启用圆角）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Tab Switcher Roundness（标签页切换器圆滑程度）
+ 类型：数值；默认：0.3f
+ 说明：用于细调显示样式和间距。默认值 0.3f 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Tab Switcher Shadow（标签页切换器启用阴影）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Tab Switcher Shadow Thickness（标签页切换器阴影厚度）
+ 类型：数值；默认：40.0f
+ 说明：用于细调显示样式和间距。默认值 40.0f 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Tab Switcher Shadow Opacity (0~1)（标签页切换器阴影不透明度 (0~1））
+ 类型：数值；默认：0.5f
+ 说明：用于控制透明度。默认值 0.5f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Tab Switcher Opacity (0~1)（标签页切换器不透明度 (0~1)）
+ 类型：数值；默认：0.7f
+ 说明：用于控制透明度。默认值 0.7f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Tab Switcher Color（标签切换器颜色）
+ 类型：枚举；默认："Black"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：Flow（流动）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Tab Switcher Shadow Color（标签切换器阴影颜色）
+ 类型：枚举；默认："Black"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Toolbar Color（工具栏颜色）
+ 类型：枚举；默认："White"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：Flow（流动）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Apply Folder Attributes（应用目录属性）
+ 类型：枚举；默认："Query"
+ 说明：这是选项型配置。默认值 Query 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Query（询问）；Only Folder（仅文件夹）；Recursive（递归）
+- Apply Multifile Attributes（应用多文件属性）
+ 类型：枚举；默认："Unify"
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+ 可选：Unify（统一化）；Toggle（切换）
+- Enable Night Module（启用夜间模块）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Go to Parent Folder Hotkey（前往父文件夹快捷键）
+ 类型：按键/复合；默认：{{"Keybind", {VK_BACK}}}
+ 说明：用于设置快捷键触发。建议避免与系统或常用软件冲突，优先使用组合键提高可控性。
+- Cancel Selection Hotkey（取消选择快捷键）
+ 类型：按键/复合；默认：{{"Keybind", {VK_ESCAPE}}}
+ 说明：用于设置快捷键触发。建议避免与系统或常用软件冲突，优先使用组合键提高可控性。
 历史更新
 - 2. 为 File Manager 添加配置：
 - 10. 修复 FileManager 在不显示隐藏文件和系统文件时留出多余位子的问题。

@@ -14,14 +14,21 @@ ListModules
 介绍
 ListModules（枚举模块）用于暂无描述。
 适合进程观测、控制与排障场景。
-初次使用可优先调整：Async、Auto Console、Verify。
+初次使用可优先调整：Async、Auto Console、PID (0 for self)。
 
 配置项
-- Async（中文：异步）：类型=布尔，默认=true
-- Auto Console（中文：自动启用控制台）：类型=布尔，默认=true
-- Verify（中文：验证）：类型=布尔，默认=true
-- PID (0 for self)（中文：进程ID (0 for self)）：类型=数值，默认=0
-
+- Async（异步）
+ 类型：布尔；默认：true
+ 说明：用于控制是否异步处理。默认值 true 通常能减少主线程卡顿；若你遇到并发相关问题，可回退到更保守设置测试。
+- Auto Console（自动启用控制台）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- PID (0 for self)（进程ID (0 for self)）
+ 类型：数值；默认：0
+ 说明：这是数值型配置。默认值 0 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Verify（验证）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
 历史更新
 - 18. 使 /listmodules 命令可以接收一个参数。
 - 3. 现在 ListModules 模块如果枚举的是64位进程，则会调用loader进行枚举。

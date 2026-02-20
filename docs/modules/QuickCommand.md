@@ -17,12 +17,19 @@ QuickCommand（快速命令）用于按快捷键打开输入框，输入后快�
 初次使用可优先调整：Input Method。
 
 配置项
-- Trigger Hotkey（中文：触发快捷键）：类型=按键/复合，默认={{"Keybind", {VK_LCONTROL, VK_LMENU, VK_OEM_3}}}
-- Input Method（中文：输入方法）：类型=枚举，默认="Input Box"
-  可选：Input Box（输入框）；Chat Box（聊天框）
-- Single Instance（中文：单例模式）：类型=布尔，默认=true
-- Async（中文：异步）：类型=布尔，默认=true
-
+- Async（异步）
+ 类型：布尔；默认：true
+ 说明：用于控制是否异步处理。默认值 true 通常能减少主线程卡顿；若你遇到并发相关问题，可回退到更保守设置测试。
+- Single Instance（单例模式）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Input Method（输入方法）
+ 类型：枚举；默认："Input Box"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Input Box ，确认稳定后再逐项切换比较效果。
+ 可选：Input Box（输入框）；Chat Box（聊天框）
+- Trigger Hotkey（触发快捷键）
+ 类型：按键/复合；默认：{{"Keybind", {VK_LCONTROL, VK_LMENU, VK_OEM_3}}}
+ 说明：用于设置快捷键触发。建议避免与系统或常用软件冲突，优先使用组合键提高可控性。
 历史更新
 - 38. 修复 QuickCommand 单例模式下 Chat Box 创建一次后无法再次创建的问题；单例模式关闭时无限创建的问题。
 - 27. 添加模块：Quick Command，快速命令。允许你按一个快捷键打开输入框输入命令后立即执行。

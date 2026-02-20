@@ -18,10 +18,11 @@ PrivacyDatabase（隐私数据库）用于一个有用的隐私数据库。（�
 初次使用可优先调整：Database Directory。
 
 配置项
-- Database Directory（中文：数据库目录）：类型=文本，默认="D:\\Program Files (x86)\\Jackal\\Privacy"
-
+- Database Directory（数据库目录）
+ 类型：文本；默认："D:\\Program Files (x86)\\Jackal\\Privacy"
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
 历史更新
-- 4.  【PRO】添加模块：Privacy Database
+- 4. 【PRO】添加模块：Privacy Database
 
 备注
 该模块可能受系统版本、权限级别、目标进程状态或安全软件策略影响；若功能未生效，优先检查管理员权限、驱动依赖、联网状态与系统兼容性。

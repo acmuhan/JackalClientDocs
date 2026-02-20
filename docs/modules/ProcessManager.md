@@ -14,69 +14,174 @@ ProcessManager
 介绍
 ProcessManager（进程管理器）用于暂无描述。
 适合进程观测、控制与排障场景。
-初次使用可优先调整：Keyword Filter、Enum Cooldown (ms)、Filter Critical PID <= 4。
+初次使用可优先调整：Enum Cooldown (ms)。
 
 配置项
-- Simplify Command Line（中文：精简命令行）：类型=布尔，默认=true
-- Open File Location Select（中文：打开 文件 Location Select）：类型=布尔，默认=true
-- Menu Font Size（中文：菜单字号）：类型=数值，默认=28
-- Show PPID（中文：显示 父进程ID）：类型=布尔，默认=true
-- Menu Line Gap（中文：菜单行距）：类型=数值，默认=8
-- Show Memory Usage Private (PRO)（中文：显示内存占用（专用，专业版））：类型=布尔，默认=true
-- Highlight Process Lifecycle (PRO)（中文：高亮进程创建/退出（专业版））：类型=布尔，默认=true
-- Show Path（中文：显示 路径）：类型=布尔，默认=true
-- Show Architecture (PRO)（中文：显示架构 (PRO)）：类型=枚举，默认="Label"
-  可选：Off（关闭）；Column（未收录）；Label（未收录）
-- Show Description（中文：显示描述）：类型=布尔，默认=true
-- Sort By（中文：排序依据）：类型=枚举，默认="PID"
-  可选：PID（进程ID）；Name（名称）；Threads（个线程）；PPID（父进程ID）；CPU（CPU）；GPU（GPU）；Memory (Private)（内存（专用））；Privilege（权限）；Owner（所有者）；Rank（进程类型）；Description（简介）；Profile Description（档案描述）
-- Keyword Filter（中文：Keyword 筛选器）：类型=文本，默认=""
-- Async Enum（中文：异步 Enum）：类型=布尔，默认=true
-- Show Process Privilege Tag (PRO)（中文：显示进程权限标签 (PRO)）：类型=布尔，默认=true
-- Show Owner（中文：显示 所有者）：类型=布尔，默认=true
-- Process Name Color（中文：进程名颜色）：类型=枚举，默认="Dynamic"
-  可选：Type（类型）；Dynamic（动态）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Show PID（中文：显示进程ID）：类型=布尔，默认=true
-- Menu Easing Speed (0~1)（中文：菜单缓动速率 (0~1)）：类型=数值，默认=0.18f
-- Row Select Alpha (0~1)（中文：Row Select 不透明度 (0~1)）：类型=数值，默认=0.66f
-- Menu Animation Duration (ms)（中文：菜单动画时长（毫秒））：类型=数值，默认=200L
-- Menu Alpha (0~1)（中文：Menu 不透明度 (0~1)）：类型=数值，默认=0.88f
-- Show Process Icon（中文：显示进程图标）：类型=布尔，默认=false
-- Row Height（中文：Row 高度）：类型=数值，默认=42
-- Use Tree Structure（中文：使用树形结构）：类型=布尔，默认=false
-- Show CPU Usage (PRO)（中文：显示CPU占用率（专业版））：类型=布尔，默认=true
-- Enum Cooldown (ms)（中文：Enum 冷却 (ms)）：类型=数值，默认=1200L
-- Auto Refresh On Open（中文：自动 刷新 开启 打开）：类型=布尔，默认=true
-- Enum Max Item Count（中文：Enum 最大数量 Item 数目）：类型=数值，默认=4096
-- Dynamic Column Width (PRO)（中文：动态列宽（专业版））：类型=布尔，默认=true
-- Lifecycle Highlight Duration (ms)（中文：生命周期高亮时长 (毫秒)）：类型=数值，默认=3500L
-- Background Alpha (0~1)（中文：背景 不透明度 (0~1)）：类型=数值，默认=0.68f
-- Easing Speed (0~1)（中文：缓动速率 (0~1)）：类型=数值，默认=0.14f
-- Animation Duration (ms)（中文：动画持续时间 (毫秒)）：类型=数值，默认=260L
-- Show GPU Usage (PRO)（中文：显示GPU占用率（专业版））：类型=布尔，默认=true
-- Filter Critical PID <= 4（中文：筛选器 严重 进程ID <= 4）：类型=布尔，默认=false
-- Show Rank（中文：显示 进程类型）：类型=布尔，默认=true
-- Filter Lifecycle Rows By Search（中文：搜索时筛选生命周期列表）：类型=布尔，默认=false
-- Sort Order（中文：排序顺序）：类型=枚举，默认="Ascending"
-  可选：Ascending（升序）；Descending（降序）
-- Header Alpha (0~1)（中文：Header 不透明度 (0~1)）：类型=数值，默认=0.78f
-- Enable Night Module（中文：启用夜间模块）：类型=布尔，默认=true
-- Header Font Size（中文：Header 字体 大小）：类型=数值，默认=28
-- Show Threads（中文：显示 个线程）：类型=布尔，默认=true
-- Row Hover Alpha (0~1)（中文：Row Hover 不透明度 (0~1)）：类型=数值，默认=0.48f
-- Font Size（中文：字号）：类型=数值，默认=30
-- Menu Roundness（中文：菜单圆滑程度）：类型=数值，默认=0.18f
-- Pin Lifecycle Rows On Top（中文：将创建/退出进程置顶）：类型=布尔，默认=false
-- Show Command Line (PRO)（中文：显示命令行 (PRO)）：类型=布尔，默认=true
-- Show Profile Description（中文：显示档案描述）：类型=布尔，默认=false
-- Tree Sort Strategy（中文：树形排序策略）：类型=枚举，默认="Keep Parent First"
-  可选：Keep Parent First（父进程优先）；Subtree Metric（按子树指标）
-- Roundness（中文：圆滑程度）：类型=数值，默认=0.15f
-- Process Path Color Style（中文：进程路径颜色样式）：类型=枚举，默认="Static"
-  可选：Static（静态）；Dynamic（动态）
-- Line Gap（中文：行距）：类型=数值，默认=6
-- Wheel Sensitivity（中文：滚轮灵敏度）：类型=数值，默认=160.0f
-
+- Async Enum（异步 Enum）
+ 类型：布尔；默认：true
+ 说明：用于控制是否异步处理。默认值 true 通常能减少主线程卡顿；若你遇到并发相关问题，可回退到更保守设置测试。
+- Auto Refresh On Open（自动 刷新 开启 打开）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Enum Cooldown (ms)（Enum 冷却 (ms)）
+ 类型：数值；默认：1200L
+ 说明：用于控制检测/刷新/动画节奏。默认值 1200L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Enum Max Item Count（Enum 最大数量 Item 数目）
+ 类型：数值；默认：4096
+ 说明：这是数值型配置。默认值 4096 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Filter Critical PID <= 4（筛选器 严重 进程ID <= 4）
+ 类型：布尔；默认：false
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- Sort By（排序依据）
+ 类型：枚举；默认："PID"
+ 说明：这是选项型配置。默认值 PID 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：PID（进程ID）；Name（名称）；Threads（个线程）；PPID（父进程ID）；CPU（CPU）；GPU（GPU）；Memory (Private)（内存（专用））；Privilege（权限）；Owner（所有者）；Rank（进程类型）；Description（简介）；Profile Description（档案描述）
+- Sort Order（排序顺序）
+ 类型：枚举；默认："Ascending"
+ 说明：这是选项型配置。默认值 Ascending 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Ascending（升序）；Descending（降序）
+- Process Name Color（进程名颜色）
+ 类型：枚举；默认："Dynamic"
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+ 可选：Type（类型）；Dynamic（动态）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Process Path Color Style（进程路径颜色样式）
+ 类型：枚举；默认："Static"
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+ 可选：Static（静态）；Dynamic（动态）
+- Show Architecture (PRO)（显示架构 (PRO)）
+ 类型：枚举；默认："Label"
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+ 可选：Off（关闭）；Column（未收录）；Label（未收录）
+- Keyword Filter（Keyword 筛选器）
+ 类型：文本；默认：""
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- Enable Night Module（启用夜间模块）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Dynamic Column Width (PRO)（动态列宽（专业版））
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Show Process Icon（显示进程图标）
+ 类型：布尔；默认：false
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- Show Profile Description（显示档案描述）
+ 类型：布尔；默认：false
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- Show Description（显示描述）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show Process Privilege Tag (PRO)（显示进程权限标签 (PRO)）
+ 类型：布尔；默认：true
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- Simplify Command Line（精简命令行）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Highlight Process Lifecycle (PRO)（高亮进程创建/退出（专业版））
+ 类型：布尔；默认：true
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- Lifecycle Highlight Duration (ms)（生命周期高亮时长 (毫秒)）
+ 类型：数值；默认：3500L
+ 说明：用于控制检测/刷新/动画节奏。默认值 3500L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Pin Lifecycle Rows On Top（将创建/退出进程置顶）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Filter Lifecycle Rows By Search（搜索时筛选生命周期列表）
+ 类型：布尔；默认：false
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- Use Tree Structure（使用树形结构）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Tree Sort Strategy（树形排序策略）
+ 类型：枚举；默认："Keep Parent First"
+ 说明：这是选项型配置。默认值 Keep Parent First 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Keep Parent First（父进程优先）；Subtree Metric（按子树指标）
+- Show PID（显示进程ID）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show PPID（显示 父进程ID）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show Threads（显示 个线程）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show Rank（显示 进程类型）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show Path（显示 路径）
+ 类型：布尔；默认：true
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- Show Owner（显示 所有者）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show Command Line (PRO)（显示命令行 (PRO)）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show CPU Usage (PRO)（显示CPU占用率（专业版））
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show GPU Usage (PRO)（显示GPU占用率（专业版））
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show Memory Usage Private (PRO)（显示内存占用（专用，专业版））
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Font Size（字号）
+ 类型：数值；默认：30
+ 说明：用于控制文本可读性。默认字号 30 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+- Header Font Size（Header 字体 大小）
+ 类型：数值；默认：28
+ 说明：用于控制文本可读性。默认字号 28 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+- Row Height（Row 高度）
+ 类型：数值；默认：42
+ 说明：这是数值型配置。默认值 42 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Line Gap（行距）
+ 类型：数值；默认：6
+ 说明：用于细调显示样式和间距。默认值 6 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Wheel Sensitivity（滚轮灵敏度）
+ 类型：数值；默认：160.0f
+ 说明：这是数值型配置。默认值 160.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Easing Speed (0~1)（缓动速率 (0~1)）
+ 类型：数值；默认：0.14f
+ 说明：这是数值型配置。默认值 0.14f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Animation Duration (ms)（动画持续时间 (毫秒)）
+ 类型：数值；默认：260L
+ 说明：用于控制检测/刷新/动画节奏。默认值 260L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Background Alpha (0~1)（背景 不透明度 (0~1)）
+ 类型：数值；默认：0.68f
+ 说明：这是数值型配置。默认值 0.68f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Header Alpha (0~1)（Header 不透明度 (0~1)）
+ 类型：数值；默认：0.78f
+ 说明：这是数值型配置。默认值 0.78f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Row Hover Alpha (0~1)（Row Hover 不透明度 (0~1)）
+ 类型：数值；默认：0.48f
+ 说明：这是数值型配置。默认值 0.48f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Row Select Alpha (0~1)（Row Select 不透明度 (0~1)）
+ 类型：数值；默认：0.66f
+ 说明：这是数值型配置。默认值 0.66f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Roundness（圆滑程度）
+ 类型：数值；默认：0.15f
+ 说明：用于细调显示样式和间距。默认值 0.15f 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Menu Font Size（菜单字号）
+ 类型：数值；默认：28
+ 说明：用于控制文本可读性。默认字号 28 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+- Menu Line Gap（菜单行距）
+ 类型：数值；默认：8
+ 说明：用于细调显示样式和间距。默认值 8 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Menu Animation Duration (ms)（菜单动画时长（毫秒））
+ 类型：数值；默认：200L
+ 说明：用于控制检测/刷新/动画节奏。默认值 200L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Menu Easing Speed (0~1)（菜单缓动速率 (0~1)）
+ 类型：数值；默认：0.18f
+ 说明：这是数值型配置。默认值 0.18f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Menu Roundness（菜单圆滑程度）
+ 类型：数值；默认：0.18f
+ 说明：用于细调显示样式和间距。默认值 0.18f 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Menu Alpha (0~1)（Menu 不透明度 (0~1)）
+ 类型：数值；默认：0.88f
+ 说明：这是数值型配置。默认值 0.88f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Open File Location Select（打开 文件 Location Select）
+ 类型：布尔；默认：true
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
 历史更新
 - 46. 添加模块：ProcessManager 进程管理器，成为第二个 App。
 

@@ -18,11 +18,18 @@ QQBot（QQ机器人）用于一个简单的QQ机器人。
 该模块处于 WIP 阶段，行为可能不稳定，建议先小范围测试。
 
 配置项
-- Recognize Min Confidence (0~100)（中文：识别最小置信度 (0~100)）：类型=数值，默认=80.0f
-- Own Message Min X Rate（中文：Own Message Min X 比率）：类型=数值，默认=0.41f
-- Scan Cooldown (ms)（中文：扫描冷却 (毫秒)）：类型=数值，默认=5000L
-- Others Message Max X Rate（中文：Others Message 最大数量 X 比率）：类型=数值，默认=0.4f
-
+- Scan Cooldown (ms)（扫描冷却 (毫秒)）
+ 类型：数值；默认：5000L
+ 说明：用于控制检测/刷新/动画节奏。默认值 5000L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Others Message Max X Rate（Others Message 最大数量 X 比率）
+ 类型：数值；默认：0.4f
+ 说明：用于控制界面元素在屏幕中的相对位置。默认值 0.4f 一般是作者调过的稳定布局；建议每次只改一个轴，避免元素跑出可视区域。
+- Own Message Min X Rate（Own Message Min X 比率）
+ 类型：数值；默认：0.41f
+ 说明：用于控制界面元素在屏幕中的相对位置。默认值 0.41f 一般是作者调过的稳定布局；建议每次只改一个轴，避免元素跑出可视区域。
+- Recognize Min Confidence (0~100)（识别最小置信度 (0~100)）
+ 类型：数值；默认：80.0f
+ 说明：这是数值型配置。默认值 80.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
 历史更新
 无（HISTORY 中暂无明确记录）
 

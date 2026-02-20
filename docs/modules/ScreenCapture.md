@@ -17,11 +17,14 @@ ScreenCapture（屏幕捕获）用于一个持续捕捉屏幕的后台线程。
 初次使用可优先调整：Backend、Exclude Client。
 
 配置项
-- Backend（中文：后端）：类型=枚举，默认="GDI"
-  可选：GDI（未收录）；DXGI（未收录）
-- Exclude Client（中文：排除客户端）：类型=枚举，默认="Keep"
-  可选：Off（关闭）；Slow（缓慢）；Keep（保持）
-
+- Backend（后端）
+ 类型：枚举；默认："GDI"
+ 说明：这是选项型配置。默认值 GDI 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：GDI（未收录）；DXGI（未收录）
+- Exclude Client（排除客户端）
+ 类型：枚举；默认："Keep"
+ 说明：这是选项型配置。默认值 Keep 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Off（关闭）；Slow（缓慢）；Keep（保持）
 历史更新
 - 29. 将屏幕捕获线程单独放到新的模块：Screen Capture，支持DXGI方法
 - 58. 添加 HUD Blur 模块，为 HUD 背景添加模糊或者【PRO】液体玻璃效果。需要实时屏幕捕获，会降低性能，但是可以调低频率。

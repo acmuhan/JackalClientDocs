@@ -14,17 +14,30 @@ AutoTotem
 介绍
 AutoTotem（自动图腾）用于自动播放爆图腾动画。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：AntiTaskkill Defend Success、Gatekeeper Deny After Query、AntiClose Defend Success。
+初次使用可优先调整：Gatekeeper Deny、Gatekeeper Deny After Query、AntiClose Defend Success。
 
 配置项
-- AntiTaskkill Defend Success（中文：反击杀防御成功）：类型=布尔，默认=true
-- Gatekeeper Deny After Query（中文：看门人在确认后拒绝）：类型=布尔，默认=true
-- AntiClose Defend Success（中文：反关闭防御成功）：类型=布尔，默认=true
-- AutoMute Triggered（中文：自动静音时是否触发。）：类型=布尔，默认=true
-- AntiInject Defend Success（中文：反注入防御成功）：类型=布尔，默认=true
-- AntiDebug Defend Success（中文：反调试防御成功）：类型=布尔，默认=true
-- Gatekeeper Deny（中文：看门人拒绝）：类型=布尔，默认=true
-
+- Gatekeeper Deny（看门人拒绝）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Gatekeeper Deny After Query（看门人在确认后拒绝）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- AntiClose Defend Success（反关闭防御成功）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- AntiTaskkill Defend Success（反击杀防御成功）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- AntiDebug Defend Success（反调试防御成功）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- AntiInject Defend Success（反注入防御成功）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- AutoMute Triggered（自动静音时是否触发。）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
 历史更新
 - 41. 为 AutoTotem 添加配置：
 - 5. 发现 SetWindowDisplayAffinity 和 图腾动画不兼容。受影响的模块有：AntiCapture, BlackCapture。经过修改，这两个模块在启用的时候如果 AutoTotem 启用，则会启用失败。

@@ -12,15 +12,14 @@ TrustedInstaller
 - 版本属性：普通可用
 
 介绍
-TrustedInstaller（受信任安装者）用于暂无描述。
-适合在日常管理与自动化场景中按需启用。
-建议先以管理员身份运行客户端。
-初次使用可优先调整：Exit After Run、Use NSudo。
-
+TrustedInstaller（受信任安装者）建议先按默认配置运行一段时间，确认对目标窗口/系统行为的影响后，再从关键开关项开始逐步微调。
 配置项
-- Exit After Run（中文：运行后退出）：类型=布尔，默认=true
-- Use NSudo（中文：使用 NSudo）：类型=布尔，默认=false
-
+- Use NSudo（使用 NSudo）
+ 类型：布尔；默认：false
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Exit After Run（运行后退出）
+ 类型：布尔；默认：true
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
 历史更新
 - 6. 为需要管理员、系统、TrustedInstaller 权限的模块设计了新的图标。
 - 7. 另设需要系统和 TrustedInstaller 权限的模块，将Config中的 Admin Modules Check Admin改为Check Module Privileges Before Turning On。

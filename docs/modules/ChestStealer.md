@@ -14,67 +14,158 @@ ChestStealer
 介绍
 ChestStealer（箱子小偷）用于暂无描述。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：HUD Target Slot Color、Notify Mode、Trigger Mode。
+初次使用可优先调整：Trigger Mode、HUD、HUD Font Size。
 
 配置项
-- Manual X Offset (Large Chest)（中文：手动X偏移 (大型箱子)）：类型=数值，默认=-240
-- Mouse Easing Movement（中文：鼠标缓动）：类型=枚举，默认="EaseInOutSine"
-  可选：Off（关闭）；Linear（线性）；EaseInOutSine（未收录）；EaseInOutExpo（未收录）；EaseInOutBack（未收录）
-- Manual Y Offset (Large Chest)（中文：手动Y偏移 (大型箱子)）：类型=数值，默认=-278
-- HUD Target Slot Color（中文：HUD 目标格子颜色）：类型=枚举，默认="Rainbow"
-  可选：Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Not Trigger While Moving（中文：移动中不触发）：类型=布尔，默认=true
-- Operate Delay Max (ms)（中文：操作延迟最大值 (毫秒)）：类型=数值，默认=250
-- Semi-Auto Y Offset Slots (Large Chest)（中文：半自动Y偏移格子数 (大型箱子)）：类型=数值，默认=4.60f
-- Manual Y Offset (Dispenser)（中文：手动Y偏移 (发射器)）：类型=数值，默认=-198
-- Trigger Hotkey Interrupt（中文：触发快捷键中断）：类型=枚举，默认="Close Container"
-  可选：Off（关闭）；Stop（停止）；Close Container（关闭容器）
-- Interrupt Key 2（中文：中断键 2）：类型=按键/复合，默认={{"Keybind", {VK_ESCAPE}}}
-- Minecraft Window Check（中文：Minecraft 窗口检查）：类型=布尔，默认=true
-- Notify Mode（中文：通知模式）：类型=枚举，默认="Notify"
-  可选：Off（关闭）；Notify（通知）；Chatter（弹幕）；Title（标题）
-- Slot Selector（中文：格子选择器）：类型=枚举，默认="No Empty Detect"
-  可选：All（所有）；No Empty Detect（非空检测）
-- Trigger Hotkey（中文：触发快捷键）：类型=按键/复合，默认={{"Keybind", {'B'}}}
-- Key Internal Gap 1 (ms)（中文：按键内部延迟1 (毫秒)）：类型=数值，默认=40L
-- Manual X Offset (Dispenser)（中文：手动X偏移 (发射器)）：类型=数值，默认=-78
-- Manual X Offset (Small Chest)（中文：手动X偏移 (小型箱子)）：类型=数值，默认=-240
-- Start Delay Min (ms)（中文：开始延迟最小值 (毫秒)）：类型=数值，默认=100
-- Semi-Auto Y Offset Slots (Small Chest)（中文：半自动Y偏移格子数 (小型箱子)）：类型=数值，默认=3.12f
-- Slot No Empty Single Channel Threshold（中文：Slot 否 Empty 单个 Channel Threshold）：类型=数值，默认=1000
-- Trigger Mode（中文：触发模式）：类型=枚举，默认="Hotkey"
-  可选：Instant（瞬间）；Right Mouse Button（鼠标右键）；Hotkey（快捷键）
-- Semi-Auto Y Offset Slots (Dispenser)（中文：半自动Y偏移格子数 (发射器)）：类型=数值，默认=4.10f
-- Auto Close Key（中文：自动合上按键）：类型=按键/复合，默认={{"Keybind", {'E'}}}
-- Item Operation（中文：物品操作）：类型=枚举，默认="Steal"
-  可选：Steal（偷窃）；Drop（丢弃）；Drag Steal（拖曳偷窃）
-- Slot Size（中文：格子大小）：类型=数值，默认=52
-- Key Internal Gap 2 (ms)（中文：按键内部延迟2 (毫秒)）：类型=数值，默认=40L
-- Manual X Offset (Hopper)（中文：手动X偏移 (漏斗)）：类型=数值，默认=-132
-- Slot Internal Random Offset（中文：格子内部随机偏移）：类型=布尔，默认=true
-- HUD Font Size（中文：HUD 字号）：类型=数值，默认=30
-- Async（中文：异步）：类型=布尔，默认=true
-- End Delay Max (ms)（中文：结束延迟最大值 (毫秒)）：类型=数值，默认=200
-- Interrupt Key 1（中文：中断键 1）：类型=按键/复合，默认={{"Keybind", {'E'}}}
-- HUD（中文：是否显示HUD。）：类型=枚举，默认="Off"
-  可选：Off（关闭）；Basic（基础）
-- Manual Y Offset (Small Chest)（中文：手动Y偏移 (小型箱子)）：类型=数值，默认=-198
-- Mouse Easing Duration (ms)（中文：鼠标缓动时长 (毫秒)）：类型=数值，默认=50L
-- Container Type（中文：容器类型）：类型=枚举，默认="Small Chest"
-  可选：Small Chest（小型箱子）；Large Chest（大型箱子）；Hopper（漏斗）；Dispenser（发射器）
-- Semi-Auto Y Offset Slots (Hopper)（中文：半自动Y偏移格子数 (漏斗)）：类型=数值，默认=2.00f
-- Auto Close（中文：自动合上）：类型=布尔，默认=true
-- End Delay Min (ms)（中文：结束延迟最小值 (毫秒)）：类型=数值，默认=100
-- Click Internal Gap (ms)（中文：点击内部延迟 (毫秒)）：类型=数值，默认=40L
-- Manual Y Offset (Hopper)（中文：手动Y偏移 (漏斗)）：类型=数值，默认=-141
-- Operate Delay Min (ms)（中文：操作延迟最小值 (毫秒)）：类型=数值，默认=150
-- Slot Order（中文：格子顺序）：类型=枚举，默认="Random"
-  可选：Snake（蛇形）；Reverse Snake（反转蛇形）；Sequential（顺序）；Reverse（颠倒）；Random（随机）
-- Start Delay Max (ms)（中文：开始延迟最大值 (毫秒)）：类型=数值，默认=200
-- Drop Items Key（中文：丢东西按键）：类型=按键/复合，默认={{"Keybind", {VK_LCONTROL, 'Q'}}}
-- Coordinate Mode（中文：坐标模式）：类型=枚举，默认="Semi-Auto"
-  可选：Semi-Auto（半自动）；Manual（手动）
-
+- Async（异步）
+ 类型：布尔；默认：true
+ 说明：用于控制是否异步处理。默认值 true 通常能减少主线程卡顿；若你遇到并发相关问题，可回退到更保守设置测试。
+- Trigger Mode（触发模式）
+ 类型：枚举；默认："Hotkey"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Hotkey ，确认稳定后再逐项切换比较效果。
+ 可选：Instant（瞬间）；Right Mouse Button（鼠标右键）；Hotkey（快捷键）
+- Trigger Hotkey（触发快捷键）
+ 类型：按键/复合；默认：{{"Keybind", {'B'}}}
+ 说明：用于设置快捷键触发。建议避免与系统或常用软件冲突，优先使用组合键提高可控性。
+- Trigger Hotkey Interrupt（触发快捷键中断）
+ 类型：枚举；默认："Close Container"
+ 说明：用于设置快捷键触发。建议避免与系统或常用软件冲突，优先使用组合键提高可控性。
+ 可选：Off（关闭）；Stop（停止）；Close Container（关闭容器）
+- Interrupt Key 1（中断键 1）
+ 类型：按键/复合；默认：{{"Keybind", {'E'}}}
+ 说明：该配置用于调整模块行为细节。建议先按默认值运行，确认需求后再逐步调整。
+- Interrupt Key 2（中断键 2）
+ 类型：按键/复合；默认：{{"Keybind", {VK_ESCAPE}}}
+ 说明：该配置用于调整模块行为细节。建议先按默认值运行，确认需求后再逐步调整。
+- HUD（是否显示HUD。）
+ 类型：枚举；默认："Off"
+ 说明：这是选项型配置。默认值 Off 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Off（关闭）；Basic（基础）
+- HUD Font Size（HUD 字号）
+ 类型：数值；默认：30
+ 说明：用于控制文本可读性。默认字号 30 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+- HUD Target Slot Color（HUD 目标格子颜色）
+ 类型：枚举；默认："Rainbow"
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+ 可选：见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Mouse Easing Movement（鼠标缓动）
+ 类型：枚举；默认："EaseInOutSine"
+ 说明：这是选项型配置。默认值 EaseInOutSine 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Off（关闭）；Linear（线性）；EaseInOutSine（未收录）；EaseInOutExpo（未收录）；EaseInOutBack（未收录）
+- Mouse Easing Duration (ms)（鼠标缓动时长 (毫秒)）
+ 类型：数值；默认：50L
+ 说明：用于控制检测/刷新/动画节奏。默认值 50L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Notify Mode（通知模式）
+ 类型：枚举；默认："Notify"
+ 说明：用于选择结果反馈方式。默认值 Notify 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+ 可选：Off（关闭）；Notify（通知）；Chatter（弹幕）；Title（标题）
+- Slot Selector（格子选择器）
+ 类型：枚举；默认："No Empty Detect"
+ 说明：这是选项型配置。默认值 No Empty Detect 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：All（所有）；No Empty Detect（非空检测）
+- Slot No Empty Single Channel Threshold（Slot 否 Empty 单个 Channel Threshold）
+ 类型：数值；默认：1000
+ 说明：这是数值型配置。默认值 1000 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Slot Order（格子顺序）
+ 类型：枚举；默认："Random"
+ 说明：这是选项型配置。默认值 Random 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Snake（蛇形）；Reverse Snake（反转蛇形）；Sequential（顺序）；Reverse（颠倒）；Random（随机）
+- Item Operation（物品操作）
+ 类型：枚举；默认："Steal"
+ 说明：这是选项型配置。默认值 Steal 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Steal（偷窃）；Drop（丢弃）；Drag Steal（拖曳偷窃）
+- Coordinate Mode（坐标模式）
+ 类型：枚举；默认："Semi-Auto"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Semi-Auto ，确认稳定后再逐项切换比较效果。
+ 可选：Semi-Auto（半自动）；Manual（手动）
+- Container Type（容器类型）
+ 类型：枚举；默认："Small Chest"
+ 说明：这是选项型配置。默认值 Small Chest 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Small Chest（小型箱子）；Large Chest（大型箱子）；Hopper（漏斗）；Dispenser（发射器）
+- Slot Size（格子大小）
+ 类型：数值；默认：52
+ 说明：这是数值型配置。默认值 52 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Semi-Auto Y Offset Slots (Small Chest)（半自动Y偏移格子数 (小型箱子)）
+ 类型：数值；默认：3.12f
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Semi-Auto Y Offset Slots (Large Chest)（半自动Y偏移格子数 (大型箱子)）
+ 类型：数值；默认：4.60f
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Semi-Auto Y Offset Slots (Hopper)（半自动Y偏移格子数 (漏斗)）
+ 类型：数值；默认：2.00f
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Semi-Auto Y Offset Slots (Dispenser)（半自动Y偏移格子数 (发射器)）
+ 类型：数值；默认：4.10f
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Manual X Offset (Small Chest)（手动X偏移 (小型箱子)）
+ 类型：数值；默认：-240
+ 说明：这是数值型配置。默认值 -240 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Manual X Offset (Large Chest)（手动X偏移 (大型箱子)）
+ 类型：数值；默认：-240
+ 说明：这是数值型配置。默认值 -240 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Manual X Offset (Hopper)（手动X偏移 (漏斗)）
+ 类型：数值；默认：-132
+ 说明：这是数值型配置。默认值 -132 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Manual X Offset (Dispenser)（手动X偏移 (发射器)）
+ 类型：数值；默认：-78
+ 说明：这是数值型配置。默认值 -78 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Manual Y Offset (Small Chest)（手动Y偏移 (小型箱子)）
+ 类型：数值；默认：-198
+ 说明：这是数值型配置。默认值 -198 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Manual Y Offset (Large Chest)（手动Y偏移 (大型箱子)）
+ 类型：数值；默认：-278
+ 说明：这是数值型配置。默认值 -278 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Manual Y Offset (Hopper)（手动Y偏移 (漏斗)）
+ 类型：数值；默认：-141
+ 说明：这是数值型配置。默认值 -141 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Manual Y Offset (Dispenser)（手动Y偏移 (发射器)）
+ 类型：数值；默认：-198
+ 说明：这是数值型配置。默认值 -198 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Slot Internal Random Offset（格子内部随机偏移）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Click Internal Gap (ms)（点击内部延迟 (毫秒)）
+ 类型：数值；默认：40L
+ 说明：这是数值型配置。默认值 40L 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Key Internal Gap 1 (ms)（按键内部延迟1 (毫秒)）
+ 类型：数值；默认：40L
+ 说明：这是数值型配置。默认值 40L 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Key Internal Gap 2 (ms)（按键内部延迟2 (毫秒)）
+ 类型：数值；默认：40L
+ 说明：这是数值型配置。默认值 40L 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Start Delay Min (ms)（开始延迟最小值 (毫秒)）
+ 类型：数值；默认：100
+ 说明：这是数值型配置。默认值 100 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Start Delay Max (ms)（开始延迟最大值 (毫秒)）
+ 类型：数值；默认：200
+ 说明：这是数值型配置。默认值 200 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Operate Delay Min (ms)（操作延迟最小值 (毫秒)）
+ 类型：数值；默认：150
+ 说明：这是数值型配置。默认值 150 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Operate Delay Max (ms)（操作延迟最大值 (毫秒)）
+ 类型：数值；默认：250
+ 说明：这是数值型配置。默认值 250 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- End Delay Min (ms)（结束延迟最小值 (毫秒)）
+ 类型：数值；默认：100
+ 说明：这是数值型配置。默认值 100 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- End Delay Max (ms)（结束延迟最大值 (毫秒)）
+ 类型：数值；默认：200
+ 说明：这是数值型配置。默认值 200 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Auto Close（自动合上）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Not Trigger While Moving（移动中不触发）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Minecraft Window Check（Minecraft 窗口检查）
+ 类型：布尔；默认：true
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- Auto Close Key（自动合上按键）
+ 类型：按键/复合；默认：{{"Keybind", {'E'}}}
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Drop Items Key（丢东西按键）
+ 类型：按键/复合；默认：{{"Keybind", {VK_LCONTROL, 'Q'}}}
+ 说明：该配置用于调整模块行为细节。建议先按默认值运行，确认需求后再逐步调整。
 历史更新
 - 28. 添加模块：ChestStealer，这里不展开描述。
 

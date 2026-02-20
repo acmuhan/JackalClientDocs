@@ -18,9 +18,10 @@ CrashKey（快捷蓝屏）用于开启蓝屏快捷键（按两次 右Ctrl + Scro
 初次使用可优先调整：Keyboard Device。
 
 配置项
-- Keyboard Device（中文：键盘设备）：类型=枚举，默认="All"
-  可选：All（所有）；PS/2（未收录）；USB（未收录）；Hyper-V（未收录）
-
+- Keyboard Device（键盘设备）
+ 类型：枚举；默认："All"
+ 说明：这是选项型配置。默认值 All 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：All（所有）；PS/2（未收录）；USB（未收录）；Hyper-V（未收录）
 历史更新
 - 8. 将 Crash Key 从 Combat 改到 Registry 下。
 - 15. 添加模块：CrashKey，为特定键盘设备添加一个系统支持的蓝屏快捷键（按两次 RCtrl + ScrollLock）

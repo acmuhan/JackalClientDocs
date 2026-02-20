@@ -17,36 +17,81 @@ LetterGraph（字母图）用于呈现字母数量的图表。
 初次使用可优先调整：Bar Width Fill Mode。
 
 配置项
-- Bar Width Fill Mode（中文：柱子宽度使用填充模式）：类型=布尔，默认=false
-- X Offset（中文：横坐标偏移）：类型=数值，默认=0.0f
-- Sort By（中文：排序依据）：类型=枚举，默认="Name"
-  可选：Name（名称）；Code（未收录）；Count（数目）
-- Bar Direction（中文：柱子方向）：类型=枚举，默认="Right"
-  可选：Right（右侧）；Up（向上）；Left（左侧）；Down（向下）
-- Easing（中文：缓动）：类型=布尔，默认=true
-- Stat Lyrics（中文：统计歌词）：类型=布尔，默认=true
-- Bar Gap（中文：柱子间隙）：类型=数值，默认=10
-- Bar Color 2（中文：柱子颜色 2）：类型=枚举，默认="Red"
-  可选：Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Value Color（中文：值颜色）：类型=枚举，默认="Pink"
-  可选：Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Base Y Rate（中文：基础纵坐标比例）：类型=数值，默认=0.5f
-- Key Max Value（中文：键最大值）：类型=数值，默认=1024
-- Bar Width（中文：柱宽度）：类型=数值，默认=50
-- Stat Keys（中文：统计按键）：类型=布尔，默认=true
-- Key Color（中文：键颜色）：类型=枚举，默认="Colorful"
-  可选：Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Easing Speed (0~1)（中文：缓动速率 (0~1)）：类型=数值，默认=0.2f
-- Y Offset（中文：纵坐标偏移）：类型=数值，默认=0.0f
-- Bar Color 1（中文：柱子颜色 1）：类型=枚举，默认="Green"
-  可选：Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Text Opacity (0~1)（中文：文本不透明度 (0~1)）：类型=数值，默认=0.7f
-- Text Font Size（中文：文本字号）：类型=数值，默认=50
-- Adaptive Height Scaling（中文：适应性高度缩放）：类型=布尔，默认=true
-- Bar Opacity (0~1)（中文：柱不透明度 (0~1)）：类型=数值，默认=0.3f
-- Bar Max Height（中文：柱最大高度）：类型=数值，默认=500
-- Base X Rate（中文：基础横坐标比例）：类型=数值，默认=0.2f
-
+- Sort By（排序依据）
+ 类型：枚举；默认："Name"
+ 说明：这是选项型配置。默认值 Name 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Name（名称）；Code（未收录）；Count（数目）
+- Adaptive Height Scaling（适应性高度缩放）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Bar Max Height（柱最大高度）
+ 类型：数值；默认：500
+ 说明：这是数值型配置。默认值 500 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Bar Opacity (0~1)（柱不透明度 (0~1)）
+ 类型：数值；默认：0.3f
+ 说明：用于控制透明度。默认值 0.3f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Bar Width Fill Mode（柱子宽度使用填充模式）
+ 类型：布尔；默认：false
+ 说明：这是该模块的核心行为开关。默认值 false 通常更稳，建议先验证默认策略再尝试其他模式。
+- Bar Width（柱宽度）
+ 类型：数值；默认：50
+ 说明：这是数值型配置。默认值 50 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Bar Gap（柱子间隙）
+ 类型：数值；默认：10
+ 说明：这是数值型配置。默认值 10 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Key Max Value（键最大值）
+ 类型：数值；默认：1024
+ 说明：这是数值型配置。默认值 1024 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Text Opacity (0~1)（文本不透明度 (0~1)）
+ 类型：数值；默认：0.7f
+ 说明：用于控制透明度。默认值 0.7f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Text Font Size（文本字号）
+ 类型：数值；默认：50
+ 说明：用于控制文本可读性。默认字号 50 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+- Easing（缓动）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Easing Speed (0~1)（缓动速率 (0~1)）
+ 类型：数值；默认：0.2f
+ 说明：这是数值型配置。默认值 0.2f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Bar Direction（柱子方向）
+ 类型：枚举；默认："Right"
+ 说明：这是选项型配置。默认值 Right 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Right（右侧）；Up（向上）；Left（左侧）；Down（向下）
+- Bar Color 1（柱子颜色 1）
+ 类型：枚举；默认："Green"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Bar Color 2（柱子颜色 2）
+ 类型：枚举；默认："Red"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Key Color（键颜色）
+ 类型：枚举；默认："Colorful"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Value Color（值颜色）
+ 类型：枚举；默认："Pink"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Stat Lyrics（统计歌词）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Stat Keys（统计按键）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Base X Rate（基础横坐标比例）
+ 类型：数值；默认：0.2f
+ 说明：用于控制界面元素在屏幕中的相对位置。默认值 0.2f 一般是作者调过的稳定布局；建议每次只改一个轴，避免元素跑出可视区域。
+- Base Y Rate（基础纵坐标比例）
+ 类型：数值；默认：0.5f
+ 说明：用于控制界面元素在屏幕中的相对位置。默认值 0.5f 一般是作者调过的稳定布局；建议每次只改一个轴，避免元素跑出可视区域。
+- X Offset（横坐标偏移）
+ 类型：数值；默认：0.0f
+ 说明：这是数值型配置。默认值 0.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Y Offset（纵坐标偏移）
+ 类型：数值；默认：0.0f
+ 说明：这是数值型配置。默认值 0.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
 历史更新
 - 23. 为 Download HUD, Chat Bar, Clipboard ESP, Security ESP, Letter Graph 添加 HUD Editor 拖曳。
 - 29. 修复 LetterGraph 中的配置项 Text Opacity (0~1) 无效的问题。

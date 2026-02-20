@@ -14,16 +14,25 @@ Tasklist
 介绍
 Tasklist（进程列表）用于暂无描述。
 适合进程观测、控制与排障场景。
-初次使用可优先调整：Style。
+初次使用可优先调整：Async、Auto Console、Use Record。
 
 配置项
-- Use Record（中文：使用记录）：类型=布尔，默认=false
-- Auto Console（中文：自动启用控制台）：类型=布尔，默认=true
-- Async（中文：异步）：类型=布尔，默认=true
-- Style（中文：风格）：类型=枚举，默认="Normal"
-  可选：Vanilla（原版）；Normal（普通）；Pathes（未收录）；Command Lines（命令行）
-- Verify Signature（中文：验证签名）：类型=布尔，默认=false
-
+- Async（异步）
+ 类型：布尔；默认：true
+ 说明：用于控制是否异步处理。默认值 true 通常能减少主线程卡顿；若你遇到并发相关问题，可回退到更保守设置测试。
+- Auto Console（自动启用控制台）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Use Record（使用记录）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Verify Signature（验证签名）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Style（风格）
+ 类型：枚举；默认："Normal"
+ 说明：这是选项型配置。默认值 Normal 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Vanilla（原版）；Normal（普通）；Pathes（未收录）；Command Lines（命令行）
 历史更新
 - 42. 为 Tasklist 模块的 Style 添加配置项：Pathes
 - 43. 为 Tasklist 添加配置项：

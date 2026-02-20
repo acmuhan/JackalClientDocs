@@ -12,25 +12,43 @@ TargetESP
 - 版本属性：普通可用
 
 介绍
-TargetESP（目标透视）用于标记目标窗口的位置。
-适合窗口管理、可视化监控与交互增强场景。
-初次使用可优先调整：Target。
-
+TargetESP（目标透视）建议先按默认配置运行一段时间，确认对目标窗口/系统行为的影响后，再从关键开关项开始逐步微调。
 配置项
-- Easing Speed (0~1)（中文：缓动速率 (0~1)）：类型=数值，默认=0.05f
-- Opacity (0~1)（中文：不透明度 (0~1））：类型=数值，默认=0.9f
-- Rotation Speed（中文：旋转速度）：类型=数值，默认=1.5f
-- Show Temporarily（中文：临时显示）：类型=布尔，默认=true
-- Show Duration (ms)（中文：显示时长（毫秒））：类型=数值，默认=5000L
-- Target（中文：目标）：类型=枚举，默认="PointAt"
-  可选：Target HUD（目标 是否显示HUD。）；Foreground（前端）；PointAt（指向）；it (Pronoun)（代词 it）
-- Scale（中文：比例）：类型=数值，默认=1.0f
-- Fade In Time (ms)（中文：淡入时长 (毫秒)）：类型=数值，默认=1200L
-- Fade Out Time (ms)（中文：淡出时长 (毫秒)）：类型=数值，默认=5000L
-- Rotation Amplitude（中文：最大旋转角）：类型=数值，默认=150.0f
-- Color（中文：颜色）：类型=枚举，默认="White"
-  可选：Flow（流动）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-
+- Target（目标）
+ 类型：枚举；默认："PointAt"
+ 说明：用于指定作用目标。建议先从单一目标验证，确认稳定后再扩大范围。
+ 可选：Target HUD（目标 是否显示HUD。）；Foreground（前端）；PointAt（指向）；it (Pronoun)（代词 it）
+- Rotation Speed（旋转速度）
+ 类型：数值；默认：1.5f
+ 说明：该值控制强度/时序。建议以默认值为中心小步调整，避免一次跨度过大。
+- Rotation Amplitude（最大旋转角）
+ 类型：数值；默认：150.0f
+ 说明：该值控制强度/时序。建议以默认值为中心小步调整，避免一次跨度过大。
+- Easing Speed (0~1)（缓动速率 (0~1)）
+ 类型：数值；默认：0.05f
+ 说明：该值控制强度/时序。建议以默认值为中心小步调整，避免一次跨度过大。
+- Scale（比例）
+ 类型：数值；默认：1.0f
+ 说明：该值控制强度/时序。建议以默认值为中心小步调整，避免一次跨度过大。
+- Opacity (0~1)（不透明度 (0~1））
+ 类型：数值；默认：0.9f
+ 说明：用于控制透明度。数值越高越清晰但遮挡更明显。
+- Fade In Time (ms)（淡入时长 (毫秒)）
+ 类型：数值；默认：1200L
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Fade Out Time (ms)（淡出时长 (毫秒)）
+ 类型：数值；默认：5000L
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Show Temporarily（临时显示）
+ 类型：布尔；默认：true
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Show Duration (ms)（显示时长（毫秒））
+ 类型：数值；默认：5000L
+ 说明：该值控制强度/时序。建议以默认值为中心小步调整，避免一次跨度过大。
+- Color（颜色）
+ 类型：枚举；默认："White"
+ 说明：用于控制该元素颜色。建议优先保证与背景有足够对比度，再考虑风格化配色。
+ 可选：Flow（流动）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
 历史更新
 - 7. 添加模块：Target ESP
 

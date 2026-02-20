@@ -14,14 +14,21 @@ Hidden
 介绍
 Hidden（隐藏至托盘）用于隐藏主窗口，最小化至托盘。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Disable Tray Tip、Auto Hide Client When GUI Closed、Hide Console。
+初次使用可优先调整：Hide Console、Auto Hide Client When GUI Closed、Disable Client Keybind When Hidden。
 
 配置项
-- Disable Tray Tip（中文：禁用托盘提示）：类型=布尔，默认=false
-- Auto Hide Client When GUI Closed（中文：GUI 关闭时自动隐藏客户端）：类型=布尔，默认=false
-- Hide Console（中文：隐藏控制台）：类型=布尔，默认=true
-- Disable Client Keybind When Hidden（中文：隐藏时禁用客户端按键）：类型=布尔，默认=true
-
+- Hide Console（隐藏控制台）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Auto Hide Client When GUI Closed（GUI 关闭时自动隐藏客户端）
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Disable Client Keybind When Hidden（隐藏时禁用客户端按键）
+ 类型：布尔；默认：true
+ 说明：用于设置快捷键触发。建议避免与系统或常用软件冲突，优先使用组合键提高可控性。
+- Disable Tray Tip（禁用托盘提示）
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
 历史更新
 - 40. 为 Hidden 添加配置：
 - 24. 为 Hidden 模块添加配置：

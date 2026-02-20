@@ -15,55 +15,118 @@ CompileESP
 介绍
 CompileESP（编译透视）用于监控编译器进程并通知编译开始/结束。
 适合进程观测、控制与排障场景。
-初次使用可优先调整：Compile Start Notify Mode、HUD Background Opacity (0~1)、HUD Background Color。
+初次使用可优先调整：HUD、Hide HUD When Menu On、HUD Main Text。
 
 配置项
-- Show PID（中文：显示进程ID）：类型=布尔，默认=true
-- Compiler Process Blacklist Enabled（中文：编译器进程黑名单是否启用）：类型=布尔，默认=false
-- Compile Start Notify Mode（中文：编译开始通知模式）：类型=枚举，默认="Notify"
-  可选：Off（关闭）；Notify（通知）；Chatter（弹幕）；Title（标题）；Island（岛）；Console Output（控制台输出）；WinToast（系统通知）；Speak（讲述）；Real Chatter（真弹幕）
-- HUD Background Opacity (0~1)（中文：HUD 背景不透明度 (0~1)）：类型=数值，默认=0.35f
-- HUD Background Color（中文：HUD 背景颜色）：类型=枚举，默认="Black"
-  可选：Flow（流动）；Transparent（透明）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- HUD Background Roundness（中文：HUD背景圆角度）：类型=数值，默认=0.3f
-- HUD Loading Color 1（中文：HUD加载动画颜色1）：类型=枚举，默认="Aqua"
-  可选：Flow（流动）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- HUD Subtext Color（中文：HUD副文本颜色）：类型=枚举，默认="Aqua"
-  可选：Flow（流动）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- HUD Main Text（中文：HUD主文本）：类型=文本，默认="Compiling..."
-- HUD Y Rate（中文：HUD 纵坐标比例）：类型=数值，默认=0.56f
-- HUD Fade In Duration (ms)（中文：HUD淡入时长 (毫秒)）：类型=数值，默认=2000L
-- HUD Text Font Size（中文：HUD 文本字号）：类型=数值，默认=24
-- HUD Text Gap（中文：HUD文本间隔）：类型=数值，默认=8
-- Compiler Process Blacklist (Regex Sep With Semicolon)（中文：编译器进程黑名单（用分号分隔的正则表达式））：类型=文本，默认=""
-- Show Duration（中文：显示耗时）：类型=布尔，默认=true
-- HUD Subtext（中文：HUD副文本）：类型=枚举，默认="Type + Duration"
-  可选：Off（关闭）；Type（类型）；Tool（工具）；Duration（时长）；Type + Duration（类型 + 时长）；Type + Tool + Duration（类型 + 工具 + 时长）
-- HUD Background（中文：HUD背景）：类型=布尔，默认=true
-- HUD Padding（中文：HUD内边距）：类型=数值，默认=14
-- Compiler Process Whitelist (Regex Sep With Semicolon)（中文：编译器进程扩展列表（用分号分隔的正则表达式））：类型=文本，默认=""
-- Arraylist Extra Info（中文：模块列表额外信息）：类型=枚举，默认="Type"
-  可选：Off（关闭）；Type（类型）；Tool（工具）；Target File（目标文件）；Type + File（类型 + 文件）
-- Compile Finish Notify Mode（中文：编译结束通知模式）：类型=枚举，默认="Notify"
-  可选：Off（关闭）；Notify（通知）；Chatter（弹幕）；Title（标题）；Island（岛）；Console Output（控制台输出）；WinToast（系统通知）；Speak（讲述）；Real Chatter（真弹幕）
-- HUD Extra Height（中文：HUD额外高度）：类型=数值，默认=12
-- HUD Loading Thickness（中文：HUD加载动画粗细）：类型=数值，默认=5.0f
-- HUD（中文：是否显示HUD。）：类型=布尔，默认=true
-- Check Cooldown (ms)（中文：检查冷却 (毫秒)）：类型=数值，默认=300L
-- HUD Show Task Count（中文：HUD显示任务数量）：类型=布尔，默认=true
-- HUD Loading Color 2（中文：HUD加载动画颜色2）：类型=枚举，默认="Sky Blue"
-  可选：Flow（流动）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- HUD Text Line Gap（中文：HUD文本行间距）：类型=数值，默认=3
-- HUD Loading Radius（中文：HUD加载动画半径）：类型=数值，默认=18.0f
-- HUD Loading Period (ms)（中文：HUD加载动画周期 (毫秒)）：类型=数值，默认=1800L
-- Hide HUD When Menu On（中文：打开菜单时隐藏HUD）：类型=布尔，默认=false
-- Show Command Line（中文：显示命令行）：类型=布尔，默认=false
-- HUD Opacity (0~1)（中文：HUD 不透明度）：类型=数值，默认=0.92f
-- HUD Text Color（中文：HUD文本颜色）：类型=枚举，默认="White"
-  可选：Flow（流动）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- HUD Fade Out Duration (ms)（中文：HUD淡出时长 (毫秒)）：类型=数值，默认=1000L
-- HUD X Rate（中文：HUD 横坐标比例）：类型=数值，默认=0.5f
-
+- Show PID（显示进程ID）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show Command Line（显示命令行）
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show Duration（显示耗时）
+ 类型：布尔；默认：true
+ 说明：用于控制检测/刷新/动画节奏。默认值 true 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Arraylist Extra Info（模块列表额外信息）
+ 类型：枚举；默认："Type"
+ 说明：这是选项型配置。默认值 Type 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Off（关闭）；Type（类型）；Tool（工具）；Target File（目标文件）；Type File（类型 文件）
+- HUD（是否显示HUD。）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Hide HUD When Menu On（打开菜单时隐藏HUD）
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- HUD Main Text（HUD主文本）
+ 类型：文本；默认："Compiling..."
+ 说明：该配置用于调整模块行为细节。建议先按默认值运行，确认需求后再逐步调整。
+- HUD Subtext（HUD副文本）
+ 类型：枚举；默认："Type + Duration"
+ 说明：这是选项型配置。默认值 Type Duration + 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Off（关闭）；Type（类型）；Tool（工具）；Duration（时长）；Type Duration（类型 时长）；Type Tool Duration（类型 工具 时长）
+- HUD Show Task Count（HUD显示任务数量）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- HUD X Rate（HUD 横坐标比例）
+ 类型：数值；默认：0.5f
+ 说明：用于控制界面元素在屏幕中的相对位置。默认值 0.5f 一般是作者调过的稳定布局；建议每次只改一个轴，避免元素跑出可视区域。
+- HUD Y Rate（HUD 纵坐标比例）
+ 类型：数值；默认：0.56f
+ 说明：用于控制界面元素在屏幕中的相对位置。默认值 0.56f 一般是作者调过的稳定布局；建议每次只改一个轴，避免元素跑出可视区域。
+- HUD Text Font Size（HUD 文本字号）
+ 类型：数值；默认：24
+ 说明：用于控制文本可读性。默认字号 24 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+- HUD Text Gap（HUD文本间隔）
+ 类型：数值；默认：8
+ 说明：用于细调显示样式和间距。默认值 8 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- HUD Text Line Gap（HUD文本行间距）
+ 类型：数值；默认：3
+ 说明：用于细调显示样式和间距。默认值 3 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- HUD Padding（HUD内边距）
+ 类型：数值；默认：14
+ 说明：用于细调显示样式和间距。默认值 14 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- HUD Extra Height（HUD额外高度）
+ 类型：数值；默认：12
+ 说明：用于细调显示样式和间距。默认值 12 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- HUD Opacity (0~1)（HUD 不透明度）
+ 类型：数值；默认：0.92f
+ 说明：用于控制透明度。默认值 0.92f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- HUD Text Color（HUD文本颜色）
+ 类型：枚举；默认："White"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：Flow（流动）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- HUD Subtext Color（HUD副文本颜色）
+ 类型：枚举；默认："Aqua"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：Flow（流动）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- HUD Background（HUD背景）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- HUD Background Color（HUD 背景颜色）
+ 类型：枚举；默认："Black"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：Flow（流动）；Transparent（透明）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- HUD Background Opacity (0~1)（HUD 背景不透明度 (0~1)）
+ 类型：数值；默认：0.35f
+ 说明：用于控制透明度。默认值 0.35f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- HUD Background Roundness（HUD背景圆角度）
+ 类型：数值；默认：0.3f
+ 说明：用于细调显示样式和间距。默认值 0.3f 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- HUD Loading Radius（HUD加载动画半径）
+ 类型：数值；默认：18.0f
+ 说明：用于细调显示样式和间距。默认值 18.0f 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- HUD Loading Thickness（HUD加载动画粗细）
+ 类型：数值；默认：5.0f
+ 说明：用于细调显示样式和间距。默认值 5.0f 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- HUD Loading Period (ms)（HUD加载动画周期 (毫秒)）
+ 类型：数值；默认：1800L
+ 说明：用于控制检测/刷新/动画节奏。默认值 1800L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- HUD Loading Color 1（HUD加载动画颜色1）
+ 类型：枚举；默认："Aqua"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：Flow（流动）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- HUD Loading Color 2（HUD加载动画颜色2）
+ 类型：枚举；默认："Sky Blue"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：Flow（流动）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- HUD Fade In Duration (ms)（HUD淡入时长 (毫秒)）
+ 类型：数值；默认：2000L
+ 说明：用于控制检测/刷新/动画节奏。默认值 2000L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- HUD Fade Out Duration (ms)（HUD淡出时长 (毫秒)）
+ 类型：数值；默认：1000L
+ 说明：用于控制检测/刷新/动画节奏。默认值 1000L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Compiler Process Blacklist Enabled（编译器进程黑名单是否启用）
+ 类型：布尔；默认：false
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- Compiler Process Blacklist (Regex Sep With Semicolon)（编译器进程黑名单（用分号分隔的正则表达式））
+ 类型：文本；默认：""
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- Compiler Process Whitelist (Regex Sep With Semicolon)（编译器进程扩展列表（用分号分隔的正则表达式））
+ 类型：文本；默认：""
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- Check Cooldown (ms)（检查冷却 (毫秒)）
+ 类型：数值；默认：300L
+ 说明：用于控制检测/刷新/动画节奏。默认值 300L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
 历史更新
 - 34. 【PRO】添加 CompileESP 模块：监控常见编译器进程（Java / C / C++，支持 MSVC/GCC/Clang），在编译开始和结束时发送通知。
 - 35. 【PRO】为 CompileESP 添加可配置项：开始/结束通知模式、PID/命令行/耗时显示、编译器进程白名单/黑名单、检查间隔。以及各种HUD配置项。

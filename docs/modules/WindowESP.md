@@ -12,20 +12,30 @@ WindowESP
 - 版本属性：普通可用
 
 介绍
-WindowESP（窗口透视）用于暂无描述。
-适合窗口管理、可视化监控与交互增强场景。
-初次使用可优先调整：Hide HUD When Menu On。
-
+WindowESP（窗口透视）用于给候选窗口绘制边框，方便快速定位与观察窗口分布。建议先开启排除项减少噪声，再调整线宽、颜色与透明度。
 配置项
-- Box Color（中文：方框颜色）：类型=枚举，默认="Rainbow"
-  可选：Flow（流动）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Hide HUD When Menu On（中文：打开菜单时隐藏HUD）：类型=布尔，默认=true
-- Exclude Foreground（中文：排除前端）：类型=布尔，默认=true
-- Box Line Width（中文：框线宽）：类型=数值，默认=3.0f
-- Exclude Invisible（中文：排除不可见）：类型=布尔，默认=true
-- Box Alpha（中文：框不透明度）：类型=数值，默认=0.5f
-- Exclude Pointed（中文：排除鼠标指向）：类型=布尔，默认=true
-
+- Box Color（方框颜色）
+ 类型：枚举；默认："Rainbow"
+ 说明：窗口框主颜色。复杂背景下建议选择高对比纯色。
+ 可选：Flow（流动）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Box Line Width（框线宽）
+ 类型：数值；默认：3.0f
+ 说明：框线粗细。高分辨率可略增，低分辨率建议偏小。
+- Box Alpha（框不透明度）
+ 类型：数值；默认：0.5f
+ 说明：框线透明度，兼顾存在感与遮挡。
+- Exclude Invisible（排除不可见）
+ 类型：布尔；默认：true
+ 说明：忽略不可见窗口，减少无意义框体。一般建议保持开启。
+- Exclude Foreground（排除前端）
+ 类型：布尔；默认：true
+ 说明：排除当前前台窗口，避免和主视角内容重叠。
+- Exclude Pointed（排除鼠标指向）
+ 类型：布尔；默认：true
+ 说明：排除鼠标指向窗口，减少指针附近遮挡。
+- Hide HUD When Menu On（打开菜单时隐藏HUD）
+ 类型：布尔；默认：true
+ 说明：菜单打开时暂时不绘制框体，便于调参。
 历史更新
 - 14. WindowESP 的顶层窗口更新现已和 Tracers 共用，更新冷却在 Config 设置
 

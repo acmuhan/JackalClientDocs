@@ -12,21 +12,29 @@ SetPassword
 - 版本属性：普通可用
 
 介绍
-SetPassword（篡改密码）用于清除或设置计算机密码。（需要管理员）。
-适合在日常管理与自动化场景中按需启用。
-建议先以管理员身份运行客户端。
-初次使用可优先调整：Close Menu、Or Custom Password:、Or Custom Username:。
-该模块被标记为恶意高风险，请在隔离环境下验证，避免对生产系统直接操作。
-
+SetPassword（篡改密码）建议先按默认配置运行一段时间，确认对目标窗口/系统行为的影响后，再从关键开关项开始逐步微调。
 配置项
-- Close Menu（中文：关闭菜单）：类型=布尔，默认=true
-- Or Custom Password:（中文：或者自定义密码:）：类型=文本，默认="123456"
-- Or Custom Username:（中文：或者自定义用户名:）：类型=文本，默认="Administrator"
-- Async（中文：异步）：类型=布尔，默认=true
-- Just Clear（中文：清除就行）：类型=布尔，默认=true
-- Auto Fill Username（中文：自动填写用户名）：类型=布尔，默认=true
-- Async Single Instance（中文：异步单例）：类型=布尔，默认=true
-
+- Async（异步）
+ 类型：布尔；默认：true
+ 说明：启用异步处理可降低主线程卡顿；如需稳定复现实验流程可暂时关闭。
+- Async Single Instance（异步单例）
+ 类型：布尔；默认：true
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Just Clear（清除就行）
+ 类型：布尔；默认：true
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Or Custom Password:（或者自定义密码:）
+ 类型：文本；默认："123456"
+ 说明：该项与口令/口令策略有关。建议先在测试环境验证，避免影响正常登录流程。
+- Auto Fill Username（自动填写用户名）
+ 类型：布尔；默认：true
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Or Custom Username:（或者自定义用户名:）
+ 类型：文本；默认："Administrator"
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Close Menu（关闭菜单）
+ 类型：布尔；默认：true
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
 历史更新
 无（HISTORY 中暂无明确记录）
 

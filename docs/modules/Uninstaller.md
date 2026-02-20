@@ -15,19 +15,28 @@ Uninstaller
 Uninstaller（一键卸载）用于自动帮你卸载一些软件。
 适合在日常管理与自动化场景中按需启用。
 建议先以管理员身份运行客户端。
-初次使用可优先调整：Uninstall Start Method、Mode、Notify Steps。
+初次使用可优先调整：Mode、Uninstall Start Method、Notify Steps。
 该模块被标记为恶意高风险，请在隔离环境下验证，避免对生产系统直接操作。
 
 配置项
-- Uninstall Start Method（中文：卸载启动方式）：类型=枚举，默认="Injection"
-  可选：Execute（执行）；Parent Spoof（父进程欺骗）；Cmd Legit（合法命令提示符）；Explorer Legit（合法资源管理器）；Injection（注入）
-- Mode（中文：模式）：类型=枚举，默认="Auto"
-  可选：Auto（自动）；Manual（手动）
-- Transparent Window（中文：透明窗口）：类型=布尔，默认=false
-- Notify Steps（中文：通知步骤）：类型=布尔，默认=true
-- Victim（中文：受害者）：类型=枚举，默认="None"
-  可选：None（无）；360（数字）；Huorong（火绒）
-
+- Victim（受害者）
+ 类型：枚举；默认："None"
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+ 可选：None（无）；360（数字）；Huorong（火绒）
+- Mode（模式）
+ 类型：枚举；默认："Auto"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Auto ，确认稳定后再逐项切换比较效果。
+ 可选：Auto（自动）；Manual（手动）
+- Uninstall Start Method（卸载启动方式）
+ 类型：枚举；默认："Injection"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Injection ，确认稳定后再逐项切换比较效果。
+ 可选：Execute（执行）；Parent Spoof（父进程欺骗）；Cmd Legit（合法命令提示符）；Explorer Legit（合法资源管理器）；Injection（注入）
+- Transparent Window（透明窗口）
+ 类型：布尔；默认：false
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- Notify Steps（通知步骤）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
 历史更新
 - 12. 略微调整 Uninstaller 模块对数字的卸载的某几个坐标。
 - 15. 为 Uninstaller 模块对360的卸载添加了360极速版。会自动判断。

@@ -15,13 +15,18 @@ CloudMusic
 介绍
 CloudMusic（云音乐）用于一个简单的网易云音乐的挂钩。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Delete DLL When Disabled、Start App When Enabled、Custom Directory。
+初次使用可优先调整：Start App When Enabled、Delete DLL When Disabled、Custom Directory。
 
 配置项
-- Delete DLL When Disabled（中文：禁用时删除DLL）：类型=布尔，默认=true
-- Start App When Enabled（中文：启用时打开云音乐）：类型=布尔，默认=true
-- Custom Directory（中文：指定目录）：类型=文本，默认=""
-
+- Start App When Enabled（启用时打开云音乐）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Delete DLL When Disabled（禁用时删除DLL）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Custom Directory（指定目录）
+ 类型：文本；默认：""
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
 历史更新
 - 11. 修复 MusicOverlay 模式为 Hook 时开启后再开启网易云时不能立即打开 Cloud Music 模块的问题。
 - 67. 为 Cloud Music 添加配置项：

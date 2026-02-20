@@ -14,28 +14,59 @@ Shaders
 介绍
 Shaders（着色器）用于暂无描述。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Style、Screen Mode Redraw Client Texture、Screen Mode Update Cooldown。
+初次使用可优先调整：Screen Mode Update Cooldown、Screen Mode Redraw Client Texture。
 
 配置项
-- Blur Samples（中文：模糊取样数）：类型=数值，默认=5
-- Bloom Intensity（中文：泛光强度）：类型=数值，默认=0.3f
-- Flow Text Scale（中文：流动文本缩放）：类型=数值，默认=6.0f
-- Bloom Samples（中文：泛光采样数）：类型=数值，默认=1.0f
-- Apply Area（中文：应用区域）：类型=枚举，默认="Client Only"
-  可选：Client Only（仅客户端）；Screen（屏幕）
-- Flow Text Brightness（中文：流动文本亮度）：类型=数值，默认=1.2f
-- Flow Text Depth（中文：流动文本深度）：类型=数值，默认=0.6f
-- Bloom Quality（中文：泛光质量）：类型=数值，默认=0.2f
-- Screen Compensation Faster（中文：让屏幕补偿更快）：类型=布尔，默认=true
-- Flow Text Theme Period (s)（中文：流动文本主题周期（秒））：类型=数值，默认=300L
-- Style（中文：风格）：类型=枚举，默认="bloom"
-  可选：bloom（泛光）；bloom_time（泛光_time）；blur（模糊）；cross_hatching（未收录）；cross_stitching（未收录）；dispersion（未收录）；dream_vision（未收录）；flash_shake（flash_抖动）；mvp（未收录）；old（老版）；pixelizer_time（未收录）；shadow_glitch（阴影_glitch）；sobel（未收录）
-- Flow Text Noise Amount（中文：流动文本噪音数量）：类型=数值，默认=0.6f
-- Screen Mode Redraw Client Texture（中文：屏幕模式重绘客户端贴图）：类型=布尔，默认=true
-- Screen Mode Update Cooldown（中文：屏幕模式更新冷却）：类型=数值，默认=33U
-- Flow Text Speed（中文：流动文本速率）：类型=数值，默认=1.0f
-- Blur Strength（中文：模糊强度）：类型=数值，默认=2.0f
-
+- Apply Area（应用区域）
+ 类型：枚举；默认："Client Only"
+ 说明：这是选项型配置。默认值 Client Only 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Client Only（仅客户端）；Screen（屏幕）
+- Style（风格）
+ 类型：枚举；默认："bloom"
+ 说明：这是选项型配置。默认值 bloom 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：bloom（泛光）；bloom_time（泛光_time）；blur（模糊）；cross_hatching（未收录）；cross_stitching（未收录）；dispersion（未收录）；dream_vision（未收录）；flash_shake（flash_抖动）；mvp（未收录）；old（老版）；pixelizer_time（未收录）；shadow_glitch（阴影_glitch）；sobel（未收录）
+- Blur Strength（模糊强度）
+ 类型：数值；默认：2.0f
+ 说明：这是数值型配置。默认值 2.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Blur Samples（模糊取样数）
+ 类型：数值；默认：5
+ 说明：这是数值型配置。默认值 5 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Bloom Samples（泛光采样数）
+ 类型：数值；默认：1.0f
+ 说明：这是数值型配置。默认值 1.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Bloom Quality（泛光质量）
+ 类型：数值；默认：0.2f
+ 说明：这是数值型配置。默认值 0.2f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Bloom Intensity（泛光强度）
+ 类型：数值；默认：0.3f
+ 说明：这是数值型配置。默认值 0.3f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Screen Mode Update Cooldown（屏幕模式更新冷却）
+ 类型：数值；默认：33U
+ 说明：用于控制检测/刷新/动画节奏。默认值 33U 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Screen Mode Redraw Client Texture（屏幕模式重绘客户端贴图）
+ 类型：布尔；默认：true
+ 说明：这是该模块的核心行为开关。默认值 true 通常更稳，建议先验证默认策略再尝试其他模式。
+- Screen Compensation Faster（让屏幕补偿更快）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Flow Text Theme Period (s)（流动文本主题周期（秒））
+ 类型：数值；默认：300L
+ 说明：用于控制检测/刷新/动画节奏。默认值 300L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Flow Text Speed（流动文本速率）
+ 类型：数值；默认：1.0f
+ 说明：这是数值型配置。默认值 1.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Flow Text Scale（流动文本缩放）
+ 类型：数值；默认：6.0f
+ 说明：这是数值型配置。默认值 6.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Flow Text Noise Amount（流动文本噪音数量）
+ 类型：数值；默认：0.6f
+ 说明：这是数值型配置。默认值 0.6f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Flow Text Brightness（流动文本亮度）
+ 类型：数值；默认：1.2f
+ 说明：这是数值型配置。默认值 1.2f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Flow Text Depth（流动文本深度）
+ 类型：数值；默认：0.6f
+ 说明：这是数值型配置。默认值 0.6f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
 历史更新
 - 4. 在 Shader 模块 (bloom模式) 开启后，LiveStream 的观众头像亮度将会降低。
 - 30. 修复 Screen 范围的其他 Shader 无法生效的问题。

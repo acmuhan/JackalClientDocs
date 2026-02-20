@@ -12,44 +12,97 @@ MachineLock
 - 版本属性：普通可用
 
 介绍
-MachineLock（锁机）用于锁定这台计算机（谨慎使用）。
-适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Emergency Escape Method、Disable Client Other HUD。
-该模块被标记为恶意高风险，请在隔离环境下验证，避免对生产系统直接操作。
-
+MachineLock（锁机）建议先按默认配置运行一段时间，确认对目标窗口/系统行为的影响后，再从关键开关项开始逐步微调。
 配置项
-- Wait Duration (min)（中文：等待多久 (分钟)）：类型=数值，默认=30U
-- Subtitle（中文：副标题）：类型=文本，默认="你需要输入密码"
-- Force Topmost（中文：强制置顶）：类型=布尔，默认=true
-- Emergency Escape Method（中文：紧急退出方法）：类型=枚举，默认="Custom Hotkey (Notice Keyboard Lock
-- Background Color（中文：背景颜色）：类型=文本，默认="40;0;0;250"
-- Disable KeyLogger（中文：关闭键盘记录）：类型=布尔，默认=true
-- Hide Taskbar（中文：隐藏任务栏）：类型=布尔，默认=true
-- Subtitle Display（中文：展示副标题）：类型=布尔，默认=true
-- Password (Must Alpha or Num)（中文：密码 (必须字母或数字)）：类型=文本，默认="0721"
-- Keyboard Lock (Ctrl, Win, Alt)（中文：键盘锁定 (Ctrl, Win, Alt)）：类型=布尔，默认=true
-- Mouse Lock（中文：鼠标锁定）：类型=枚举，默认="Allow Move"
-  可选：Off（关闭）；Allow Move（允许移动）；Disable All（禁用所有）
-- Pause Keystrokes2（中文：暂停按键显示II）：类型=布尔，默认=true
-- Disable Client Other Control（中文：禁用客户端其他控制）：类型=布尔，默认=true
-- AUTO ENABLE WHEN CLIENT LAUNCHED（中文：客户端启动时自动启用）：类型=布尔，默认=false
-- Subtitle Font Size（中文：副标题字号）：类型=数值，默认=100
-- Disable IME（中文：禁用输入法）：类型=布尔，默认=true
-- Title（中文：标题）：类型=文本，默认="计算机已锁定"
-- Password Font Size（中文：密码字号）：类型=数值，默认=220
-- Custom Escape Hotkey（中文：自定义退出快捷键）：类型=按键/复合，默认={{"Keybind", {VK_OEM_3}}}
-- Title Font Size（中文：标题字号）：类型=数值，默认=180
-- Title Color（中文：标题颜色）：类型=文本，默认="yellow"
-- Subtitle Color（中文：副标题颜色）：类型=文本，默认="aqua"
-- Exit Condition（中文：退出条件）：类型=枚举，默认="Password"
-  可选：Password（密码）；Wait Duration（等待一段时间）
-- Title Display（中文：展示标题）：类型=布尔，默认=true
-- Mute（中文：静音）：类型=布尔，默认=true
-- Password Color（中文：密码颜色）：类型=文本，默认="green"
-- Keep Active（中文：保持活动）：类型=布尔，默认=true
-- Disable Logoff（中文：禁用注销）：类型=布尔，默认=true
-- Disable Client Other HUD（中文：禁用客户端其他HUD）：类型=布尔，默认=true
-
+- Title（标题）
+ 类型：文本；默认："计算机已锁定"
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Subtitle（副标题）
+ 类型：文本；默认："你需要输入密码"
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Title Display（展示标题）
+ 类型：布尔；默认：true
+ 说明：控制提示输出方式与噪声级别。调试阶段可开全提示，稳定后可关掉非必要提示。
+- Subtitle Display（展示副标题）
+ 类型：布尔；默认：true
+ 说明：控制提示输出方式与噪声级别。调试阶段可开全提示，稳定后可关掉非必要提示。
+- Background Color（背景颜色）
+ 类型：文本；默认："40;0;0;250"
+ 说明：用于控制该元素颜色。建议优先保证与背景有足够对比度，再考虑风格化配色。
+- Title Color（标题颜色）
+ 类型：文本；默认："yellow"
+ 说明：用于控制该元素颜色。建议优先保证与背景有足够对比度，再考虑风格化配色。
+- Subtitle Color（副标题颜色）
+ 类型：文本；默认："aqua"
+ 说明：用于控制该元素颜色。建议优先保证与背景有足够对比度，再考虑风格化配色。
+- Password Color（密码颜色）
+ 类型：文本；默认："green"
+ 说明：用于控制该元素颜色。建议优先保证与背景有足够对比度，再考虑风格化配色。
+- Title Font Size（标题字号）
+ 类型：数值；默认：180
+ 说明：用于控制文字可读性。建议先保证主要信息一眼可见，再微调到不遮挡内容。
+- Subtitle Font Size（副标题字号）
+ 类型：数值；默认：100
+ 说明：用于控制文字可读性。建议先保证主要信息一眼可见，再微调到不遮挡内容。
+- Password Font Size（密码字号）
+ 类型：数值；默认：220
+ 说明：用于控制文字可读性。建议先保证主要信息一眼可见，再微调到不遮挡内容。
+- Mute（静音）
+ 类型：布尔；默认：true
+ 说明：该开关会直接改变系统或窗口行为。建议逐项启用并观察，避免一次开启过多导致排查困难。
+- Disable IME（禁用输入法）
+ 类型：布尔；默认：true
+ 说明：该开关会直接改变系统或窗口行为。建议逐项启用并观察，避免一次开启过多导致排查困难。
+- Keep Active（保持活动）
+ 类型：布尔；默认：true
+ 说明：该开关会直接改变系统或窗口行为。建议逐项启用并观察，避免一次开启过多导致排查困难。
+- Force Topmost（强制置顶）
+ 类型：布尔；默认：true
+ 说明：该开关会直接改变系统或窗口行为。建议逐项启用并观察，避免一次开启过多导致排查困难。
+- Hide Taskbar（隐藏任务栏）
+ 类型：布尔；默认：true
+ 说明：该开关会直接改变系统或窗口行为。建议逐项启用并观察，避免一次开启过多导致排查困难。
+- Disable KeyLogger（关闭键盘记录）
+ 类型：布尔；默认：true
+ 说明：该开关会直接改变系统或窗口行为。建议逐项启用并观察，避免一次开启过多导致排查困难。
+- Disable Logoff（禁用注销）
+ 类型：布尔；默认：true
+ 说明：该开关会直接改变系统或窗口行为。建议逐项启用并观察，避免一次开启过多导致排查困难。
+- Pause Keystrokes2（暂停按键显示II）
+ 类型：布尔；默认：true
+ 说明：该开关会直接改变系统或窗口行为。建议逐项启用并观察，避免一次开启过多导致排查困难。
+- Mouse Lock（鼠标锁定）
+ 类型：枚举；默认："Allow Move"
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+ 可选：Off（关闭）；Allow Move（允许移动）；Disable All（禁用所有）
+- Keyboard Lock (Ctrl, Win, Alt)（键盘锁定 (Ctrl, Win, Alt)）
+ 类型：布尔；默认：true
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Disable Client Other Control（禁用客户端其他控制）
+ 类型：布尔；默认：true
+ 说明：该开关会直接改变系统或窗口行为。建议逐项启用并观察，避免一次开启过多导致排查困难。
+- Disable Client Other HUD（禁用客户端其他HUD）
+ 类型：布尔；默认：true
+ 说明：该开关会直接改变系统或窗口行为。建议逐项启用并观察，避免一次开启过多导致排查困难。
+- Emergency Escape Method（紧急退出方法）
+ 类型：枚举；默认："Custom Hotkey (Notice Keyboard Lock)"
+ 说明：该项决定执行策略。建议先用默认策略验证稳定性，再逐个切换比较效果与副作用。
+- Custom Escape Hotkey（自定义退出快捷键）
+ 类型：按键/复合；默认：{{"Keybind", {VK_OEM_3}}}
+ 说明：该快捷键用于即时触发功能。建议避免与系统或常用软件冲突。
+- Exit Condition（退出条件）
+ 类型：枚举；默认："Password"
+ 说明：该项决定执行策略。建议先用默认策略验证稳定性，再逐个切换比较效果与副作用。
+ 可选：Password（密码）；Wait Duration（等待一段时间）
+- Password (Must Alpha or Num)（密码 (必须字母或数字)）
+ 类型：文本；默认："0721"
+ 说明：锁机解锁密码，仅支持字母或数字。建议避免弱口令，并先在可恢复环境中验证再正式启用。
+- Wait Duration (min)（等待多久 (分钟)）
+ 类型：数值；默认：30U
+ 说明：该值控制强度/时序。建议以默认值为中心小步调整，避免一次跨度过大。
+- AUTO ENABLE WHEN CLIENT LAUNCHED（客户端启动时自动启用）
+ 类型：布尔；默认：false
+ 说明：该开关会直接改变系统或窗口行为。建议逐项启用并观察，避免一次开启过多导致排查困难。
 历史更新
 - 17. 为 MachineLock 锁机模块添加配置：
 - 20. 为 MachineLock 锁机添加配置：

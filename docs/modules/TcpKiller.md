@@ -15,32 +15,65 @@ TCP杀手
 TcpKiller（TCP杀手）用于断开指定进程的某些TCP连接。
 适合联网信息获取、账号联动和在线交互场景。
 建议先以管理员身份运行客户端。
-初次使用可优先调整：Filter IPs、Notify、Filter Processes。
+初次使用可优先调整：Mode、Keep Mode Cooldown (ms)、Notify。
 
 配置项
-- Filter IPs（中文：过滤 IP）：类型=布尔，默认=false
-- Process Id (Zero For Any)（中文：进程ID (用0指代任何)）：类型=数值，默认=0
-- IP Type（中文：IP 类型）：类型=枚举，默认="Remote"
-  可选：Remote（远程）；Local（本地）
-- Notify（中文：通知）：类型=枚举，默认="Smart"
-  可选：Off（关闭）；Only Error（Only 错误）；Smart（智能）；All（所有）
-- Exclude LAN IP（中文：排除局域网IP）：类型=布尔，默认=true
-- Filter Processes（中文：过滤进程）：类型=布尔，默认=false
-- Port Type（中文：端口类型）：类型=枚举，默认="Remote"
-  可选：Remote（远程）；Local（本地）
-- Filter Ports（中文：过滤端口号）：类型=布尔，默认=true
-- Process Name (Empty For Any)（中文：进程名 (用空指代任何)）：类型=文本，默认=""
-- Mode（中文：模式）：类型=枚举，默认="Once"
-  可选：Once（未收录）；Keep（保持）
-- Ports Blacklist (e.g. 4-10,80)（中文：端口黑名单（例：4-10,80））：类型=文本，默认=""
-- IP Whitelist (Sep With Semicolon)（中文：IP 白名单（用分号分隔多个））：类型=文本，默认=""
-- Keep Mode Cooldown (ms)（中文：保持模式冷却时间 (毫秒)）：类型=数值，默认=200U
-- Ports Whitelist (e.g. 4-10,80)（中文：端口白名单（例：4-10,80））：类型=文本，默认="80,443"
-- Notify Mode（中文：通知模式）：类型=枚举，默认="Notify"
-  可选：Notify（通知）；Chatter（弹幕）；Actionbar（行为栏）
-- IP Blacklist (Sep With Semicolon)（中文：IP 黑名单（用分号分隔多个））：类型=文本，默认=""
-- Max Disconnection Count（中文：最大断连数量）：类型=数值，默认=65535
-
+- Mode（模式）
+ 类型：枚举；默认："Once"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Once ，确认稳定后再逐项切换比较效果。
+ 可选：Once（未收录）；Keep（保持）
+- Keep Mode Cooldown (ms)（保持模式冷却时间 (毫秒)）
+ 类型：数值；默认：200U
+ 说明：用于控制检测/刷新/动画节奏。默认值 200U 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Filter Processes（过滤进程）
+ 类型：布尔；默认：false
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- Process Name (Empty For Any)（进程名 (用空指代任何)）
+ 类型：文本；默认：""
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- Process Id (Zero For Any)（进程ID (用0指代任何)）
+ 类型：数值；默认：0
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- Max Disconnection Count（最大断连数量）
+ 类型：数值；默认：65535
+ 说明：这是数值型配置。默认值 65535 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Notify（通知）
+ 类型：枚举；默认："Smart"
+ 说明：用于选择结果反馈方式。默认值 Smart 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+ 可选：Off（关闭）；Only Error（Only 错误）；Smart（智能）；All（所有）
+- Notify Mode（通知模式）
+ 类型：枚举；默认："Notify"
+ 说明：用于选择结果反馈方式。默认值 Notify 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+ 可选：Notify（通知）；Chatter（弹幕）；Actionbar（行为栏）
+- Filter Ports（过滤端口号）
+ 类型：布尔；默认：true
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- Ports Whitelist (e.g. 4-10,80)（端口白名单（例：4-10,80））
+ 类型：文本；默认："80,443"
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- Ports Blacklist (e.g. 4-10,80)（端口黑名单（例：4-10,80））
+ 类型：文本；默认：""
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- Port Type（端口类型）
+ 类型：枚举；默认："Remote"
+ 说明：这是选项型配置。默认值 Remote 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Remote（远程）；Local（本地）
+- Filter IPs（过滤 IP）
+ 类型：布尔；默认：false
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- Exclude LAN IP（排除局域网IP）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- IP Whitelist (Sep With Semicolon)（IP 白名单（用分号分隔多个））
+ 类型：文本；默认：""
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- IP Blacklist (Sep With Semicolon)（IP 黑名单（用分号分隔多个））
+ 类型：文本；默认：""
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- IP Type（IP 类型）
+ 类型：枚举；默认："Remote"
+ 说明：这是选项型配置。默认值 Remote 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Remote（远程）；Local（本地）
 历史更新
 - 4. 添加新模块：Tcp Killer，自动终止指定进程的 TCP 连接。
 

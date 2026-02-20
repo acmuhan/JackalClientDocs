@@ -18,14 +18,25 @@ IPHorror（IP恐惧）用于根据提供的IP地址组装一个吓人的段落�
 使用前请确认网络可用及相关 API/平台账号配置完整。
 
 配置项
-- Auto Console（中文：自动启用控制台）：类型=布尔，默认=true
-- Log Destination Info（中文：日志记录目的地信息）：类型=布尔，默认=true
-- Target IP Address（中文：目标 IP 地址）：类型=文本，默认="127.0.0.1"
-- Async（中文：异步）：类型=布尔，默认=true
-- Method（中文：方法）：类型=枚举，默认="V1"
-  可选：V1（未收录）；AI Normal（人工智能 普通）；AI Mesugaki（人工智能 Mesugaki）；AI Catgirl（人工智能 猫娘）
-- Copy to Clipboard（中文：复制到剪贴板）：类型=布尔，默认=true
-
+- Async（异步）
+ 类型：布尔；默认：true
+ 说明：用于控制是否异步处理。默认值 true 通常能减少主线程卡顿；若你遇到并发相关问题，可回退到更保守设置测试。
+- Auto Console（自动启用控制台）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Copy to Clipboard（复制到剪贴板）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Log Destination Info（日志记录目的地信息）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Target IP Address（目标 IP 地址）
+ 类型：文本；默认："127.0.0.1"
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- Method（方法）
+ 类型：枚举；默认："V1"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 V1 ，确认稳定后再逐项切换比较效果。
+ 可选：V1（未收录）；AI Normal（人工智能 普通）；AI Mesugaki（人工智能 Mesugaki）；AI Catgirl（人工智能 猫娘）
 历史更新
 - 24. 修正 IPHorror 的外国判定。
 - 20. 为 IP Address, IP Horror 和 Weather 添加 Auto Console 选项。

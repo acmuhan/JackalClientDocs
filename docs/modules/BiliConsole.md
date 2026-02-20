@@ -14,29 +14,64 @@ B站控制台
 介绍
 BiliConsole（B站控制台）用于一个实用的交互式B站控制台。
 适合联网信息获取、账号联动和在线交互场景。
-初次使用可优先调整：Update Cooldown (ms)、Draw Cooldown (ms)。
+初次使用可优先调整：Draw Cooldown (ms)、Update Cooldown (ms)。
 使用前请确认网络可用及相关 API/平台账号配置完整。
 
 配置项
-- Show User Space Notice（中文：显示用户空间公告）：类型=布尔，默认=true
-- Show User Masterpieces（中文：显示用户代表作）：类型=布尔，默认=true
-- Update Periodically（中文：是否周期性刷新页面。按 F5 可以手动刷新。）：类型=布尔，默认=false
-- Draw Periodically（中文：是否周期性绘制。不推荐开启，因为绘制需要时间。）：类型=布尔，默认=false
-- Use Chinese Number Format（中文：使用中文数字格式）：类型=布尔，默认=true
-- Show User Favorite Folders（中文：显示用户收藏夹缩略信息）：类型=布尔，默认=true
-- User Medal Wall Y（中文：用户 Medal Wall Y）：类型=数值，默认=3
-- Show User Top Video（中文：显示用户置顶的视频）：类型=布尔，默认=true
-- Single Coin Quantity（中文：单次投币数量）：类型=数值，默认=2U
-- User Medal Wall X（中文：用户 Medal Wall X）：类型=数值，默认=110
-- Like When Coin（中文：投币时点赞）：类型=布尔，默认=true
-- Auto Console（中文：自动启用控制台）：类型=布尔，默认=true
-- Debug Output（中文：调试输出）：类型=布尔，默认=false
-- Show User Like Videos（中文：显示用户点赞的视频）：类型=布尔，默认=true
-- User Medal Wall Display（中文：用户勋章墙展示）：类型=布尔，默认=true
-- Update Cooldown (ms)（中文：更新冷却（毫秒））：类型=数值，默认=180000L
-- Draw Cooldown (ms)（中文：绘制冷却（毫秒））：类型=数值，默认=500L
-- Show User Coin Videos（中文：显示用户投币的视频）：类型=布尔，默认=true
-
+- Auto Console（自动启用控制台）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Debug Output（调试输出）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Draw Periodically（是否周期性绘制。不推荐开启，因为绘制需要时间。）
+ 类型：布尔；默认：false
+ 说明：用于控制检测/刷新/动画节奏。默认值 false 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Draw Cooldown (ms)（绘制冷却（毫秒））
+ 类型：数值；默认：500L
+ 说明：用于控制检测/刷新/动画节奏。默认值 500L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Update Periodically（是否周期性刷新页面。按 F5 可以手动刷新。）
+ 类型：布尔；默认：false
+ 说明：用于控制检测/刷新/动画节奏。默认值 false 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Update Cooldown (ms)（更新冷却（毫秒））
+ 类型：数值；默认：180000L
+ 说明：用于控制检测/刷新/动画节奏。默认值 180000L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Use Chinese Number Format（使用中文数字格式）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- User Medal Wall Display（用户勋章墙展示）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- User Medal Wall X（用户 Medal Wall X）
+ 类型：数值；默认：110
+ 说明：这是数值型配置。默认值 110 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- User Medal Wall Y（用户 Medal Wall Y）
+ 类型：数值；默认：3
+ 说明：这是数值型配置。默认值 3 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Show User Space Notice（显示用户空间公告）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show User Like Videos（显示用户点赞的视频）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show User Coin Videos（显示用户投币的视频）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show User Top Video（显示用户置顶的视频）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show User Masterpieces（显示用户代表作）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show User Favorite Folders（显示用户收藏夹缩略信息）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Single Coin Quantity（单次投币数量）
+ 类型：数值；默认：2U
+ 说明：这是数值型配置。默认值 2U 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Like When Coin（投币时点赞）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
 历史更新
 - 15. 添加新模块：Bili Settings。表面上看是B站设定，其实按一下就可以扫码登录。Bili Notifier, Bili Console等模块会用到这里的 Cookies 等信息。
 - 17. 添加新模块：Bili Console，B站交互式控制台，工程量巨大的一个模块。

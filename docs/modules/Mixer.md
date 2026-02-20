@@ -14,43 +14,98 @@ Mixer
 介绍
 Mixer（混音器）用于显示所有所有发声的进程的音量。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Temp HUD Duration (ms)、HUD Mode、Temp HUD Animation Duration (ms)。
+初次使用可优先调整：HUD Mode、Temp HUD Duration (ms)、Temp HUD Animation Duration (ms)。
 
 配置项
-- Base Y Rate（中文：基础纵坐标比例）：类型=数值，默认=0.05f
-- Show Only Volume > 0（中文：只显示音量大于0的）：类型=布尔，默认=true
-- Process Id (Zero For Any)（中文：进程ID (用0指代任何)）：类型=数值，默认=0
-- Highlight Process Volume (%%)（中文：高亮进程音量 (%%)）：类型=数值，默认=80
-- Temp HUD Duration (ms)（中文：临时HUD持续时间(毫秒)）：类型=数值，默认=3000L
-- X Offset（中文：横坐标偏移）：类型=数值，默认=0.0f
-- HUD Mode（中文：HUD 模式）：类型=枚举，默认="Temp"
-  可选：Always（总是）；Temp（临时）
-- Text Color（中文：文本颜色）：类型=枚举，默认="Colorful"
-  可选：Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Hide When Menu On（中文：菜单打开时不显示）：类型=布尔，默认=true
-- Max Items（中文：最大显示进程数量。用于限制 HUD 中最多显示的进程条数，防止界面拥挤。）：类型=数值，默认=10
-- Bar Max Height（中文：柱最大高度）：类型=数值，默认=500
-- Refresh Interval (ms)（中文：刷新间隔（毫秒））：类型=数值，默认=500.0f
-- Fade Duration (ms)（中文：淡入淡出时长 (毫秒)）：类型=数值，默认=1000L
-- Text Font Size（中文：文本字号）：类型=数值，默认=28
-- Base X Rate（中文：基础横坐标比例）：类型=数值，默认=0.5f
-- Other Process Volume (%%)（中文：其他进程音量 (%%)）：类型=数值，默认=10
-- Bar Gap（中文：柱子间隙）：类型=数值，默认=100
-- Temp HUD Animation Duration (ms)（中文：临时显示的淡入淡出动画时长（毫秒）。）：类型=数值，默认=300L
-- Bar Color（中文：柱颜色）：类型=枚举，默认="White"
-  可选：Flow（流动）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Easing Speed (0~1)（中文：缓动速率 (0~1)）：类型=数值，默认=0.1f
-- Bar Direction（中文：柱子方向）：类型=枚举，默认="Down"
-  可选：Right（右侧）；Up（向上）；Left（左侧）；Down（向下）
-- Y Offset（中文：纵坐标偏移）：类型=数值，默认=0.0f
-- Bar Thickness（中文：柱子厚度）：类型=数值，默认=80
-- Easing（中文：缓动）：类型=布尔，默认=true
-- Set Highlight Process Volume（中文：设置高亮进程音量）：类型=布尔，默认=false
-- Label Format（中文：标签格式）：类型=枚举，默认="Process Name"
-  可选：PID（进程ID）；Process Name（进程名）；Both（两者）
-- Process Name (Empty For Any)（中文：进程名 (用空指代任何)）：类型=文本，默认="JackalClient.exe"
-- Bar Opacity (0~1)（中文：柱不透明度 (0~1)）：类型=数值，默认=0.35f
-
+- Bar Direction（柱子方向）
+ 类型：枚举；默认："Down"
+ 说明：这是选项型配置。默认值 Down 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Right（右侧）；Up（向上）；Left（左侧）；Down（向下）
+- HUD Mode（HUD 模式）
+ 类型：枚举；默认："Temp"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Temp ，确认稳定后再逐项切换比较效果。
+ 可选：Always（总是）；Temp（临时）
+- Temp HUD Duration (ms)（临时HUD持续时间(毫秒)）
+ 类型：数值；默认：3000L
+ 说明：用于控制检测/刷新/动画节奏。默认值 3000L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Temp HUD Animation Duration (ms)（临时显示的淡入淡出动画时长（毫秒）。）
+ 类型：数值；默认：300L
+ 说明：用于控制检测/刷新/动画节奏。默认值 300L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Bar Max Height（柱最大高度）
+ 类型：数值；默认：500
+ 说明：这是数值型配置。默认值 500 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Bar Color（柱颜色）
+ 类型：枚举；默认："White"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：Flow（流动）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Bar Opacity (0~1)（柱不透明度 (0~1)）
+ 类型：数值；默认：0.35f
+ 说明：用于控制透明度。默认值 0.35f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Hide When Menu On（菜单打开时不显示）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Easing（缓动）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Easing Speed (0~1)（缓动速率 (0~1)）
+ 类型：数值；默认：0.1f
+ 说明：这是数值型配置。默认值 0.1f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Text Font Size（文本字号）
+ 类型：数值；默认：28
+ 说明：用于控制文本可读性。默认字号 28 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+- Text Color（文本颜色）
+ 类型：枚举；默认："Colorful"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Label Format（标签格式）
+ 类型：枚举；默认："Process Name"
+ 说明：这是选项型配置。默认值 Process Name 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：PID（进程ID）；Process Name（进程名）；Both（两者）
+- Bar Thickness（柱子厚度）
+ 类型：数值；默认：80
+ 说明：用于细调显示样式和间距。默认值 80 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Bar Gap（柱子间隙）
+ 类型：数值；默认：100
+ 说明：这是数值型配置。默认值 100 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Show Only Volume > 0（只显示音量大于0的）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Max Items（最大显示进程数量。用于限制 HUD 中最多显示的进程条数，防止界面拥挤。）
+ 类型：数值；默认：10
+ 说明：这是数值型配置。默认值 10 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Refresh Interval (ms)（刷新间隔（毫秒））
+ 类型：数值；默认：500.0f
+ 说明：用于控制检测/刷新/动画节奏。默认值 500.0f 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Base X Rate（基础横坐标比例）
+ 类型：数值；默认：0.5f
+ 说明：用于控制界面元素在屏幕中的相对位置。默认值 0.5f 一般是作者调过的稳定布局；建议每次只改一个轴，避免元素跑出可视区域。
+- Base Y Rate（基础纵坐标比例）
+ 类型：数值；默认：0.05f
+ 说明：用于控制界面元素在屏幕中的相对位置。默认值 0.05f 一般是作者调过的稳定布局；建议每次只改一个轴，避免元素跑出可视区域。
+- X Offset（横坐标偏移）
+ 类型：数值；默认：0.0f
+ 说明：这是数值型配置。默认值 0.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Y Offset（纵坐标偏移）
+ 类型：数值；默认：0.0f
+ 说明：这是数值型配置。默认值 0.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Process Name (Empty For Any)（进程名 (用空指代任何)）
+ 类型：文本；默认："JackalClient.exe"
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- Process Id (Zero For Any)（进程ID (用0指代任何)）
+ 类型：数值；默认：0
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- Set Highlight Process Volume（设置高亮进程音量）
+ 类型：布尔；默认：false
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- Highlight Process Volume (%%)（高亮进程音量 (%%)）
+ 类型：数值；默认：80
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- Other Process Volume (%%)（其他进程音量 (%%)）
+ 类型：数值；默认：10
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- Fade Duration (ms)（淡入淡出时长 (毫秒)）
+ 类型：数值；默认：1000L
+ 说明：用于控制检测/刷新/动画节奏。默认值 1000L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
 历史更新
 无（HISTORY 中暂无明确记录）
 

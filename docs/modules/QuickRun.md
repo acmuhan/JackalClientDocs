@@ -17,20 +17,39 @@ QuickRun（快捷运行）用于暂无描述。
 初次使用可优先调整：Scan Policy。
 
 配置项
-- Output Error（中文：输出错误）：类型=布尔，默认=false
-- Scan Policy（中文：扫描策略）：类型=枚举，默认="Lazy"
-  可选：Lazy（懒散）；Launch（未收录）；Daily（未收录）
-- Remember Multi-Result Selection（中文：记忆多结果选择）：类型=布尔，默认=true
-- Scan Skip System Files（中文：扫描时跳过系统文件）：类型=布尔，默认=false
-- Confirm Before Scanning（中文：扫描前确认）：类型=布尔，默认=true
-- Execution（中文：执行）：类型=枚举，默认="system & pause"
-  可选：ShellExecute（未收录）；system（系统）；system & pause（系统 & pause）
-- Scan Skip Hidden Files（中文：扫描时跳过隐藏文件）：类型=布尔，默认=false
-- Scan Skip Readonly Files（中文：扫描时跳过只读文件）：类型=布尔，默认=false
-- Unknown Command Auto Resolve（中文：未知命令自动解析）：类型=枚举，默认="Off"
-  可选：Off（关闭）；Confirm（确认）；Run（未收录）
-- Output While Scanning（中文：Output While 扫描）：类型=布尔，默认=true
-
+- Execution（执行）
+ 类型：枚举；默认："system & pause"
+ 说明：这是选项型配置。默认值 system & pause 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：ShellExecute（未收录）；system（系统）；system & pause（系统 & pause）
+- Unknown Command Auto Resolve（未知命令自动解析）
+ 类型：枚举；默认："Off"
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+ 可选：Off（关闭）；Confirm（确认）；Run（未收录）
+- Remember Multi-Result Selection（记忆多结果选择）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Scan Skip Readonly Files（扫描时跳过只读文件）
+ 类型：布尔；默认：false
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- Scan Skip Hidden Files（扫描时跳过隐藏文件）
+ 类型：布尔；默认：false
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- Scan Skip System Files（扫描时跳过系统文件）
+ 类型：布尔；默认：false
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- Confirm Before Scanning（扫描前确认）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Output While Scanning（Output While 扫描）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Output Error（输出错误）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Scan Policy（扫描策略）
+ 类型：枚举；默认："Lazy"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Lazy ，确认稳定后再逐项切换比较效果。
+ 可选：Lazy（懒散）；Launch（未收录）；Daily（未收录）
 历史更新
 - 32. 完善 /quickrun ，先扫描 Program Files，如果无结果再扫描全盘。
 - 11. 添加模块：QuickRun，需要用指令调用。

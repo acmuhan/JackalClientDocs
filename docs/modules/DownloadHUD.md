@@ -14,39 +14,92 @@ DownloadHUD
 介绍
 DownloadHUD（下载显示）用于显示客户端文件下载进度。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Background Shadow、Item Height、Background Roundness。
+初次使用可优先调整：Hide When Menu On、X Rate、Y Rate。
 
 配置项
-- Background Shadow（中文：背景阴影）：类型=布尔，默认=true
-- Item Height（中文：Item 高度）：类型=数值，默认=120.0f
-- Background Roundness（中文：背景圆滑程度）：类型=数值，默认=0.5f
-- Item Width（中文：Item 宽度）：类型=数值，默认=350.0f
-- Background Color（中文：背景颜色）：类型=枚举，默认="Black"
-  可选：Flow（流动）；Transparent（透明）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Background Shadow Color（中文：背景阴影颜色）：类型=枚举，默认="Black"
-  可选：Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Background Opacity (0~1)（中文：背景不透明度 (0~1)）：类型=数值，默认=0.8f
-- Item Gap（中文：未收录）：类型=数值，默认=40.0f
-- Item Width Strict（中文：项目严格宽度）：类型=布尔，默认=true
-- Item Easing（中文：Item 缓动）：类型=布尔，默认=true
-- Background Shadow Thickness（中文：背景阴影厚度）：类型=数值，默认=30.0f
-- Text Font Size（中文：文本字号）：类型=数值，默认=25
-- Text Opacity (0~1)（中文：文本不透明度 (0~1)）：类型=数值，默认=1.0f
-- Progress Bar Easing（中文：进度条缓动）：类型=布尔，默认=true
-- Hide When Menu On（中文：菜单打开时不显示）：类型=布尔，默认=false
-- Title（中文：标题）：类型=布尔，默认=true
-- X Rate（中文：横坐标比例）：类型=数值，默认=0.7f
-- Progress Bar Height（中文：进度条高度）：类型=数值，默认=10
-- Progress Bar Easing Speed (0~1)（中文：进度条缓动速率 (0~1)）：类型=数值，默认=0.07f
-- Y Rate（中文：纵坐标比例）：类型=数值，默认=0.1f
-- Item Max Count（中文：最大显示的项数。）：类型=数值，默认=8U
-- Background（中文：背景）：类型=布尔，默认=true
-- Background Round Corners（中文：背景圆角）：类型=布尔，默认=true
-- Item Easing Speed (0~1)（中文：Item 缓动 速率 (0~1)）：类型=数值，默认=0.2f
-- Item Fade Duration (ms)（中文：Item 淡入淡出 时长 (ms)）：类型=数值，默认=1000L
-- Completed Task Show Time (ms)（中文：完成的任务显示的时长（毫秒）。）：类型=数值，默认=5000L
-- Background Shadow Opacity (0~1)（中文：背景阴影不透明度 (0~1)）：类型=数值，默认=0.5f
-
+- Hide When Menu On（菜单打开时不显示）
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- X Rate（横坐标比例）
+ 类型：数值；默认：0.7f
+ 说明：用于控制界面元素在屏幕中的相对位置。默认值 0.7f 一般是作者调过的稳定布局；建议每次只改一个轴，避免元素跑出可视区域。
+- Y Rate（纵坐标比例）
+ 类型：数值；默认：0.1f
+ 说明：用于控制界面元素在屏幕中的相对位置。默认值 0.1f 一般是作者调过的稳定布局；建议每次只改一个轴，避免元素跑出可视区域。
+- Title（标题）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Item Width（Item 宽度）
+ 类型：数值；默认：350.0f
+ 说明：这是数值型配置。默认值 350.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Item Height（Item 高度）
+ 类型：数值；默认：120.0f
+ 说明：这是数值型配置。默认值 120.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Item Width Strict（项目严格宽度）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Item Gap（未收录）
+ 类型：数值；默认：40.0f
+ 说明：这是数值型配置。默认值 40.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Item Easing（Item 缓动）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Item Easing Speed (0~1)（Item 缓动 速率 (0~1)）
+ 类型：数值；默认：0.2f
+ 说明：这是数值型配置。默认值 0.2f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Item Fade Duration (ms)（Item 淡入淡出 时长 (ms)）
+ 类型：数值；默认：1000L
+ 说明：用于控制检测/刷新/动画节奏。默认值 1000L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Item Max Count（最大显示的项数。）
+ 类型：数值；默认：8U
+ 说明：这是数值型配置。默认值 8U 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Text Font Size（文本字号）
+ 类型：数值；默认：25
+ 说明：用于控制文本可读性。默认字号 25 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+- Text Opacity (0~1)（文本不透明度 (0~1)）
+ 类型：数值；默认：1.0f
+ 说明：用于控制透明度。默认值 1.0f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Background（背景）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Background Round Corners（背景圆角）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Background Roundness（背景圆滑程度）
+ 类型：数值；默认：0.5f
+ 说明：用于细调显示样式和间距。默认值 0.5f 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Background Opacity (0~1)（背景不透明度 (0~1)）
+ 类型：数值；默认：0.8f
+ 说明：用于控制透明度。默认值 0.8f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Background Shadow（背景阴影）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Background Shadow Thickness（背景阴影厚度）
+ 类型：数值；默认：30.0f
+ 说明：用于细调显示样式和间距。默认值 30.0f 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Background Shadow Opacity (0~1)（背景阴影不透明度 (0~1)）
+ 类型：数值；默认：0.5f
+ 说明：用于控制透明度。默认值 0.5f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Background Color（背景颜色）
+ 类型：枚举；默认："Black"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：Flow（流动）；Transparent（透明）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Background Shadow Color（背景阴影颜色）
+ 类型：枚举；默认："Black"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Progress Bar Easing（进度条缓动）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Progress Bar Easing Speed (0~1)（进度条缓动速率 (0~1)）
+ 类型：数值；默认：0.07f
+ 说明：这是数值型配置。默认值 0.07f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Progress Bar Height（进度条高度）
+ 类型：数值；默认：10
+ 说明：这是数值型配置。默认值 10 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Completed Task Show Time (ms)（完成的任务显示的时长（毫秒）。）
+ 类型：数值；默认：5000L
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
 历史更新
 - 31. 为 Download HUD 添加配置：
 - 32. 修复 Download HUD 进度条缓动在绘制时有概率不生效的问题。

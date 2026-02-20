@@ -14,12 +14,15 @@ KeyLogger
 介绍
 KeyLogger（键盘记录）用于暂无描述。
 适合键鼠行为控制、输入增强和自动化操作场景。
-初次使用可优先调整：Log Output、Console Output。
+初次使用可优先调整：Console Output、Log Output。
 
 配置项
-- Log Output（中文：日志输出）：类型=布尔，默认=true
-- Console Output（中文：控制台输出）：类型=布尔，默认=true
-
+- Console Output（控制台输出）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Log Output（日志输出）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
 历史更新
 无（HISTORY 中暂无明确记录）
 

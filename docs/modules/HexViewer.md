@@ -17,25 +17,58 @@ HexViewer（十六进制查看）用于暂无描述。
 初次使用可优先调整：Color Mode。
 
 配置项
-- Category CR Color（中文：类别 CR 颜色）：类型=文本，默认="&11"
-- Category Null Color（中文：类别 Null 颜色）：类型=文本，默认="30;30;30"
-- Category 3-Byte Unicode Color（中文：类别 3-Byte Unicode 颜色）：类型=文本，默认="255;110;180"
-- Category Punct Color（中文：类别 Punct 颜色）：类型=文本，默认="&14"
-- Color Mode（中文：颜色模式）：类型=枚举，默认="Simple"
-  可选：Off（关闭）；Simple（简易）；Category（类别）；Step（步长）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Category Control Color（中文：类别 控制 颜色）：类型=文本，默认="&6"
-- Category Space Color（中文：类别 空格 颜色）：类型=文本，默认="&12"
-- Category LF Color（中文：类别 LF 颜色）：类型=文本，默认="&10"
-- Category Punct Unicode Color (Strict)（中文：类别 Punct Unicode 颜色 (严格)）：类型=文本，默认="255;80;80"
-- Category Other Color（中文：类别 Other 颜色）：类型=文本，默认="&13"
-- Category Number Color（中文：类别 号码 颜色）：类型=文本，默认="&9"
-- Step Color End（中文：步长 颜色 End）：类型=文本，默认="255;255;255"
-- Category 2-Byte Unicode Color（中文：类别 2-Byte Unicode 颜色）：类型=文本，默认="255;110;180"
-- Category Alpha Color（中文：类别 不透明度 颜色）：类型=文本，默认="&7"
-- Category Punct Unicode Color（中文：类别 Punct Unicode 颜色）：类型=文本，默认="72;118;255"
-- Category 4-Byte Unicode Color（中文：类别 4-Byte Unicode 颜色）：类型=文本，默认="255;110;180"
-- Step Color Start（中文：步长 颜色 启动）：类型=文本，默认="30;30;30"
-
+- Color Mode（颜色模式）
+ 类型：枚举；默认："Simple"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Simple ，确认稳定后再逐项切换比较效果。
+ 可选：Off（关闭）；Simple（简易）；Category（类别）；Step（步长）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Category Null Color（类别 Null 颜色）
+ 类型：文本；默认："30;30;30"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Category CR Color（类别 CR 颜色）
+ 类型：文本；默认："&11"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Category LF Color（类别 LF 颜色）
+ 类型：文本；默认："&10"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Category Control Color（类别 控制 颜色）
+ 类型：文本；默认："&6"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Category Space Color（类别 空格 颜色）
+ 类型：文本；默认："&12"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Category Punct Color（类别 Punct 颜色）
+ 类型：文本；默认："&14"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Category Alpha Color（类别 不透明度 颜色）
+ 类型：文本；默认："&7"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Category Number Color（类别 号码 颜色）
+ 类型：文本；默认："&9"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Category Other Color（类别 Other 颜色）
+ 类型：文本；默认："&13"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Category Punct Unicode Color (Strict)（类别 Punct Unicode 颜色 (严格)）
+ 类型：文本；默认："255;80;80"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Category Punct Unicode Color（类别 Punct Unicode 颜色）
+ 类型：文本；默认："72;118;255"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Category 2-Byte Unicode Color（类别 2-Byte Unicode 颜色）
+ 类型：文本；默认："255;110;180"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Category 3-Byte Unicode Color（类别 3-Byte Unicode 颜色）
+ 类型：文本；默认："255;110;180"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Category 4-Byte Unicode Color（类别 4-Byte Unicode 颜色）
+ 类型：文本；默认："255;110;180"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Step Color Start（步长 颜色 启动）
+ 类型：文本；默认："30;30;30"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Step Color End（步长 颜色 End）
+ 类型：文本；默认："255;255;255"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
 历史更新
 - 1. 修复 Hex Viewer 数字左对齐的问题。
 - 35. 为 Hex Viewer 添加了更多的类目自定义颜色。支持对 Unicode 字符的解析了。

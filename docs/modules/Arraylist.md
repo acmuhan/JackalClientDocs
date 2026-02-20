@@ -14,75 +14,184 @@ Arraylist
 介绍
 Arraylist（模块列表）用于显示已启用模块列表。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Background Height Mode、Side Bar Style。
+初次使用可优先调整：Background Height Mode。
 
 配置项
-- Background Opacity Max (0~1)（中文：背景不透明度最大值 (0~1)）：类型=数值，默认=0.57f
-- Show Info（中文：显示信息）：类型=布尔，默认=true
-- Show Window（中文：显示窗口）：类型=布尔，默认=true
-- Background Shadow（中文：背景阴影）：类型=布尔，默认=true
-- Opacity Period (ms)（中文：不透明度周期（毫秒））：类型=数值，默认=3000L
-- Show Control（中文：显示控制）：类型=布尔，默认=true
-- Background Opacity Min (0~1)（中文：背景不透明度最小值 (0~1)）：类型=数值，默认=0.56f
-- Sort By Length（中文：按长度排序）：类型=布尔，默认=true
-- Show Web（中文：显示联网状态）：类型=布尔，默认=true
-- Show Render（中文：显示渲染）：类型=布尔，默认=true
-- Background Roundness（中文：背景圆滑程度）：类型=数值，默认=0.3f
-- Background Color（中文：背景颜色）：类型=枚举，默认="Black"
-  可选：Transparent（透明）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Background Shadow Color（中文：背景阴影颜色）：类型=枚举，默认="Black"
-  可选：Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Background Shadow Old Rendering（中文：背景阴影使用旧渲染）：类型=布尔，默认=true
-- Background Shadow Thickness（中文：背景阴影厚度）：类型=数值，默认=40
-- Show Combat（中文：显示竞技）：类型=布尔，默认=true
-- Entry Exit Animation（中文：进出场动画）：类型=枚举，默认="Normal"
-  可选：Off（关闭）；Normal（普通）；Elastic（弹性）；Back（返回）
-- Top（中文：顶端）：类型=数值，默认=60
-- Hide When Menu On（中文：菜单打开时不显示）：类型=布尔，默认=false
-- Background Height Mode（中文：背景高度模式）：类型=枚举，默认="Font Size"
-  可选：Font Size + Line Gap（字号+行距）；Font Size（字号）
-- Global Position（中文：全局位置）：类型=枚举，默认="Screen"
-  可选：Screen（屏幕）；Foreground（前端）；PointAt（指向）
-- Opacity Max (0~1)（中文：不透明度最大值 (0~1)）：类型=数值，默认=0.88f
-- Removed Item Offset Y（中文：Removed Item 偏移 Y）：类型=数值，默认=0.0f
-- Side Bar Style（中文：侧边条样式）：类型=枚举，默认="Disconnected"
-  可选：Disconnected（已断开）；Continuous（连续）
-- Background Opacity Period (ms)（中文：背景不透明度周期 (毫秒)）：类型=数值，默认=2000L
-- Drag X（中文：未收录）：类型=数值，默认=0
-- Background Outline Color（中文：背景描边颜色）：类型=枚举，默认="Transparent"
-  可选：Transparent（透明）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Use Display Length（中文：使用实际长度）：类型=布尔，默认=true
-- Show Registry（中文：显示注册表）：类型=布尔，默认=true
-- Side Margin（中文：侧边空白）：类型=数值，默认=12
-- Side Bar Text Gap（中文：侧边条与文字间距）：类型=数值，默认=15
-- Show Process（中文：显示进程）：类型=布尔，默认=true
-- Position（中文：位置）：类型=枚举，默认="Right"
-  可选：Left（左侧）；Right（右侧）
-- Background Round Corners（中文：背景圆角）：类型=布尔，默认=false
-- Easing Speed (0~1)（中文：缓动速率 (0~1)）：类型=数值，默认=0.2f
-- Show Drivers（中文：显示驱动）：类型=布尔，默认=true
-- Text Glow Radius Rate（中文：文本发光半径占比）：类型=数值，默认=0.2f
-- Give Way to Mouse（中文：给鼠标让道）：类型=布尔，默认=true
-- Background Shadow Opacity (0~1)（中文：背景阴影不透明度 (0~1)）：类型=数值，默认=0.5f
-- Info Gap（中文：信息间距）：类型=数值，默认=10
-- Background Color Darkness (0~1)（中文：背景颜色暗度 (0~1)）：类型=数值，默认=0.8f
-- Info Color（中文：信息颜色）：类型=枚举，默认="White-Gray"
-  可选：Flow（流动）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Text Glow (PRO)（中文：文本发光（专业版））：类型=布尔，默认=true
-- Background（中文：背景）：类型=布尔，默认=true
-- Background Horizontal Padding（中文：背景水平留白）：类型=数值，默认=10
-- Show Misc（中文：显示其他）：类型=布尔，默认=true
-- Side Bar（中文：侧边矩形）：类型=布尔，默认=false
-- Language（中文：语言）：类型=枚举，默认="Follow Global"
-  可选：Follow Global（跟随全局）；English（英语）；简体中文（未收录）
-- hidden（中文：隐藏）：类型=布尔，默认=true
-- Font Size（中文：字号）：类型=数值，默认=36
-- Background Outline（中文：背景描边）：类型=布尔，默认=true
-- Opacity Min (0~1)（中文：不透明度最小值 (0~1)）：类型=数值，默认=0.8f
-- Text Glow Alpha (0~1)（中文：文本发光不透明度 (0~1)）：类型=数值，默认=0.5f
-- Give Way to Mouse Distance（中文：给鼠标让道的距离）：类型=数值，默认=80.0f
-- Line Gap（中文：行距）：类型=数值，默认=9
-
+- Hide When Menu On（菜单打开时不显示）
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Give Way to Mouse（给鼠标让道）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Give Way to Mouse Distance（给鼠标让道的距离）
+ 类型：数值；默认：80.0f
+ 说明：这是数值型配置。默认值 80.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Font Size（字号）
+ 类型：数值；默认：36
+ 说明：用于控制文本可读性。默认字号 36 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+- Line Gap（行距）
+ 类型：数值；默认：9
+ 说明：用于细调显示样式和间距。默认值 9 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Text Glow (PRO)（文本发光（专业版））
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Text Glow Radius Rate（文本发光半径占比）
+ 类型：数值；默认：0.2f
+ 说明：用于细调显示样式和间距。默认值 0.2f 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Text Glow Alpha (0~1)（文本发光不透明度 (0~1)）
+ 类型：数值；默认：0.5f
+ 说明：这是数值型配置。默认值 0.5f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Top（顶端）
+ 类型：数值；默认：60
+ 说明：这是数值型配置。默认值 60 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Drag X（未收录）
+ 类型：数值；默认：0
+ 说明：这是数值型配置。默认值 0 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Global Position（全局位置）
+ 类型：枚举；默认："Screen"
+ 说明：这是选项型配置。默认值 Screen 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Screen（屏幕）；Foreground（前端）；PointAt（指向）
+- Language（语言）
+ 类型：枚举；默认："Follow Global"
+ 说明：这是选项型配置。默认值 Follow Global 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Follow Global（跟随全局）；English（英语）；简体中文（未收录）
+- Position（位置）
+ 类型：枚举；默认："Right"
+ 说明：这是选项型配置。默认值 Right 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Left（左侧）；Right（右侧）
+- Side Margin（侧边空白）
+ 类型：数值；默认：12
+ 说明：这是数值型配置。默认值 12 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Side Bar（侧边矩形）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Entry Exit Animation（进出场动画）
+ 类型：枚举；默认："Normal"
+ 说明：这是选项型配置。默认值 Normal 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Off（关闭）；Normal（普通）；Elastic（弹性）；Back（返回）
+- Side Bar Text Gap（侧边条与文字间距）
+ 类型：数值；默认：15
+ 说明：用于细调显示样式和间距。默认值 15 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Side Bar Style（侧边条样式）
+ 类型：枚举；默认："Disconnected"
+ 说明：这是选项型配置。默认值 Disconnected 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Disconnected（已断开）；Continuous（连续）
+- Easing Speed (0~1)（缓动速率 (0~1)）
+ 类型：数值；默认：0.2f
+ 说明：这是数值型配置。默认值 0.2f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Removed Item Offset Y（Removed Item 偏移 Y）
+ 类型：数值；默认：0.0f
+ 说明：这是数值型配置。默认值 0.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Opacity Min (0~1)（不透明度最小值 (0~1)）
+ 类型：数值；默认：0.8f
+ 说明：用于控制透明度。默认值 0.8f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Opacity Max (0~1)（不透明度最大值 (0~1)）
+ 类型：数值；默认：0.88f
+ 说明：用于控制透明度。默认值 0.88f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Opacity Period (ms)（不透明度周期（毫秒））
+ 类型：数值；默认：3000L
+ 说明：用于控制透明度。默认值 3000L 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Show Combat（显示竞技）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show Window（显示窗口）
+ 类型：布尔；默认：true
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- Show Process（显示进程）
+ 类型：布尔；默认：true
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- Show Registry（显示注册表）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show Control（显示控制）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show Web（显示联网状态）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show Render（显示渲染）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show Misc（显示其他）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show Drivers（显示驱动）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show Info（显示信息）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Info Color（信息颜色）
+ 类型：枚举；默认："White-Gray"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：Flow（流动）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Info Gap（信息间距）
+ 类型：数值；默认：10
+ 说明：这是数值型配置。默认值 10 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Background（背景）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Background Outline（背景描边）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Background Shadow（背景阴影）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Background Shadow Opacity (0~1)（背景阴影不透明度 (0~1)）
+ 类型：数值；默认：0.5f
+ 说明：用于控制透明度。默认值 0.5f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Background Shadow Thickness（背景阴影厚度）
+ 类型：数值；默认：40
+ 说明：用于细调显示样式和间距。默认值 40 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Background Shadow Old Rendering（背景阴影使用旧渲染）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Background Round Corners（背景圆角）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Background Roundness（背景圆滑程度）
+ 类型：数值；默认：0.3f
+ 说明：用于细调显示样式和间距。默认值 0.3f 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Background Horizontal Padding（背景水平留白）
+ 类型：数值；默认：10
+ 说明：用于细调显示样式和间距。默认值 10 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Background Height Mode（背景高度模式）
+ 类型：枚举；默认："Font Size"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Font Size ，确认稳定后再逐项切换比较效果。
+ 可选：Font Size + Line Gap（字号+行距）；Font Size（字号）
+- Background Opacity Min (0~1)（背景不透明度最小值 (0~1)）
+ 类型：数值；默认：0.56f
+ 说明：用于控制透明度。默认值 0.56f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Background Opacity Max (0~1)（背景不透明度最大值 (0~1)）
+ 类型：数值；默认：0.57f
+ 说明：用于控制透明度。默认值 0.57f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Background Opacity Period (ms)（背景不透明度周期 (毫秒)）
+ 类型：数值；默认：2000L
+ 说明：用于控制透明度。默认值 2000L 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Background Color（背景颜色）
+ 类型：枚举；默认："Black"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：Transparent（透明）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Background Shadow Color（背景阴影颜色）
+ 类型：枚举；默认："Black"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Background Color Darkness (0~1)（背景颜色暗度 (0~1)）
+ 类型：数值；默认：0.8f
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Background Outline Color（背景描边颜色）
+ 类型：枚举；默认："Transparent"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：Transparent（透明）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Sort By Length（按长度排序）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Use Display Length（使用实际长度）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- hidden（隐藏）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
 历史更新
 - 17. 现在 模块列表HUD 添加了丝滑的动画。
 - 25. 现在模块列表HUD支持靠左了。

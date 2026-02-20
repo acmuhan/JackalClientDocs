@@ -12,18 +12,24 @@ AntiDebug
 - 版本属性：普通可用
 
 介绍
-AntiDebug（反调试）用于防止客户端被调试。
-适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Check Cooldown、Reaction。
-
+AntiDebug（反调试）建议先按默认配置运行一段时间，确认对目标窗口/系统行为的影响后，再从关键开关项开始逐步微调。
 配置项
-- Related File Detection（中文：相关文件探测）：类型=布尔，默认=true
-- Active Defense（中文：主动防御）：类型=布尔，默认=true
-- Check Cooldown（中文：检查冷却）：类型=数值，默认=500
-- Async（中文：异步）：类型=布尔，默认=true
-- Reaction（中文：反应）：类型=枚举，默认="Exit"
-  可选：Warn（警告）；Exit（退出）；Self Destruct（自毁）；Extinction（灭亡）
-
+- Async（异步）
+ 类型：布尔；默认：true
+ 说明：启用异步处理可降低主线程卡顿；如需稳定复现实验流程可暂时关闭。
+- Active Defense（主动防御）
+ 类型：布尔；默认：true
+ 说明：该开关会直接改变系统或窗口行为。建议逐项启用并观察，避免一次开启过多导致排查困难。
+- Check Cooldown（检查冷却）
+ 类型：数值；默认：500
+ 说明：该值控制轮询/触发间隔。调小响应更快但占用更高；调大更省资源。
+- Related File Detection（相关文件探测）
+ 类型：布尔；默认：true
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Reaction（反应）
+ 类型：枚举；默认："Exit"
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+ 可选：Warn（警告）；Exit（退出）；Self Destruct（自毁）；Extinction（灭亡）
 历史更新
 - 8. 修复 Anti Debug 报错的问题。
 - 4. 修复了 AntiDebug 反调试模块无法击杀部分窗口的问题，并支持异步模式了，以免很卡。

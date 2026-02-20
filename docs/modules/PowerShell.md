@@ -17,9 +17,12 @@ PowerShell（PowerShell）用于打开 PowerShell。
 初次使用可优先调整：Run As Admin、No Wow64 Redirection。
 
 配置项
-- Run As Admin（中文：以管理员身份运行）：类型=布尔，默认=false
-- No Wow64 Redirection（中文：禁用 Wow64 重定向）：类型=布尔，默认=true
-
+- Run As Admin（以管理员身份运行）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- No Wow64 Redirection（禁用 Wow64 重定向）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
 历史更新
 - 2. 修复了 NoCmd, NoPowerShell, NoTaskmgr, NoRegedit 无效的问题。
 

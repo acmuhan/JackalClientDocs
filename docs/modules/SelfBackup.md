@@ -17,8 +17,9 @@ SelfBackup（自我备份）用于把所有资产备份到backup文件夹。
 初次使用可优先调整：Async。
 
 配置项
-- Async（中文：异步）：类型=布尔，默认=true
-
+- Async（异步）
+ 类型：布尔；默认：true
+ 说明：用于控制是否异步处理。默认值 true 通常能减少主线程卡顿；若你遇到并发相关问题，可回退到更保守设置测试。
 历史更新
 - 18. 修复了 Self Backup 错误更新备份列表的问题。
 - 19. 为 Self Backup 和 Self Restore 添加配置项：Async （是否异步操作）.

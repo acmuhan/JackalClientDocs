@@ -14,26 +14,53 @@ MacroRecorder
 介绍
 MacroRecorder（宏录制）用于录制键盘和鼠标操作的宏。
 适合键鼠行为控制、输入增强和自动化操作场景。
-初次使用可优先调整：Recording HUD、Recording HUD Font Size、Notify Mouse Pos (Chatter)。
+初次使用可优先调整：Recording HUD、Recording HUD Font Size、Recording HUD X Rate。
 
 配置项
-- bind (Enable)（中文：绑定 (启用)）：类型=按键/复合，默认={{"Keybind", {0}}}
-- Recording HUD（中文：录制中HUD）：类型=枚举，默认="Off"
-  可选：Off（关闭）；Rec（未收录）；Red Rectangle（红色矩形）
-- Recording HUD Font Size（中文：录制中HUD字号）：类型=数值，默认=50
-- Record Window Assertions（中文：记录窗口断言）：类型=布尔，默认=false
-- Notify Mouse Pos (Chatter)（中文：通知鼠标坐标 (弹幕)）：类型=布尔，默认=false
-- First Perspective Mouse Offset Scale Y（中文：第一人称视角鼠标偏移 Y 缩放）：类型=数值，默认=1.0f
-- First Perspective Mouse Offset（中文：第一视角鼠标偏移）：类型=布尔，默认=false
-- First Perspective Mouse Offset Scale X（中文：第一人称视角鼠标偏移 X 缩放）：类型=数值，默认=5.0f
-- Notify File Path（中文：通知文件路径）：类型=布尔，默认=true
-- Output Format（中文：输出格式）：类型=枚举，默认="Jackal Macro"
-  可选：Jackal Macro（Jackal 宏）；Jackal Batch（Jackal 批处理）
-- Recording HUD X Rate（中文：录制中HUD X比例）：类型=数值，默认=0.05f
-- Notify Actions (Chatter)（中文：通知动作 (弹幕)）：类型=布尔，默认=false
-- bind (Disable)（中文：绑定 (关闭)）：类型=按键/复合，默认={{"Keybind", {0}}}
-- Recording HUD Y Rate（中文：录制中HUD Y比例）：类型=数值，默认=0.12f
-
+- Output Format（输出格式）
+ 类型：枚举；默认："Jackal Macro"
+ 说明：这是选项型配置。默认值 Jackal Macro 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Jackal Macro（Jackal 宏）；Jackal Batch（Jackal 批处理）
+- First Perspective Mouse Offset（第一视角鼠标偏移）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- First Perspective Mouse Offset Scale X（第一人称视角鼠标偏移 X 缩放）
+ 类型：数值；默认：5.0f
+ 说明：这是数值型配置。默认值 5.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- First Perspective Mouse Offset Scale Y（第一人称视角鼠标偏移 Y 缩放）
+ 类型：数值；默认：1.0f
+ 说明：这是数值型配置。默认值 1.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Recording HUD（录制中HUD）
+ 类型：枚举；默认："Off"
+ 说明：这是选项型配置。默认值 Off 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Off（关闭）；Rec（未收录）；Red Rectangle（红色矩形）
+- Recording HUD Font Size（录制中HUD字号）
+ 类型：数值；默认：50
+ 说明：用于控制文本可读性。默认字号 50 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+- Recording HUD X Rate（录制中HUD X比例）
+ 类型：数值；默认：0.05f
+ 说明：用于控制界面元素在屏幕中的相对位置。默认值 0.05f 一般是作者调过的稳定布局；建议每次只改一个轴，避免元素跑出可视区域。
+- Recording HUD Y Rate（录制中HUD Y比例）
+ 类型：数值；默认：0.12f
+ 说明：用于控制界面元素在屏幕中的相对位置。默认值 0.12f 一般是作者调过的稳定布局；建议每次只改一个轴，避免元素跑出可视区域。
+- Notify File Path（通知文件路径）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Notify Actions (Chatter)（通知动作 (弹幕)）
+ 类型：布尔；默认：false
+ 说明：用于选择结果反馈方式。默认值 false 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Notify Mouse Pos (Chatter)（通知鼠标坐标 (弹幕)）
+ 类型：布尔；默认：false
+ 说明：用于选择结果反馈方式。默认值 false 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Record Window Assertions（记录窗口断言）
+ 类型：布尔；默认：false
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- bind (Enable)（绑定 (启用)）
+ 类型：按键/复合；默认：{{"Keybind", {0}}}
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- bind (Disable)（绑定 (关闭)）
+ 类型：按键/复合；默认：{{"Keybind", {0}}}
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
 历史更新
 - 10. 添加模块： MacroRecorder（宏录制）
 

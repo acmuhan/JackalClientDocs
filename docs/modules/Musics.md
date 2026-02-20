@@ -14,16 +14,23 @@ Musics
 介绍
 Musics（音乐）用于播放音乐。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Style。
+初次使用可优先调整：Filename、When、Style。
 
 配置项
-- Filename（中文：文件名）：类型=文本，默认="FunkyStars.mp3"
-- MCI Mp3 Volume（中文：MCI Mp3 音量）：类型=数值，默认=100
-- Style（中文：风格）：类型=枚举，默认="Normal"
-  可选：Normal（普通）；Damaged（损坏）
-- When（中文：何时）：类型=枚举，默认="Menu On"
-  可选：Menu On（打开菜单）；Menu Off（关闭菜单）；Always（总是）
-
+- Filename（文件名）
+ 类型：文本；默认："FunkyStars.mp3"
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- When（何时）
+ 类型：枚举；默认："Menu On"
+ 说明：这是选项型配置。默认值 Menu On 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Menu On（打开菜单）；Menu Off（关闭菜单）；Always（总是）
+- Style（风格）
+ 类型：枚举；默认："Normal"
+ 说明：这是选项型配置。默认值 Normal 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Normal（普通）；Damaged（损坏）
+- MCI Mp3 Volume（MCI Mp3 音量）
+ 类型：数值；默认：100
+ 说明：这是数值型配置。默认值 100 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
 历史更新
 无（HISTORY 中暂无明确记录）
 

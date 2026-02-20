@@ -14,15 +14,24 @@ Anti360Ad
 介绍
 Anti360Ad（反数字广告）用于暂无描述。
 适合进程观测、控制与排障场景。
-初次使用可优先调整：Remove 360 Suspended Ball、Kill 360 Ad Processes、MultiTip.exe。
+初次使用可优先调整：Kill 360 Ad Processes、Remove 360 Suspended Ball、MultiTip.exe。
 
 配置项
-- Remove 360 Suspended Ball（中文：移除 360 悬浮球）：类型=布尔，默认=true
-- Kill 360 Ad Processes（中文：杀死 360 广告进程）：类型=布尔，默认=true
-- MultiTip.exe（中文：未收录）：类型=布尔，默认=true
-- sesvcr.exe（中文：未收录）：类型=布尔，默认=true
-- 360SpeedldHealth.exe（中文：未收录）：类型=布尔，默认=true
-
+- Kill 360 Ad Processes（杀死 360 广告进程）
+ 类型：布尔；默认：true
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- Remove 360 Suspended Ball（移除 360 悬浮球）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- MultiTip.exe（未收录）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- sesvcr.exe（未收录）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- 360SpeedldHealth.exe（未收录）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
 历史更新
 - 9. 修复 Anti360Ad 在系统权限下 %AppData% 路径错误的问题。
 - 14. 为 Anti360Ad 模块添加配置：

@@ -12,17 +12,18 @@ System
 - 版本属性：普通可用
 
 介绍
-System（系统）用于重启客户端窃取系统权限。
-适合在日常管理与自动化场景中按需启用。
-建议先以管理员身份运行客户端。
-初次使用可优先调整：System Privilege Check Method。
-
+System（系统）建议先按默认配置运行一段时间，确认对目标窗口/系统行为的影响后，再从关键开关项开始逐步微调。
 配置项
-- System Privilege Check Method（中文：系统权限检查方式）：类型=枚举，默认="Whoami"
-  可选：Membership（成员资格）；Whoami（俺是谁）
-- Use NSudo（中文：使用 NSudo）：类型=布尔，默认=false
-- Exit After Run（中文：运行后退出）：类型=布尔，默认=true
-
+- System Privilege Check Method（系统权限检查方式）
+ 类型：枚举；默认："Whoami"
+ 说明：该项决定执行策略。建议先用默认策略验证稳定性，再逐个切换比较效果与副作用。
+ 可选：Membership（成员资格）；Whoami（俺是谁）
+- Use NSudo（使用 NSudo）
+ 类型：布尔；默认：false
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Exit After Run（运行后退出）
+ 类型：布尔；默认：true
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
 历史更新
 - 36. 修改所有的 _wsystem 调用改为自定义的 CreateProcess，其中 bInheritHandle为FALSE，避免自保护下的拒绝访问。
 - 4. 添加模块：System Proxy，系统因特网代理设置

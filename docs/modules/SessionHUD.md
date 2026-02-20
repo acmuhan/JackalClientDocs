@@ -14,33 +14,72 @@ SessionHUD
 介绍
 SessionHUD（会话显示）用于显示当前用户的信息。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Y Rate、Background Roundness、Background Round Corners。
+初次使用可优先调整：X Rate、Y Rate、Hide When Menu On。
 
 配置项
-- Y Rate（中文：纵坐标比例）：类型=数值，默认=0.2f
-- Background Roundness（中文：背景圆滑程度）：类型=数值，默认=0.6f
-- Background Round Corners（中文：背景圆角）：类型=布尔，默认=true
-- Background Shadow Color（中文：背景阴影颜色）：类型=枚举，默认="Black"
-  可选：Transparent（透明）；Flow（流动）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Time Info（中文：时间信息）：类型=布尔，默认=true
-- Background Opacity (0~1)（中文：背景不透明度 (0~1)）：类型=数值，默认=0.5f
-- Background Shadow Thickness（中文：背景阴影厚度）：类型=数值，默认=60.0f
-- Hide When Menu On（中文：菜单打开时不显示）：类型=布尔，默认=false
-- Give Way to Mouse（中文：给鼠标让道）：类型=布尔，默认=true
-- Text Color（中文：文本颜色）：类型=枚举，默认="White"
-  可选：Flow（流动）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Width（中文：宽度）：类型=数值，默认=300
-- Avatar Opacity (0~1)（中文：头像不透明度 (0~1)）：类型=数值，默认=1.0f
-- Avatar Circle（中文：圆形头像）：类型=布尔，默认=true
-- Background Color（中文：背景颜色）：类型=枚举，默认="Flow"
-  可选：Transparent（透明）；Flow（流动）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Text Font Size（中文：文本字号）：类型=数值，默认=30
-- Background Shadow（中文：背景阴影）：类型=布尔，默认=true
-- Background Shadow Opacity (0~1)（中文：背景阴影不透明度 (0~1)）：类型=数值，默认=0.6f
-- Avatar Scale（中文：头像缩放）：类型=数值，默认=1.0f
-- X Rate（中文：横坐标比例）：类型=数值，默认=0.1f
-- Background（中文：背景）：类型=布尔，默认=true
-
+- X Rate（横坐标比例）
+ 类型：数值；默认：0.1f
+ 说明：用于控制界面元素在屏幕中的相对位置。默认值 0.1f 一般是作者调过的稳定布局；建议每次只改一个轴，避免元素跑出可视区域。
+- Y Rate（纵坐标比例）
+ 类型：数值；默认：0.2f
+ 说明：用于控制界面元素在屏幕中的相对位置。默认值 0.2f 一般是作者调过的稳定布局；建议每次只改一个轴，避免元素跑出可视区域。
+- Hide When Menu On（菜单打开时不显示）
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Give Way to Mouse（给鼠标让道）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Avatar Scale（头像缩放）
+ 类型：数值；默认：1.0f
+ 说明：这是数值型配置。默认值 1.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Avatar Circle（圆形头像）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Avatar Opacity (0~1)（头像不透明度 (0~1)）
+ 类型：数值；默认：1.0f
+ 说明：用于控制透明度。默认值 1.0f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Width（宽度）
+ 类型：数值；默认：300
+ 说明：这是数值型配置。默认值 300 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Background（背景）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Background Opacity (0~1)（背景不透明度 (0~1)）
+ 类型：数值；默认：0.5f
+ 说明：用于控制透明度。默认值 0.5f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Background Round Corners（背景圆角）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Background Roundness（背景圆滑程度）
+ 类型：数值；默认：0.6f
+ 说明：用于细调显示样式和间距。默认值 0.6f 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Background Shadow（背景阴影）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Background Shadow Thickness（背景阴影厚度）
+ 类型：数值；默认：60.0f
+ 说明：用于细调显示样式和间距。默认值 60.0f 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Background Shadow Opacity (0~1)（背景阴影不透明度 (0~1)）
+ 类型：数值；默认：0.6f
+ 说明：用于控制透明度。默认值 0.6f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Background Color（背景颜色）
+ 类型：枚举；默认："Flow"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：Transparent（透明）；Flow（流动）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Background Shadow Color（背景阴影颜色）
+ 类型：枚举；默认："Black"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：Transparent（透明）；Flow（流动）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Text Font Size（文本字号）
+ 类型：数值；默认：30
+ 说明：用于控制文本可读性。默认字号 30 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+- Text Color（文本颜色）
+ 类型：枚举；默认："White"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：Flow（流动）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Time Info（时间信息）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
 历史更新
 - 19. 修复了 SessionHUD 在 HudEditor 启用时仍能为鼠标让位的问题。
 - 1. 添加模块：Session HUD，显示当前 Windows 用户信息，模仿挂端设计。还会有当前的游玩时间，实际是开机时间。

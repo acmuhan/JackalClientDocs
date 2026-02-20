@@ -12,30 +12,60 @@ AntiSpy
 - 版本属性：普通可用
 
 介绍
-AntiSpy（反间谍）用于暂无描述。
-适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Notify、Anti Prefetch Check Cooldown (ms)、Check Cooldown (ms)。
-
+AntiSpy（反间谍）建议先按默认配置运行一段时间，确认对目标窗口/系统行为的影响后，再从关键开关项开始逐步微调。
 配置项
-- Anti Prefetch (PRO)（中文：反预取（专业版））：类型=枚举，默认="Filtered"
-  可选：Off（关闭）；Filtered（已过滤）；All（所有）
-- Clear Run History (PRO)（中文：清空运行历史（专业版））：类型=布尔，默认=true
-- Async（中文：异步）：类型=布尔，默认=true
-- Notify（中文：通知）：类型=布尔，默认=true
-- Anti Prefetch Whitelist Processes (Sep With Semicolon)（中文：反预取进程白名单（用分号分隔））：类型=文本，默认="JackalClient.exe;loader.exe;Inject.exe;Injector.exe;liquidlauncher.exe;Vape_V4. ...
-- Anti Prefetch Whitelist Processes Enabled（中文：反预取启用进程白名单）：类型=布尔，默认=true
-- Anti Prefetch Blacklist Processes (Sep With Semicolon)（中文：反预取进程黑名单（用分号分隔））：类型=文本，默认=""
-- Clear Recent Office History（中文：清空近期Office历史）：类型=布尔，默认=true
-- Clear Recent Activity Timeline (PRO)（中文：清空最近活动时间轴（专业版））：类型=布尔，默认=true
-- Toggle Anti Microphone（中文：联动反麦克风）：类型=布尔，默认=false
-- Anti Prefetch Check Cooldown (ms)（中文：Anti Prefetch Check 冷却 (ms)）：类型=数值，默认=50000L
-- Clear Recent File History（中文：清空近期文件历史）：类型=布尔，默认=true
-- Disable Clipboard History（中文：禁用剪贴板历史）：类型=布尔，默认=true
-- Check Cooldown (ms)（中文：检查冷却 (毫秒)）：类型=数值，默认=1000U
-- Clear Explorer Search History (PRO)（中文：清空资源管理器搜索历史（专业版））：类型=布尔，默认=true
-- Anti Prefetch Deletion Notify（中文：反预取删除通知）：类型=布尔，默认=false
-- Anti Prefetch Blacklist Processes Enabled（中文：反预取启用进程黑名单）：类型=布尔，默认=false
-
+- Async（异步）
+ 类型：布尔；默认：true
+ 说明：启用异步处理可降低主线程卡顿；如需稳定复现实验流程可暂时关闭。
+- Check Cooldown (ms)（检查冷却 (毫秒)）
+ 类型：数值；默认：1000U
+ 说明：该值控制轮询/触发间隔。调小响应更快但占用更高；调大更省资源。
+- Toggle Anti Microphone（联动反麦克风）
+ 类型：布尔；默认：false
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Clear Recent File History（清空近期文件历史）
+ 类型：布尔；默认：true
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Clear Recent Office History（清空近期Office历史）
+ 类型：布尔；默认：true
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Clear Recent Activity Timeline (PRO)（清空最近活动时间轴（专业版））
+ 类型：布尔；默认：true
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Clear Run History (PRO)（清空运行历史（专业版））
+ 类型：布尔；默认：true
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Clear Explorer Search History (PRO)（清空资源管理器搜索历史（专业版））
+ 类型：布尔；默认：true
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Disable Clipboard History（禁用剪贴板历史）
+ 类型：布尔；默认：true
+ 说明：该开关会直接改变系统或窗口行为。建议逐项启用并观察，避免一次开启过多导致排查困难。
+- Anti Prefetch (PRO)（反预取（专业版））
+ 类型：枚举；默认："Filtered"
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+ 可选：Off（关闭）；Filtered（已过滤）；All（所有）
+- Anti Prefetch Deletion Notify（反预取删除通知）
+ 类型：布尔；默认：false
+ 说明：用于控制结果反馈方式。调试阶段建议开启，日常使用可按需要关闭。
+- Anti Prefetch Check Cooldown (ms)（Anti Prefetch Check 冷却 (ms)）
+ 类型：数值；默认：50000L
+ 说明：该值控制轮询/触发间隔。调小响应更快但占用更高；调大更省资源。
+- Anti Prefetch Whitelist Processes Enabled（反预取启用进程白名单）
+ 类型：布尔；默认：true
+ 说明：这是筛选名单项，用于限制作用范围。建议先小范围试运行，再逐步扩充名单。
+- Anti Prefetch Whitelist Processes (Sep With Semicolon)（反预取进程白名单（用分号分隔））
+ 类型：文本；默认："JackalClient.exe;loader.exe;Inject.exe;Injector.exe;liquidlauncher.exe;Vape_V4.exe;Vape_Lite.exe;patcher.exe;Kangaroo Patcher.exe;我的世界布吉岛启动器.exe ...
+ 说明：这是筛选名单项，用于限制作用范围。建议先小范围试运行，再逐步扩充名单。
+- Anti Prefetch Blacklist Processes Enabled（反预取启用进程黑名单）
+ 类型：布尔；默认：false
+ 说明：这是筛选名单项，用于限制作用范围。建议先小范围试运行，再逐步扩充名单。
+- Anti Prefetch Blacklist Processes (Sep With Semicolon)（反预取进程黑名单（用分号分隔））
+ 类型：文本；默认：""
+ 说明：这是筛选名单项，用于限制作用范围。建议先小范围试运行，再逐步扩充名单。
+- Notify（通知）
+ 类型：布尔；默认：true
+ 说明：用于控制结果反馈方式。调试阶段建议开启，日常使用可按需要关闭。
 历史更新
 - 79. 为 Anti Spy 添加配置项：
 - 33. 为 Anti Spy 添加配置：

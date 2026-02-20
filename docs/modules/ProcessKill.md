@@ -14,17 +14,28 @@ ProcessKill
 介绍
 ProcessKill（进程击杀）用于暂无描述。
 适合进程观测、控制与排障场景。
-初次使用可优先调整：Notify Kill、Method。
+初次使用可优先调整：Method、Notify Kill。
 
 配置项
-- Kill PID（中文：杀PID）：类型=数值，默认=0
-- Keep（中文：保持）：类型=布尔，默认=false
-- Notify Kill（中文：通知击杀）：类型=布尔，默认=true
-- Kill Names (Sep with Semicolon)（中文：杀名称 (用分号分隔)）：类型=文本，默认="dwm.exe"
-- Disable After Attempt（中文：尝试之后关闭）：类型=布尔，默认=true
-- Method（中文：方法）：类型=枚举，默认="Chain"
-  可选：Chain（链式）；Normal（普通）；Thread Killer（线程杀手）；Thread Patcher（线程补丁）；Winsta（未收录）；Debugger（未收录）；Job（未收录）；WMI（未收录）；Kernel（未收录）
-
+- Method（方法）
+ 类型：枚举；默认："Chain"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Chain ，确认稳定后再逐项切换比较效果。
+ 可选：Chain（链式）；Normal（普通）；Thread Killer（线程杀手）；Thread Patcher（线程补丁）；Winsta（未收录）；Debugger（未收录）；Job（未收录）；WMI（未收录）；Kernel（未收录）
+- Kill Names (Sep with Semicolon)（杀名称 (用分号分隔)）
+ 类型：文本；默认："dwm.exe"
+ 说明：该配置用于调整模块行为细节。建议先按默认值运行，确认需求后再逐步调整。
+- Kill PID（杀PID）
+ 类型：数值；默认：0
+ 说明：这是数值型配置。默认值 0 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Notify Kill（通知击杀）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Disable After Attempt（尝试之后关闭）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Keep（保持）
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
 历史更新
 - 32. 为模块 ProcessKill 添加配置：
 - 33. 修复 ProcessKill 只指定 PID 时不工作的问题。

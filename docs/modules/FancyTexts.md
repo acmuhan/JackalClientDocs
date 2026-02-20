@@ -14,35 +14,78 @@ FancyTexts
 介绍
 FancyTexts（花式文字）用于显示一些带有动画和特效的花哨文字。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Opacity Min (0~1)、Fog Color、Async。
+初次使用可优先调整：Async、Hide When Menu On、Module Status Auto Switch。
 
 配置项
-- Opacity Min (0~1)（中文：不透明度最小值 (0~1)）：类型=数值，默认=0.7f
-- Fog Color（中文：雾颜色）：类型=枚举，默认="Black"
-  可选：Transparent（透明）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Async（中文：异步）：类型=布尔，默认=true
-- Random Rotation Start Coefficient（中文：随机旋转起始系数）：类型=数值，默认=1.0f
-- Color（中文：颜色）：类型=枚举，默认="Colorful"
-  可选：Flow（流动）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Fixed Text（中文：固定文本）：类型=文本，默认="阿诺头顶怎么尖尖的"
-- Parallax Intensity（中文：视差强度）：类型=数值，默认=0.8f
-- Hide When Menu On（中文：菜单打开时不显示）：类型=布尔，默认=false
-- Fade Out Duration (ms)（中文：淡出时长（毫秒））：类型=数值，默认=800L
-- Opacity Period (ms)（中文：不透明度周期（毫秒））：类型=数值，默认=6000L
-- Fog Enabled（中文：启用雾效果）：类型=布尔，默认=false
-- Fog Opacity (0~1)（中文：雾不透明度 (0~1)）：类型=数值，默认=0.6f
-- Cut Words（中文：分词）：类型=枚举，默认="Single"
-  可选：Single（单个）；Double（两个）；Bili Suggestion（哔哩建议）；API（未收录）；API 2（未收录）
-- Random Rotation End Coefficient（中文：随机旋转结束系数）：类型=数值，默认=1.0f
-- Flow（中文：流动）：类型=通用，默认=NAMED_COLOR_BASE_LIST
-- Show Duration (ms)（中文：显示时长（毫秒））：类型=数值，默认=3000L
-- Opacity Max (0~1)（中文：不透明度最大值 (0~1)）：类型=数值，默认=0.9f
-- Module Status Auto Switch（中文：模块状态自动切换）：类型=布尔，默认=true
-- Scale（中文：比例）：类型=数值，默认=100
-- Single（中文：单个）：类型=文本，默认="Double", "Bili Suggestion", "API", "API 2"
-- Fade In Duration (ms)（中文：淡入时长（毫秒））：类型=数值，默认=500L
-- Random Rotation（中文：随机旋转）：类型=布尔，默认=true
-
+- Async（异步）
+ 类型：布尔；默认：true
+ 说明：用于控制是否异步处理。默认值 true 通常能减少主线程卡顿；若你遇到并发相关问题，可回退到更保守设置测试。
+- Hide When Menu On（菜单打开时不显示）
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Module Status Auto Switch（模块状态自动切换）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show Duration (ms)（显示时长（毫秒））
+ 类型：数值；默认：3000L
+ 说明：用于控制检测/刷新/动画节奏。默认值 3000L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Scale（比例）
+ 类型：数值；默认：100
+ 说明：这是数值型配置。默认值 100 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Fixed Text（固定文本）
+ 类型：文本；默认："阿诺头顶怎么尖尖的"
+ 说明：该配置用于调整模块行为细节。建议先按默认值运行，确认需求后再逐步调整。
+- Cut Words（分词）
+ 类型：枚举；默认："Single"
+ 说明：这是选项型配置。默认值 Single 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Single（单个）；Double（两个）；Bili Suggestion（哔哩建议）；API（未收录）；API 2（未收录）
+- Single（单个）
+ 类型：文本；默认："Double", "Bili Suggestion", "API", "API 2"
+ 说明：该配置用于调整模块行为细节。建议先按默认值运行，确认需求后再逐步调整。
+- Color（颜色）
+ 类型：枚举；默认："Colorful"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：Flow（流动）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Flow（流动）
+ 类型：通用；默认：NAMED_COLOR_BASE_LIST
+ 说明：该配置用于调整模块行为细节。建议先按默认值运行，确认需求后再逐步调整。
+- Random Rotation（随机旋转）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Random Rotation Start Coefficient（随机旋转起始系数）
+ 类型：数值；默认：1.0f
+ 说明：这是数值型配置。默认值 1.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Random Rotation End Coefficient（随机旋转结束系数）
+ 类型：数值；默认：1.0f
+ 说明：这是数值型配置。默认值 1.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Fog Enabled（启用雾效果）
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Fog Opacity (0~1)（雾不透明度 (0~1)）
+ 类型：数值；默认：0.6f
+ 说明：用于控制透明度。默认值 0.6f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Fog Color（雾颜色）
+ 类型：枚举；默认："Black"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：Transparent（透明）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Parallax Intensity（视差强度）
+ 类型：数值；默认：0.8f
+ 说明：这是数值型配置。默认值 0.8f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Fade In Duration (ms)（淡入时长（毫秒））
+ 类型：数值；默认：500L
+ 说明：用于控制检测/刷新/动画节奏。默认值 500L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Fade Out Duration (ms)（淡出时长（毫秒））
+ 类型：数值；默认：800L
+ 说明：用于控制检测/刷新/动画节奏。默认值 800L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Opacity Min (0~1)（不透明度最小值 (0~1)）
+ 类型：数值；默认：0.7f
+ 说明：用于控制透明度。默认值 0.7f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Opacity Max (0~1)（不透明度最大值 (0~1)）
+ 类型：数值；默认：0.9f
+ 说明：用于控制透明度。默认值 0.9f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Opacity Period (ms)（不透明度周期（毫秒））
+ 类型：数值；默认：6000L
+ 说明：用于控制透明度。默认值 6000L 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
 历史更新
 - 35. 改良 Fancy Text 的渲染，添加了三种新布局: 阻止元素超出屏幕范围
 - 36. 为 Fancy Text 添加配置：

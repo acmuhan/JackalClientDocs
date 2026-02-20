@@ -15,30 +15,57 @@ Reminder
 介绍
 Reminder（提醒）用于想要关心你的某一个人。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Morning Greetings、Night Greetings、Afternoon Time Min。
+初次使用可优先调整：Holiday Greetings、Morning Greetings、Afternoon Greetings。
 
 配置项
-- Morning Greetings（中文：早晨问候）：类型=枚举，默认="Basic"
-  可选：Off（关闭）；Basic（基础）；AI（人工智能）
-- Night Greetings（中文：晚间问候）：类型=枚举，默认="Basic"
-  可选：Off（关闭）；Basic（基础）；AI（人工智能）
-- Afternoon Time Min（中文：下午最早时间）：类型=数值，默认=12.5f
-- Midnight Greetings（中文：凌晨问候）：类型=枚举，默认="Basic"
-  可选：Off（关闭）；Basic（基础）；AI（人工智能）
-- Morning Time Min（中文：早晨最早时间）：类型=数值，默认=6.0f
-- Night Time Max（中文：晚间最晚时间）：类型=数值，默认=23.5f
-- Midnight Time Min（中文：凌晨最早时间）：类型=数值，默认=0.0f
-- Morning Time Max（中文：早晨最晚时间）：类型=数值，默认=10.5f
-- Midnight Time Max（中文：凌晨最晚时间）：类型=数值，默认=4.0f
-- Greeting Persona（中文：问候口吻）：类型=枚举，默认="Normal"
-  可选：Normal（普通）；Maid（女仆）；Catgirl（猫娘）
-- Night Time Min（中文：晚间最早时间）：类型=数值，默认=18.8f
-- Afternoon Greetings（中文：下午问候）：类型=枚举，默认="Basic"
-  可选：Off（关闭）；Basic（基础）；AI（人工智能）
-- Afternoon Time Max（中文：下午最晚时间）：类型=数值，默认=16.8f
-- Holiday Greetings（中文：节日祝福）：类型=枚举，默认="Basic"
-  可选：Off（关闭）；Basic（基础）；AI（人工智能）
-
+- Holiday Greetings（节日祝福）
+ 类型：枚举；默认："Basic"
+ 说明：这是选项型配置。默认值 Basic 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Off（关闭）；Basic（基础）；AI（人工智能）
+- Morning Greetings（早晨问候）
+ 类型：枚举；默认："Basic"
+ 说明：这是选项型配置。默认值 Basic 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Off（关闭）；Basic（基础）；AI（人工智能）
+- Afternoon Greetings（下午问候）
+ 类型：枚举；默认："Basic"
+ 说明：这是选项型配置。默认值 Basic 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Off（关闭）；Basic（基础）；AI（人工智能）
+- Night Greetings（晚间问候）
+ 类型：枚举；默认："Basic"
+ 说明：这是选项型配置。默认值 Basic 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Off（关闭）；Basic（基础）；AI（人工智能）
+- Midnight Greetings（凌晨问候）
+ 类型：枚举；默认："Basic"
+ 说明：这是选项型配置。默认值 Basic 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Off（关闭）；Basic（基础）；AI（人工智能）
+- Greeting Persona（问候口吻）
+ 类型：枚举；默认："Normal"
+ 说明：这是选项型配置。默认值 Normal 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Normal（普通）；Maid（女仆）；Catgirl（猫娘）
+- Morning Time Min（早晨最早时间）
+ 类型：数值；默认：6.0f
+ 说明：这是数值型配置。默认值 6.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Morning Time Max（早晨最晚时间）
+ 类型：数值；默认：10.5f
+ 说明：这是数值型配置。默认值 10.5f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Afternoon Time Min（下午最早时间）
+ 类型：数值；默认：12.5f
+ 说明：这是数值型配置。默认值 12.5f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Afternoon Time Max（下午最晚时间）
+ 类型：数值；默认：16.8f
+ 说明：这是数值型配置。默认值 16.8f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Night Time Min（晚间最早时间）
+ 类型：数值；默认：18.8f
+ 说明：这是数值型配置。默认值 18.8f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Night Time Max（晚间最晚时间）
+ 类型：数值；默认：23.5f
+ 说明：这是数值型配置。默认值 23.5f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Midnight Time Min（凌晨最早时间）
+ 类型：数值；默认：0.0f
+ 说明：这是数值型配置。默认值 0.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Midnight Time Max（凌晨最晚时间）
+ 类型：数值；默认：4.0f
+ 说明：这是数值型配置。默认值 4.0f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
 历史更新
 - 69. 实装 Reminder，提供简单的每日/节日祝福。可以自行探索。
 - 28. 【PRO】添加模块：Reminder，会在特定场景下弹出一些通知。

@@ -14,13 +14,18 @@ Elevator
 介绍
 Elevator（电梯）用于使用驱动程序提升进程权限，无需重启它。
 适合进程观测、控制与排障场景。
-初次使用可优先调整：Process Id (Zero For Any)、Process Name (Empty For Any)、Max Process Count。
+初次使用可优先调整：Process Name (Empty For Any)、Process Id (Zero For Any)、Max Process Count。
 
 配置项
-- Process Id (Zero For Any)（中文：进程ID (用0指代任何)）：类型=数值，默认=0
-- Process Name (Empty For Any)（中文：进程名 (用空指代任何)）：类型=文本，默认="JackalClient.exe"
-- Max Process Count（中文：最大进程数量）：类型=数值，默认=8
-
+- Process Name (Empty For Any)（进程名 (用空指代任何)）
+ 类型：文本；默认："JackalClient.exe"
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- Process Id (Zero For Any)（进程ID (用0指代任何)）
+ 类型：数值；默认：0
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- Max Process Count（最大进程数量）
+ 类型：数值；默认：8
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
 历史更新
 - 23. 添加使用驱动的模块：Elevator，使用驱动程序提升目标进程权限。
 

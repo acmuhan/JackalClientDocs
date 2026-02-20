@@ -14,25 +14,50 @@ AutoSpeak
 介绍
 AutoSpeak（自动讲述）用于自动说出一些话。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Translator (Except Main Mode)、Speak Actionbar、Main Mode。
+初次使用可优先调整：Main Mode、Smart Mode Gap (ms)、Translator (Except Main Mode)。
 
 配置项
-- Translator (Except Main Mode)（中文：翻译器 (除主模式外)）：类型=枚举，默认="Off"
-  可选：Off（关闭）；Chinese（中文）；English（英语）；Exchange（交换）
-- Speak Actionbar（中文：念行为栏）：类型=布尔，默认=false
-- Random Min Interval (ms)（中文：最小随机间隔 (毫秒)）：类型=数值，默认=20000L
-- Speak Title（中文：念标题）：类型=布尔，默认=true
-- Random Max Interval (ms)（中文：最大随机间隔 (毫秒)）：类型=数值，默认=120000L
-- Dialog Text Max Speak Length（中文：对话框文本最大朗读长度）：类型=数值，默认=100U
-- Periodic Interval (ms)（中文：周期性间隔 (毫秒)）：类型=数值，默认=10000L
-- Main Mode（中文：主模式）：类型=枚举，默认="Off"
-  可选：Off（关闭）；Periodic（周期性）；Random（随机）；Smart（智能）
-- Skip Speaking Dialog Text Same As Previous（中文：朗读跳过和上一次相同的对话框文本）：类型=布尔，默认=true
-- Speak Dialog (Auto Detect)（中文：念对话框 (自动检测)）：类型=布尔，默认=true
-- Speak Subtitle（中文：念副标题）：类型=布尔，默认=false
-- Smart Mode Gap (ms)（中文：智能模式间隔（毫秒））：类型=数值，默认=1000L
-- Speak Chatter（中文：念弹幕）：类型=布尔，默认=false
-
+- Main Mode（主模式）
+ 类型：枚举；默认："Off"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Off ，确认稳定后再逐项切换比较效果。
+ 可选：Off（关闭）；Periodic（周期性）；Random（随机）；Smart（智能）
+- Periodic Interval (ms)（周期性间隔 (毫秒)）
+ 类型：数值；默认：10000L
+ 说明：用于控制检测/刷新/动画节奏。默认值 10000L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Random Min Interval (ms)（最小随机间隔 (毫秒)）
+ 类型：数值；默认：20000L
+ 说明：用于控制检测/刷新/动画节奏。默认值 20000L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Random Max Interval (ms)（最大随机间隔 (毫秒)）
+ 类型：数值；默认：120000L
+ 说明：用于控制检测/刷新/动画节奏。默认值 120000L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Smart Mode Gap (ms)（智能模式间隔（毫秒））
+ 类型：数值；默认：1000L
+ 说明：这是该模块的核心行为开关。默认值 1000L 通常更稳，建议先验证默认策略再尝试其他模式。
+- Translator (Except Main Mode)（翻译器 (除主模式外)）
+ 类型：枚举；默认："Off"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Off ，确认稳定后再逐项切换比较效果。
+ 可选：Off（关闭）；Chinese（中文）；English（英语）；Exchange（交换）
+- Speak Actionbar（念行为栏）
+ 类型：布尔；默认：false
+ 说明：这是该模块的核心行为开关。默认值 false 通常更稳，建议先验证默认策略再尝试其他模式。
+- Speak Title（念标题）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Speak Subtitle（念副标题）
+ 类型：布尔；默认：false
+ 说明：用于选择结果反馈方式。默认值 false 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Speak Chatter（念弹幕）
+ 类型：布尔；默认：false
+ 说明：用于选择结果反馈方式。默认值 false 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Speak Dialog (Auto Detect)（念对话框 (自动检测)）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Dialog Text Max Speak Length（对话框文本最大朗读长度）
+ 类型：数值；默认：100U
+ 说明：这是数值型配置。默认值 100U 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Skip Speaking Dialog Text Same As Previous（朗读跳过和上一次相同的对话框文本）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
 历史更新
 - 33. 为 AutoSpeak 添加配置：
 - 28. 为 AutoSpeak 模块添加配置：

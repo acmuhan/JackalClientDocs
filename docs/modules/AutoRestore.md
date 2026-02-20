@@ -17,8 +17,9 @@ AutoRestore（自动还原）用于暂无描述。
 初次使用可优先调整：Only Backup Folder。
 
 配置项
-- Only Backup Folder（中文：仅backup文件夹）：类型=布尔，默认=true
-
+- Only Backup Folder（仅backup文件夹）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
 历史更新
 无（HISTORY 中暂无明确记录）
 

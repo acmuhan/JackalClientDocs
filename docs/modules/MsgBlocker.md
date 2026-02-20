@@ -14,24 +14,45 @@ MsgBlocker
 介绍
 MsgBlocker（消息阻塞）用于暂无描述。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Hide HUD When Menu On、Notify、Target Window。
+初次使用可优先调整：Notify、Hide HUD When Menu On、Target Window。
 该模块处于 WIP 阶段，行为可能不稳定，建议先小范围测试。
 
 配置项
-- Output Messages（中文：输出消息）：类型=布尔，默认=true
-- Hide HUD When Menu On（中文：打开菜单时隐藏HUD）：类型=布尔，默认=false
-- Overlay Color（中文：覆盖膜颜色）：类型=枚举，默认="Red"
-  可选：Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Overlay Opacity (0~1)（中文：覆盖膜不透明度 (0~1)）：类型=数值，默认=0.2f
-- Ignore WM_PAINT（中文：忽略 WM_PAINT）：类型=布尔，默认=true
-- Notify（中文：通知）：类型=布尔，默认=true
-- Ignore WM_TIMER（中文：忽略 WM_TIMER）：类型=布尔，默认=false
-- Disable When Quit（中文：退出时关闭）：类型=布尔，默认=true
-- Target Window（中文：目标窗口）：类型=枚举，默认="Foreground"
-  可选：Foreground（前端）；PointAt（指向）
-- Overlay（中文：覆盖膜）：类型=布尔，默认=true
-- Ignore WM_QUIT（中文：忽略 WM_QUIT）：类型=布尔，默认=false
-
+- Notify（通知）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Disable When Quit（退出时关闭）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Output Messages（输出消息）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Ignore WM_PAINT（忽略 WM_PAINT）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Ignore WM_TIMER（忽略 WM_TIMER）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Ignore WM_QUIT（忽略 WM_QUIT）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Overlay（覆盖膜）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Overlay Color（覆盖膜颜色）
+ 类型：枚举；默认："Red"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Overlay Opacity (0~1)（覆盖膜不透明度 (0~1)）
+ 类型：数值；默认：0.2f
+ 说明：用于控制透明度。默认值 0.2f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Hide HUD When Menu On（打开菜单时隐藏HUD）
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Target Window（目标窗口）
+ 类型：枚举；默认："Foreground"
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+ 可选：Foreground（前端）；PointAt（指向）
 历史更新
 无（HISTORY 中暂无明确记录）
 

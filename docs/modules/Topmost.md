@@ -12,17 +12,19 @@ Topmost
 - 版本属性：普通可用
 
 介绍
-Topmost（窗口置顶）用于立即置顶前端窗口。你需要分配一个快捷键。
-适合窗口管理、可视化监控与交互增强场景。
-初次使用可优先调整：Notify、Target。
-
+Topmost（置顶）用于快速切换窗口置顶状态。建议先限定目标来源，避免误操作到无关窗口。
 配置项
-- Notify（中文：通知）：类型=布尔，默认=true
-- Target（中文：目标）：类型=枚举，默认="Foreground"
-  可选：Foreground（前端）；PointAt（指向）
-- Operation（中文：操作）：类型=枚举，默认="Auto"
-  可选：Auto（自动）；Topmost（置顶）；Untopmost（取消置顶）
-
+- Target（目标）
+ 类型：枚举；默认："Foreground"
+ 说明：置顶/取消置顶的目标窗口来源。
+ 可选：Foreground（前端）；PointAt（指向）
+- Operation（操作）
+ 类型：枚举；默认："Auto"
+ 说明：执行模式：自动切换、强制置顶或强制取消置顶。
+ 可选：Auto（自动）；Topmost（置顶）；Untopmost（取消置顶）
+- Notify（通知）
+ 类型：布尔；默认：true
+ 说明：执行后是否给出提示。批量操作时可关闭减少干扰。
 历史更新
 - 23. 添加一个设定：如果 GUI 中的更好的置顶（Better Topmost）启用，按下 Win+D 快捷键后客户端会自动获得焦点以免置顶了却被最小化。
 - 33. 将 Title 模块的 Check Topmost 改为只设置窗口置顶，添加 Auto Focus 配置项（这个才是设置焦点）

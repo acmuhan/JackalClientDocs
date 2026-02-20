@@ -17,9 +17,10 @@ ChatRestruct（AI重构）用于暂无描述。
 初次使用可优先调整：Pattern。
 
 配置项
-- Pattern（中文：样式）：类型=枚举，默认="AddSpace"
-  可选：AddSpace（添加空格）；Reverse（颠倒）；Shuffle（打乱）；ExpandSentence（扩句）；Abbreviate（缩句）；MachineTranslative（机翻）；Stammer（结巴）；Childlike（跟小孩似的）；Spoken（口语）；Emojis（表情符号）
-
+- Pattern（样式）
+ 类型：枚举；默认："AddSpace"
+ 说明：这是选项型配置。默认值 AddSpace 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：AddSpace（添加空格）；Reverse（颠倒）；Shuffle（打乱）；ExpandSentence（扩句）；Abbreviate（缩句）；MachineTranslative（机翻）；Stammer（结巴）；Childlike（跟小孩似的）；Spoken（口语）；Emojis（表情符号）
 历史更新
 - 27. 为 Chat Restruct 添加配置项，以便调整样式。样式有：
 

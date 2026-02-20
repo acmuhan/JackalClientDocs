@@ -14,16 +14,23 @@ WebSettings
 介绍
 WebSettings（网络设定）用于客户端联网设置。
 适合联网信息获取、账号联动和在线交互场景。
-初次使用可优先调整：Network Check Cooldown (ms)、Network Online Status Change Notify Mode。
+初次使用可优先调整：Network Online Status Change Notify Mode、Network Check Cooldown (ms)。
 
 配置项
-- Network Module Force Online（中文：联网模块强制联网）：类型=布尔，默认=true
-- Network Check Cooldown (ms)（中文：网络检查冷却 (毫秒)）：类型=数值，默认=5000U
-- Network Online Status Change Notify Mode（中文：网络在线状态变化时通知模式）：类型=枚举，默认="Notify"
-  可选：Off（关闭）；Notify（通知）；Title（标题）；Chatter（弹幕）；WinToast（系统通知）
-- Output Curl Error（中文：输出 Curl 错误）：类型=枚举，默认="Always"
-  可选：Off（关闭）；Non Timeout（非超时）；Always（总是）
-
+- Network Online Status Change Notify Mode（网络在线状态变化时通知模式）
+ 类型：枚举；默认："Notify"
+ 说明：用于选择结果反馈方式。默认值 Notify 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+ 可选：Off（关闭）；Notify（通知）；Title（标题）；Chatter（弹幕）；WinToast（系统通知）
+- Network Check Cooldown (ms)（网络检查冷却 (毫秒)）
+ 类型：数值；默认：5000U
+ 说明：用于控制检测/刷新/动画节奏。默认值 5000U 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Network Module Force Online（联网模块强制联网）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Output Curl Error（输出 Curl 错误）
+ 类型：枚举；默认："Always"
+ 说明：这是选项型配置。默认值 Always 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Off（关闭）；Non Timeout（非超时）；Always（总是）
 历史更新
 - 47. 添加模块：Web Settings，将客户端联网设置集中在这里。
 

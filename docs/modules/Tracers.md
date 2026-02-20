@@ -12,18 +12,24 @@ Tracers
 - 版本属性：普通可用
 
 介绍
-Tracers（追踪线）用于绘制鼠标到窗口的追踪线。
-适合窗口管理、可视化监控与交互增强场景。
-初次使用可优先调整：Line Color、Line Width、Line Opacity (0~1)。
-
+Tracers（追踪线）会从参考点向目标窗口绘制连线，用于快速建立视觉关联。先调好锚点比例，再调颜色和透明度。
 配置项
-- Line Color（中文：线条颜色）：类型=枚举，默认="Rainbow"
-  可选：Flow（流动）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Line Width（中文：线条宽度）：类型=数值，默认=1.0f
-- Line Opacity (0~1)（中文：线条不透明度 (0~1)）：类型=数值，默认=0.5f
-- Window Point X Rate（中文：窗口点横坐标比例）：类型=数值，默认=0.5f
-- Window Point Y Rate（中文：窗口点纵坐标比例）：类型=数值，默认=0.05f
-
+- Line Color（线条颜色）
+ 类型：枚举；默认："Rainbow"
+ 说明：连线颜色。
+ 可选：Flow（流动）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Line Width（线条宽度）
+ 类型：数值；默认：1.0f
+ 说明：连线宽度。
+- Line Opacity (0~1)（线条不透明度 (0~1)）
+ 类型：数值；默认：0.5f
+ 说明：连线透明度。
+- Window Point X Rate（窗口点横坐标比例）
+ 类型：数值；默认：0.5f
+ 说明：窗口锚点横向比例。0=左侧，1=右侧。
+- Window Point Y Rate（窗口点纵坐标比例）
+ 类型：数值；默认：0.05f
+ 说明：窗口锚点纵向比例。0=顶部，1=底部。
 历史更新
 - 13. 添加模块：Tracers，绘制从鼠标到顶层窗口的追踪线
 - 14. WindowESP 的顶层窗口更新现已和 Tracers 共用，更新冷却在 Config 设置

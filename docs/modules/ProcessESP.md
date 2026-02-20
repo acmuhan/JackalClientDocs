@@ -14,24 +14,39 @@ ProcessESP
 介绍
 ProcessESP（进程透视）用于暂无描述。
 适合进程观测、控制与排障场景。
-初次使用可优先调整：Exited Process Notify Whitelist Enabled、New Process Notify Blacklist Enabled、New Process Notify Whitelist (Regex Sep With Semicolon)。
+初次使用可优先调整：New Process Notify Blacklist Enabled、New Process Notify Blacklist (Regex Sep With Semicolon)、New Process Notify Whitelist Enabled。
 
 配置项
-- Exited Process Notify Whitelist Enabled（中文：进程通知白名单是否启用）：类型=布尔，默认=false
-- New Process Notify Blacklist Enabled（中文：新增进程通知黑名单是否启用）：类型=布尔，默认=false
-- New Process Notify Whitelist (Regex Sep With Semicolon)（中文：新增进程通知白名单 (用分号分隔的正则表达式)）：类型=文本，默认="cmd\\.exe;explorer\\.exe;Hips[a-zA-Z]+\\.exe;360[a-zA-Z0-9]+\\.exe"
-- New Process Notify Blacklist (Regex Sep With Semicolon)（中文：新增进程通知黑名单 (用分号分隔的正则表达式)）：类型=文本，默认="loader\\.exe;conhost\\.exe;tesseract\\.exe"
-- New Process Notify Mode（中文：新增进程通知模式）：类型=枚举，默认="Notify"
-  可选：Off（关闭）；Notify（通知）；Chatter（弹幕）；Title（标题）
-- Check Cooldown (ms)（中文：检查冷却 (毫秒)）：类型=数值，默认=100L
-- Exited Process Notify Blacklist Enabled（中文：进程通知黑名单是否启用）：类型=布尔，默认=false
-- New Process Parent Display（中文：新进程显示父进程）：类型=布尔，默认=true
-- Exited Process Notify Whitelist (Regex Sep With Semicolon)（中文：退出进程通知白名单 (用分号分隔的正则表达式)）：类型=文本，默认="cmd\\.exe;explorer\\.exe;Hips[a-zA-Z]+\\.exe;360[a-zA-Z0-9]+\\.exe"
-- Exited Process Notify Blacklist (Regex Sep With Semicolon)（中文：退出进程通知黑名单 (用分号分隔的正则表达式)）：类型=文本，默认="loader\\.exe;conhost\\.exe;tesseract\\.exe"
-- Exited Process Notify Mode（中文：退出进程通知模式）：类型=枚举，默认="Notify"
-  可选：Off（关闭）；Notify（通知）；Chatter（弹幕）；Title（标题）
-- New Process Notify Whitelist Enabled（中文：新增进程通知白名单是否启用）：类型=布尔，默认=false
-
+- New Process Parent Display（新进程显示父进程）
+ 类型：布尔；默认：true
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- New Process Notify Blacklist Enabled（新增进程通知黑名单是否启用）
+ 类型：布尔；默认：false
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- New Process Notify Blacklist (Regex Sep With Semicolon)（新增进程通知黑名单 (用分号分隔的正则表达式)）
+ 类型：文本；默认："loader\\.exe;conhost\\.exe;tesseract\\.exe"
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- New Process Notify Whitelist Enabled（新增进程通知白名单是否启用）
+ 类型：布尔；默认：false
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- New Process Notify Whitelist (Regex Sep With Semicolon)（新增进程通知白名单 (用分号分隔的正则表达式)）
+ 类型：文本；默认："cmd\\.exe;explorer\\.exe;Hips[a-zA-Z]+\\.exe;360[a-zA-Z0-9]+\\.exe"
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- Exited Process Notify Blacklist Enabled（进程通知黑名单是否启用）
+ 类型：布尔；默认：false
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- Exited Process Notify Blacklist (Regex Sep With Semicolon)（退出进程通知黑名单 (用分号分隔的正则表达式)）
+ 类型：文本；默认："loader\\.exe;conhost\\.exe;tesseract\\.exe"
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- Exited Process Notify Whitelist Enabled（进程通知白名单是否启用）
+ 类型：布尔；默认：false
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- Exited Process Notify Whitelist (Regex Sep With Semicolon)（退出进程通知白名单 (用分号分隔的正则表达式)）
+ 类型：文本；默认："cmd\\.exe;explorer\\.exe;Hips[a-zA-Z]+\\.exe;360[a-zA-Z0-9]+\\.exe"
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- Check Cooldown (ms)（检查冷却 (毫秒)）
+ 类型：数值；默认：100L
+ 说明：用于控制检测/刷新/动画节奏。默认值 100L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
 历史更新
 - 12. 为 ProcessESP 添加配置：
 - 18. 实装模块： Process ESP，探测进程及变化，并进行通知。

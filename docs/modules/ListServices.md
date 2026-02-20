@@ -14,15 +14,22 @@ ListServices
 介绍
 ListServices（枚举服务）用于暂无描述。
 适合进程观测、控制与排障场景。
-初次使用可优先调整：Style。
+初次使用可优先调整：Async、Auto Console、Style。
 
 配置项
-- Auto Console（中文：自动启用控制台）：类型=布尔，默认=true
-- Async（中文：异步）：类型=布尔，默认=true
-- Style（中文：风格）：类型=枚举，默认="Normal"
-  可选：Vanilla（原版）；Vanilla (Only Win32)（原版 (仅Win32)）；Vanilla (Only Drivers)（原版 (仅驱动程序)）；Vanilla Custom（原版 (自定义)）；Normal（普通）；Simple（简易）
-- Vanilla Enum Custom Command（中文：原版枚举自定义命令）：类型=文本，默认="sc query"
-
+- Async（异步）
+ 类型：布尔；默认：true
+ 说明：用于控制是否异步处理。默认值 true 通常能减少主线程卡顿；若你遇到并发相关问题，可回退到更保守设置测试。
+- Auto Console（自动启用控制台）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Style（风格）
+ 类型：枚举；默认："Normal"
+ 说明：这是选项型配置。默认值 Normal 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Vanilla（原版）；Vanilla (Only Win32)（原版 (仅Win32)）；Vanilla (Only Drivers)（原版 (仅驱动程序)）；Vanilla Custom（原版 (自定义)）；Normal（普通）；Simple（简易）
+- Vanilla Enum Custom Command（原版枚举自定义命令）
+ 类型：文本；默认："sc query"
+ 说明：该配置用于调整模块行为细节。建议先按默认值运行，确认需求后再逐步调整。
 历史更新
 - 10. 添加新模块 ListServices: 枚举服务。
 

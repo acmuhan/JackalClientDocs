@@ -17,12 +17,19 @@ DiskMissing（磁盘丢失）用于制造磁盘丢失的假象。
 初次使用可优先调整：Signal Cooldown (ms)。
 
 配置项
-- Custom Missing Drives（中文：自定义丢失的磁盘）：类型=文本，默认="D;E"
-- Keep（中文：保持）：类型=布尔，默认=true
-- Signal Cooldown (ms)（中文：发送信号冷却 (毫秒)）：类型=数值，默认=80L
-- Missing Drives（中文：丢失的磁盘）：类型=枚举，默认="System Drive"
-  可选：System Drive（系统盘）；All（所有）；Custom（自定义）
-
+- Keep（保持）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Signal Cooldown (ms)（发送信号冷却 (毫秒)）
+ 类型：数值；默认：80L
+ 说明：用于控制检测/刷新/动画节奏。默认值 80L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Missing Drives（丢失的磁盘）
+ 类型：枚举；默认："System Drive"
+ 说明：这是选项型配置。默认值 System Drive 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：System Drive（系统盘）；All（所有）；Custom（自定义）
+- Custom Missing Drives（自定义丢失的磁盘）
+ 类型：文本；默认："D;E"
+ 说明：该配置用于调整模块行为细节。建议先按默认值运行，确认需求后再逐步调整。
 历史更新
 - 21. 添加模块：DiskMissing，可以制造磁盘消失的假象。
 

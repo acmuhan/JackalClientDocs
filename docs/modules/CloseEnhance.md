@@ -12,15 +12,15 @@ CloseEnhance
 - 版本属性：普通可用
 
 介绍
-CloseEnhance（关闭增强）用于暂无描述。
-适合窗口管理、可视化监控与交互增强场景。
-初次使用可优先调整：Method。
-
+CloseEnhance（关闭增强）建议先按默认配置运行一段时间，确认对目标窗口/系统行为的影响后，再从关键开关项开始逐步微调。
 配置项
-- Exclude Self（中文：排除自身）：类型=布尔，默认=true
-- Method（中文：方法）：类型=枚举，默认="EndSession"
-  可选：EndSession（发送结束会话消息）；KillProcess（击杀进程）；EndTask（暴力结束任务）
-
+- Method（方法）
+ 类型：枚举；默认："EndSession"
+ 说明：该项决定执行策略。建议先用默认策略验证稳定性，再逐个切换比较效果与副作用。
+ 可选：EndSession（发送结束会话消息）；KillProcess（击杀进程）；EndTask（暴力结束任务）
+- Exclude Self（排除自身）
+ 类型：布尔；默认：true
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
 历史更新
 - 13. 为 CloseEnhance 模块的 Method 添加一种方式： EndTask。
 - 2. 为 Close Enhance 添加配置：

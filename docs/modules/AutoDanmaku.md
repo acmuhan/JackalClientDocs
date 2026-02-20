@@ -14,32 +14,69 @@ AutoDanmaku
 介绍
 AutoDanmaku（自动弹幕）用于根据xml文件自动发送弹幕。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Danmaku Font Size Mode、File Selection Mode、Notify Danmaku File Name。
+初次使用可优先调整：File Selection Mode、Notify Danmaku File Name、Danmaku Font Size Mode。
 
 配置项
-- Danmaku Font Size Mode（中文：弹幕字号模式）：类型=枚举，默认="Auto"
-  可选：Fixed（固定）；Auto（自动）；Manual（手动）
-- Path（中文：路径）：类型=文本，默认="danmaku_172423516.xml"
-- White Danmaku Color（中文：白色弹幕颜色）：类型=枚举，默认="White"
-  可选：Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- File Selection Mode（中文：弹幕文件选择模式。）：类型=枚举，默认="Single File"
-  可选：Single File（单一文件）；Single File Loop（单一文件循环）；Folder Random Select（文件夹中随机选择）；Folder Sequential Select（文件夹中顺序选择）；Folder Loop Select（文件夹中循环选择）
-- List Current Index（中文：列表当前索引）：类型=数值，默认=0
-- Lazy Danmaku Pushing（中文：懒汉式推送弹幕）：类型=布尔，默认=false
-- Horizontal Reverse（中文：横向翻转）：类型=布尔，默认=false
-- Hotkey (Next Danmaku File)（中文：快捷键（下一个弹幕文件））：类型=按键/复合，默认={{"Keybind", {VK_LCONTROL, VK_LMENU, '2'}}}
-- Recursive Selection in Folder（中文：文件夹中选择文件时采用递归）：类型=布尔，默认=false
-- Show Reverse Danmaku（中文：展示逆向弹幕）：类型=布尔，默认=true
-- Show Top Danmaku（中文：展示顶部居中弹幕）：类型=布尔，默认=true
-- File Selection Max Attempts（中文：文件选择最大尝试次数）：类型=数值，默认=5
-- White Danmaku Color Frozen（中文：白色弹幕颜色是否冻结）：类型=布尔，默认=false
-- Show Bottom Danmaku（中文：展示底部居中弹幕）：类型=布尔，默认=true
-- Danmaku Font Size Manual Scale（中文：弹幕字号手动缩放）：类型=数值，默认=1.0f
-- Notify Danmaku File Name（中文：通知弹幕文件名）：类型=布尔，默认=true
-- Vertical Reverse（中文：纵向翻转）：类型=布尔，默认=false
-- File Gap Duration (ms)（中文：文件间隔时间 (毫秒)）：类型=数值，默认=0L
-- Correct /n to NewLine（中文：纠正/n为换行符）：类型=布尔，默认=true
-
+- File Selection Mode（弹幕文件选择模式。）
+ 类型：枚举；默认："Single File"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Single File ，确认稳定后再逐项切换比较效果。
+ 可选：Single File（单一文件）；Single File Loop（单一文件循环）；Folder Random Select（文件夹中随机选择）；Folder Sequential Select（文件夹中顺序选择）；Folder Loop Select（文件夹中循环选择）
+- Path（路径）
+ 类型：文本；默认："danmaku_172423516.xml"
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- File Selection Max Attempts（文件选择最大尝试次数）
+ 类型：数值；默认：5
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- Recursive Selection in Folder（文件夹中选择文件时采用递归）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- List Current Index（列表当前索引）
+ 类型：数值；默认：0
+ 说明：这是数值型配置。默认值 0 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- File Gap Duration (ms)（文件间隔时间 (毫秒)）
+ 类型：数值；默认：0L
+ 说明：用于控制检测/刷新/动画节奏。默认值 0L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Correct /n to NewLine（纠正/n为换行符）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Notify Danmaku File Name（通知弹幕文件名）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Show Top Danmaku（展示顶部居中弹幕）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show Bottom Danmaku（展示底部居中弹幕）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show Reverse Danmaku（展示逆向弹幕）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Horizontal Reverse（横向翻转）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Vertical Reverse（纵向翻转）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Danmaku Font Size Mode（弹幕字号模式）
+ 类型：枚举；默认："Auto"
+ 说明：用于控制文本可读性。默认字号 Auto 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+ 可选：Fixed（固定）；Auto（自动）；Manual（手动）
+- White Danmaku Color（白色弹幕颜色）
+ 类型：枚举；默认："White"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- White Danmaku Color Frozen（白色弹幕颜色是否冻结）
+ 类型：布尔；默认：false
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Danmaku Font Size Manual Scale（弹幕字号手动缩放）
+ 类型：数值；默认：1.0f
+ 说明：用于控制文本可读性。默认字号 1.0f 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+- Lazy Danmaku Pushing（懒汉式推送弹幕）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Hotkey (Next Danmaku File)（快捷键（下一个弹幕文件））
+ 类型：按键/复合；默认：{{"Keybind", {VK_LCONTROL, VK_LMENU, '2'}}}
+ 说明：用于设置快捷键触发。建议避免与系统或常用软件冲突，优先使用组合键提高可控性。
 历史更新
 - 17. 修复 AutoDanmaku 模块因为编码而无法启动问题。
 - 22. 修改 AutoDanmaku 的示例文件为 danmaku_172423516.xml

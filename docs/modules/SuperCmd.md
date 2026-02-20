@@ -17,12 +17,19 @@ SuperCmd（超级CMD）用于打开更高权限的命令提示符。
 初次使用可优先调整：Mode。
 
 配置项
-- SetPrivileges Waiting Start Timeout (ms)（中文：设置特权等待超时时间 (毫秒)）：类型=数值，默认=5000L
-- Enable Privileges（中文：启用特权）：类型=布尔，默认=true
-- No Wow64 Redirection（中文：禁用 Wow64 重定向）：类型=布尔，默认=true
-- Mode（中文：模式）：类型=枚举，默认="System"
-  可选：Admin（管理员）；Admin UAC Bypass（管理员UAC绕过）；System（系统）；Trusted Installer（未收录）
-
+- Mode（模式）
+ 类型：枚举；默认："System"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 System ，确认稳定后再逐项切换比较效果。
+ 可选：Admin（管理员）；Admin UAC Bypass（管理员UAC绕过）；System（系统）；Trusted Installer（未收录）
+- SetPrivileges Waiting Start Timeout (ms)（设置特权等待超时时间 (毫秒)）
+ 类型：数值；默认：5000L
+ 说明：用于控制检测/刷新/动画节奏。默认值 5000L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Enable Privileges（启用特权）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- No Wow64 Redirection（禁用 Wow64 重定向）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
 历史更新
 - 2. 添加模块：SuperCmd，快捷启动高权限CMD。
 

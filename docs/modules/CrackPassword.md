@@ -12,28 +12,45 @@ CrackPassword
 - 版本属性：普通可用
 
 介绍
-CrackPassword（破解密码）用于凭借字典，暴力破解计算机当前用户的密码。
-适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：HUD、HUD Show Current Password Attempt、Notify Speed。
-该模块被标记为恶意高风险，请在隔离环境下验证，避免对生产系统直接操作。
-
+CrackPassword（破解密码）建议先按默认配置运行一段时间，确认对目标窗口/系统行为的影响后，再从关键开关项开始逐步微调。
 配置项
-- Use Strong Password Dictionary（中文：使用强口令字典）：类型=布尔，默认=true
-- Async（中文：异步）：类型=布尔，默认=true
-- HUD（中文：是否显示HUD。）：类型=布尔，默认=true
-- HUD Show Current Password Attempt（中文：在HUD中显示当前的密码尝试）：类型=布尔，默认=true
-- Notify Speed（中文：通知速率）：类型=布尔，默认=true
-- Threshold Setting Confirmation MessageBox Timeout (ms)（中文：阈值设置确认提示框超时时间 (毫秒)）：类型=数值，默认=20000
-- Multithread（中文：多线程）：类型=布尔，默认=true
-- Hide HUD When Menu On（中文：打开菜单时隐藏HUD）：类型=布尔，默认=false
-- Memorize Prev Password（中文：记住上一次的密码）：类型=布尔，默认=true
-- Try Birthdays（中文：尝试生日）：类型=布尔，默认=true
-- Notify Password（中文：通知密码）：类型=布尔，默认=true
-- Account Lockout Threshold Policy（中文：账号锁定阈值策略）：类型=枚举，默认="Query"
-  可选：Ignore（忽略）；Safe（安全）；Query（询问）
-- Threshold Setting Default Option（中文：阈值设置默认选项）：类型=枚举，默认="Cancel"
-  可选：Yes（是）；No（否）；Cancel（取消）
-
+- Async（异步）
+ 类型：布尔；默认：true
+ 说明：启用异步处理可降低主线程卡顿；如需稳定复现实验流程可暂时关闭。
+- Multithread（多线程）
+ 类型：布尔；默认：true
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Memorize Prev Password（记住上一次的密码）
+ 类型：布尔；默认：true
+ 说明：该项与口令/口令策略有关。建议先在测试环境验证，避免影响正常登录流程。
+- HUD（是否显示HUD。）
+ 类型：布尔；默认：true
+ 说明：该项用于控制作用目标或展示位置。建议先固定目标与位置，再调其它视觉参数。
+- HUD Show Current Password Attempt（在HUD中显示当前的密码尝试）
+ 类型：布尔；默认：true
+ 说明：该项与口令/口令策略有关。建议先在测试环境验证，避免影响正常登录流程。
+- Hide HUD When Menu On（打开菜单时隐藏HUD）
+ 类型：布尔；默认：false
+ 说明：该项用于控制作用目标或展示位置。建议先固定目标与位置，再调其它视觉参数。
+- Use Strong Password Dictionary（使用强口令字典）
+ 类型：布尔；默认：true
+ 说明：该项与口令/口令策略有关。建议先在测试环境验证，避免影响正常登录流程。
+- Try Birthdays（尝试生日）
+ 类型：布尔；默认：true
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Notify Password（通知密码）
+ 类型：布尔；默认：true
+ 说明：用于控制结果反馈方式。调试阶段建议开启，日常使用可按需要关闭。
+- Notify Speed（通知速率）
+ 类型：布尔；默认：true
+ 说明：用于控制结果反馈方式。调试阶段建议开启，日常使用可按需要关闭。
+- Threshold Setting Confirmation MessageBox Timeout (ms)（阈值设置确认提示框超时时间 (毫秒)）
+ 类型：数值；默认：20000
+ 说明：该值控制轮询/触发间隔。调小响应更快但占用更高；调大更省资源。
+- Threshold Setting Default Option（阈值设置默认选项）
+ 类型：枚举；默认："Cancel"
+ 说明：该项决定执行策略。建议先用默认策略验证稳定性，再逐个切换比较效果与副作用。
+ 可选：Yes（是）；No（否）；Cancel（取消）
 历史更新
 - 18. 添加了 CrackPassword 破解密码时的HUD。
 - 19. 修复 CrackPassword 中配置 Notify Password 无效的问题。

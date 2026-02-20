@@ -15,21 +15,38 @@ BHop
 介绍
 BHop（兔子跳）用于帮助你连续跳。（专业版）。
 适合键鼠行为控制、输入增强和自动化操作场景。
-初次使用可优先调整：Trigger Mode、Basic Tap Cooldown (ms)。
+初次使用可优先调整：Basic Tap Cooldown (ms)、Trigger Mode。
 
 配置项
-- Trigger Mode（中文：触发模式）：类型=枚举，默认="Hold"
-  可选：Hold（未收录）；Toggle（切换）
-- Repeat Times（中文：重复次数）：类型=数值，默认=3L
-- Trigger Key（中文：触发键）：类型=按键/复合，默认={{"Keybind", {VK_SPACE}}}
-- Repeat Interval (ms)（中文：重复间隙（毫秒））：类型=数值，默认=50L
-- Jump Custom Key Hold Interval (ms)（中文：自定义跳跃键按住时间（毫秒））：类型=数值，默认=100L
-- Only In Game（中文：仅在游戏内）：类型=布尔，默认=true
-- Jump Custom Key（中文：自定义跳跃键）：类型=按键/复合，默认={{"Keybind", {VK_LMENU}}}
-- Jump Key（中文：跳跃键）：类型=枚举，默认="Wheel Down"
-  可选：Wheel Down（向下滚轮）；Wheel Up（向上滚轮）；Custom（自定义）
-- Basic Tap Cooldown (ms)（中文：基本敲击冷却（毫秒））：类型=数值，默认=500L
-
+- Only In Game（仅在游戏内）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Basic Tap Cooldown (ms)（基本敲击冷却（毫秒））
+ 类型：数值；默认：500L
+ 说明：用于控制检测/刷新/动画节奏。默认值 500L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Repeat Times（重复次数）
+ 类型：数值；默认：3L
+ 说明：这是数值型配置。默认值 3L 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Repeat Interval (ms)（重复间隙（毫秒））
+ 类型：数值；默认：50L
+ 说明：用于控制检测/刷新/动画节奏。默认值 50L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Jump Custom Key Hold Interval (ms)（自定义跳跃键按住时间（毫秒））
+ 类型：数值；默认：100L
+ 说明：用于控制检测/刷新/动画节奏。默认值 100L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Trigger Key（触发键）
+ 类型：按键/复合；默认：{{"Keybind", {VK_SPACE}}}
+ 说明：该配置用于调整模块行为细节。建议先按默认值运行，确认需求后再逐步调整。
+- Jump Key（跳跃键）
+ 类型：枚举；默认："Wheel Down"
+ 说明：这是选项型配置。默认值 Wheel Down 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Wheel Down（向下滚轮）；Wheel Up（向上滚轮）；Custom（自定义）
+- Trigger Mode（触发模式）
+ 类型：枚举；默认："Hold"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Hold ，确认稳定后再逐项切换比较效果。
+ 可选：Hold（未收录）；Toggle（切换）
+- Jump Custom Key（自定义跳跃键）
+ 类型：按键/复合；默认：{{"Keybind", {VK_LMENU}}}
+ 说明：该配置用于调整模块行为细节。建议先按默认值运行，确认需求后再逐步调整。
 历史更新
 无（HISTORY 中暂无明确记录）
 

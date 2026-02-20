@@ -12,20 +12,30 @@ Ruler
 - 版本属性：普通可用
 
 介绍
-Ruler（标尺）用于暂无描述。
-适合窗口管理、可视化监控与交互增强场景。
-初次使用可优先调整：Line Color、Hide When Menu On、Line Width。
-
+Ruler（标尺）用于测量窗口尺寸、边界和间距。建议先保证线条对比度，再按需打开信息项。
 配置项
-- Line Color（中文：线条颜色）：类型=枚举，默认="Red"
-  可选：Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Hide When Menu On（中文：菜单打开时不显示）：类型=布尔，默认=true
-- Line Width（中文：线条宽度）：类型=数值，默认=2
-- Mark Sides（中文：标记各条边）：类型=布尔，默认=true
-- Measure Distances（中文：丈量距离）：类型=布尔，默认=true
-- Show Size（中文：展示尺寸）：类型=布尔，默认=true
-- Info Font Size（中文：信息字号）：类型=数值，默认=20
-
+- Line Color（线条颜色）
+ 类型：枚举；默认："Red"
+ 说明：标尺线条颜色。建议使用高对比色。
+ 可选：见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Line Width（线条宽度）
+ 类型：数值；默认：2
+ 说明：标尺线条粗细。
+- Info Font Size（信息字号）
+ 类型：数值；默认：20
+ 说明：距离/尺寸文字字号。
+- Show Size（展示尺寸）
+ 类型：布尔；默认：true
+ 说明：显示目标窗口宽高。
+- Mark Sides（标记各条边）
+ 类型：布尔；默认：true
+ 说明：显示边缘标记，便于快速对齐。
+- Measure Distances（丈量距离）
+ 类型：布尔；默认：true
+ 说明：显示窗口间距离测量信息。
+- Hide When Menu On（菜单打开时不显示）
+ 类型：布尔；默认：true
+ 说明：菜单打开时隐藏标尺，避免覆盖设置界面。
 历史更新
 无（HISTORY 中暂无明确记录）
 

@@ -14,27 +14,58 @@ PrivacySpy
 介绍
 PrivacySpy（隐私密探）用于根据本地文件汇总用户的隐私信息，让你变得紧张。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Filter File Extensions。
+初次使用可优先调整：Async、Auto Console、Custom Scan Directory。
 该模块被标记为恶意高风险，请在隔离环境下验证，避免对生产系统直接操作。
 
 配置项
-- Skip System Files（中文：跳过系统文件）：类型=布尔，默认=true
-- Async（中文：异步）：类型=布尔，默认=true
-- IDCard Valid Year Min（中文：身份证有效年份最小值）：类型=数值，默认=1914
-- Skip Hidden Files（中文：跳过隐藏文件）：类型=布尔，默认=true
-- Included File Extensions（中文：包括的文件扩展名）：类型=文本，默认=".txt;.md;.rtf;.doc;.ppt;.xls;.docx;.pptx;.xlsx;.wps;.zip;.rar;.7z;.gz;.c;.cpp;. ...
-- Custom Scan Directory（中文：自定义扫描目录）：类型=文本，默认="D:\\"
-- IDCard Strict Validify（中文：身份证严格验证）：类型=布尔，默认=true
-- Confirm Before Scanning（中文：扫描前确认）：类型=布尔，默认=true
-- Skip Readonly Files（中文：跳过只读文件）：类型=布尔，默认=true
-- Skip Folders（中文：跳过目录检查）：类型=布尔，默认=false
-- Auto Console（中文：自动启用控制台）：类型=布尔，默认=true
-- IDCard Valid Year Max（中文：身份证有效年份最大值）：类型=数值，默认=2024
-- Filter File Extensions（中文：筛选文件扩展名）：类型=布尔，默认=true
-- Find Other Privacy（中文：寻找其他隐私）：类型=布尔，默认=true
-- Scan Disk Privacy（中文：扫描磁盘隐私）：类型=布尔，默认=true
-- Person Name Character Max Count（中文：人名最多几个汉字）：类型=数值，默认=3
-
+- Async（异步）
+ 类型：布尔；默认：true
+ 说明：用于控制是否异步处理。默认值 true 通常能减少主线程卡顿；若你遇到并发相关问题，可回退到更保守设置测试。
+- Auto Console（自动启用控制台）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Custom Scan Directory（自定义扫描目录）
+ 类型：文本；默认："D:\\"
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- Skip Folders（跳过目录检查）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Skip Readonly Files（跳过只读文件）
+ 类型：布尔；默认：true
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- Skip Hidden Files（跳过隐藏文件）
+ 类型：布尔；默认：true
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- Skip System Files（跳过系统文件）
+ 类型：布尔；默认：true
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- IDCard Valid Year Min（身份证有效年份最小值）
+ 类型：数值；默认：1914
+ 说明：这是数值型配置。默认值 1914 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- IDCard Valid Year Max（身份证有效年份最大值）
+ 类型：数值；默认：2024
+ 说明：这是数值型配置。默认值 2024 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- IDCard Strict Validify（身份证严格验证）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Person Name Character Max Count（人名最多几个汉字）
+ 类型：数值；默认：3
+ 说明：这是数值型配置。默认值 3 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Filter File Extensions（筛选文件扩展名）
+ 类型：布尔；默认：true
+ 说明：用于限定作用范围，避免误触发。建议先用小样本验证规则，再逐步扩展；涉及正则时优先从简单规则开始。
+- Included File Extensions（包括的文件扩展名）
+ 类型：文本；默认：".txt;.md;.rtf;.doc;.ppt;.xls;.docx;.pptx;.xlsx;.wps;.zip;.rar;.7z;.gz;.c;.cpp;.h;.hpp;.java;.py;.cs;.exe;.sln;.jpg;.png;.bmp;.mp3;.m4a;.mp4;.html;.htm;.css;.js;.db ...
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- Scan Disk Privacy（扫描磁盘隐私）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Confirm Before Scanning（扫描前确认）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Find Other Privacy（寻找其他隐私）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
 历史更新
 - 12. 现在 PrivacySpy 也会对文件夹名称进行检查统计了，如果你不想，就打开 Skip Folders 选项。
 - 13. 现在 PrivacySpy 支持扫描时取消扫描。

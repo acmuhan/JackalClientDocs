@@ -12,16 +12,20 @@ AntiTaskkill
 - 版本属性：普通可用
 
 介绍
-AntiTaskkill（反进程杀手）用于阻止所有对客户端有威胁的taskkill命令。
-适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Notify Failure、Notify Success。
-
+AntiTaskkill（反进程杀手）建议先按默认配置运行一段时间，确认对目标窗口/系统行为的影响后，再从关键开关项开始逐步微调。
 配置项
-- Only Threat For Client（中文：只处理对客户端有威胁的）：类型=布尔，默认=true
-- Notify Failure（中文：通知失败）：类型=布尔，默认=true
-- Check Tskill.exe（中文：检查 Tskill.exe）：类型=布尔，默认=false
-- Notify Success（中文：通知成功）：类型=布尔，默认=true
-
+- Check Tskill.exe（检查 Tskill.exe）
+ 类型：布尔；默认：false
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Only Threat For Client（只处理对客户端有威胁的）
+ 类型：布尔；默认：true
+ 说明：该项会影响模块行为，建议基于默认值小步调整。
+- Notify Success（通知成功）
+ 类型：布尔；默认：true
+ 说明：用于控制结果反馈方式。调试阶段建议开启，日常使用可按需要关闭。
+- Notify Failure（通知失败）
+ 类型：布尔；默认：true
+ 说明：用于控制结果反馈方式。调试阶段建议开启，日常使用可按需要关闭。
 历史更新
 无（HISTORY 中暂无明确记录）
 

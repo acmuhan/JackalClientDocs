@@ -17,9 +17,12 @@ TesseractOCR（TesseractOCR）用于Tesseract 文字识别设置。
 初次使用可优先调整：Executable Path、Language。
 
 配置项
-- Executable Path（中文：可执行文件路径）：类型=文本，默认=""
-- Language（中文：语言）：类型=文本，默认="chi_sim"
-
+- Executable Path（可执行文件路径）
+ 类型：文本；默认：""
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- Language（语言）
+ 类型：文本；默认："chi_sim"
+ 说明：该配置用于调整模块行为细节。建议先按默认值运行，确认需求后再逐步调整。
 历史更新
 - 37. 给 TesseractOCR 识别函数添加了自动扫描路径（在Program Files /Program Files (x86)中自动查找）
 - 30. 添加模块：TesseractOCR，文字识别设定。你需要手动下载好它然后指定可执行程序的路径。

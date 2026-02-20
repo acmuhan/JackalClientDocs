@@ -17,8 +17,9 @@ KeyDisabler（禁用键盘）用于暂无描述。
 初次使用可优先调整：Mode。
 
 配置项
-- Mode（中文：模式）：类型=枚举，默认="Locker (Press End to escape
-
+- Mode（模式）
+ 类型：枚举；默认："Locker (Press End to escape
+ 说明：这是该模块的核心行为开关。默认值 Locker (Press End to escape 通常更稳，建议先验证默认策略再尝试其他模式。
 历史更新
 - 7. 为 Key Disabler 模式添加 A,W,S,D,Space,Shift
 - 26. 为 KeyDisabler 添加一个新模式：Ctrl, Win, Alt

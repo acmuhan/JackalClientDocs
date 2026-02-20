@@ -14,18 +14,29 @@ BetterAnimation
 介绍
 BetterAnimation（更好的动画）用于自定义窗口动画效果。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Notify Mode、Custom Style、Check Cooldown (ms)。
+初次使用可优先调整：Notify Mode、Check Cooldown (ms)。
 
 配置项
-- Toggle NoAnimation Module（中文：切换禁用动画模块）：类型=布尔，默认=true
-- Color Transition（中文：颜色过渡）：类型=文本，默认="1;1;1"
-- Notify Mode（中文：通知模式）：类型=枚举，默认="Off"
-  可选：Off（关闭）；Notify（通知）；Chatter（弹幕）；Actionbar（行为栏）
-- Custom Style（中文：自定义风格）：类型=枚举，默认="Fade"
-  可选：Fade（淡入淡出）；Color Transition（颜色过渡）
-- Check Cooldown (ms)（中文：检查冷却 (毫秒)）：类型=数值，默认=10L
-- Animation Duration (ms)（中文：动画持续时间 (毫秒)）：类型=数值，默认=300L
-
+- Animation Duration (ms)（动画持续时间 (毫秒)）
+ 类型：数值；默认：300L
+ 说明：用于控制检测/刷新/动画节奏。默认值 300L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Toggle NoAnimation Module（切换禁用动画模块）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Custom Style（自定义风格）
+ 类型：枚举；默认："Fade"
+ 说明：这是选项型配置。默认值 Fade 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Fade（淡入淡出）；Color Transition（颜色过渡）
+- Color Transition（颜色过渡）
+ 类型：文本；默认："1;1;1"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Notify Mode（通知模式）
+ 类型：枚举；默认："Off"
+ 说明：用于选择结果反馈方式。默认值 Off 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+ 可选：Off（关闭）；Notify（通知）；Chatter（弹幕）；Actionbar（行为栏）
+- Check Cooldown (ms)（检查冷却 (毫秒)）
+ 类型：数值；默认：10L
+ 说明：用于控制检测/刷新/动画节奏。默认值 10L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
 历史更新
 - 47. 修复 Better Animation 的 Color Transition 模式矩形绘制不全的问题。
 - 29. 添加新模块： BetterAnimation，可自定义系统窗口切换动画。有很多bug

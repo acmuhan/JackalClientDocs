@@ -18,9 +18,10 @@ KillEveryone（全员击杀）用于暂无描述。
 该模块属于不安全能力，建议先备份关键数据并确认回滚路径。
 
 配置项
-- Method（中文：方法）：类型=枚举，默认="Normal"
-  可选：Normal（普通）；Driver（未收录）
-
+- Method（方法）
+ 类型：枚举；默认："Normal"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Normal ，确认稳定后再逐项切换比较效果。
+ 可选：Normal（普通）；Driver（未收录）
 历史更新
 - 3. 为 KillMalware, KillEveryone 模块添加配置：
 

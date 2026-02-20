@@ -14,35 +14,76 @@ Keystrokes
 介绍
 Keystrokes（按键显示）用于暂无描述。
 适合键鼠行为控制、输入增强和自动化操作场景。
-初次使用可优先调整：Y Rate、Shadow、Mouse Buttons。
+初次使用可优先调整：Text Color、Outline Color、Background Color。
 
 配置项
-- Y Rate（中文：纵坐标比例）：类型=数值，默认=0.7f
-- Shadow（中文：阴影）：类型=布尔，默认=true
-- Mouse Buttons（中文：鼠标按钮）：类型=布尔，默认=true
-- Box Size（中文：框大小）：类型=数值，默认=54
-- Roundness（中文：圆滑程度）：类型=数值，默认=0.2f
-- Hide When Menu On（中文：菜单打开时不显示）：类型=布尔，默认=false
-- Box Opacity (0~1)（中文：方框不透明度 (0~1)）：类型=数值，默认=1.0f
-- Background Color（中文：背景颜色）：类型=枚举，默认="Black"
-  可选：Transparent（透明）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Shift（中文：未收录）：类型=布尔，默认=true
-- Space（中文：空格）：类型=布尔，默认=true
-- Text Color（中文：文本颜色）：类型=枚举，默认="Rainbow"
-  可选：Flow（流动）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Show CPS（中文：显示CPS）：类型=布尔，默认=true
-- Box Gap（中文：方框间隙）：类型=数值，默认=15
-- Shadow Color（中文：阴影颜色）：类型=枚举，默认="Black"
-  可选：Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Round Corners（中文：圆角）：类型=布尔，默认=false
-- Easing Speed (0~1)（中文：缓动速率 (0~1)）：类型=数值，默认=0.1f
-- Font Size（中文：字号）：类型=数值，默认=43
-- Give Way to Mouse（中文：给鼠标让道）：类型=布尔，默认=true
-- Shadow Thickness（中文：阴影厚度）：类型=数值，默认=20.0f
-- X Rate（中文：横坐标比例）：类型=数值，默认=0.9f
-- Outline Color（中文：轮廓颜色）：类型=枚举，默认="Rainbow"
-  可选：Flow（流动）；Transparent（透明）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-
+- Text Color（文本颜色）
+ 类型：枚举；默认："Rainbow"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：Flow（流动）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Outline Color（轮廓颜色）
+ 类型：枚举；默认："Rainbow"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：Flow（流动）；Transparent（透明）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Background Color（背景颜色）
+ 类型：枚举；默认："Black"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：Transparent（透明）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- X Rate（横坐标比例）
+ 类型：数值；默认：0.9f
+ 说明：用于控制界面元素在屏幕中的相对位置。默认值 0.9f 一般是作者调过的稳定布局；建议每次只改一个轴，避免元素跑出可视区域。
+- Y Rate（纵坐标比例）
+ 类型：数值；默认：0.7f
+ 说明：用于控制界面元素在屏幕中的相对位置。默认值 0.7f 一般是作者调过的稳定布局；建议每次只改一个轴，避免元素跑出可视区域。
+- Box Size（框大小）
+ 类型：数值；默认：54
+ 说明：这是数值型配置。默认值 54 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Box Gap（方框间隙）
+ 类型：数值；默认：15
+ 说明：这是数值型配置。默认值 15 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Box Opacity (0~1)（方框不透明度 (0~1)）
+ 类型：数值；默认：1.0f
+ 说明：用于控制透明度。默认值 1.0f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Font Size（字号）
+ 类型：数值；默认：43
+ 说明：用于控制文本可读性。默认字号 43 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+- Space（空格）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Shift（未收录）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Mouse Buttons（鼠标按钮）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Hide When Menu On（菜单打开时不显示）
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Show CPS（显示CPS）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Give Way to Mouse（给鼠标让道）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Easing Speed (0~1)（缓动速率 (0~1)）
+ 类型：数值；默认：0.1f
+ 说明：这是数值型配置。默认值 0.1f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Round Corners（圆角）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Roundness（圆滑程度）
+ 类型：数值；默认：0.2f
+ 说明：用于细调显示样式和间距。默认值 0.2f 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Shadow（阴影）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Shadow Thickness（阴影厚度）
+ 类型：数值；默认：20.0f
+ 说明：用于细调显示样式和间距。默认值 20.0f 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Shadow Color（阴影颜色）
+ 类型：枚举；默认："Black"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
 历史更新
 - 8. 修复了 Keystrokes 里 Shift 隐藏无效的问题。
 - 7. 为 Keystrokes2 添加了丝滑动画。添加配置项：

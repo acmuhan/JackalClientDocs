@@ -12,14 +12,14 @@ Privileges
 - 版本属性：普通可用
 
 介绍
-Privileges（特权）用于获得各项可用的特权。
-适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Notify。
-
+Privileges（特权）建议先按默认配置运行一段时间，确认对目标窗口/系统行为的影响后，再从关键开关项开始逐步微调。
 配置项
-- Notify（中文：通知）：类型=布尔，默认=true
-- bind（中文：绑定）：类型=按键/复合，默认={{"Keybind", {VK_RMENU, 'P'}}}
-
+- Notify（通知）
+ 类型：布尔；默认：true
+ 说明：用于控制结果反馈方式。调试阶段建议开启，日常使用可按需要关闭。
+- bind（绑定）
+ 类型：按键/复合；默认：{{"Keybind", {VK_RMENU, 'P'}}}
+ 说明：该快捷键用于即时触发功能。建议避免与系统或常用软件冲突。
 历史更新
 - 7. 另设需要系统和 TrustedInstaller 权限的模块，将Config中的 Admin Modules Check Admin改为Check Module Privileges Before Turning On。
 - 19. Privileges: 现在分开了不同权限下的特权列表，以免出现不需要的权限也要去获取导致失败的情况。现在显示获取特权成功数了。

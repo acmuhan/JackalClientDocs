@@ -17,33 +17,72 @@ SecurityESP（安全透视）用于暂无描述。
 初次使用可优先调整：HUD Font Size、HUD Line Gap。
 
 配置项
-- Show Description When Mouse Hovering（中文：在鼠标悬停时显示描述）：类型=布尔，默认=true
-- Background Round Corners（中文：背景圆角）：类型=布尔，默认=true
-- Background Shadow Color（中文：背景阴影颜色）：类型=枚举，默认="Black"
-  可选：Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- HUD Font Size（中文：HUD 字号）：类型=数值，默认=30
-- Background Opacity (0~1)（中文：背景不透明度 (0~1)）：类型=数值，默认=0.5f
-- Malware Text Color（中文：恶意软件文本颜色）：类型=枚举，默认="Red"
-  可选：Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Background Shadow Thickness（中文：背景阴影厚度）：类型=数值，默认=26.0f
-- Hide When Menu On（中文：菜单打开时不显示）：类型=布尔，默认=true
-- Mid Y Rate（中文：中心纵坐标比例）：类型=数值，默认=0.5
-- Give Way to Mouse（中文：给鼠标让道）：类型=布尔，默认=true
-- Description Text Color（中文：描述文本颜色）：类型=枚举，默认="Aqua"
-  可选：Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Background Roundness（中文：背景圆滑程度）：类型=数值，默认=0.2f
-- HUD Line Gap（中文：HUD 行距）：类型=数值，默认=5
-- Background Color（中文：背景颜色）：类型=枚举，默认="Black"
-  可选：Flow（流动）；Transparent（透明）；Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Background Shadow（中文：背景阴影）：类型=布尔，默认=true
-- Background Shadow Opacity (0~1)（中文：背景阴影不透明度 (0~1)）：类型=数值，默认=0.45f
-- Antivirus Text Color（中文：杀毒软件文本颜色）：类型=枚举，默认="Gold"
-  可选：Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- X Rate（中文：横坐标比例）：类型=数值，默认=0.8
-- Title Color（中文：标题颜色）：类型=枚举，默认="Red"
-  可选：Black（黑色）；Gray（灰色）；White（白色）；Red（红色）；Gold（金瓜子）；Yellow（黄色）；Green（绿色）；Dark Green（深绿色）；Aqua（淡蓝色）；Blue（蓝色）；Magenta（品红色）；Pink（粉色）；Purple（紫色）；Pink-Magenta（粉-紫组合）；Red-Orange（红-橙组合）；White-Gray（白-灰组合）；Aqua-Blue（浅蓝-蓝组合）；Aqua-Pink（淡蓝-浅粉组合）；Green-Red（红-绿组合）；Astrolfo（未收录）；Colorful（缤纷）；Rainbow（彩虹色）
-- Background（中文：背景）：类型=布尔，默认=true
-
+- Hide When Menu On（菜单打开时不显示）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Give Way to Mouse（给鼠标让道）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Show Description When Mouse Hovering（在鼠标悬停时显示描述）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Background（背景）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Background Round Corners（背景圆角）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Background Roundness（背景圆滑程度）
+ 类型：数值；默认：0.2f
+ 说明：用于细调显示样式和间距。默认值 0.2f 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Background Opacity (0~1)（背景不透明度 (0~1)）
+ 类型：数值；默认：0.5f
+ 说明：用于控制透明度。默认值 0.5f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Background Shadow（背景阴影）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Background Shadow Thickness（背景阴影厚度）
+ 类型：数值；默认：26.0f
+ 说明：用于细调显示样式和间距。默认值 26.0f 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- Background Shadow Opacity (0~1)（背景阴影不透明度 (0~1)）
+ 类型：数值；默认：0.45f
+ 说明：用于控制透明度。默认值 0.45f 兼顾可见性和遮挡；如果你觉得挡视线可小幅下调，若看不清可小幅上调。
+- Background Color（背景颜色）
+ 类型：枚举；默认："Black"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：Flow（流动）；Transparent（透明）；其余颜色见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Background Shadow Color（背景阴影颜色）
+ 类型：枚举；默认："Black"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Title Color（标题颜色）
+ 类型：枚举；默认："Red"
+ 说明：用于选择结果反馈方式。默认值 Red 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+ 可选：见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Malware Text Color（恶意软件文本颜色）
+ 类型：枚举；默认："Red"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Antivirus Text Color（杀毒软件文本颜色）
+ 类型：枚举；默认："Gold"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- Description Text Color（描述文本颜色）
+ 类型：枚举；默认："Aqua"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+ 可选：见 [NAMED_COLOR_BASE_LIST](./NAMED_COLOR_BASE_LIST.md)
+- HUD Font Size（HUD 字号）
+ 类型：数值；默认：30
+ 说明：用于控制文本可读性。默认字号 30 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+- HUD Line Gap（HUD 行距）
+ 类型：数值；默认：5
+ 说明：用于细调显示样式和间距。默认值 5 通常是平衡视觉效果与紧凑度的设置，建议小步调整并实时观察。
+- X Rate（横坐标比例）
+ 类型：数值；默认：0.8
+ 说明：用于控制界面元素在屏幕中的相对位置。默认值 0.8 一般是作者调过的稳定布局；建议每次只改一个轴，避免元素跑出可视区域。
+- Mid Y Rate（中心纵坐标比例）
+ 类型：数值；默认：0.5
+ 说明：用于控制界面元素在屏幕中的相对位置。默认值 0.5 一般是作者调过的稳定布局；建议每次只改一个轴，避免元素跑出可视区域。
 历史更新
 - 40. 为 ClipboardESP / SecurityESP 添加众多配置项，整改视觉，可以高度定制。支持 HudEditor 拖曳。添加为鼠标让位。
 - 23. 为 Download HUD, Chat Bar, Clipboard ESP, Security ESP, Letter Graph 添加 HUD Editor 拖曳。

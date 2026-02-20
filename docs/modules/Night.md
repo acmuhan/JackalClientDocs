@@ -14,14 +14,19 @@ Night
 介绍
 Night（夜间）用于暂无描述。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Hide When No Focus、Mask Alpha Rate、When。
+初次使用可优先调整：Mask Alpha Rate、When、Hide When No Focus。
 
 配置项
-- Hide When No Focus（中文：无焦点时隐藏）：类型=布尔，默认=true
-- Mask Alpha Rate（中文：遮罩不透明度比例）：类型=数值，默认=0.8f
-- When（中文：何时）：类型=枚举，默认="Menu On"
-  可选：Menu On（打开菜单）；Menu Off（关闭菜单）；Always（总是）
-
+- Mask Alpha Rate（遮罩不透明度比例）
+ 类型：数值；默认：0.8f
+ 说明：这是数值型配置。默认值 0.8f 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- When（何时）
+ 类型：枚举；默认："Menu On"
+ 说明：这是选项型配置。默认值 Menu On 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Menu On（打开菜单）；Menu Off（关闭菜单）；Always（总是）
+- Hide When No Focus（无焦点时隐藏）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
 历史更新
 无（HISTORY 中暂无明确记录）
 

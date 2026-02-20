@@ -18,11 +18,18 @@ NoUAC（禁UAC）用于暂无描述。
 初次使用可优先调整：Bypass Explorer Notify、Keep Mode Notify Action。
 
 配置项
-- Bypass Explorer Notify（中文：绕过资源管理器通知）：类型=布尔，默认=true
-- Highest Level When UAC Enabled（中文：UAC启用时使用最高等级）：类型=布尔，默认=false
-- Keep Mode Notify Action（中文：保持模式通知行为）：类型=布尔，默认=true
-- Keep（中文：保持）：类型=布尔，默认=false
-
+- Bypass Explorer Notify（绕过资源管理器通知）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Highest Level When UAC Enabled（UAC启用时使用最高等级）
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Keep（保持）
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Keep Mode Notify Action（保持模式通知行为）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
 历史更新
 无（HISTORY 中暂无明确记录）
 

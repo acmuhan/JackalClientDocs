@@ -17,17 +17,30 @@ DebugESP（调试透视）用于接收并输出进程的调试字符串。
 初次使用可优先调整：Display Mode。
 
 配置项
-- Chatter Type（中文：弹幕类型）：类型=枚举，默认="Top"
-  可选：Scroll（滚动）；Top（顶端）；Bottom（底部）；Reverse（颠倒）；Horizontal（横向）；Vertical（纵向）；Random（随机）
-- Show Namespace Source（中文：显示命名空间来源）：类型=布尔，默认=false
-- Capture Global Win32 (Admin Required)（中文：捕获全局 Win32（需要管理员））：类型=布尔，默认=false
-- Show Process Source（中文：显示进程来源）：类型=枚举，默认="Both"
-  可选：Off（关闭）；PID（进程ID）；Process Name（进程名）；Both（两者）
-- Capture Win32（中文：捕获 Win32）：类型=布尔，默认=true
-- Anti Spam（中文：反刷屏）：类型=布尔，默认=true
-- Display Mode（中文：展示模式）：类型=枚举，默认="Chatter"
-  可选：Console Output（控制台输出）；Chatter（弹幕）；Notify（通知）；Title（标题）；Actionbar（行为栏）；Speak（讲述）
-
+- Capture Win32（捕获 Win32）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Capture Global Win32 (Admin Required)（捕获全局 Win32（需要管理员））
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Display Mode（展示模式）
+ 类型：枚举；默认："Chatter"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Chatter ，确认稳定后再逐项切换比较效果。
+ 可选：Console Output（控制台输出）；Chatter（弹幕）；Notify（通知）；Title（标题）；Actionbar（行为栏）；Speak（讲述）
+- Show Process Source（显示进程来源）
+ 类型：枚举；默认："Both"
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+ 可选：Off（关闭）；PID（进程ID）；Process Name（进程名）；Both（两者）
+- Show Namespace Source（显示命名空间来源）
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Anti Spam（反刷屏）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Chatter Type（弹幕类型）
+ 类型：枚举；默认："Top"
+ 说明：用于选择结果反馈方式。默认值 Top 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+ 可选：Scroll（滚动）；Top（顶端）；Bottom（底部）；Reverse（颠倒）；Horizontal（横向）；Vertical（纵向）；Random（随机）
 历史更新
 - 25. 添加模块：Debug ESP，捕获并显示应用程序的调试信息，就跟 Debugview 一样。
 

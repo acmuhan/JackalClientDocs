@@ -14,31 +14,66 @@ B站通知
 介绍
 BiliNotifier（B站通知）用于向你发送B站的通知。
 适合联网信息获取、账号联动和在线交互场景。
-初次使用可优先调整：Notify Likes、Notify Comments、Notify Danmaku。
+初次使用可优先调整：Mode、Query Cooldown (s)、Notify Ats。
 使用前请确认网络可用及相关 API/平台账号配置完整。
 
 配置项
-- Notify Likes（中文：通知点赞消息。）：类型=布尔，默认=true
-- Async（中文：异步）：类型=布尔，默认=true
-- Off（中文：关闭）：类型=文本，默认="Notify", "Chatter", "Actionbar", "Title", "WinToast"
-- PREVIOUS DATA（中文：上一次的缓存数据。无需修改。）：类型=文本，默认="{\"at\":0,\"chat\":0,\"coin\":0,\"danmu\":0,\"favorite\":0,\"like\":0,\"recv_li ...
-- Notify Comments（中文：通知回复消息。）：类型=布尔，默认=true
-- Notify Danmaku（中文：通知弹幕消息。）：类型=布尔，默认=true
-- Show Reply Content（中文：显示回复内容）：类型=枚举，默认="Chatter"
-  可选：Off（关闭）；Console Output（控制台输出）；Notify（通知）；Chatter（弹幕）；Actionbar（行为栏）；WinToast（系统通知）
-- Notify Chats（中文：通知私信消息。）：类型=布尔，默认=true
-- Notify System Messages（中文：通知系统消息。）：类型=布尔，默认=true
-- Notify Favorites（中文：通知收藏消息。）：类型=布尔，默认=true
-- Ignore Negative Changes（中文：忽略负值变化。）：类型=布尔，默认=true
-- Notify Ats（中文：通知@我的消息。）：类型=布尔，默认=true
-- Notify Coins（中文：通知投币消息。）：类型=布尔，默认=true
-- Query Cooldown (s)（中文：查询冷却（秒））：类型=数值，默认=5L
-- Mode（中文：模式）：类型=枚举，默认="Notify"
-  可选：Off（关闭）；Notify（通知）；Chatter（弹幕）；Actionbar（行为栏）；Title（标题）；WinToast（系统通知）
-- Connect Timeout (s)（中文：连接超时时间 (秒)）：类型=数值，默认=4L
-- Notify Uploader Helper Messages（中文：通知UP主小助手消息。）：类型=布尔，默认=true
-- Reply Content Max Length（中文：回复内容最大长度）：类型=数值，默认=80U
-
+- Async（异步）
+ 类型：布尔；默认：true
+ 说明：用于控制是否异步处理。默认值 true 通常能减少主线程卡顿；若你遇到并发相关问题，可回退到更保守设置测试。
+- Mode（模式）
+ 类型：枚举；默认："Notify"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Notify ，确认稳定后再逐项切换比较效果。
+ 可选：Off（关闭）；Notify（通知）；Chatter（弹幕）；Actionbar（行为栏）；Title（标题）；WinToast（系统通知）
+- Off（关闭）
+ 类型：文本；默认："Notify", "Chatter", "Actionbar", "Title", "WinToast"
+ 说明：该配置用于调整模块行为细节。建议先按默认值运行，确认需求后再逐步调整。
+- Show Reply Content（显示回复内容）
+ 类型：枚举；默认："Chatter"
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+ 可选：Off（关闭）；Console Output（控制台输出）；Notify（通知）；Chatter（弹幕）；Actionbar（行为栏）；WinToast（系统通知）
+- Reply Content Max Length（回复内容最大长度）
+ 类型：数值；默认：80U
+ 说明：这是数值型配置。默认值 80U 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Query Cooldown (s)（查询冷却（秒））
+ 类型：数值；默认：5L
+ 说明：用于控制检测/刷新/动画节奏。默认值 5L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Connect Timeout (s)（连接超时时间 (秒)）
+ 类型：数值；默认：4L
+ 说明：用于控制检测/刷新/动画节奏。默认值 4L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Ignore Negative Changes（忽略负值变化。）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Notify Ats（通知@我的消息。）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Notify Chats（通知私信消息。）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Notify Likes（通知点赞消息。）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Notify Comments（通知回复消息。）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Notify Coins（通知投币消息。）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Notify Danmaku（通知弹幕消息。）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Notify Favorites（通知收藏消息。）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Notify Uploader Helper Messages（通知UP主小助手消息。）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Notify System Messages（通知系统消息。）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- PREVIOUS DATA（上一次的缓存数据。无需修改。）
+ 类型：文本；默认："{\"at\":0,\"chat\":0,\"coin\":0,\"danmu\":0,\"favorite\":0,\"like\":0,\"recv_like\":0,\"recv_reply\":0,\"reply\":0,\"sys_msg\":0,\"up\":0} ...
+ 说明：该配置用于调整模块行为细节。建议先按默认值运行，确认需求后再逐步调整。
 历史更新
 - 31. 为 Bili Notifier 添加配置：
 - 15. 添加新模块：Bili Settings。表面上看是B站设定，其实按一下就可以扫码登录。Bili Notifier, Bili Console等模块会用到这里的 Cookies 等信息。

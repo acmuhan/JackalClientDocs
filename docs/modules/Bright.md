@@ -14,22 +14,39 @@ Bright
 介绍
 Bright（亮度修改）用于调节屏幕亮度。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：HUD Giant 2 Bar Color、Keeping Cooldown (ms)、Mode。
+初次使用可优先调整：Mode、HUD、HUD Duration (ms)。
 该模块处于 WIP 阶段，行为可能不稳定，建议先小范围测试。
 
 配置项
-- HUD Giant 2 Bar Color（中文：HUD 巨型2矩形颜色）：类型=文本，默认="gold"
-- Keeping Cooldown (ms)（中文：保持模式冷却 (毫秒)）：类型=数值，默认=1000L
-- Hotkey Brightness-（中文：降低亮度快捷键）：类型=按键/复合，默认={{"Keybind", {VK_LCONTROL, VK_LMENU, VK_OEM_COMMA}}}
-- Mode（中文：模式）：类型=枚举，默认="Lazy"
-  可选：Once（未收录）；Hotkey（快捷键）；Lazy（懒散）；Keep（保持）
-- HUD（中文：是否显示HUD。）：类型=枚举，默认="Bottom"
-  可选：Off（关闭）；Bottom（底部）；Bottom Big（底部，大号）；Giant（巨型）；Giant 2（巨型 2）
-- Hotkey Brightness+（中文：提高亮度快捷键）：类型=按键/复合，默认={{"Keybind", {VK_LCONTROL, VK_LMENU, VK_OEM_PERIOD}}}
-- Hotkey Step (%%)（中文：快捷键调节差值 (%%)）：类型=数值，默认=5
-- HUD Duration (ms)（中文：HUD 持续时间 (毫秒)）：类型=数值，默认=3000L
-- Percentage (0~100)（中文：百分比 (0~100)）：类型=数值，默认=20
-
+- Percentage (0~100)（百分比 (0~100)）
+ 类型：数值；默认：20
+ 说明：这是数值型配置。默认值 20 通常在稳定性与效果之间做了平衡，建议小步调整并观察实际变化。
+- Mode（模式）
+ 类型：枚举；默认："Lazy"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Lazy ，确认稳定后再逐项切换比较效果。
+ 可选：Once（未收录）；Hotkey（快捷键）；Lazy（懒散）；Keep（保持）
+- Hotkey Brightness-（降低亮度快捷键）
+ 类型：按键/复合；默认：{{"Keybind", {VK_LCONTROL, VK_LMENU, VK_OEM_COMMA}}}
+ 说明：用于设置快捷键触发。建议避免与系统或常用软件冲突，优先使用组合键提高可控性。
+- Hotkey Brightness+（提高亮度快捷键）
+ 类型：按键/复合；默认：{{"Keybind", {VK_LCONTROL, VK_LMENU, VK_OEM_PERIOD}}}
+ 说明：用于设置快捷键触发。建议避免与系统或常用软件冲突，优先使用组合键提高可控性。
+- Hotkey Step (%%)（快捷键调节差值 (%%)）
+ 类型：数值；默认：5
+ 说明：用于设置快捷键触发。建议避免与系统或常用软件冲突，优先使用组合键提高可控性。
+- HUD（是否显示HUD。）
+ 类型：枚举；默认："Bottom"
+ 说明：这是选项型配置。默认值 Bottom 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Off（关闭）；Bottom（底部）；Bottom Big（底部，大号）；Giant（巨型）；Giant 2（巨型 2）
+- HUD Duration (ms)（HUD 持续时间 (毫秒)）
+ 类型：数值；默认：3000L
+ 说明：用于控制检测/刷新/动画节奏。默认值 3000L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- HUD Giant 2 Bar Color（HUD 巨型2矩形颜色）
+ 类型：文本；默认："gold"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Keeping Cooldown (ms)（保持模式冷却 (毫秒)）
+ 类型：数值；默认：1000L
+ 说明：用于控制检测/刷新/动画节奏。默认值 1000L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
 历史更新
 无（HISTORY 中暂无明确记录）
 

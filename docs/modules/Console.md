@@ -14,30 +14,57 @@ Console
 介绍
 Console（控制台）用于暂无描述。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Dark Mode、Advanced Background Style、Module Toggle Mode。
+初次使用可优先调整：Disable Insert Mode、Module Toggle Mode、Dark Mode。
 
 配置项
-- Round Corner（中文：圆角）：类型=布尔，默认=true
-- Dark Mode（中文：深色模式）：类型=枚举，默认="On"
-  可选：Off（关闭）；On（开启）；Auto（自动）
-- Advanced Background Style（中文：高级背景样式）：类型=枚举，默认="Off"
-  可选：Off（关闭）；Mica（云母）；Acrylic（亚克力）；Test（未收录）
-- Disable Close（中文：禁用关闭）：类型=布尔，默认=true
-- Random Title（中文：随机标题）：类型=布尔，默认=true
-- Disable Quick Edit（中文：禁用快速编辑）：类型=布尔，默认=true
-- Caption Text Color（中文：标题颜色）：类型=文本，默认=""
-- bind（中文：绑定）：类型=按键/复合，默认={{"Keybind", {VK_RMENU, 'C'}}}
-- Border Color（中文：边界颜色）：类型=文本，默认=""
-- Font Name（中文：字体名称）：类型=枚举，默认="Consolas"
-  可选：新宋体（未收录）；宋体（未收录）；黑体（未收录）；楷体（未收录）；等线（未收录）；Candara（未收录）；Consolas（未收录）；Lucida Console（Lucida 控制台）；Segoe UI（未收录）；Tahoma（未收录）
-- Font Size（中文：字号）：类型=数值，默认=18
-- Module Toggle Mode（中文：模块切换模式）：类型=枚举，默认="Visibility"
-  可选：Visibility（能见度）；Existence（未收录）
-- Non-client Rendering Policy（中文：非客户区渲染策略）：类型=布尔，默认=false
-- Caption Color（中文：标题栏颜色）：类型=文本，默认=""
-- Disable Mouse Input（中文：禁用鼠标输入）：类型=布尔，默认=true
-- Disable Insert Mode（中文：禁用插入模式）：类型=布尔，默认=false
-
+- Random Title（随机标题）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- Disable Quick Edit（禁用快速编辑）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Disable Insert Mode（禁用插入模式）
+ 类型：布尔；默认：false
+ 说明：这是该模块的核心行为开关。默认值 false 通常更稳，建议先验证默认策略再尝试其他模式。
+- Disable Mouse Input（禁用鼠标输入）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Disable Close（禁用关闭）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Font Size（字号）
+ 类型：数值；默认：18
+ 说明：用于控制文本可读性。默认字号 18 适合多数分辨率；高分屏可适当加大，低分辨率建议减少以免拥挤。
+- Module Toggle Mode（模块切换模式）
+ 类型：枚举；默认："Visibility"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Visibility ，确认稳定后再逐项切换比较效果。
+ 可选：Visibility（能见度）；Existence（未收录）
+- Dark Mode（深色模式）
+ 类型：枚举；默认："On"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 On ，确认稳定后再逐项切换比较效果。
+ 可选：Off（关闭）；On（开启）；Auto（自动）
+- Non-client Rendering Policy（非客户区渲染策略）
+ 类型：布尔；默认：false
+ 说明：这是该模块的核心行为开关。默认值 false 通常更稳，建议先验证默认策略再尝试其他模式。
+- Round Corner（圆角）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Font Name（字体名称）
+ 类型：枚举；默认："Consolas"
+ 说明：这是选项型配置。默认值 Consolas 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：新宋体（未收录）；宋体（未收录）；黑体（未收录）；楷体（未收录）；等线（未收录）；Candara（未收录）；Consolas（未收录）；Lucida Console（Lucida 控制台）；Segoe UI（未收录）；Tahoma（未收录）
+- Border Color（边界颜色）
+ 类型：文本；默认：""
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Caption Color（标题栏颜色）
+ 类型：文本；默认：""
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Caption Text Color（标题颜色）
+ 类型：文本；默认：""
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- bind（绑定）
+ 类型：按键/复合；默认：{{"Keybind", {VK_RMENU, 'C'}}}
+ 说明：该配置用于调整模块行为细节。建议先按默认值运行，确认需求后再逐步调整。
 历史更新
 - 48. 为 Console 控制台模块添加配置：
 - 20. 为 IP Address, IP Horror 和 Weather 添加 Auto Console 选项。

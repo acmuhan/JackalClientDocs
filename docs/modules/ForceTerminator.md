@@ -14,16 +14,27 @@ ForceTerminator
 介绍
 ForceTerminator（暴力送终）用于使用驱动程序帮你强制终止目标进程。
 适合进程观测、控制与排障场景。
-初次使用可优先调整：Close Menu、Process Name (Empty For Any)、Max Process Count。
+初次使用可优先调整：Async、Close Menu、Confirm Before Termination。
 
 配置项
-- Close Menu（中文：关闭菜单）：类型=布尔，默认=false
-- Process Name (Empty For Any)（中文：进程名 (用空指代任何)）：类型=文本，默认="JackalClient.exe"
-- Max Process Count（中文：最大进程数量）：类型=数值，默认=8
-- Async（中文：异步）：类型=布尔，默认=true
-- Confirm Before Termination（中文：终止前确认）：类型=布尔，默认=false
-- Process Id (Zero For Any)（中文：进程ID (用0指代任何)）：类型=数值，默认=0
-
+- Async（异步）
+ 类型：布尔；默认：true
+ 说明：用于控制是否异步处理。默认值 true 通常能减少主线程卡顿；若你遇到并发相关问题，可回退到更保守设置测试。
+- Close Menu（关闭菜单）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Confirm Before Termination（终止前确认）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Process Name (Empty For Any)（进程名 (用空指代任何)）
+ 类型：文本；默认："JackalClient.exe"
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- Process Id (Zero For Any)（进程ID (用0指代任何)）
+ 类型：数值；默认：0
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- Max Process Count（最大进程数量）
+ 类型：数值；默认：8
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
 历史更新
 - 25. 新增模块 Force Terminator：使用驱动程序强制终止目标进程。
 

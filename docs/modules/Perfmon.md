@@ -14,12 +14,15 @@ Perfmon
 介绍
 Perfmon（资源监视器）用于打开资源监视器。
 适合进程观测、控制与排障场景。
-初次使用可优先调整：No Wow64 Redirection、Parameters。
+初次使用可优先调整：Parameters、No Wow64 Redirection。
 
 配置项
-- No Wow64 Redirection（中文：禁用 Wow64 重定向）：类型=布尔，默认=true
-- Parameters（中文：参数）：类型=文本，默认="/reS"
-
+- Parameters（参数）
+ 类型：文本；默认："/reS"
+ 说明：该配置用于调整模块行为细节。建议先按默认值运行，确认需求后再逐步调整。
+- No Wow64 Redirection（禁用 Wow64 重定向）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
 历史更新
 - 10. 添加模块：Perfmon。打开资源监视器。
 

@@ -14,12 +14,15 @@ AI回答
 介绍
 ChatAsk（AI回答）用于暂无描述。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Remove Markdown Format、Async。
+初次使用可优先调整：Async、Remove Markdown Format。
 
 配置项
-- Remove Markdown Format（中文：移除 Markdown 格式）：类型=布尔，默认=true
-- Async（中文：异步）：类型=布尔，默认=true
-
+- Async（异步）
+ 类型：布尔；默认：true
+ 说明：用于控制是否异步处理。默认值 true 通常能减少主线程卡顿；若你遇到并发相关问题，可回退到更保守设置测试。
+- Remove Markdown Format（移除 Markdown 格式）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
 历史更新
 - 52. 添加模块：AI Settings，将之前的 Chat Ask 的 API Key 等配置移动到这里。
 

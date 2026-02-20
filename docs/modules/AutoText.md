@@ -17,24 +17,51 @@ AutoText（自动文本）用于特定情况下自动发送指定文本。
 初次使用可优先调整：Auto GG Mode、Auto Thank Watchdog Mode。
 
 配置项
-- Auto GG (PRO)（中文：自动GG（专业版））：类型=布尔，默认=true
-- Auto Thank Watchdog（中文：自动感谢看门狗）：类型=布尔，默认=true
-- Auto GG Mode（中文：自动GG模式）：类型=枚举，默认="Smart Send"
-  可选：Smart Send（智能发送）；Copy（复制）；Chatter（弹幕）；Speak（讲述）；WinToast（系统通知）；Real Chatter（真弹幕）
-- Auto Talk Back (Experimental)（中文：自动顶嘴（实验性））：类型=布尔，默认=false
-- Auto Register (PRO)（中文：自动注册（专业版））：类型=布尔，默认=false
-- Auto Thank Watchdog Content (Hypixel)（中文：自动感谢看门狗内容 (Hypixel)）：类型=文本，默认="Thanks Watchd0g!!!"
-- Auto GG Content (Victory)（中文：自动GG内容（赢））：类型=文本，默认="gg"
-- Auto Thank Watchdog Mode（中文：自动感谢看门狗模式）：类型=枚举，默认="Smart Send"
-  可选：Smart Send（智能发送）；Copy（复制）；Chatter（弹幕）；Speak（讲述）；WinToast（系统通知）；Real Chatter（真弹幕）
-- Password Source（中文：密码来源）：类型=枚举，默认="Fixed"
-  可选：Fixed（固定）；File（文件）
-- Password File Path（中文：密码文件路径）：类型=文本，默认=""
-- Password (Fixed)（中文：密码（固定））：类型=文本，默认="123456"
-- Auto Thank Watchdog Content (Heypixel)（中文：自动感谢看门狗内容 (布吉岛)）：类型=文本，默认="少羽牛逼"
-- Auto GG Content (Defeat)（中文：自动GG内容（输））：类型=文本，默认="gg"
-- Auto Login (PRO)（中文：自动登陆（专业版））：类型=布尔，默认=false
-
+- Auto GG (PRO)（自动GG（专业版））
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Auto GG Mode（自动GG模式）
+ 类型：枚举；默认："Smart Send"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Smart Send ，确认稳定后再逐项切换比较效果。
+ 可选：Smart Send（智能发送）；Copy（复制）；Chatter（弹幕）；Speak（讲述）；WinToast（系统通知）；Real Chatter（真弹幕）
+- Auto GG Content (Victory)（自动GG内容（赢））
+ 类型：文本；默认："gg"
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Auto GG Content (Defeat)（自动GG内容（输））
+ 类型：文本；默认："gg"
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Password Source（密码来源）
+ 类型：枚举；默认："Fixed"
+ 说明：这是选项型配置。默认值 Fixed 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：Fixed（固定）；File（文件）
+- Password (Fixed)（密码（固定））
+ 类型：文本；默认："123456"
+ 说明：该配置用于调整模块行为细节。建议先按默认值运行，确认需求后再逐步调整。
+- Password File Path（密码文件路径）
+ 类型：文本；默认：""
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- Auto Register (PRO)（自动注册（专业版））
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Auto Login (PRO)（自动登陆（专业版））
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Auto Talk Back (Experimental)（自动顶嘴（实验性））
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Auto Thank Watchdog Mode（自动感谢看门狗模式）
+ 类型：枚举；默认："Smart Send"
+ 说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 Smart Send ，确认稳定后再逐项切换比较效果。
+ 可选：Smart Send（智能发送）；Copy（复制）；Chatter（弹幕）；Speak（讲述）；WinToast（系统通知）；Real Chatter（真弹幕）
+- Auto Thank Watchdog（自动感谢看门狗）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Auto Thank Watchdog Content (Hypixel)（自动感谢看门狗内容 (Hypixel)）
+ 类型：文本；默认："Thanks Watchd0g!!!"
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Auto Thank Watchdog Content (Heypixel)（自动感谢看门狗内容 (布吉岛)）
+ 类型：文本；默认："少羽牛逼"
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
 历史更新
 - 30. 修复 AutoText 未启用时仍 Auto Thank Watchdog 的问题。
 - 5. 【PRO】修复了 AutoText 没有启用的情况下启用 Auto Login / Auto Register 仍会触发的问题。

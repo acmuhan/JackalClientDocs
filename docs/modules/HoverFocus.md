@@ -12,14 +12,14 @@ HoverFocus
 - 版本属性：普通可用
 
 介绍
-HoverFocus（悬停聚焦）用于暂无描述。
-适合窗口管理、可视化监控与交互增强场景。
-初次使用可优先调整：Bring to Top、Hover Timeout (ms)。
-
+HoverFocus（悬停聚焦）在鼠标悬停达到阈值后自动聚焦窗口，适合多窗口快速切换。
 配置项
-- Bring to Top（中文：带到顶部）：类型=布尔，默认=false
-- Hover Timeout (ms)（中文：悬停超时（毫秒））：类型=数值，默认=1000L
-
+- Hover Timeout (ms)（悬停超时（毫秒））
+ 类型：数值；默认：1000L
+ 说明：鼠标悬停多久后触发聚焦。时间越短越灵敏，也越容易误触。
+- Bring to Top（带到顶部）
+ 类型：布尔；默认：false
+ 说明：悬停聚焦后是否同时置顶窗口。
 历史更新
 - 65. 修复 CaretBrowser, HoverFocus, NoAnimation, MouseTrails 的开关超时问题。
 - 66. 为 HoverFocus 模块添加配置项：

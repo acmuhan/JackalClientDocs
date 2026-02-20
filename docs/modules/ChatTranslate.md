@@ -17,9 +17,10 @@ ChatTranslate（AI翻译）用于暂无描述。
 初次使用可优先调整：Dest Language。
 
 配置项
-- Dest Language（中文：目标语言）：类型=枚举，默认="Chinese-English"
-  可选：English（英语）；Chinese（中文）；Chinese-English（中英）；Classic Chinese（经典 中文）；Japanese（日语）；French（法语）；German（德语）
-
+- Dest Language（目标语言）
+ 类型：枚举；默认："Chinese-English"
+ 说明：这是选项型配置。默认值 Chinese-English 一般更稳妥；建议按使用场景逐个试用，而不是一次性切换多项。
+ 可选：English（英语）；Chinese（中文）；Chinese-English（中英）；Classic Chinese（经典 中文）；Japanese（日语）；French（法语）；German（德语）
 历史更新
 - 26. 为 Chat Translate 添加配置项，以便调整翻译目标语言。现已支持中文、英文、中英、文言文、日语、法语、德语。
 

@@ -17,13 +17,24 @@ ForceTopmost（强制置顶）用于暂无描述。
 初次使用可优先调整：Cooldown。
 
 配置项
-- Use SW_RESTORE（中文：使用 SW_RESTORE）：类型=布尔，默认=false
-- Not While Using IME（中文：使用输入法时禁用）：类型=布尔，默认=true
-- bind（中文：绑定）：类型=按键/复合，默认={{"Keybind", {VK_RMENU, 'F'}}}
-- Not While Hidden（中文：隐藏时禁用）：类型=布尔，默认=true
-- Cooldown（中文：冷却）：类型=数值，默认=25
-- Not While Screenshot（中文：截图时禁用）：类型=布尔，默认=true
-
+- Cooldown（冷却）
+ 类型：数值；默认：25
+ 说明：用于控制检测/刷新/动画节奏。默认值 25 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Use SW_RESTORE（使用 SW_RESTORE）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Not While Hidden（隐藏时禁用）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Not While Screenshot（截图时禁用）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Not While Using IME（使用输入法时禁用）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- bind（绑定）
+ 类型：按键/复合；默认：{{"Keybind", {VK_RMENU, 'F'}}}
+ 说明：该配置用于调整模块行为细节。建议先按默认值运行，确认需求后再逐步调整。
 历史更新
 - 3. 为 Force Topmost 添加配置：
 - 8. 为 Force Topmost 添加配置：

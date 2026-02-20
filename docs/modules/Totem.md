@@ -17,12 +17,19 @@ Totem（不死图腾）用于播放不死图腾的动画。
 初次使用可优先调整：Cooldown (ms)。
 
 配置项
-- Chatter New Advancement（中文：新进度弹幕）：类型=枚举，默认="Only First Time"
-  可选：Off（关闭）；Only First Time（只在第一次显示）；Always（总是）
-- Cooldown (ms)（中文：冷却 (毫秒)）：类型=数值，默认=5000L
-- Transparent Color Key (For Cutout)（中文：透明颜色键（用于抠图））：类型=文本，默认="16;16;16"
-- Transparent Color Alpha（中文：透明颜色不透明度）：类型=数值，默认=0
-
+- Cooldown (ms)（冷却 (毫秒)）
+ 类型：数值；默认：5000L
+ 说明：用于控制检测/刷新/动画节奏。默认值 5000L 以稳定为主；调小会更灵敏但可能增加资源占用，调大则更省资源但响应更慢。
+- Transparent Color Key (For Cutout)（透明颜色键（用于抠图））
+ 类型：文本；默认："16;16;16"
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Transparent Color Alpha（透明颜色不透明度）
+ 类型：数值；默认：0
+ 说明：用于控制视觉配色。建议先选对比度高的配色保证可读性；若是动态颜色，注意在复杂背景下的辨识度。
+- Chatter New Advancement（新进度弹幕）
+ 类型：枚举；默认："Only First Time"
+ 说明：用于选择结果反馈方式。默认值 Only First Time 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+ 可选：Off（关闭）；Only First Time（只在第一次显示）；Always（总是）
 历史更新
 - 6. 稍微修改了一下不死图腾的触发动画视频。
 - 45. 为 Totem 不死图腾模块添加冷却时间：Cooldown (ms)，防止刷屏导致卡死。

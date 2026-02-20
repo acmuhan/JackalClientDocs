@@ -17,9 +17,12 @@ MouseTeleport（鼠标传送）用于在某些场合下传送鼠标。
 初次使用可优先调整：Edge Teleport、Teleport Sound。
 
 配置项
-- Edge Teleport（中文：边缘传送）：类型=布尔，默认=true
-- Teleport Sound（中文：传送音效）：类型=布尔，默认=true
-
+- Edge Teleport（边缘传送）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Teleport Sound（传送音效）
+ 类型：布尔；默认：true
+ 说明：用于选择结果反馈方式。默认值 true 适合大多数场景；若你不想打扰可改为更安静的输出方式。
 历史更新
 - 12. 修复 Mouse Teleport 忽视屏幕全局缩放的问题。
 - 21. 添加 Mouse Teleport 模块，可以在特定场合下传送你的鼠标。

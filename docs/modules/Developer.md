@@ -17,37 +17,96 @@ Developer（开发者）用于开发者模式。
 初次使用可优先调整：Level System Profiles HUD。
 
 配置项
-- system2（中文：未收录）：类型=布尔，默认=true
-- Neverlose GUI（中文：未收录）：类型=布尔，默认=false
-- Music Overlay（中文：Music 覆盖膜）：类型=布尔，默认=true
-- Live Chatter Time Diff（中文：直播中 弹幕 Time Diff）：类型=布尔，默认=false
-- Fancy Text（中文：优美 文本）：类型=布尔，默认=false
-- Cloud Music（中文：未收录）：类型=布尔，默认=true
-- Quake Warning（中文：Quake 警告）：类型=布尔，默认=true
-- Better Lyrics Result（中文：Better Lyrics 结果）：类型=布尔，默认=false
-- Debug Break Hotkey（中文：Debug Break 快捷键）：类型=按键/复合，默认={{"Keybind", {VK_LCONTROL, VK_LMENU, VK_SUBTRACT}}}
-- Speak（中文：讲述）：类型=布尔，默认=true
-- Query IP Location（中文：询问 IP Location）：类型=布尔，默认=true
-- Download Manager（中文：未收录）：类型=布尔，默认=false
-- RunWormwakeCommand（中文：未收录）：类型=布尔，默认=true
-- Web Request（中文：网络 Request）：类型=布尔，默认=false
-- Verification（中文：未收录）：类型=布尔，默认=false
-- Chinese Translation（中文：中文 翻译）：类型=布尔，默认=false
-- Not Responding Fix（中文：Not Responding 修复）：类型=布尔，默认=true
-- Live Gift Check（中文：直播中 Gift Check）：类型=布尔，默认=false
-- Force Live Stream AI (Context) Prompt（中文：强制 直播中 Stream 人工智能 (Context) Prompt）：类型=布尔，默认=false
-- Disable MC Check（中文：禁用 MC Check）：类型=布尔，默认=false
-- MC AI Speak Detect Result（中文：MC 人工智能 讲述 Detect 结果）：类型=布尔，默认=true
-- Better Lyrics Lines（中文：Better Lyrics 行数）：类型=布尔，默认=false
-- Music Overlay Ratio（中文：Music 覆盖膜 Ratio）：类型=布尔，默认=false
-- AI Context（中文：人工智能 Context）：类型=布尔，默认=false
-- Level System（中文：等级系统）：类型=布尔，默认=false
-- Level System Profiles HUD（中文：等级 系统 档案 是否显示HUD。）：类型=布尔，默认=false
-- Better Lyrics AI Decision（中文：Better Lyrics 人工智能 Decision）：类型=布尔，默认=true
-- MC Log Lines（中文：MC Log 行数）：类型=布尔，默认=false
-- Execute OCR（中文：执行 OCR）：类型=布尔，默认=false
-- Better Lyrics AI Decide Prompt（中文：Better Lyrics 人工智能 Decide Prompt）：类型=布尔，默认=false
-
+- AI Context（人工智能 Context）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Speak（讲述）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Web Request（网络 Request）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Fancy Text（优美 文本）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Query IP Location（询问 IP Location）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Quake Warning（Quake 警告）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Execute OCR（执行 OCR）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Better Lyrics Lines（Better Lyrics 行数）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Better Lyrics AI Decision（Better Lyrics 人工智能 Decision）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Better Lyrics AI Decide Prompt（Better Lyrics 人工智能 Decide Prompt）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Better Lyrics Result（Better Lyrics 结果）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- RunWormwakeCommand（未收录）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Chinese Translation（中文 翻译）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- system2（未收录）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Level System（等级系统）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Level System Profiles HUD（等级 系统 档案 是否显示HUD。）
+ 类型：布尔；默认：false
+ 说明：用于指定文件/目录路径。建议使用稳定的绝对路径并确认权限可访问，避免因路径变化导致功能失效。
+- Live Gift Check（直播中 Gift Check）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Live Chatter Time Diff（直播中 弹幕 Time Diff）
+ 类型：布尔；默认：false
+ 说明：用于选择结果反馈方式。默认值 false 适合大多数场景；若你不想打扰可改为更安静的输出方式。
+- MC Log Lines（MC Log 行数）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- MC AI Speak Detect Result（MC 人工智能 讲述 Detect 结果）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Verification（未收录）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Neverlose GUI（未收录）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Music Overlay Ratio（Music 覆盖膜 Ratio）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Music Overlay（Music 覆盖膜）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Cloud Music（未收录）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Disable MC Check（禁用 MC Check）
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Force Live Stream AI (Context) Prompt（强制 直播中 Stream 人工智能 (Context) Prompt）
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Not Responding Fix（Not Responding 修复）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Download Manager（未收录）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Debug Break Hotkey（Debug Break 快捷键）
+ 类型：按键/复合；默认：{{"Keybind", {VK_LCONTROL, VK_LMENU, VK_SUBTRACT}}}
+ 说明：用于设置快捷键触发。建议避免与系统或常用软件冲突，优先使用组合键提高可控性。
 历史更新
 无（HISTORY 中暂无明确记录）
 

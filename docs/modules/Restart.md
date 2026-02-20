@@ -14,13 +14,18 @@ Restart
 介绍
 Restart（重新启动）用于暂无描述。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：bind、Generate Arguments、Run As User。
+初次使用可优先调整：Run As User、Generate Arguments、bind。
 
 配置项
-- bind（中文：绑定）：类型=按键/复合，默认={{"Keybind", {VK_RMENU, 'R'}}}
-- Generate Arguments（中文：生成参数）：类型=布尔，默认=true
-- Run As User（中文：用户身份启动）：类型=布尔，默认=false
-
+- Run As User（用户身份启动）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Generate Arguments（生成参数）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- bind（绑定）
+ 类型：按键/复合；默认：{{"Keybind", {VK_RMENU, 'R'}}}
+ 说明：该配置用于调整模块行为细节。建议先按默认值运行，确认需求后再逐步调整。
 历史更新
 - 41. 修复 AntiCapture 和 Black Capture 在打开后重新启动后没有重新生效的问题。
 - 41. 现在客户端有 --shell 参数时，不仅开启独占模式，还将不创建窗口。如果需要窗口了，你需要重新启动客户端且不指定该参数。该模式下会避免运行任何需要客户端窗口的代码。

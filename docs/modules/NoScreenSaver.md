@@ -17,9 +17,12 @@ NoScreenSaver（关闭屏保）用于暂无描述。
 初次使用可优先调整：Check Process、Kill Process。
 
 配置项
-- Check Process（中文：检查进程）：类型=布尔，默认=true
-- Kill Process（中文：结束进程）：类型=布尔，默认=false
-
+- Check Process（检查进程）
+ 类型：布尔；默认：true
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
+- Kill Process（结束进程）
+ 类型：布尔；默认：false
+ 说明：用于指定模块实际作用对象。建议先对单个目标测试通过，再扩大到多目标，降低误操作风险。
 历史更新
 - 31. 为 NoScreenSaver 添加对相关系统参数的设置。
 

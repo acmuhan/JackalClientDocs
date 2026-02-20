@@ -14,20 +14,39 @@ ScreenSaver
 介绍
 ScreenSaver（屏保程序）用于启动系统的一个屏幕保护程序。
 适合在日常管理与自动化场景中按需启用。
-初次使用可优先调整：Disable Gamma、Use Custom Program、Your Custom Program。
+初次使用可优先调整：Use Custom Program、Your Custom Program、Display On Client。
 
 配置项
-- Disable Gamma（中文：关闭伽马覆写）：类型=布尔，默认=false
-- Use Custom Program（中文：使用自定义程序）：类型=布尔，默认=false
-- Your Custom Program（中文：你的自定义程序）：类型=文本，默认="null"
-- Mute（中文：静音）：类型=布尔，默认=true
-- Disable ForceTopmost（中文：关闭强制置顶）：类型=布尔，默认=true
-- Disable Night（中文：关闭夜间模式）：类型=布尔，默认=true
-- Close Client Menu（中文：关闭客户端菜单）：类型=布尔，默认=true
-- Mouse Disabler (Press END to quit)（中文：鼠标锁 (按End退出)）：类型=布尔，默认=false
-- Key Locker (Press END to quit)（中文：键盘锁 (按End退出)）：类型=布尔，默认=false
-- Display On Client（中文：在客户端窗口显示）：类型=布尔，默认=true
-
+- Use Custom Program（使用自定义程序）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Your Custom Program（你的自定义程序）
+ 类型：文本；默认："null"
+ 说明：该配置用于调整模块行为细节。建议先按默认值运行，确认需求后再逐步调整。
+- Display On Client（在客户端窗口显示）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Disable ForceTopmost（关闭强制置顶）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Disable Night（关闭夜间模式）
+ 类型：布尔；默认：true
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Disable Gamma（关闭伽马覆写）
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
+- Close Client Menu（关闭客户端菜单）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Mute（静音）
+ 类型：布尔；默认：true
+ 说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Key Locker (Press END to quit)（键盘锁 (按End退出)）
+ 类型：布尔；默认：false
+ 说明：这是开关型配置。默认值 false 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
+- Mouse Disabler (Press END to quit)（鼠标锁 (按End退出)）
+ 类型：布尔；默认：false
+ 说明：这是行为开关项。建议先按默认值使用，确认行为符合预期后再逐项启停，避免多个开关同时改动造成排查困难。
 历史更新
 - 31. 为 NoScreenSaver 添加对相关系统参数的设置。
 
