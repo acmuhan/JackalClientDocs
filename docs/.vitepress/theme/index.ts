@@ -1,17 +1,16 @@
-// https://vitepress.dev/guide/custom-theme
-import { h } from 'vue'
+﻿import { h } from 'vue'
 import type { Theme } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
+import TeekTheme, { TkThemeEnhance } from 'vitepress-theme-teek'
+import 'virtual:group-icons.css'
+import 'vitepress-theme-teek/theme-chalk/tk-catalogue-page.css'
 import './style.css'
 
 export default {
-  extends: DefaultTheme,
-  Layout: () => {
-    return h(DefaultTheme.Layout, null, {
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
-    })
-  },
-  enhanceApp({ app, router, siteData }) {
-    // ...
+  extends: TeekTheme,
+  Layout: () => h(TeekTheme.Layout, null, {
+    'nav-bar-content-after': () => h(TkThemeEnhance)
+  }),
+  async enhanceApp(ctx) {
+    await TeekTheme.enhanceApp?.(ctx)
   }
 } satisfies Theme

@@ -1,5 +1,9 @@
 ﻿# 功能与模块地图
 
+<TkTitleTag text="模块视图" type="vp-info" /> <TkTitleTag text="按场景组织" type="vp-success" />
+
+<TkVpContainer type="info" title="如何使用本页" text="按场景找到模块后，再去完整命令手册检索对应命令。" />
+
 ## A. 界面与显示
 
 - ClickGUI / HUD 编辑

@@ -1,0 +1,290 @@
+<h1 id="b站命令" tabindex="-1">B站命令 <a class="header-anchor" href="#b站命令" aria-label="Permalink to &quot;B站命令&quot;"></a></h1>
+<blockquote>
+<p>本页由 <code>test/COMMANDS.txt</code> 自动拆分生成。</p>
+</blockquote>
+<p>共 62 组命令。</p>
+<h2 id="webpage-url" tabindex="-1"><code>/webpage &lt;url...&gt;</code> <a class="header-anchor" href="#webpage-url" aria-label="Permalink to &quot;`/webpage &lt;url...&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/webpage &#x3C;url...></span></span>
+<span class="line"><span>/webpageraw &#x3C;url...></span></span>
+<span class="line"><span>/bilipage &#x3C;url...></span></span>
+<span class="line"><span>/bilipageraw &#x3C;url...></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>获取网页完整内容。/webpage /bilipage命令将解析格式以彩色输出，/webpageraw /bilipageraw 不会。/bilipage /bilipageraw 会携带对应的 Referer</span></span></code></pre>
+</div><h2 id="bili-args" tabindex="-1"><code>/bili [args...]</code> <a class="header-anchor" href="#bili-args" aria-label="Permalink to &quot;`/bili [args...]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili [args...]</span></span>
+<span class="line"><span>/bilibili [args...]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>哔哩哔哩全套命令。需要登录才能使用。输入 /bili login 或 /bilisettings 扫码登录。</span></span>
+<span class="line"><span>不指定参数时，进入主页。</span></span></code></pre>
+</div><h2 id="bili-login" tabindex="-1"><code>/bili login</code> <a class="header-anchor" href="#bili-login" aria-label="Permalink to &quot;`/bili login`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili login</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>扫码登录。将会存储 Cookies 到 BiliSettings，请勿泄露以免被盗号。</span></span></code></pre>
+</div><h2 id="bili-relogin" tabindex="-1"><code>/bili relogin</code> <a class="header-anchor" href="#bili-relogin" aria-label="Permalink to &quot;`/bili relogin`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili relogin</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>重新扫码登录。</span></span></code></pre>
+</div><h2 id="bili-logout" tabindex="-1"><code>/bili logout</code> <a class="header-anchor" href="#bili-logout" aria-label="Permalink to &quot;`/bili logout`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili logout</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>登出账号。清空 Cookies。</span></span></code></pre>
+</div><h2 id="bili-space-uid" tabindex="-1"><code>/bili space [uid]</code> <a class="header-anchor" href="#bili-space-uid" aria-label="Permalink to &quot;`/bili space [uid]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili space [uid]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>查看用户空间主页。如果不指定uid，则为当前登录账号的空间。</span></span></code></pre>
+</div><h2 id="bili-parse-shortlink" tabindex="-1"><code>/bili parse &lt;shortlink&gt;</code> <a class="header-anchor" href="#bili-parse-shortlink" aria-label="Permalink to &quot;`/bili parse &lt;shortlink&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili parse &#x3C;shortlink></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>解析B站短链接。</span></span></code></pre>
+</div><h2 id="bili-fans" tabindex="-1"><code>/bili fans</code> <a class="header-anchor" href="#bili-fans" aria-label="Permalink to &quot;`/bili fans`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili fans</span></span>
+<span class="line"><span>/bili fans list [limit=100]</span></span>
+<span class="line"><span>/bili fans enum [limit=100]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>查看自己的粉丝列表。limit 为数量限制。如果粉丝太多，你可能因B站限制无法全部看完。【PRO】版的输出会更详细。</span></span></code></pre>
+</div><h2 id="bili-fans-find-kw" tabindex="-1"><code>/bili fans find &lt;kw...&gt;</code> <a class="header-anchor" href="#bili-fans-find-kw" aria-label="Permalink to &quot;`/bili fans find &lt;kw...&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili fans find &#x3C;kw...></span></span>
+<span class="line"><span>/bili fans findf &#x3C;kw...></span></span>
+<span class="line"><span>/bili fans search &#x3C;limit> &#x3C;kw...></span></span>
+<span class="line"><span>/bili fans searchf &#x3C;limit> &#x3C;kw...></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】以昵称关键字kw搜索自己的粉丝。两个带f后缀的为快速模式，找到一个很符合的结果就会直接输出并停止。search(f)可以指定搜索范围limit（表示前limit个粉丝中搜索）, find 则为B站支持的最大搜索范围（可能为1000）中搜索。findf 为前 100 个中搜索。你可以使用UID=或UID:开头搜索指定UID的用户。</span></span></code></pre>
+</div><h2 id="bili-video-aid-bid-link" tabindex="-1"><code>/bili video &lt;aid/bid/link&gt;</code> <a class="header-anchor" href="#bili-video-aid-bid-link" aria-label="Permalink to &quot;`/bili video &lt;aid/bid/link&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili video &#x3C;aid/bid/link></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>查看B站视频信息。会进入一个可交互页面。</span></span></code></pre>
+</div><h2 id="bili-video-aid-bid-link-summary" tabindex="-1"><code>/bili video &lt;aid/bid/link&gt; summary</code> <a class="header-anchor" href="#bili-video-aid-bid-link-summary" aria-label="Permalink to &quot;`/bili video &lt;aid/bid/link&gt; summary`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili video &#x3C;aid/bid/link> summary</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>使用人工智能总结视频信息。</span></span></code></pre>
+</div><h2 id="bili-video-aid-bid-link-comment" tabindex="-1"><code>/bili video &lt;aid/bid/link&gt; comment</code> <a class="header-anchor" href="#bili-video-aid-bid-link-comment" aria-label="Permalink to &quot;`/bili video &lt;aid/bid/link&gt; comment`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili video &#x3C;aid/bid/link> comment</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>使用人工智能生成并发送一条类似的评论。</span></span></code></pre>
+</div><h2 id="bili-video-aid-bid-link-gencomment" tabindex="-1"><code>/bili video &lt;aid/bid/link&gt; gencomment</code> <a class="header-anchor" href="#bili-video-aid-bid-link-gencomment" aria-label="Permalink to &quot;`/bili video &lt;aid/bid/link&gt; gencomment`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili video &#x3C;aid/bid/link> gencomment</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>使用人工智能生成一条类似的评论。仅生成不发送。</span></span></code></pre>
+</div><h2 id="bili-comment-add-type-1-oid-content" tabindex="-1"><code>/bili comment add [type=1] &lt;oid&gt; &lt;content...&gt;</code> <a class="header-anchor" href="#bili-comment-add-type-1-oid-content" aria-label="Permalink to &quot;`/bili comment add [type=1] &lt;oid&gt; &lt;content...&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili comment add [type=1] &#x3C;oid> &#x3C;content...></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>为指定评论区添加一条评论。type 为评论区类型代码（例如视频为1, 此时 oid 为 avid），oid 为目标评论区id。</span></span></code></pre>
+</div><h2 id="bili-comment-reply-type-1-oid-root-content" tabindex="-1"><code>/bili comment reply [type=1] &lt;oid&gt; &lt;root&gt; &lt;content...&gt;</code> <a class="header-anchor" href="#bili-comment-reply-type-1-oid-root-content" aria-label="Permalink to &quot;`/bili comment reply [type=1] &lt;oid&gt; &lt;root&gt; &lt;content...&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili comment reply [type=1] &#x3C;oid> &#x3C;root> &#x3C;content...></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>为指定评论区添加一条二级评论（仅二级）。root为要回复的评论的 rpid。</span></span></code></pre>
+</div><h2 id="bili-comment-reply2-type-1-oid-root-parent-content" tabindex="-1"><code>/bili comment reply2 [type=1] &lt;oid&gt; &lt;root&gt; &lt;parent&gt; &lt;content...&gt;</code> <a class="header-anchor" href="#bili-comment-reply2-type-1-oid-root-parent-content" aria-label="Permalink to &quot;`/bili comment reply2 [type=1] &lt;oid&gt; &lt;root&gt; &lt;parent&gt; &lt;content...&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili comment reply2 [type=1] &#x3C;oid> &#x3C;root> &#x3C;parent> &#x3C;content...></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>为指定评论区添加一条大于二级的评论。root为要回复的评论所在的楼层的 rpid。parent 为要回复的评论的 rpid。</span></span></code></pre>
+</div><h2 id="bili-comment-recv-page-1" tabindex="-1"><code>/bili comment recv [page=1]</code> <a class="header-anchor" href="#bili-comment-recv-page-1" aria-label="Permalink to &quot;`/bili comment recv [page=1]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili comment recv [page=1]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】查看“回复我的”消息列表。page 为页码（每页固定显示若干条），用于快速浏览近期收到的评论回复。</span></span></code></pre>
+</div><h2 id="bili-comment-recvui" tabindex="-1"><code>/bili comment recvui</code> <a class="header-anchor" href="#bili-comment-recvui" aria-label="Permalink to &quot;`/bili comment recvui`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili comment recvui</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】进入交互式“回复我的”界面。支持方向键选择、回车直接回复、R 刷新、Q/Esc 退出。回复输入支持 cancel 或 /cancel 取消。</span></span></code></pre>
+</div><h2 id="bili-comment-list-enum-type-oid-count-20-page-1-sort-1" tabindex="-1"><code>/bili comment list/enum &lt;type&gt; &lt;oid&gt; [count=20] [page=1] [sort=1]</code> <a class="header-anchor" href="#bili-comment-list-enum-type-oid-count-20-page-1-sort-1" aria-label="Permalink to &quot;`/bili comment list/enum &lt;type&gt; &lt;oid&gt; [count=20] [page=1] [sort=1]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili comment list/enum &#x3C;type> &#x3C;oid> [count=20] [page=1] [sort=1]</span></span>
+<span class="line"><span>/bili comment list/enum &#x3C;oid></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>枚举评论区（单层，虽然可以显示部分子评论，但不会显示完整，分页）。type 为评论区类型代码（例如视频为1, 此时 oid 为 avid），oid 为目标评论区id。count 为每页数量，page 为页码，sort 为排序。</span></span></code></pre>
+</div><h2 id="bili-comment-listall-type-oid-sort-1" tabindex="-1"><code>/bili comment listall &lt;type&gt; &lt;oid&gt; [sort=1]</code> <a class="header-anchor" href="#bili-comment-listall-type-oid-sort-1" aria-label="Permalink to &quot;`/bili comment listall &lt;type&gt; &lt;oid&gt; [sort=1]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili comment listall &#x3C;type> &#x3C;oid> [sort=1]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>枚举评论区（单层，虽然可以显示部分子评论，但不会显示完整）。type 为评论区类型代码（例如视频为1, 此时 oid 为 avid），oid 为目标评论区id，sort 为排序。</span></span></code></pre>
+</div><h2 id="bili-comment-tree-type-oid-sort-1" tabindex="-1"><code>/bili comment tree &lt;type&gt; &lt;oid&gt; [sort=1]</code> <a class="header-anchor" href="#bili-comment-tree-type-oid-sort-1" aria-label="Permalink to &quot;`/bili comment tree &lt;type&gt; &lt;oid&gt; [sort=1]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili comment tree &#x3C;type> &#x3C;oid> [sort=1]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>枚举评论区（多层）。type 为评论区类型代码（例如视频为1, 此时 oid 为 avid），oid 为目标评论区id，sort 为排序。</span></span></code></pre>
+</div><h2 id="bili-comment-like-type-oid-rpid1-rpid2-rpid3" tabindex="-1"><code>/bili comment like &lt;type&gt; &lt;oid&gt; [rpid1;rpid2;rpid3;...]</code> <a class="header-anchor" href="#bili-comment-like-type-oid-rpid1-rpid2-rpid3" aria-label="Permalink to &quot;`/bili comment like &lt;type&gt; &lt;oid&gt; [rpid1;rpid2;rpid3;...]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili comment like &#x3C;type> &#x3C;oid> [rpid1;rpid2;rpid3;...]</span></span>
+<span class="line"><span>/bili comment unlike &#x3C;type> &#x3C;oid> [rpid1;rpid2;rpid3;...]</span></span>
+<span class="line"><span>/bili comment dislike &#x3C;type> &#x3C;oid> [rpid1;rpid2;rpid3;...]</span></span>
+<span class="line"><span>/bili comment undislike &#x3C;type> &#x3C;oid> [rpid1;rpid2;rpid3;...]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>给若干评论点赞/取消赞/点踩/取消踩。type 为评论区类型代码（例如视频为1, 此时 oid 为 avid），oid 为目标评论区id，rpid 为目标评论rpid。rpid 不填时，代表所有评论。</span></span></code></pre>
+</div><h2 id="bili-comment-delete-type-oid-rpid1-rpid2-rpid3" tabindex="-1"><code>/bili comment delete &lt;type&gt; &lt;oid&gt; [rpid1;rpid2;rpid3;...]</code> <a class="header-anchor" href="#bili-comment-delete-type-oid-rpid1-rpid2-rpid3" aria-label="Permalink to &quot;`/bili comment delete &lt;type&gt; &lt;oid&gt; [rpid1;rpid2;rpid3;...]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili comment delete &#x3C;type> &#x3C;oid> [rpid1;rpid2;rpid3;...]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>删除若干评论。type 为评论区类型代码（例如视频为1, 此时 oid 为 avid），oid 为目标评论区id，rpid 为目标评论rpid。rpid 不填时，代表所有评论。</span></span></code></pre>
+</div><h2 id="bili-comment-topmost-type-oid-rpid1-rpid2-rpid3" tabindex="-1"><code>/bili comment topmost &lt;type&gt; &lt;oid&gt; [rpid1;rpid2;rpid3;...]</code> <a class="header-anchor" href="#bili-comment-topmost-type-oid-rpid1-rpid2-rpid3" aria-label="Permalink to &quot;`/bili comment topmost &lt;type&gt; &lt;oid&gt; [rpid1;rpid2;rpid3;...]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili comment topmost &#x3C;type> &#x3C;oid> [rpid1;rpid2;rpid3;...]</span></span>
+<span class="line"><span>/bili comment untopmost &#x3C;type> &#x3C;oid> [rpid1;rpid2;rpid3;...]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>置顶/取消置顶评论。。type 为评论区类型代码（例如视频为1, 此时 oid 为 avid），oid 为目标评论区id, rpid 为目标评论rpid，支持并发置顶多个目标评论 （未成功）。rpid 不填时，代表所有评论。</span></span></code></pre>
+</div><h2 id="bili-dynamic-list-enum" tabindex="-1"><code>/bili dynamic list/enum</code> <a class="header-anchor" href="#bili-dynamic-list-enum" aria-label="Permalink to &quot;`/bili dynamic list/enum`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili dynamic list/enum</span></span>
+<span class="line"><span>/bili dynamic list/enum &#x3C;uid> [limit=10] [offset_dynamic_id=0]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>枚举编号为 uid 的用户动态。limit 表示最大数量。如果填写offset_dynamic_id，则从编号为offset_dynamic_id的动态开始枚举。</span></span></code></pre>
+</div><h2 id="bili-dynamic-likes-uid-limit-8" tabindex="-1"><code>/bili dynamic likes &lt;uid&gt; [limit=8]</code> <a class="header-anchor" href="#bili-dynamic-likes-uid-limit-8" aria-label="Permalink to &quot;`/bili dynamic likes &lt;uid&gt; [limit=8]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili dynamic likes &#x3C;uid> [limit=8]</span></span>
+<span class="line"><span>/bili dynamic unlikes &#x3C;uid> [limit=8]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>给指定用户动态点赞/取消点赞，最多 limit 个动态。</span></span></code></pre>
+</div><h2 id="bili-contribution-uid-own-limit-30" tabindex="-1"><code>/bili contribution [uid=own] [limit=30]</code> <a class="header-anchor" href="#bili-contribution-uid-own-limit-30" aria-label="Permalink to &quot;`/bili contribution [uid=own] [limit=30]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili contribution [uid=own] [limit=30]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>枚举指定用户的稿件列表。uid如果不填则是当前登录的用户。limit为数量限制，显示前多少的稿件。</span></span></code></pre>
+</div><h2 id="bili-tag-query-avid-bid-link" tabindex="-1"><code>/bili tag query &lt;avid/bid/link...&gt;</code> <a class="header-anchor" href="#bili-tag-query-avid-bid-link" aria-label="Permalink to &quot;`/bili tag query &lt;avid/bid/link...&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili tag query &#x3C;avid/bid/link...></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>该命令已被废弃。</span></span></code></pre>
+</div><h2 id="bili-live" tabindex="-1"><code>/bili live</code> <a class="header-anchor" href="#bili-live" aria-label="Permalink to &quot;`/bili live`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live</span></span>
+<span class="line"><span>/bili live feed/recommend [limit]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>获得推荐的直播间列表。limit 为数量限制。</span></span></code></pre>
+</div><h2 id="bili-live-addchatter-room-id-content" tabindex="-1"><code>/bili live addchatter &lt;room_id&gt; &lt;content...&gt;</code> <a class="header-anchor" href="#bili-live-addchatter-room-id-content" aria-label="Permalink to &quot;`/bili live addchatter &lt;room_id&gt; &lt;content...&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live addchatter &#x3C;room_id> &#x3C;content...></span></span>
+<span class="line"><span>/bili live chatter &#x3C;content...></span></span>
+<span class="line"><span>/bili live leetchatter &#x3C;content...></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>向 room_id 直播间发送弹幕。如果 room_id 填为 ~ ，则会使用 LiveStream 模块中的 Room ID。/bili live leetchatter 则会先将文本交给 Clipboard Tweaks 模块处理再发送。</span></span></code></pre>
+</div><h2 id="bili-live-go-roomid" tabindex="-1"><code>/bili live go [roomId=~]</code> <a class="header-anchor" href="#bili-live-go-roomid" aria-label="Permalink to &quot;`/bili live go [roomId=~]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live go [roomId=~]</span></span>
+<span class="line"><span>/bili live link [roomId=~]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 LiveStream 模块的 Room ID。</span></span></code></pre>
+</div><h2 id="bili-live-following" tabindex="-1"><code>/bili live following</code> <a class="header-anchor" href="#bili-live-following" aria-label="Permalink to &quot;`/bili live following`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live following</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>查询自己已关注的所有 up 的直播状态。</span></span></code></pre>
+</div><h2 id="bili-live-audience-roomid" tabindex="-1"><code>/bili live audience [roomId=~]</code> <a class="header-anchor" href="#bili-live-audience-roomid" aria-label="Permalink to &quot;`/bili live audience [roomId=~]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live audience [roomId=~]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>输出现在的直播间观众信息。如果 roomId 不填，则为当前的缓存。如果填~，则取 LiveStream 模块的 Room ID。</span></span></code></pre>
+</div><h2 id="bili-live-likeauds-roomid-limit-5" tabindex="-1"><code>/bili live likeauds [roomId=~] [limit=5]</code> <a class="header-anchor" href="#bili-live-likeauds-roomid-limit-5" aria-label="Permalink to &quot;`/bili live likeauds [roomId=~] [limit=5]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live likeauds [roomId=~] [limit=5]</span></span>
+<span class="line"><span>/bili live likeauds2 [roomId=~] [limit=5]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>给现在的直播间观众的动态点赞。limit 为点赞的动态数量。</span></span></code></pre>
+</div><h2 id="bili-live-host-uid" tabindex="-1"><code>/bili live host [uid=~]</code> <a class="header-anchor" href="#bili-live-host-uid" aria-label="Permalink to &quot;`/bili live host [uid=~]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live host [uid=~]</span></span>
+<span class="line"><span>/bili live hostinfo [uid=~]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>获取主播信息。</span></span></code></pre>
+</div><h2 id="bili-live-fetch-limit-100" tabindex="-1"><code>/bili live fetch [limit=100]</code> <a class="header-anchor" href="#bili-live-fetch-limit-100" aria-label="Permalink to &quot;`/bili live fetch [limit=100]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live fetch [limit=100]</span></span>
+<span class="line"><span>/bili live chat [limit=100]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>获取并输出当前直播间弹幕列表的前limit个。</span></span></code></pre>
+</div><h2 id="bili-live-setroom-roomid-auto" tabindex="-1"><code>/bili live setroom [roomId=auto]</code> <a class="header-anchor" href="#bili-live-setroom-roomid-auto" aria-label="Permalink to &quot;`/bili live setroom [roomId=auto]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live setroom [roomId=auto]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>将有关模块的直播间ID选项全部设为roomId。如果不填，则为自己的直播间ID。</span></span></code></pre>
+</div><h2 id="bili-live-info-roomid" tabindex="-1"><code>/bili live info [roomId=~]</code> <a class="header-anchor" href="#bili-live-info-roomid" aria-label="Permalink to &quot;`/bili live info [roomId=~]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live info [roomId=~]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>获得直播间原始信息JSON。</span></span></code></pre>
+</div><h2 id="bili-live-create" tabindex="-1"><code>/bili live create</code> <a class="header-anchor" href="#bili-live-create" aria-label="Permalink to &quot;`/bili live create`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live create</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>为自己创建一个直播间。</span></span></code></pre>
+</div><h2 id="bili-live-settitle-title" tabindex="-1"><code>/bili live settitle &lt;title...&gt;</code> <a class="header-anchor" href="#bili-live-settitle-title" aria-label="Permalink to &quot;`/bili live settitle &lt;title...&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live settitle &#x3C;title...></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】设置直播间标题为 title。</span></span></code></pre>
+</div><h2 id="bili-live-gettitle-roomid" tabindex="-1"><code>/bili live gettitle [roomId=~]</code> <a class="header-anchor" href="#bili-live-gettitle-roomid" aria-label="Permalink to &quot;`/bili live gettitle [roomId=~]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live gettitle [roomId=~]</span></span>
+<span class="line"><span>/bili live title [roomId=~]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>获取直播间标题。</span></span></code></pre>
+</div><h2 id="bili-live-areas" tabindex="-1"><code>/bili live areas</code> <a class="header-anchor" href="#bili-live-areas" aria-label="Permalink to &quot;`/bili live areas`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live areas</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>查看所有直播分区及其ID。</span></span></code></pre>
+</div><h2 id="bili-live-area" tabindex="-1"><code>/bili live area</code> <a class="header-anchor" href="#bili-live-area" aria-label="Permalink to &quot;`/bili live area`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live area</span></span>
+<span class="line"><span>/bili live getarea [roomId=~]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>获取直播间分区。使用 /bili live areas 查看所有分区。</span></span></code></pre>
+</div><h2 id="bili-live-area-area-id-area-name" tabindex="-1"><code>/bili live area &lt;area_id/area_name&gt;</code> <a class="header-anchor" href="#bili-live-area-area-id-area-name" aria-label="Permalink to &quot;`/bili live area &lt;area_id/area_name&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live area &#x3C;area_id/area_name></span></span>
+<span class="line"><span>/bili live setarea &#x3C;area_id/area_name></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>设置直播间分区。可填分区ID或分区名。分区名将自动模糊匹配（命中规则：相似度>0.8，或>0.6且领先第二名>0.2）；若匹配失败会输出候选分区。使用 /bili live areas 查看所有分区。</span></span></code></pre>
+</div><h2 id="bili-live-start-area-current" tabindex="-1"><code>/bili live start [area=current]</code> <a class="header-anchor" href="#bili-live-start-area-current" aria-label="Permalink to &quot;`/bili live start [area=current]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live start [area=current]</span></span>
+<span class="line"><span>/bili live startsilent [area=current]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】立即开播。房间号将采用 LiveStream 直播间模块的房间号。area为分区ID，如果不填则为当前分区。startsilent 子命令是静默开播，不会提示任何信息。</span></span></code></pre>
+</div><h2 id="bili-live-stop" tabindex="-1"><code>/bili live stop</code> <a class="header-anchor" href="#bili-live-stop" aria-label="Permalink to &quot;`/bili live stop`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live stop</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】关闭直播。房间号将采用 LiveStream 直播间模块的房间号。</span></span></code></pre>
+</div><h2 id="bili-live-levelsystem-list" tabindex="-1"><code>/bili live levelsystem list</code> <a class="header-anchor" href="#bili-live-levelsystem-list" aria-label="Permalink to &quot;`/bili live levelsystem list`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live levelsystem list</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>枚举等级系统所有的观众档案数据。</span></span></code></pre>
+</div><h2 id="bili-live-levelsystem-save" tabindex="-1"><code>/bili live levelsystem save</code> <a class="header-anchor" href="#bili-live-levelsystem-save" aria-label="Permalink to &quot;`/bili live levelsystem save`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live levelsystem save</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>立即保存等级系统所有的观众档案数据。</span></span></code></pre>
+</div><h2 id="bili-live-mute-uid-name-duration-flag" tabindex="-1"><code>/bili live mute &lt;uid/name&gt; &lt;duration_flag&gt;</code> <a class="header-anchor" href="#bili-live-mute-uid-name-duration-flag" aria-label="Permalink to &quot;`/bili live mute &lt;uid/name&gt; &lt;duration_flag&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live mute &#x3C;uid/name> &#x3C;duration_flag></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>禁言指定的直播间用户。duration_flag可以填写：</span></span>
+<span class="line"><span>	0/current: 本场直播。</span></span>
+<span class="line"><span>	-1/permenant: 永久。</span></span></code></pre>
+</div><h2 id="bili-live-muted" tabindex="-1"><code>/bili live muted</code> <a class="header-anchor" href="#bili-live-muted" aria-label="Permalink to &quot;`/bili live muted`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live muted</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>查看直播间已禁言列表。</span></span></code></pre>
+</div><h2 id="bili-live-unmute-uid-name" tabindex="-1"><code>/bili live unmute &lt;uid/name&gt;</code> <a class="header-anchor" href="#bili-live-unmute-uid-name" aria-label="Permalink to &quot;`/bili live unmute &lt;uid/name&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili live unmute &#x3C;uid/name></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>取消指定用户的禁言。</span></span></code></pre>
+</div><h2 id="bili-opus-id" tabindex="-1"><code>/bili opus &lt;id&gt;</code> <a class="header-anchor" href="#bili-opus-id" aria-label="Permalink to &quot;`/bili opus &lt;id&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili opus &#x3C;id></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>阅读一个专栏。</span></span></code></pre>
+</div><h2 id="bili-components-uid-preset-for-speak" tabindex="-1"><code>/bili components &lt;uid&gt; [preset=for_speak]</code> <a class="header-anchor" href="#bili-components-uid-preset-for-speak" aria-label="Permalink to &quot;`/bili components &lt;uid&gt; [preset=for_speak]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili components &#x3C;uid> [preset=for_speak]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>查用户成分。uid 为用户ID。preset 为预设。</span></span>
+<span class="line"><span>for_speak: 只讲述，不输出。</span></span>
+<span class="line"><span>normal:	讲述并输出。</span></span></code></pre>
+</div><h2 id="bili-cookies" tabindex="-1"><code>/bili cookies</code> <a class="header-anchor" href="#bili-cookies" aria-label="Permalink to &quot;`/bili cookies`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili cookies</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>查看 Cookies。请勿泄露以免被盗号。</span></span></code></pre>
+</div><h2 id="bili-setcookies-cookies-cookiesjson" tabindex="-1"><code>/bili setcookies [cookies.../cookiesjson...]</code> <a class="header-anchor" href="#bili-setcookies-cookies-cookiesjson" aria-label="Permalink to &quot;`/bili setcookies [cookies.../cookiesjson...]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bili setcookies [cookies.../cookiesjson...]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>设置 Cookies 的必要项。如果只填前两项参数，则会提示分别输入 DedeUserID, DedeUserID__ckMd5, SESSDATA, bili_jct, sid。</span></span></code></pre>
+</div><h2 id="bilinickname-uid" tabindex="-1"><code>/bilinickname &lt;uid&gt;</code> <a class="header-anchor" href="#bilinickname-uid" aria-label="Permalink to &quot;`/bilinickname &lt;uid&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bilinickname &#x3C;uid></span></span>
+<span class="line"><span>/bilinicknames &#x3C;uid1;uid2;...></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>查询B站用户昵称。</span></span></code></pre>
+</div><h2 id="biliuid-nickname" tabindex="-1"><code>/biliuid &lt;nickname&gt;</code> <a class="header-anchor" href="#biliuid-nickname" aria-label="Permalink to &quot;`/biliuid &lt;nickname&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/biliuid &#x3C;nickname></span></span>
+<span class="line"><span>/biliuid1 &#x3C;nickname></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>根据一个用户昵称反查用户UID。如果找不到精确的就输出相似的。/biliuid如果遇到空回复会多尝试几次，/biliuid1并不会。</span></span></code></pre>
+</div><h2 id="bilihot-limit" tabindex="-1"><code>/bilihot [limit]</code> <a class="header-anchor" href="#bilihot-limit" aria-label="Permalink to &quot;`/bilihot [limit]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bilihot [limit]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>显示B站热搜。</span></span></code></pre>
+</div><h2 id="bilisuggest-keyword" tabindex="-1"><code>/bilisuggest &lt;keyword&gt;</code> <a class="header-anchor" href="#bilisuggest-keyword" aria-label="Permalink to &quot;`/bilisuggest &lt;keyword&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bilisuggest &#x3C;keyword></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>显示关于关键词 keyword 的哔哩哔哩搜索建议。一次会输出很多。</span></span></code></pre>
+</div><h2 id="bilivideo-aid-bid-link" tabindex="-1"><code>/bilivideo &lt;aid/bid/link&gt;</code> <a class="header-anchor" href="#bilivideo-aid-bid-link" aria-label="Permalink to &quot;`/bilivideo &lt;aid/bid/link&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bilivideo &#x3C;aid/bid/link></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>输出指定B站视频相关信息。</span></span></code></pre>
+</div><h2 id="bilivideocover-get-download-forward-aid-bid-link" tabindex="-1"><code>/bilivideocover &lt;get/download/forward&gt; &lt;aid/bid/link&gt;</code> <a class="header-anchor" href="#bilivideocover-get-download-forward-aid-bid-link" aria-label="Permalink to &quot;`/bilivideocover &lt;get/download/forward&gt; &lt;aid/bid/link&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bilivideocover &#x3C;get/download/forward> &#x3C;aid/bid/link></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>B站视频封面提取。</span></span>
+<span class="line"><span>get输出图片链接，download下载至output\Cover，forward直接在浏览器在线查看此图片。</span></span></code></pre>
+</div><h2 id="biliprofile-uid1-uid2" tabindex="-1"><code>/biliprofile [uid1;uid2;...]</code> <a class="header-anchor" href="#biliprofile-uid1-uid2" aria-label="Permalink to &quot;`/biliprofile [uid1;uid2;...]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/biliprofile [uid1;uid2;...]</span></span>
+<span class="line"><span>/biliprofiles &#x3C;uid1;uid2;...></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>获取指定B站用户完整档案。</span></span></code></pre>
+</div>

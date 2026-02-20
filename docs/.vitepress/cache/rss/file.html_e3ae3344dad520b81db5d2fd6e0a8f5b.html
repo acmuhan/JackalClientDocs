@@ -1,0 +1,140 @@
+<h1 id="文件命令" tabindex="-1">文件命令 <a class="header-anchor" href="#文件命令" aria-label="Permalink to &quot;文件命令&quot;"></a></h1>
+<blockquote>
+<p>本页由 <code>test/COMMANDS.txt</code> 自动拆分生成。</p>
+</blockquote>
+<p>共 32 组命令。</p>
+<h2 id="ls" tabindex="-1"><code>/ls</code> <a class="header-anchor" href="#ls" aria-label="Permalink to &quot;`/ls`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/ls</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>枚举当前目录文件。</span></span></code></pre>
+</div><h2 id="interpret-path" tabindex="-1"><code>/interpret &lt;path...&gt;</code> <a class="header-anchor" href="#interpret-path" aria-label="Permalink to &quot;`/interpret &lt;path...&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/interpret &#x3C;path...></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>同步解释执行一个客户端批处理文件(.jbat)或者宏文件(.jm)。</span></span></code></pre>
+</div><h2 id="perform-path" tabindex="-1"><code>/perform &lt;path...&gt;</code> <a class="header-anchor" href="#perform-path" aria-label="Permalink to &quot;`/perform &lt;path...&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/perform &#x3C;path...></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>异步解释执行一个客户端批处理文件(.jbat)或者宏文件(.jm)。</span></span></code></pre>
+</div><h2 id="pwd" tabindex="-1"><code>/pwd</code> <a class="header-anchor" href="#pwd" aria-label="Permalink to &quot;`/pwd`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/pwd</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>输出当前工作目录。</span></span></code></pre>
+</div><h2 id="cd-path" tabindex="-1"><code>/cd [path...]</code> <a class="header-anchor" href="#cd-path" aria-label="Permalink to &quot;`/cd [path...]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/cd [path...]</span></span>
+<span class="line"><span>/chdir [path...]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>切换当前工作目录。注意，不需要指定/d参数，如果有会自动去除。后面的路径可以不加双引号。如果要切换到上一个目录，可以使用 /chdir .. 命令。/chdir 命令成功执行后，会输出当前工作目录，而 /cd 不会。</span></span></code></pre>
+</div><h2 id="rm-path" tabindex="-1"><code>/rm &lt;path...&gt;</code> <a class="header-anchor" href="#rm-path" aria-label="Permalink to &quot;`/rm &lt;path...&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/rm &#x3C;path...></span></span>
+<span class="line"><span>/remove &#x3C;path...></span></span>
+<span class="line"><span>/rmcom &#x3C;path...></span></span>
+<span class="line"><span>/removecom &#x3C;path...></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>删除文件或目录。后两个使用COM接口（支持撤销）。前两者如果目标为文件夹，则必须保证文件夹为空。</span></span></code></pre>
+</div><h2 id="hexviewfile-filepath" tabindex="-1"><code>/hexviewfile &lt;filepath...&gt;</code> <a class="header-anchor" href="#hexviewfile-filepath" aria-label="Permalink to &quot;`/hexviewfile &lt;filepath...&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/hexviewfile &#x3C;filepath...></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>十六进制查看指定文件。</span></span></code></pre>
+</div><h2 id="hexviewproc-pid-hprocess-hwnd" tabindex="-1"><code>/hexviewproc &lt;pid/hprocess/hwnd&gt;</code> <a class="header-anchor" href="#hexviewproc-pid-hprocess-hwnd" aria-label="Permalink to &quot;`/hexviewproc &lt;pid/hprocess/hwnd&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/hexviewproc &#x3C;pid/hprocess/hwnd></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>十六进制查看进程并输出到文件。</span></span></code></pre>
+</div><h2 id="cleardumps" tabindex="-1"><code>/cleardumps</code> <a class="header-anchor" href="#cleardumps" aria-label="Permalink to &quot;`/cleardumps`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/cleardumps</span></span>
+<span class="line"><span>/clearcrashlogs</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>清空客户端崩溃转储文件 (crashlog\*.dmp)</span></span></code></pre>
+</div><h2 id="file-path" tabindex="-1"><code>/file &lt;path...&gt;</code> <a class="header-anchor" href="#file-path" aria-label="Permalink to &quot;`/file &lt;path...&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/file &#x3C;path...></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>根据文件内容辨别文件类型，较为基础，只能判断一小部分类型。</span></span></code></pre>
+</div><h2 id="findfile-keywords" tabindex="-1"><code>/findfile &lt;keywords...&gt;</code> <a class="header-anchor" href="#findfile-keywords" aria-label="Permalink to &quot;`/findfile &lt;keywords...&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/findfile &#x3C;keywords...></span></span>
+<span class="line"><span>/findfileb &#x3C;keywords...></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>通过 Everything 软件搜索指定的文件。 /findfileb 命令只显示文件名， /findfile 显示文件名和绝对路径。</span></span></code></pre>
+</div><h2 id="everything" tabindex="-1"><code>/everything</code> <a class="header-anchor" href="#everything" aria-label="Permalink to &quot;`/everything`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/everything</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>切换 Everything 模块。</span></span></code></pre>
+</div><h2 id="everything-status" tabindex="-1"><code>/everything status</code> <a class="header-anchor" href="#everything-status" aria-label="Permalink to &quot;`/everything status`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/everything status</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】查看 Everything 状态（进程、版本、请求参数等）。</span></span></code></pre>
+</div><h2 id="everything-start" tabindex="-1"><code>/everything start</code> <a class="header-anchor" href="#everything-start" aria-label="Permalink to &quot;`/everything start`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/everything start</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】启动 Everything.exe 并初始化接口。</span></span></code></pre>
+</div><h2 id="everything-exit" tabindex="-1"><code>/everything exit</code> <a class="header-anchor" href="#everything-exit" aria-label="Permalink to &quot;`/everything exit`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/everything exit</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】关闭 Everything 并清理接口。</span></span></code></pre>
+</div><h2 id="everything-search-keywords" tabindex="-1"><code>/everything search &lt;keywords...&gt;</code> <a class="header-anchor" href="#everything-search-keywords" aria-label="Permalink to &quot;`/everything search &lt;keywords...&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/everything search &#x3C;keywords...></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】通过 /findfile 搜索指定文件。</span></span></code></pre>
+</div><h2 id="everything-reset" tabindex="-1"><code>/everything reset</code> <a class="header-anchor" href="#everything-reset" aria-label="Permalink to &quot;`/everything reset`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/everything reset</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】重置 Everything 搜索状态。</span></span></code></pre>
+</div><h2 id="everything-rebuild" tabindex="-1"><code>/everything rebuild</code> <a class="header-anchor" href="#everything-rebuild" aria-label="Permalink to &quot;`/everything rebuild`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/everything rebuild</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】请求 Everything 重新建立索引数据库。</span></span></code></pre>
+</div><h2 id="everything-update" tabindex="-1"><code>/everything update</code> <a class="header-anchor" href="#everything-update" aria-label="Permalink to &quot;`/everything update`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/everything update</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】请求 Everything 更新文件夹索引。</span></span></code></pre>
+</div><h2 id="everything-savedb" tabindex="-1"><code>/everything savedb</code> <a class="header-anchor" href="#everything-savedb" aria-label="Permalink to &quot;`/everything savedb`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/everything savedb</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】保存 Everything 数据库。</span></span></code></pre>
+</div><h2 id="everything-savehistory" tabindex="-1"><code>/everything savehistory</code> <a class="header-anchor" href="#everything-savehistory" aria-label="Permalink to &quot;`/everything savehistory`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/everything savehistory</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】保存 Everything 运行历史。</span></span></code></pre>
+</div><h2 id="everything-clearhistory" tabindex="-1"><code>/everything clearhistory</code> <a class="header-anchor" href="#everything-clearhistory" aria-label="Permalink to &quot;`/everything clearhistory`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/everything clearhistory</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】清空 Everything 运行历史。</span></span></code></pre>
+</div><h2 id="everything-matchpath-on-off" tabindex="-1"><code>/everything matchpath [on/off]</code> <a class="header-anchor" href="#everything-matchpath-on-off" aria-label="Permalink to &quot;`/everything matchpath [on/off]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/everything matchpath [on/off]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】查看或设置匹配路径（Match Path）。</span></span></code></pre>
+</div><h2 id="everything-matchcase-on-off" tabindex="-1"><code>/everything matchcase [on/off]</code> <a class="header-anchor" href="#everything-matchcase-on-off" aria-label="Permalink to &quot;`/everything matchcase [on/off]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/everything matchcase [on/off]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】查看或设置大小写匹配（Match Case）。</span></span></code></pre>
+</div><h2 id="everything-wholeword-on-off" tabindex="-1"><code>/everything wholeword [on/off]</code> <a class="header-anchor" href="#everything-wholeword-on-off" aria-label="Permalink to &quot;`/everything wholeword [on/off]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/everything wholeword [on/off]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】查看或设置全词匹配（Whole Word）。</span></span></code></pre>
+</div><h2 id="everything-regex-on-off" tabindex="-1"><code>/everything regex [on/off]</code> <a class="header-anchor" href="#everything-regex-on-off" aria-label="Permalink to &quot;`/everything regex [on/off]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/everything regex [on/off]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】查看或设置正则匹配（Regex）。</span></span></code></pre>
+</div><h2 id="everything-max-number" tabindex="-1"><code>/everything max [number]</code> <a class="header-anchor" href="#everything-max-number" aria-label="Permalink to &quot;`/everything max [number]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/everything max [number]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】查看或设置最大返回数量。</span></span></code></pre>
+</div><h2 id="everything-offset-number" tabindex="-1"><code>/everything offset [number]</code> <a class="header-anchor" href="#everything-offset-number" aria-label="Permalink to &quot;`/everything offset [number]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/everything offset [number]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】查看或设置结果偏移。</span></span></code></pre>
+</div><h2 id="everything-sort-type" tabindex="-1"><code>/everything sort [type]</code> <a class="header-anchor" href="#everything-sort-type" aria-label="Permalink to &quot;`/everything sort [type]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/everything sort [type]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】查看或设置排序方式。示例：name-asc、name-desc、size-asc、size-desc。</span></span></code></pre>
+</div><h2 id="everything-request-default-all-flags" tabindex="-1"><code>/everything request [default/all/flags...]</code> <a class="header-anchor" href="#everything-request-default-all-flags" aria-label="Permalink to &quot;`/everything request [default/all/flags...]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/everything request [default/all/flags...]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】查看或设置请求字段。可选：name path full ext size created modified accessed attributes filelist runcount rundate recent hname hpath hfull</span></span></code></pre>
+</div><h2 id="load-dllpath" tabindex="-1"><code>/load &lt;dllpath...&gt;</code> <a class="header-anchor" href="#load-dllpath" aria-label="Permalink to &quot;`/load &lt;dllpath...&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/load &#x3C;dllpath...></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>加载指定位置的DLL。</span></span></code></pre>
+</div><h2 id="unload-dllname" tabindex="-1"><code>/unload &lt;dllname&gt;</code> <a class="header-anchor" href="#unload-dllname" aria-label="Permalink to &quot;`/unload &lt;dllname&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/unload &#x3C;dllname></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>卸载已加载的DLL。</span></span></code></pre>
+</div>

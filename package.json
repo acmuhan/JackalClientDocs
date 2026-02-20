@@ -1,10 +1,16 @@
 {
   "devDependencies": {
-    "vitepress": "^2.0.0-alpha.16"
+    "mermaid": "^11.12.3",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-group-icons": "^1.7.1",
+    "vitepress-plugin-mermaid": "^2.0.17",
+    "vitepress-plugin-rss": "^0.4.2",
+    "vitepress-theme-teek": "^1.5.4"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "docs:commands": "node scripts/generate-commands-manual.mjs"
   }
 }

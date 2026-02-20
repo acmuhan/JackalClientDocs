@@ -1,5 +1,9 @@
 ﻿# 安全与使用边界
 
+<TkTitleTag text="高优先级" type="vp-danger" /> <TkTitleTag text="必读" type="vp-warning" />
+
+<TkVpContainer type="danger" title="法律与合规" text="JackalClient 仅应在合法授权、合规审计、学习研究范围内使用。禁止任何未授权或违法用途。" />
+
 ## 法律与合规
 
 JackalClient 仅应在合法授权、合规审计、学习研究范围内使用。
@@ -43,3 +47,5 @@ JackalClient 仅应在合法授权、合规审计、学习研究范围内使用�
 - `CLIENT.LOG`
 - 崩溃日志目录（如 `crashlog`）
 - 配置目录（如 `config`）
+
+<TkVpContainer type="warning" title="排障建议" text="先最小化启用模块，再逐项恢复配置，可以最快定位冲突来源。" />

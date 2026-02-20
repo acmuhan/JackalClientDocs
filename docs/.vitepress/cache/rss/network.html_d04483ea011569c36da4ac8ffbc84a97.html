@@ -1,0 +1,125 @@
+<h1 id="网络命令" tabindex="-1">网络命令 <a class="header-anchor" href="#网络命令" aria-label="Permalink to &quot;网络命令&quot;"></a></h1>
+<blockquote>
+<p>本页由 <code>test/COMMANDS.txt</code> 自动拆分生成。</p>
+</blockquote>
+<p>共 26 组命令。</p>
+<h2 id="ipaddress-ip1-ip2" tabindex="-1"><code>/ipaddress [ip1;ip2;...]</code> <a class="header-anchor" href="#ipaddress-ip1-ip2" aria-label="Permalink to &quot;`/ipaddress [ip1;ip2;...]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/ipaddress [ip1;ip2;...]</span></span>
+<span class="line"><span>/ipaddressex [ip1;ip2;...]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>显示 IP 地址地理位置信息。如果不填参数则显示当前 IP 地址位置。/ipaddressex 命令显示人工智能对该地的描述。</span></span></code></pre>
+</div><h2 id="iphorror-ip1-ip2" tabindex="-1"><code>/iphorror [ip1;ip2;...]</code> <a class="header-anchor" href="#iphorror-ip1-ip2" aria-label="Permalink to &quot;`/iphorror [ip1;ip2;...]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/iphorror [ip1;ip2;...]</span></span>
+<span class="line"><span>/iphorrorex [ip1;ip2;...]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>显示 IP 地址恐吓段落。如果不填参数则显示当前 IP 地址位置。/ipaddressex 命令则使用人工智能生成段落。</span></span></code></pre>
+</div><h2 id="tcptable" tabindex="-1"><code>/tcptable</code> <a class="header-anchor" href="#tcptable" aria-label="Permalink to &quot;`/tcptable`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/tcptable</span></span>
+<span class="line"><span>/tcptable2</span></span>
+<span class="line"><span>/tcptable3</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>获取当前计算机的所有 TCP 连接。/tcptable2 还会获取外部IP的具体位置。（外国IP只能具体到国家）。 /tcptable3 还会显示该IP的大洲、地区、经纬度。</span></span></code></pre>
+</div><h2 id="irc" tabindex="-1"><code>/irc</code> <a class="header-anchor" href="#irc" aria-label="Permalink to &quot;`/irc`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/irc</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>切换IRC聊天室模块状态。当启用时，会自动检查用户名以及状态。启用后就可以接受聊天室消息了。</span></span></code></pre>
+</div><h2 id="irc-send-msg" tabindex="-1"><code>/irc send [msg...]</code> <a class="header-anchor" href="#irc-send-msg" aria-label="Permalink to &quot;`/irc send [msg...]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/irc send [msg...]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>发送一条聊天室公共信息。如果你启用了IRC模块的Fast Send With # Prefix Command选项，你可以直接使用#开头的字符串快捷发送消息。例如：#hello-world</span></span>
+<span class="line"><span>如果不填msg，将会打开一个框，你可以在里面输入（也可以输入中文）。或者使用 ## 也可以。</span></span>
+<span class="line"><span>当前不支持私聊。友善交流讨论。</span></span></code></pre>
+</div><h2 id="irc-getname" tabindex="-1"><code>/irc getname</code> <a class="header-anchor" href="#irc-getname" aria-label="Permalink to &quot;`/irc getname`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/irc getname</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>获取自己的实际用户名。</span></span></code></pre>
+</div><h2 id="irc-register-name" tabindex="-1"><code>/irc register &lt;name&gt;</code> <a class="header-anchor" href="#irc-register-name" aria-label="Permalink to &quot;`/irc register &lt;name&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/irc register &#x3C;name></span></span>
+<span class="line"><span>/irc setname &#x3C;name></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>注册当前计算机的聊天室用户名称。名称为 name ，不能含空格。如果检测到名称被占用且不为自己，就不能修改。</span></span></code></pre>
+</div><h2 id="irc-queryuser-name" tabindex="-1"><code>/irc queryuser &lt;name&gt;</code> <a class="header-anchor" href="#irc-queryuser-name" aria-label="Permalink to &quot;`/irc queryuser &lt;name&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/irc queryuser &#x3C;name></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>查询 name 用户名是否被占用。</span></span></code></pre>
+</div><h2 id="irc-block-name" tabindex="-1"><code>/irc block &lt;name&gt;</code> <a class="header-anchor" href="#irc-block-name" aria-label="Permalink to &quot;`/irc block &lt;name&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/irc block &#x3C;name></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>[PRO] 屏蔽指定用户的消息。会添加到模块配置中，随时可以改。收到被屏蔽用户的消息时，什么也不会显示。</span></span></code></pre>
+</div><h2 id="irc-unblock-name" tabindex="-1"><code>/irc unblock &lt;name&gt;</code> <a class="header-anchor" href="#irc-unblock-name" aria-label="Permalink to &quot;`/irc unblock &lt;name&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/irc unblock &#x3C;name></span></span>
+<span class="line"><span>/irc unblock all/*</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>[PRO] 取消屏蔽指定用户的消息。</span></span></code></pre>
+</div><h2 id="what" tabindex="-1"><code>/what</code> <a class="header-anchor" href="#what" aria-label="Permalink to &quot;`/what`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/what</span></span>
+<span class="line"><span>/wtf</span></span>
+<span class="line"><span>/what [text...=clipboard]</span></span>
+<span class="line"><span>/wtf [text...=clipboard]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>让 AI 解读一段文本。</span></span></code></pre>
+</div><h2 id="what-is-term" tabindex="-1"><code>/what is &lt;term&gt;</code> <a class="header-anchor" href="#what-is-term" aria-label="Permalink to &quot;`/what is &lt;term&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/what is &#x3C;term></span></span>
+<span class="line"><span>/wtf is &#x3C;term></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】在 Wikipedia 上搜索有关词汇的信息。</span></span></code></pre>
+</div><h2 id="what-window-hwnd-it" tabindex="-1"><code>/what window [hwnd=it]</code> <a class="header-anchor" href="#what-window-hwnd-it" aria-label="Permalink to &quot;`/what window [hwnd=it]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/what window [hwnd=it]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>让 AI 解读一个窗口（会自动OCR）</span></span></code></pre>
+</div><h2 id="what-process-pid-it" tabindex="-1"><code>/what process [pid=it]</code> <a class="header-anchor" href="#what-process-pid-it" aria-label="Permalink to &quot;`/what process [pid=it]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/what process [pid=it]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>让 AI 解读一个进程</span></span></code></pre>
+</div><h2 id="ncm-args" tabindex="-1"><code>/ncm &lt;args...&gt;</code> <a class="header-anchor" href="#ncm-args" aria-label="Permalink to &quot;`/ncm &lt;args...&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/ncm &#x3C;args...></span></span>
+<span class="line"><span>/cloudmusic &#x3C;args...></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>网易云音乐相关命令。</span></span></code></pre>
+</div><h2 id="ncm-song-keywords" tabindex="-1"><code>/ncm song &lt;keywords...&gt;</code> <a class="header-anchor" href="#ncm-song-keywords" aria-label="Permalink to &quot;`/ncm song &lt;keywords...&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/ncm song &#x3C;keywords...></span></span>
+<span class="line"><span>/ncm songex &#x3C;page> &#x3C;keywords...></span></span>
+<span class="line"><span>/ncm songraw &#x3C;keywords...></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>搜索单曲。songraw 输出原始 json 数据。</span></span></code></pre>
+</div><h2 id="ncm-songdetails-songinfo-id" tabindex="-1"><code>/ncm songdetails/songinfo &lt;id&gt;</code> <a class="header-anchor" href="#ncm-songdetails-songinfo-id" aria-label="Permalink to &quot;`/ncm songdetails/songinfo &lt;id&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/ncm songdetails/songinfo &#x3C;id></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>获取单曲的详细信息。</span></span></code></pre>
+</div><h2 id="ncm-getid" tabindex="-1"><code>/ncm getid</code> <a class="header-anchor" href="#ncm-getid" aria-label="Permalink to &quot;`/ncm getid`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/ncm getid</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>查找一首歌曲的ID。需要输入标题和作曲家字符串。</span></span></code></pre>
+</div><h2 id="ncm-clearcache" tabindex="-1"><code>/ncm clearcache</code> <a class="header-anchor" href="#ncm-clearcache" aria-label="Permalink to &quot;`/ncm clearcache`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/ncm clearcache</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>清除封面图片缓存。output\Cover\NCM_Cache</span></span></code></pre>
+</div><h2 id="ncm-lyrics-songid" tabindex="-1"><code>/ncm lyrics &lt;songid&gt;</code> <a class="header-anchor" href="#ncm-lyrics-songid" aria-label="Permalink to &quot;`/ncm lyrics &lt;songid&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/ncm lyrics &#x3C;songid></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>根据歌曲ID获取没有时间轴的完整歌词。将会异步获取。</span></span></code></pre>
+</div><h2 id="ncm-elog" tabindex="-1"><code>/ncm elog</code> <a class="header-anchor" href="#ncm-elog" aria-label="Permalink to &quot;`/ncm elog`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/ncm elog</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【实验性】解析并输出当前网易云ELOG内容。</span></span></code></pre>
+</div><h2 id="ncm-checkdll" tabindex="-1"><code>/ncm checkdll</code> <a class="header-anchor" href="#ncm-checkdll" aria-label="Permalink to &quot;`/ncm checkdll`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/ncm checkdll</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>【PRO】检查 version.dll 网易云监听DLL是否被安装，如果没有被安装则安装并重新启动网易云音乐。</span></span></code></pre>
+</div><h2 id="download-url" tabindex="-1"><code>/download &lt;url...&gt;</code> <a class="header-anchor" href="#download-url" aria-label="Permalink to &quot;`/download &lt;url...&gt;`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/download &#x3C;url...></span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>开始一个下载任务。url必须以http开头。</span></span></code></pre>
+</div><h2 id="download-list" tabindex="-1"><code>/download list</code> <a class="header-anchor" href="#download-list" aria-label="Permalink to &quot;`/download list`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/download list</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>打开 Download HUD 模块。</span></span></code></pre>
+</div><h2 id="search-text" tabindex="-1"><code>/search [text...]</code> <a class="header-anchor" href="#search-text" aria-label="Permalink to &quot;`/search [text...]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/search [text...]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>搜索相关内容，可以在命令行中交互。</span></span></code></pre>
+</div><h2 id="searchai-text" tabindex="-1"><code>/searchai [text...]</code> <a class="header-anchor" href="#searchai-text" aria-label="Permalink to &quot;`/searchai [text...]`&quot;"></a></h2>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/searchai [text...]</span></span></code></pre>
+</div><p>说明摘录：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>搜索相关内容，可以在命令行中交互。且每一个条目都会用AI简短地总结。</span></span></code></pre>
+</div>

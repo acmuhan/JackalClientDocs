@@ -1,47 +1,99 @@
-﻿import { defineConfig } from 'vitepress'
+﻿import { withMermaid } from 'vitepress-plugin-mermaid'
+import { defineTeekConfig } from 'vitepress-theme-teek/config'
+import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
+import { RssPlugin, type RSSOptions } from 'vitepress-plugin-rss'
 
-export default defineConfig({
-  title: 'JackalClient',
+const rss: RSSOptions = {
+  title: 'JackalClient Docs',
   description: 'Windows client toolbox documentation',
-  themeConfig: {
-    nav: [
-      { text: '首页', link: '/' },
-      { text: '快速开始', link: '/quick-start' },
-      { text: '命令总览', link: '/commands-overview' },
-      { text: '安全边界', link: '/safety' }
-    ],
+  baseUrl: 'https://doc.wormwake.com',
+  copyright: 'Copyright (c) JackalClient',
+  language: 'zh-CN'
+}
 
-    sidebar: [
-      {
-        text: '开始',
-        items: [
-          { text: '文档概览', link: '/overview' },
-          { text: '快速开始', link: '/quick-start' }
-        ]
-      },
-      {
-        text: '核心内容',
-        items: [
-          { text: '功能与模块地图', link: '/module-map' },
-          { text: '命令系统总览', link: '/commands-overview' },
-          { text: '安全与使用边界', link: '/safety' },
-          { text: '版本与演进', link: '/history-summary' }
-        ]
-      },
-      {
-        text: '专题文档',
-        items: [
-          { text: '常见问题', link: '/faq' },
-          { text: 'BetterLyrics 说明', link: '/betterlyrics' }
-        ]
-      },
-      {
-        text: '原始示例',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
+const sidebarGroups = [
+  {
+    text: '开始',
+    items: [
+      { text: '文档概览', link: '/overview' },
+      { text: '快速开始', link: '/quick-start' }
+    ]
+  },
+  {
+    text: '核心内容',
+    items: [
+      { text: '功能与模块地图', link: '/module-map' },
+      { text: '完整命令手册', link: '/commands/' },
+      { text: '命令目录页', link: '/commands-catalogue' },
+      { text: '安全与使用边界', link: '/safety' },
+      { text: '版本与演进', link: '/history-summary' }
+    ]
+  },
+  {
+    text: '命令手册',
+    items: [
+      { text: '章节总览', link: '/commands/' },
+      { text: '系统命令', link: '/commands/system' },
+      { text: '文件命令', link: '/commands/file' },
+      { text: '网络命令', link: '/commands/network' },
+      { text: 'B站命令', link: '/commands/bilibili' },
+      { text: '文本处理命令', link: '/commands/text' }
+    ]
+  },
+  {
+    text: '专题文档',
+    items: [
+      { text: '常见问题', link: '/faq' },
+      { text: 'BetterLyrics 说明', link: '/betterlyrics' }
     ]
   }
+]
+
+const teekConfig = defineTeekConfig({
+  teekTheme: false,
+  vitePlugins: {
+    sidebar: false,
+    permalink: false,
+    mdH1: false,
+    docAnalysis: true
+  },
+  themeEnhance: {
+    enabled: true,
+    position: 'top',
+    layoutSwitch: { disabled: true },
+    spotlight: { disabled: true },
+    themeColor: { defaultColorName: 'vp-default' }
+  },
+  nav: [
+    { text: '首页', link: '/' },
+    { text: '快速开始', link: '/quick-start' },
+    { text: '完整命令手册', link: '/commands/' },
+    { text: '命令目录页', link: '/commands-catalogue' },
+    { text: '安全边界', link: '/safety' }
+  ],
+  sidebar: {
+    '/': sidebarGroups
+  }
+})
+
+const originalMarkdownConfig = teekConfig.markdown?.config
+teekConfig.markdown = {
+  ...(teekConfig.markdown ?? {}),
+  config(md) {
+    md.use(groupIconMdPlugin)
+    originalMarkdownConfig?.(md)
+  }
+}
+
+teekConfig.vite = teekConfig.vite ?? {}
+teekConfig.vite.plugins = [
+  ...(teekConfig.vite.plugins ?? []),
+  groupIconVitePlugin(),
+  RssPlugin(rss)
+]
+
+export default withMermaid({
+  ...teekConfig,
+  title: 'JackalClient',
+  description: 'Windows client toolbox documentation'
 })
