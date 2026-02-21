@@ -2,13 +2,38 @@
 
 JackalClient 完整命令手册目录（系统/文件/网络/B站/文本处理）。
 
+## 命令手册导航
+
+**操作步骤**：
+1. **第一步**：选择下方的命令类别
+2. **第二步**：在对应页面中找到需要的命令
+3. **第三步**：查看命令的详细说明和使用方法
+4. **第四步**：在命令行中输入命令并执行
+
 ## 目录
 
-- [章节总览](/commands/)
-- [系统命令](/commands/system)
-- [文件命令](/commands/file)
-- [网络命令](/commands/network)
-- [B站命令](/commands/bilibili)
-- [文本处理命令](/commands/text)
+- [章节总览](/commands/)：命令手册的整体介绍和导航
+- [系统命令](/commands/system)：系统管理、进程操作、服务控制等命令
+- [文件命令](/commands/file)：文件操作、目录管理、内容处理等命令
+- [网络命令](/commands/network)：网络配置、连接管理、信息查询等命令
+- [B站命令](/commands/bilibili)：哔哩哔哩专属功能、视频操作、弹幕管理等命令
+- [文本处理命令](/commands/text)：文本分析、转换、生成等命令
+
+## 命令更新
+
+**当命令有更新时，执行以下操作**：
+
+1. 打开命令行终端
+2. 进入 JackalClientDocs 目录
+3. 执行命令：
+   ```bash
+   npm run docs:commands
+   ```
+4. 等待文档生成完成
+5. 重新构建文档网站
 
 <TkVpContainer type="tip" title="说明" text="命令手册由 test/COMMANDS.txt 自动拆分生成；如有更新，执行 npm run docs:commands 后重新构建。" />
+
+---
+
+现在，你已经了解了 JackalClient 的命令目录结构。通过浏览不同类别的命令，你可以找到适合自己需求的功能，提高操作效率。快去探索丰富的命令世界吧！

@@ -38,7 +38,14 @@ JackalClient 不仅仅是一个工具箱，它是一个**可高度定制的 Wind
 - **模块化设计**：按需加载模块，保持系统轻量，同时提供无限扩展可能。
 - **社区活跃**：持续更新的文档和活跃的用户社区，随时获取帮助。
 
-## 🚀 常用入口
+## 🚀 开始使用步骤
+
+**第一步**：点击上方的「快速开始」按钮，学习如何启动程序和基本操作
+**第二步**：浏览「模块地图」，了解 JackalClient 提供的全部功能
+**第三步**：查阅「完整命令手册」，掌握命令行操作技巧
+**第四步**：阅读「安全边界」，了解使用规范和风险控制
+
+## 常用功能入口
 
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
   <a href="/commands/system" style="padding: 8px 16px; background-color: var(--vp-c-bg-soft); border-radius: 8px; text-decoration: none; color: var(--vp-c-text-1);">💻 系统命令</a>
@@ -46,3 +53,9 @@ JackalClient 不仅仅是一个工具箱，它是一个**可高度定制的 Wind
   <a href="/commands/network" style="padding: 8px 16px; background-color: var(--vp-c-bg-soft); border-radius: 8px; text-decoration: none; color: var(--vp-c-text-1);">🌐 网络命令</a>
   <a href="/commands/bilibili" style="padding: 8px 16px; background-color: var(--vp-c-bg-soft); border-radius: 8px; text-decoration: none; color: var(--vp-c-text-1);">📺 B站命令</a>
 </div>
+
+---
+
+现在，你已经准备好开始探索 JackalClient 的强大功能了。按照推荐的步骤，从「快速开始」入手，一步步成为 JackalClient 的使用高手！
+
+记住，每一个模块都有其独特的用途，通过组合使用，你可以创造出专属于你的高效工作流。祝你在使用过程中收获满满！

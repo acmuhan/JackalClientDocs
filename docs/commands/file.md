@@ -4,328 +4,352 @@
 
 共 32 组命令。
 
-## `/ls`
+## 准备阶段
 
-```bash
+**第一步**：打开左侧菜单栏的「命令面板」
+**第二步**：在搜索框中输入命令前缀快速定位
+
+## 核心操作
+
+### `/ls`
+
+```text
+可用别名：
 /ls
 ```
 
-::: details 点击查看说明
+**操作步骤**：
+
+1. 在命令面板输入上述任意别名
+2. 按下回车键执行命令
+
+**功能说明**：
+
+```text
 枚举当前目录文件。
-:::
+```
 
-## `/interpret <path...>`
+**应用场景**：
 
-```bash
+- 当你需要查看当前目录下的文件列表时，使用此命令
+
+### `/interpret <path...>`
+
+```text
+可用别名：
 /interpret <path...>
 ```
 
-::: details 点击查看说明
+**操作步骤**：
+
+1. 在命令面板输入上述任意别名
+2. 按下回车键执行命令
+
+**功能说明**：
+
+```text
 同步解释执行一个客户端批处理文件(.jbat)或者宏文件(.jm)。
-:::
+```
 
-## `/perform <path...>`
+**应用场景**：
 
-```bash
+- 当你需要同步执行一个批处理文件或宏文件时，使用此命令
+
+### `/perform <path...>`
+
+```text
+可用别名：
 /perform <path...>
 ```
 
-::: details 点击查看说明
+**操作步骤**：
+
+1. 在命令面板输入上述任意别名
+2. 按下回车键执行命令
+
+**功能说明**：
+
+```text
 异步解释执行一个客户端批处理文件(.jbat)或者宏文件(.jm)。
-:::
+```
 
-## `/pwd`
+**应用场景**：
 
-```bash
+- 当你需要异步执行一个批处理文件或宏文件，不阻塞命令行时，使用此命令
+
+### `/pwd`
+
+```text
+可用别名：
 /pwd
 ```
 
-::: details 点击查看说明
+**操作步骤**：
+
+1. 在命令面板输入上述任意别名
+2. 按下回车键执行命令
+
+**功能说明**：
+
+```text
 输出当前工作目录。
-:::
+```
 
-## `/cd [path...]`
+**应用场景**：
 
-```bash
+- 当你需要查看当前所在的目录路径时，使用此命令
+
+### `/cd [path...]`
+
+```text
+可用别名：
 /cd [path...]
 /chdir [path...]
 ```
 
-::: details 点击查看说明
+**操作步骤**：
+
+1. 在命令面板输入上述任意别名
+2. 按下回车键执行命令
+
+**功能说明**：
+
+```text
 切换当前工作目录。注意，不需要指定/d参数，如果有会自动去除。后面的路径可以不加双引号。如果要切换到上一个目录，可以使用 /chdir .. 命令。/chdir 命令成功执行后，会输出当前工作目录，而 /cd 不会。
-:::
+```
 
-## `/rm <path...>`
+**应用场景**：
 
-```bash
+- 当你需要切换到其他目录时，使用此命令
+
+**示例**：输入 `/cd D:\Documents` 切换到 D 盘的 Documents 目录
+
+### `/rm <path...>`
+
+```text
+可用别名：
 /rm <path...>
 /remove <path...>
 /rmcom <path...>
 /removecom <path...>
 ```
 
-::: details 点击查看说明
+**操作步骤**：
+
+1. 在命令面板输入上述任意别名
+2. 按下回车键执行命令
+
+**功能说明**：
+
+```text
 删除文件或目录。后两个使用COM接口（支持撤销）。前两者如果目标为文件夹，则必须保证文件夹为空。
-:::
+```
 
-## `/hexviewfile <filepath...>`
+**应用场景**：
 
-```bash
+- 当你需要删除文件或空目录时，使用此命令
+
+### `/hexviewfile <filepath...>`
+
+```text
+可用别名：
 /hexviewfile <filepath...>
 ```
 
-::: details 点击查看说明
+**操作步骤**：
+
+1. 在命令面板输入上述任意别名
+2. 按下回车键执行命令
+
+**功能说明**：
+
+```text
 十六进制查看指定文件。
-:::
+```
 
-## `/hexviewproc <pid/hprocess/hwnd>`
+**应用场景**：
 
-```bash
+- 当你需要以十六进制格式查看文件内容时，使用此命令
+
+### `/hexviewproc <pid/hprocess/hwnd>`
+
+```text
+可用别名：
 /hexviewproc <pid/hprocess/hwnd>
 ```
 
-::: details 点击查看说明
+**操作步骤**：
+
+1. 在命令面板输入上述任意别名
+2. 按下回车键执行命令
+
+**功能说明**：
+
+```text
 十六进制查看进程并输出到文件。
-:::
+```
 
-## `/cleardumps`
+**应用场景**：
 
-```bash
+- 当你需要以十六进制格式查看进程内存并输出到文件时，使用此命令
+
+### `/cleardumps`
+
+```text
+可用别名：
 /cleardumps
 /clearcrashlogs
 ```
 
-::: details 点击查看说明
+**操作步骤**：
+
+1. 在命令面板输入上述任意别名
+2. 按下回车键执行命令
+
+**功能说明**：
+
+```text
 清空客户端崩溃转储文件 (crashlog\*.dmp)
-:::
+```
 
-## `/file <path...>`
+**应用场景**：
 
-```bash
+- 当你需要清理客户端生成的崩溃转储文件时，使用此命令
+
+### `/file <path...>`
+
+```text
+可用别名：
 /file <path...>
 ```
 
-::: details 点击查看说明
+**操作步骤**：
+
+1. 在命令面板输入上述任意别名
+2. 按下回车键执行命令
+
+**功能说明**：
+
+```text
 根据文件内容辨别文件类型，较为基础，只能判断一小部分类型。
-:::
+```
 
-## `/findfile <keywords...>`
+**应用场景**：
 
-```bash
+- 当你需要快速判断一个文件的类型时，使用此命令
+
+### `/findfile <keywords...>`
+
+```text
+可用别名：
 /findfile <keywords...>
 /findfileb <keywords...>
 ```
 
-::: details 点击查看说明
+**操作步骤**：
+
+1. 在命令面板输入上述任意别名
+2. 按下回车键执行命令
+
+**功能说明**：
+
+```text
 通过 Everything 软件搜索指定的文件。 /findfileb 命令只显示文件名， /findfile 显示文件名和绝对路径。
-:::
+```
 
-## `/everything`
+**应用场景**：
 
-```bash
+- 当你需要快速搜索电脑中的文件时，使用此命令
+
+### `/everything`
+
+```text
+可用别名：
 /everything
 ```
 
-::: details 点击查看说明
+**操作步骤**：
+
+1. 在命令面板输入上述任意别名
+2. 按下回车键执行命令
+
+**功能说明**：
+
+```text
 切换 Everything 模块。
-:::
-
-## `/everything status`
-
-```bash
-/everything status
 ```
 
-::: details 点击查看说明
-【PRO】查看 Everything 状态（进程、版本、请求参数等）。
-:::
+**应用场景**：
 
-## `/everything start`
+- 当你需要启用或禁用 Everything 模块时，使用此命令
 
-```bash
-/everything start
-```
+### `/load <dllpath...>`
 
-::: details 点击查看说明
-【PRO】启动 Everything.exe 并初始化接口。
-:::
-
-## `/everything exit`
-
-```bash
-/everything exit
-```
-
-::: details 点击查看说明
-【PRO】关闭 Everything 并清理接口。
-:::
-
-## `/everything search <keywords...>`
-
-```bash
-/everything search <keywords...>
-```
-
-::: details 点击查看说明
-【PRO】通过 /findfile 搜索指定文件。
-:::
-
-## `/everything reset`
-
-```bash
-/everything reset
-```
-
-::: details 点击查看说明
-【PRO】重置 Everything 搜索状态。
-:::
-
-## `/everything rebuild`
-
-```bash
-/everything rebuild
-```
-
-::: details 点击查看说明
-【PRO】请求 Everything 重新建立索引数据库。
-:::
-
-## `/everything update`
-
-```bash
-/everything update
-```
-
-::: details 点击查看说明
-【PRO】请求 Everything 更新文件夹索引。
-:::
-
-## `/everything savedb`
-
-```bash
-/everything savedb
-```
-
-::: details 点击查看说明
-【PRO】保存 Everything 数据库。
-:::
-
-## `/everything savehistory`
-
-```bash
-/everything savehistory
-```
-
-::: details 点击查看说明
-【PRO】保存 Everything 运行历史。
-:::
-
-## `/everything clearhistory`
-
-```bash
-/everything clearhistory
-```
-
-::: details 点击查看说明
-【PRO】清空 Everything 运行历史。
-:::
-
-## `/everything matchpath [on/off]`
-
-```bash
-/everything matchpath [on/off]
-```
-
-::: details 点击查看说明
-【PRO】查看或设置匹配路径（Match Path）。
-:::
-
-## `/everything matchcase [on/off]`
-
-```bash
-/everything matchcase [on/off]
-```
-
-::: details 点击查看说明
-【PRO】查看或设置大小写匹配（Match Case）。
-:::
-
-## `/everything wholeword [on/off]`
-
-```bash
-/everything wholeword [on/off]
-```
-
-::: details 点击查看说明
-【PRO】查看或设置全词匹配（Whole Word）。
-:::
-
-## `/everything regex [on/off]`
-
-```bash
-/everything regex [on/off]
-```
-
-::: details 点击查看说明
-【PRO】查看或设置正则匹配（Regex）。
-:::
-
-## `/everything max [number]`
-
-```bash
-/everything max [number]
-```
-
-::: details 点击查看说明
-【PRO】查看或设置最大返回数量。
-:::
-
-## `/everything offset [number]`
-
-```bash
-/everything offset [number]
-```
-
-::: details 点击查看说明
-【PRO】查看或设置结果偏移。
-:::
-
-## `/everything sort [type]`
-
-```bash
-/everything sort [type]
-```
-
-::: details 点击查看说明
-【PRO】查看或设置排序方式。示例：name-asc、name-desc、size-asc、size-desc。
-:::
-
-## `/everything request [default/all/flags...]`
-
-```bash
-/everything request [default/all/flags...]
-```
-
-::: details 点击查看说明
-【PRO】查看或设置请求字段。可选：name path full ext size created modified accessed attributes filelist runcount rundate recent hname hpath hfull
-:::
-
-## `/load <dllpath...>`
-
-```bash
+```text
+可用别名：
 /load <dllpath...>
 ```
 
-::: details 点击查看说明
+**操作步骤**：
+
+1. 在命令面板输入上述任意别名
+2. 按下回车键执行命令
+
+**功能说明**：
+
+```text
 加载指定位置的DLL。
-:::
+```
 
-## `/unload <dllname>`
+**应用场景**：
 
-```bash
+- 当你需要加载一个外部DLL文件时，使用此命令
+
+### `/unload <dllname>`
+
+```text
+可用别名：
 /unload <dllname>
 ```
 
-::: details 点击查看说明
+**操作步骤**：
+
+1. 在命令面板输入上述任意别名
+2. 按下回车键执行命令
+
+**功能说明**：
+
+```text
 卸载已加载的DLL。
-:::
+```
+
+**应用场景**：
+
+- 当你需要卸载一个已加载的DLL文件时，使用此命令
+
+## 运行与测试
+
+**测试步骤**：
+
+1. 执行文件命令后，观察底部状态栏的反馈信息
+2. 若命令未生效，检查输入格式是否正确
+3. 对于文件操作命令，验证文件系统中的实际变化
+
+**示例**：
+- 输入 `/ls` 后，检查显示的文件列表是否正确
+- 输入 `/cd ..` 后，输入 `/pwd` 验证目录是否已切换
+
+## 进阶建议
+
+1. **组合使用命令**：尝试将多个文件命令组合使用，实现更复杂的操作流程
+   ```
+   示例：/cd D:\Downloads ; /ls
+   ```
+
+2. **使用批处理文件**：对于重复的文件操作，创建 `.jbat` 批处理文件来自动化执行
+
+3. **配合 Everything 搜索**：使用 `/findfile` 快速定位文件，然后对找到的文件执行后续操作
+
+---
+
+现在，你已经掌握了 JackalClient 的文件命令系统。通过这些命令，你可以轻松管理文件、执行批处理操作和搜索文件。快去构建你的专属文件操作工作流吧！

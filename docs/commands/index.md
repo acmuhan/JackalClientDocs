@@ -1,30 +1,41 @@
----
-layout: page
----
 # 完整命令手册
 
 > 本手册由 `test/COMMANDS.txt` 自动拆分生成，按场景分章节维护。
 
-<div class="command-card-grid">
-  <a href="/commands/system" class="command-card">
-    <div class="command-card-title">系统命令</div>
-    <div class="command-card-count">📚 共 322 组命令</div>
-  </a>
-  <a href="/commands/file" class="command-card">
-    <div class="command-card-title">文件命令</div>
-    <div class="command-card-count">📚 共 32 组命令</div>
-  </a>
-  <a href="/commands/network" class="command-card">
-    <div class="command-card-title">网络命令</div>
-    <div class="command-card-count">📚 共 26 组命令</div>
-  </a>
-  <a href="/commands/bilibili" class="command-card">
-    <div class="command-card-title">B站命令</div>
-    <div class="command-card-count">📚 共 62 组命令</div>
-  </a>
-  <a href="/commands/text" class="command-card">
-    <div class="command-card-title">文本处理命令</div>
-    <div class="command-card-count">📚 共 40 组命令</div>
-  </a>
-</div>
+## 命令手册导航
+
+**本手册包含以下命令类别：**
+
+- [系统命令](/commands/system)（322 组）：系统管理、进程操作、服务控制等
+- [文件命令](/commands/file)（32 组）：文件操作、目录管理、内容处理等
+- [网络命令](/commands/network)（26 组）：网络配置、连接管理、信息查询等
+- [B站命令](/commands/bilibili)（62 组）：哔哩哔哩专属功能、视频操作、弹幕管理等
+- [文本处理命令](/commands/text)（40 组）：文本分析、转换、生成等
+
+## 开始使用命令
+
+**操作步骤：**
+1. 打开 JackalClient
+2. 找到并启用 "命令行" 模块 (Shell)
+3. 在弹出的控制台中输入命令
+4. 按 Tab 键使用命令补全功能
+5. 输入 `/help` 查看命令帮助信息
+
+**示例**：输入 `/help system` 查看系统相关命令的详细说明
+
+## 命令更新
+
+**当命令有更新时，执行以下操作：**
+
+1. 打开命令行终端
+2. 进入 JackalClientDocs 目录
+3. 执行命令：
+   ```bash
+   npm run docs:commands
+   ```
+4. 等待文档生成完成
+
+---
+
+现在，你已经了解了 JackalClient 的命令手册结构。选择你需要的命令类别，开始探索 JackalClient 的强大命令系统吧！
 
