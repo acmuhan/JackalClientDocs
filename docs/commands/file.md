@@ -6,390 +6,326 @@
 
 ## `/ls`
 
-```text
+```bash
 /ls
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 枚举当前目录文件。
-```
+:::
 
 ## `/interpret <path...>`
 
-```text
+```bash
 /interpret <path...>
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 同步解释执行一个客户端批处理文件(.jbat)或者宏文件(.jm)。
-```
+:::
 
 ## `/perform <path...>`
 
-```text
+```bash
 /perform <path...>
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 异步解释执行一个客户端批处理文件(.jbat)或者宏文件(.jm)。
-```
+:::
 
 ## `/pwd`
 
-```text
+```bash
 /pwd
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 输出当前工作目录。
-```
+:::
 
 ## `/cd [path...]`
 
-```text
+```bash
 /cd [path...]
 /chdir [path...]
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 切换当前工作目录。注意，不需要指定/d参数，如果有会自动去除。后面的路径可以不加双引号。如果要切换到上一个目录，可以使用 /chdir .. 命令。/chdir 命令成功执行后，会输出当前工作目录，而 /cd 不会。
-```
+:::
 
 ## `/rm <path...>`
 
-```text
+```bash
 /rm <path...>
 /remove <path...>
 /rmcom <path...>
 /removecom <path...>
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 删除文件或目录。后两个使用COM接口（支持撤销）。前两者如果目标为文件夹，则必须保证文件夹为空。
-```
+:::
 
 ## `/hexviewfile <filepath...>`
 
-```text
+```bash
 /hexviewfile <filepath...>
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 十六进制查看指定文件。
-```
+:::
 
 ## `/hexviewproc <pid/hprocess/hwnd>`
 
-```text
+```bash
 /hexviewproc <pid/hprocess/hwnd>
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 十六进制查看进程并输出到文件。
-```
+:::
 
 ## `/cleardumps`
 
-```text
+```bash
 /cleardumps
 /clearcrashlogs
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 清空客户端崩溃转储文件 (crashlog\*.dmp)
-```
+:::
 
 ## `/file <path...>`
 
-```text
+```bash
 /file <path...>
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 根据文件内容辨别文件类型，较为基础，只能判断一小部分类型。
-```
+:::
 
 ## `/findfile <keywords...>`
 
-```text
+```bash
 /findfile <keywords...>
 /findfileb <keywords...>
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 通过 Everything 软件搜索指定的文件。 /findfileb 命令只显示文件名， /findfile 显示文件名和绝对路径。
-```
+:::
 
 ## `/everything`
 
-```text
+```bash
 /everything
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 切换 Everything 模块。
-```
+:::
 
 ## `/everything status`
 
-```text
+```bash
 /everything status
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 【PRO】查看 Everything 状态（进程、版本、请求参数等）。
-```
+:::
 
 ## `/everything start`
 
-```text
+```bash
 /everything start
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 【PRO】启动 Everything.exe 并初始化接口。
-```
+:::
 
 ## `/everything exit`
 
-```text
+```bash
 /everything exit
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 【PRO】关闭 Everything 并清理接口。
-```
+:::
 
 ## `/everything search <keywords...>`
 
-```text
+```bash
 /everything search <keywords...>
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 【PRO】通过 /findfile 搜索指定文件。
-```
+:::
 
 ## `/everything reset`
 
-```text
+```bash
 /everything reset
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 【PRO】重置 Everything 搜索状态。
-```
+:::
 
 ## `/everything rebuild`
 
-```text
+```bash
 /everything rebuild
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 【PRO】请求 Everything 重新建立索引数据库。
-```
+:::
 
 ## `/everything update`
 
-```text
+```bash
 /everything update
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 【PRO】请求 Everything 更新文件夹索引。
-```
+:::
 
 ## `/everything savedb`
 
-```text
+```bash
 /everything savedb
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 【PRO】保存 Everything 数据库。
-```
+:::
 
 ## `/everything savehistory`
 
-```text
+```bash
 /everything savehistory
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 【PRO】保存 Everything 运行历史。
-```
+:::
 
 ## `/everything clearhistory`
 
-```text
+```bash
 /everything clearhistory
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 【PRO】清空 Everything 运行历史。
-```
+:::
 
 ## `/everything matchpath [on/off]`
 
-```text
+```bash
 /everything matchpath [on/off]
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 【PRO】查看或设置匹配路径（Match Path）。
-```
+:::
 
 ## `/everything matchcase [on/off]`
 
-```text
+```bash
 /everything matchcase [on/off]
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 【PRO】查看或设置大小写匹配（Match Case）。
-```
+:::
 
 ## `/everything wholeword [on/off]`
 
-```text
+```bash
 /everything wholeword [on/off]
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 【PRO】查看或设置全词匹配（Whole Word）。
-```
+:::
 
 ## `/everything regex [on/off]`
 
-```text
+```bash
 /everything regex [on/off]
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 【PRO】查看或设置正则匹配（Regex）。
-```
+:::
 
 ## `/everything max [number]`
 
-```text
+```bash
 /everything max [number]
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 【PRO】查看或设置最大返回数量。
-```
+:::
 
 ## `/everything offset [number]`
 
-```text
+```bash
 /everything offset [number]
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 【PRO】查看或设置结果偏移。
-```
+:::
 
 ## `/everything sort [type]`
 
-```text
+```bash
 /everything sort [type]
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 【PRO】查看或设置排序方式。示例：name-asc、name-desc、size-asc、size-desc。
-```
+:::
 
 ## `/everything request [default/all/flags...]`
 
-```text
+```bash
 /everything request [default/all/flags...]
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 【PRO】查看或设置请求字段。可选：name path full ext size created modified accessed attributes filelist runcount rundate recent hname hpath hfull
-```
+:::
 
 ## `/load <dllpath...>`
 
-```text
+```bash
 /load <dllpath...>
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 加载指定位置的DLL。
-```
+:::
 
 ## `/unload <dllname>`
 
-```text
+```bash
 /unload <dllname>
 ```
 
-说明摘录：
-
-```text
+::: details 点击查看说明
 卸载已加载的DLL。
-```
+:::
