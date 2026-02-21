@@ -1,6 +1,61 @@
+# Dependencies
 node_modules
+
+# Git
 .git
+
+# Build outputs
 docs/.vitepress/dist
+
+# Cache directories
+docs/.vitepress/cache
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# System files
+Thumbs.db
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Temporary files
+*.tmp
+*.temp
+.cache
+
+# IDE and development tools
 .agents
 .trae
-docs/.vitepress/cache
+
+# OS generated files
+Thumbs.db
+.DS_Store
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
