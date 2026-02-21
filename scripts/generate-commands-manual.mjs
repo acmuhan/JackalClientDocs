@@ -103,6 +103,15 @@ function escapeCodeFence(text) {
   return text.replace(/```/g, '\\`\\`\\`');
 }
 
+function sanitizeDetailText(text) {
+  // 避免 Vue/VitePress 将参数占位符当成 HTML 标签解析
+  return text
+    .replace(/(^|[^`])(<[^<>\n]+>)(?!`)/g, (_, prefix, token) => {
+      return `${prefix}\`${token}\``;
+    })
+    .replace(/\{\{([^{}\n]+)\}\}/g, '`{{$1}}`');
+}
+
 function toSectionMarkdown(section, blocks) {
   const lines = [
     `# ${section.title}`,
@@ -116,20 +125,18 @@ function toSectionMarkdown(section, blocks) {
   for (const block of blocks) {
     const title = block.aliases[0].replace(/`/g, '\\`');
     const detail = block.details.length > 0
-      ? block.details.join('\n')
+      ? sanitizeDetailText(block.details.join('\n'))
       : '（该命令在原始文档中未提供额外说明）';
 
     lines.push(`## \`${title}\``);
     lines.push('');
-    lines.push('```text');
+    lines.push('```bash');
     lines.push(...block.aliases);
     lines.push('```');
     lines.push('');
-    lines.push('说明摘录：');
-    lines.push('');
-    lines.push('```text');
+    lines.push('::: details 点击查看说明');
     lines.push(...escapeCodeFence(detail).split('\n'));
-    lines.push('```');
+    lines.push(':::');
     lines.push('');
   }
 
@@ -145,20 +152,26 @@ function writeManual(blocks) {
   }
 
   const indexLines = [
+    '---',
+    'layout: page',
+    '---',
     '# 完整命令手册',
     '',
     '> 本手册由 `test/COMMANDS.txt` 自动拆分生成，按场景分章节维护。',
     '',
-    '## 章节',
-    ''
+    '<div class="command-card-grid">'
   ];
 
   for (const section of sections) {
     const list = grouped.get(section.key);
-    indexLines.push(`- [${section.title}](/commands/${section.filename.replace('.md', '')})（${list.length} 组）`);
+    indexLines.push(`  <a href="/commands/${section.filename.replace('.md', '')}" class="command-card">`);
+    indexLines.push(`    <div class="command-card-title">${section.title}</div>`);
+    indexLines.push(`    <div class="command-card-count">📚 共 ${list.length} 组命令</div>`);
+    indexLines.push('  </a>');
     fs.writeFileSync(path.join(outputDir, section.filename), toSectionMarkdown(section, list), 'utf8');
   }
 
+  indexLines.push('</div>');
   indexLines.push('');
   fs.writeFileSync(path.join(outputDir, 'index.md'), `${indexLines.join('\n')}\n`, 'utf8');
 }
