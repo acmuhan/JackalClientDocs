@@ -1,4 +1,4 @@
----
+﻿---
 layout: home
 
 hero:
@@ -41,8 +41,8 @@ JackalClient 不仅仅是一个工具箱，它是一个**可高度定制的 Wind
 ## 🚀 常用入口
 
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-  <a href="/commands/system" style="padding: 8px 16px; background-color: var(--vp-c-bg-soft); border-radius: 8px; text-decoration: none; color: var(--vp-c-text-1);">💻 系统命令</a>
-  <a href="/commands/file" style="padding: 8px 16px; background-color: var(--vp-c-bg-soft); border-radius: 8px; text-decoration: none; color: var(--vp-c-text-1);">📂 文件命令</a>
-  <a href="/commands/network" style="padding: 8px 16px; background-color: var(--vp-c-bg-soft); border-radius: 8px; text-decoration: none; color: var(--vp-c-text-1);">🌐 网络命令</a>
-  <a href="/commands/bilibili" style="padding: 8px 16px; background-color: var(--vp-c-bg-soft); border-radius: 8px; text-decoration: none; color: var(--vp-c-text-1);">📺 B站命令</a>
+  <a href="/commands/系统命令" style="padding: 8px 16px; background-color: var(--vp-c-bg-soft); border-radius: 8px; text-decoration: none; color: var(--vp-c-text-1);">💻 系统命令</a>
+  <a href="/commands/文件命令" style="padding: 8px 16px; background-color: var(--vp-c-bg-soft); border-radius: 8px; text-decoration: none; color: var(--vp-c-text-1);">📂 文件命令</a>
+  <a href="/commands/网络命令" style="padding: 8px 16px; background-color: var(--vp-c-bg-soft); border-radius: 8px; text-decoration: none; color: var(--vp-c-text-1);">🌐 网络命令</a>
+  <a href="/commands/B站命令" style="padding: 8px 16px; background-color: var(--vp-c-bg-soft); border-radius: 8px; text-decoration: none; color: var(--vp-c-text-1);">📺 B站命令</a>
 </div>
