@@ -33,11 +33,11 @@ const sidebarGroups = [
     text: '命令手册',
     items: [
       { text: '章节总览', link: '/commands/' },
-      { text: '系统命令', link: '/commands/system' },
-      { text: '文件命令', link: '/commands/file' },
-      { text: '网络命令', link: '/commands/network' },
-      { text: 'B站命令', link: '/commands/bilibili' },
-      { text: '文本处理命令', link: '/commands/text' }
+      { text: '系统命令', link: '/commands/系统命令' },
+      { text: '文件命令', link: '/commands/文件命令' },
+      { text: '网络命令', link: '/commands/网络命令' },
+      { text: 'B站命令', link: '/commands/B站命令' },
+      { text: '文本处理命令', link: '/commands/文本处理命令' }
     ]
   },
   {
