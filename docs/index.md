@@ -1,4 +1,4 @@
-﻿﻿---
+﻿---
 layout: home
 
 hero:
@@ -15,6 +15,9 @@ hero:
     - theme: alt
       text: 模块地图
       link: /module-map
+    - theme: alt
+      text: 模块介绍
+      link: /modules/
 
 features:
   - title: 快速上手

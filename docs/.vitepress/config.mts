@@ -1,4 +1,4 @@
-﻿import { withMermaid } from 'vitepress-plugin-mermaid'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 import { defineTeekConfig } from 'vitepress-theme-teek/config'
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import { RssPlugin, type RSSOptions } from 'vitepress-plugin-rss'
@@ -32,6 +32,7 @@ const sidebarGroups = [
     text: '核心内容',
     items: [
       { text: '功能与模块地图', link: '/module-map' },
+      { text: '模块介绍', link: '/modules/' },
       { text: '完整命令手册', link: '/commands/' },
       { text: '命令目录页', link: '/commands-catalogue' },
       { text: '安全与使用边界', link: '/safety' },
@@ -83,6 +84,7 @@ const teekConfig = defineTeekConfig({
   nav: [
     { text: '首页', link: '/' },
     { text: '快速开始', link: '/quick-start' },
+    { text: '模块介绍', link: '/modules/' },
     { text: '完整命令手册', link: '/commands/' },
     { text: '命令目录页', link: '/commands-catalogue' },
     { text: '安全边界', link: '/safety' }
@@ -90,6 +92,9 @@ const teekConfig = defineTeekConfig({
   sidebar: {
     '/': sidebarGroups
   },
+  socialLinks: [
+    { icon: 'github', link: 'https://github.com/acmuhan/JackalClientDocs' }
+  ],
   editLink: {
     pattern: 'https://github.com/acmuhan/JackalClientDocs/edit/main/docs/:path',
     text: '在 GitHub 上编辑此页'
