@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "JackalClient Docs"
   text: "Windows 客户端工具箱文档"
-  tagline: "全能型 Windows 辅助工具箱，从系统优化到自动化操作的一站式解决方案"
+  tagline: "全能型 Windows工具箱，拥有Minecrft渲染视觉，从系统优化到视觉优化的一站式解决方案"
   actions:
     - theme: brand
       text: 快速开始
