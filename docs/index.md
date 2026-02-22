@@ -22,10 +22,10 @@ hero:
 features:
   - title: 快速上手
     details: 零基础入门指南，涵盖启动方式、GUI 操作、基础命令与常见入口，助你快速掌握核心用法。
-    link: /quick-start
-  - title:  模块能力
+    link: /quick-start/
+  - title: 模块能力
     details: 深度解析百余种功能模块，按场景分类：系统工具、自动化脚本、游戏辅助与在线服务。
-    link: /module-map
+    link: /module-map/
   - title: 命令手册
     details: 详尽的命令参考文档，支持系统管理、文件操作、网络控制、文本处理及 Bilibili 专属指令。
     link: /commands/
