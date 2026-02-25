@@ -45,5 +45,5 @@
 
 ## 5. 常见问题入口
 
-- 常见问题：`/faq`
-- BetterLyrics 专题：`/betterlyrics`
+- [常见问题](/faq/)
+- [BetterLyrics 专题](/betterlyrics/)

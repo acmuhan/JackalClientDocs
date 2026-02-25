@@ -47,15 +47,18 @@ const sidebarGroups = [
       { text: '功能与模块地图', link: '/module-map' },
       { text: '模块介绍', link: '/modules/' },
       { text: '完整命令手册', link: '/commands/' },
+      { text: '按用途选命令', link: '/commands/usage-guide' },
       { text: '命令目录页', link: '/commands-catalogue' },
       { text: '安全与使用边界', link: '/safety' },
-      { text: '版本与演进', link: '/history-summary' }
+      { text: '版本与演进', link: '/history-summary' },
+      { text: '文档美化组件建议', link: '/ui-components' }
     ]
   },
   {
     text: '命令手册',
     items: [
       { text: '章节总览', link: '/commands/' },
+      { text: '按用途选命令', link: '/commands/usage-guide' },
       { text: '系统命令', link: '/commands/system-commands' },
       { text: '文件命令', link: '/commands/file-commands' },
       { text: '网络命令', link: '/commands/network-commands' },
@@ -106,8 +109,10 @@ const teekConfig = defineTeekConfig({
     { text: '快速开始', link: '/quick-start' },
     { text: '模块介绍', link: '/modules/' },
     { text: '完整命令手册', link: '/commands/' },
+    { text: '按用途选命令', link: '/commands/usage-guide' },
     { text: '命令目录页', link: '/commands-catalogue' },
-    { text: '安全边界', link: '/safety' }
+    { text: '安全边界', link: '/safety' },
+    { text: '文档美化组件', link: '/ui-components' }
   ],
   sidebar: {
     '/': sidebarGroups

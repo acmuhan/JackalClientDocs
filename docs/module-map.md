@@ -1,8 +1,17 @@
 ﻿# 功能与模块地图
 
-<TkTitleTag text="模块视图" type="vp-info" /> <TkTitleTag text="按场景组织" type="vp-success" />
+<TkTitleTag text="模块视图" type="vp-info" /> <TkTitleTag text="按场景组织" type="vp-success" /> <TkTitleTag text="普通 / PRO 分级" type="vp-warning" />
 
-<TkVpContainer type="info" title="如何使用本页" text="按场景找到模块后，再去完整命令手册检索对应命令。" />
+<TkVpContainer type="info" title="如何使用本页" text="按场景找到模块后，先确认普通/PRO可用性，再去完整命令手册检索对应命令。" />
+
+## 模块分级速查（普通 / PRO）
+
+| 场景 | 代表能力 | 普通版覆盖 | PRO增强 |
+| :-- | :-- | :-- | :-- |
+| 界面与显示 | HUD、动画、样式、可视化 | 高 | 中-高 |
+| 系统与进程工具 | 进程/窗口/服务控制 | 中 | 高 |
+| 自动化与编排 | 触发器、脚本、宏 | 中 | 高 |
+| 在线能力 | B站、歌词、在线检索 | 中 | 中-高 |
 
 ## A. 界面与显示
 
@@ -59,4 +68,4 @@
 - 扩展 GUI 与动画能力
 - 更复杂的自动化/筛选逻辑
 
-文档中会尽量标识 `PRO`，但实际可用性以当前构建为准。
+<TkVpContainer type="warning" title="可用性提醒" text="文档会尽量标识 PRO；但功能是否可用，最终以你当前客户端构建与授权状态为准。" />

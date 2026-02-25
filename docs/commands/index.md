@@ -1,26 +1,59 @@
 ﻿# 完整命令手册
 
-> 本手册由 `test/COMMANDS.txt` 自动拆分生成，按场景分章节维护。
+> 本手册由 `test/COMMANDS.txt` 自动拆分生成，并按「用途 + 风险 + 可用版本」进行阅读引导。
+
+<TkTitleTag text="按用途导航" type="vp-info" /> <TkTitleTag text="区分普通/PRO" type="vp-success" />
+
+<TkVpContainer
+  type="tip"
+  title="先看这个"
+  text="如果你觉得命令太多、看不懂先用哪条，请先看《按用途选命令》，再进入具体章节。" />
+
+- 👉 [按用途选命令（新）](/commands/usage-guide)
+- 👉 [命令目录页（全章节入口）](/commands-catalogue)
+
+## 快速分流（按目标）
+
+| 你的目标 | 先看章节 | 风险等级 | 适合人群 |
+| :-- | :-- | :-- | :-- |
+| 管理窗口、进程、权限、系统状态 | [系统命令](/commands/system-commands) | 中-高 | 进阶 |
+| 复制/删除/移动/监控文件 | [文件命令](/commands/file-commands) | 低-中 | 新手/进阶 |
+| 网络连接、代理、IP、端口相关 | [网络命令](/commands/network-commands) | 中 | 进阶 |
+| B站账号/视频/评论/直播流程 | [B站命令](/commands/bili-commands) | 低-中 | 新手/内容创作 |
+| 文本转换、提取、批处理 | [文本处理命令](/commands/text-processing-commands) | 低 | 新手 |
+
+## 版本分级说明（普通 / PRO）
+
+- <Badge type="tip" text="普通可用" /> 默认版本可直接使用。
+- <Badge type="warning" text="PRO" /> 需要专业版或特定构建支持。
+- <Badge type="danger" text="高风险" /> 涉及系统策略、权限、进程注入等，建议先阅读 [安全边界](/safety)。
+
+::: details 为什么要做分级？
+命令原始数据量大、历史跨度长。直接按字母或原文阅读，难以判断“我该先看哪段”。
+分级能帮助你先做低风险任务，再逐步进入高阶能力，减少误操作。
+:::
+
+## 章节入口
 
 <div class="command-card-grid">
   <a href="/commands/system-commands" class="command-card">
-    <div class="command-card-title">系统命令</div>
+    <div class="command-card-title">系统命令 <Badge type="warning" text="含PRO" /></div>
     <div class="command-card-count">📎 共 322 组命令</div>
   </a>
   <a href="/commands/file-commands" class="command-card">
-    <div class="command-card-title">文件命令</div>
+    <div class="command-card-title">文件命令 <Badge type="tip" text="新手友好" /></div>
     <div class="command-card-count">📎 共 32 组命令</div>
   </a>
   <a href="/commands/network-commands" class="command-card">
-    <div class="command-card-title">网络命令</div>
+    <div class="command-card-title">网络命令 <Badge type="warning" text="进阶" /></div>
     <div class="command-card-count">📎 共 26 组命令</div>
   </a>
   <a href="/commands/bili-commands" class="command-card">
-    <div class="command-card-title">B站命令</div>
+    <div class="command-card-title">B站命令 <Badge type="tip" text="内容创作" /></div>
     <div class="command-card-count">📎 共 62 组命令</div>
   </a>
   <a href="/commands/text-processing-commands" class="command-card">
-    <div class="command-card-title">文本处理命令</div>
+    <div class="command-card-title">文本处理命令 <Badge type="tip" text="高频" /></div>
     <div class="command-card-count">📎 共 40 组命令</div>
   </a>
 </div>
