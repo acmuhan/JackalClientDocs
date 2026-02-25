@@ -2,14 +2,23 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 import { defineTeekConfig } from 'vitepress-theme-teek/config'
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import { RssPlugin, type RSSOptions } from 'vitepress-plugin-rss'
-import { readdirSync } from 'node:fs'
+import { readFileSync, readdirSync } from 'node:fs'
 
-const moduleDocs = readdirSync(new URL('../modules', import.meta.url), { withFileTypes: true })
+const modulesDir = new URL('../modules', import.meta.url)
+
+const moduleDocs = readdirSync(modulesDir, { withFileTypes: true })
   .filter((entry) => entry.isFile() && entry.name.endsWith('.md') && entry.name !== 'index.md')
   .map((entry) => {
     const name = entry.name.replace(/\.md$/, '')
+    const content = readFileSync(new URL(`../modules/${entry.name}`, import.meta.url), 'utf-8')
+    const lines = content
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter(Boolean)
+    const alias = lines[1] && lines[1] !== name ? lines[1] : ''
+
     return {
-      text: name,
+      text: alias ? `${alias}（${name}）` : name,
       link: `/modules/${name}`
     }
   })
