@@ -56,6 +56,7 @@ const sidebarGroups = [
     text: '命令手册',
     items: [
       { text: '章节总览', link: '/commands/' },
+      { text: '按用途选命令', link: '/commands/usage-guide' },
       { text: '系统命令', link: '/commands/system-commands' },
       { text: '文件命令', link: '/commands/file-commands' },
       { text: '网络命令', link: '/commands/network-commands' },
