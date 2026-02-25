@@ -1,5 +1,7 @@
 # 快速开始
-<TkVpContainer type="tip" title="使用前确认" text="首次使用建议先阅读安全边界页，并确认仅在授权场景下运行。" />
+<TkVpContainer type="tip" title="使用前确认" text="首次使用建议先阅读安全说明页，并确认仅在授权场景下运行。" />
+
+<TkVpContainer type="info" title="官网与购买" text="应用官网与专业版（Pro）购买入口： https://www.wormwake.com/jackalclient/" />
 
 这个是电脑小白请单击此处 → [如何下载并运行 JackalClient 说明书](/download-and-run)
 
@@ -45,5 +47,5 @@
 
 ## 5. 常见问题入口
 
-- 常见问题：`/faq`
-- BetterLyrics 专题：`/betterlyrics`
+- [常见问题](/faq/)
+- [BetterLyrics 专题](/betterlyrics/)

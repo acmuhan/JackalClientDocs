@@ -4,7 +4,7 @@
 
 共 40 组命令。
 
-## `/echo <string...>`
+## 回显文本（`/echo <string...>`）
 
 ```bash
 /echo <string...>
@@ -14,7 +14,7 @@
 回显文本。
 :::
 
-## `/translate [content...=clipboard]`
+## Edge 翻译功能（`/translate [content...=clipboard]`）
 
 ```bash
 /translate [content...=clipboard]
@@ -30,7 +30,7 @@ Edge 翻译功能。translateto 可指定目标语言， translateloop 将会把
 如果结尾是copy，则会将结果复制到剪贴板。
 :::
 
-## `/translateoffline <from> <to> [content...=clipboard]`
+## opencc 离线翻译（`/translateoffline <from> <to> [content...=clipboard]`）
 
 ```bash
 /translateoffline <from> <to> [content...=clipboard]
@@ -41,7 +41,7 @@ opencc 离线翻译。
 支持的语言缩写有：s简体中文，t繁体中文，hk香港，tw台湾繁体，jp日本汉字
 :::
 
-## `/memeizer [content...=clipboard]`
+## 生草机翻译（`/memeizer [content...=clipboard]`）
 
 ```bash
 /memeizer [content...=clipboard]
@@ -51,7 +51,7 @@ opencc 离线翻译。
 生草机翻译。相关设置请到生草机模块进行配置。
 :::
 
-## `/calc [expr...]`
+## 前者如果参数不填，则异步启动一个计算器（`/calc [expr...]`）
 
 ```bash
 /calc [expr...]
@@ -70,7 +70,7 @@ calccopy 命令如果成功，将会将结果写入剪贴板。
 getcalc 命令如果成功，将会将结果以字符串形式写入it
 :::
 
-## `/textdatabase get <key>`
+## 从文本数据库获取文本（`/textdatabase get <key>`）
 
 ```bash
 /textdatabase get <key>
@@ -91,7 +91,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 从文本数据库获取文本。key 为秘钥。其中 copy 会把结果存入剪贴板，obtain 会把结果存入 it 代词中。/pastebin 会使用某种客户端的算法加密你的key以减少冲突的可能性。
 :::
 
-## `/textdatabase set <key>`
+## 文本数据库中设置文本（`/textdatabase set <key>`）
 
 ```bash
 /textdatabase set <key>
@@ -106,7 +106,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 文本数据库中设置文本。key 为秘钥。/pastebin 会使用某种客户端的算法加密你的key以减少冲突的可能性。
 :::
 
-## `/textdatabase clear <key>`
+## 文本数据库中清空文本（`/textdatabase clear <key>`）
 
 ```bash
 /textdatabase clear <key>
@@ -121,7 +121,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 文本数据库中清空文本。key 为秘钥。/pastebin 会使用某种客户端的算法加密你的key以减少冲突的可能性。
 :::
 
-## `/qrcode [content...]`
+## 根据内容生成二维码并打开（`/qrcode [content...]`）
 
 ```bash
 /qrcode [content...]
@@ -131,7 +131,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 根据内容生成二维码并打开。如果不写参数，则读取剪贴板内容（必须是文本类型）。
 :::
 
-## `/string [content...]`
+## 为 it 赋值字符串（`/string [content...]`）
 
 ```bash
 /string [content...]
@@ -141,7 +141,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 为 it 赋值字符串。
 :::
 
-## `/string2 [content...]`
+## 为 it 赋值字符串（`/string2 [content...]`）
 
 ```bash
 /string2 [content...]
@@ -151,7 +151,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 为 it 赋值字符串。但会弹出一个高级输入框让你编辑。content 将作为输入框的初始内容。
 :::
 
-## `/string3 [content...]`
+## 为 it 赋值字符串（`/string3 [content...]`）
 
 ```bash
 /string3 [content...]
@@ -161,7 +161,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 为 it 赋值字符串。但会弹出一个聊天框让你编辑。content 将作为输入框的初始内容。
 :::
 
-## `/copystr [content...]`
+## 复制字符串，但先弹出一个高级输入框让你编辑（`/copystr [content...]`）
 
 ```bash
 /copystr [content...]
@@ -171,7 +171,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 复制字符串，但先弹出一个高级输入框让你编辑。content 作为输入框的初始内容。
 :::
 
-## `/str <params...>`
+## 字符串功能（`/str <params...>`）
 
 ```bash
 /str <params...>
@@ -181,7 +181,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 字符串功能。params 为相关参数。
 :::
 
-## `/str size [content=it...]`
+## 获取字符串长度与字符数（`/str size [content=it...]`）
 
 ```bash
 /str size [content=it...]
@@ -191,7 +191,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 获取字符串长度与字符数。
 :::
 
-## `/str transform lower [content=it...]`
+## 字符串转小写（`/str transform lower [content=it...]`）
 
 ```bash
 /str transform lower [content=it...]
@@ -201,7 +201,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 字符串转小写。
 :::
 
-## `/str transform upper [content=it...]`
+## 字符串转大写（`/str transform upper [content=it...]`）
 
 ```bash
 /str transform upper [content=it...]
@@ -211,7 +211,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 字符串转大写。
 :::
 
-## `/str transform reverse [content=it...]`
+## 字符串反转（`/str transform reverse [content=it...]`）
 
 ```bash
 /str transform reverse [content=it...]
@@ -221,7 +221,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 字符串反转。注意基本单位为字符而不是字节。
 :::
 
-## `/str transform swapcase [content=it...]`
+## 交换字符串大小写（`/str transform swapcase [content=it...]`）
 
 ```bash
 /str transform swapcase [content=it...]
@@ -231,7 +231,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 交换字符串大小写。
 :::
 
-## `/str transform annoycase [content=it...]`
+## 混写字符串大小写（`/str transform annoycase [content=it...]`）
 
 ```bash
 /str transform annoycase [content=it...]
@@ -241,7 +241,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 混写字符串大小写。
 :::
 
-## `/str transform remove <substr> [content=it...]`
+## 移除子串（`/str transform remove <substr> [content=it...]`）
 
 ```bash
 /str transform remove <substr> [content=it...]
@@ -251,7 +251,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 移除子串。
 :::
 
-## `/str transform replace <old> <new> [content=it...]`
+## 替换字符串（`/str transform replace <old> <new> [content=it...]`）
 
 ```bash
 /str transform replace <old> <new> [content=it...]
@@ -261,7 +261,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 替换字符串。
 :::
 
-## `/str transform split <sep> [content=it...]`
+## 分隔字符串（`/str transform split <sep> [content=it...]`）
 
 ```bash
 /str transform split <sep> [content=it...]
@@ -271,7 +271,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 分隔字符串。
 :::
 
-## `/str transform join <sep> [content=it...]`
+## 在字符串每个字符间添加字符（`/str transform join <sep> [content=it...]`）
 
 ```bash
 /str transform join <sep> [content=it...]
@@ -281,7 +281,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 在字符串每个字符间添加字符。
 :::
 
-## `/str transform delpunct [content=it...]`
+## 删除字符串标点符号（`/str transform delpunct [content=it...]`）
 
 ```bash
 /str transform delpunct [content=it...]
@@ -291,7 +291,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 删除字符串标点符号。
 :::
 
-## `/str transform punctcutline [content=it...]`
+## 根据字符串标点符号换行（`/str transform punctcutline [content=it...]`）
 
 ```bash
 /str transform punctcutline [content=it...]
@@ -301,7 +301,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 根据字符串标点符号换行。
 :::
 
-## `/str transform toengpunct [content=it...]`
+## 将字符串的标点符号全部改为英文标点（`/str transform toengpunct [content=it...]`）
 
 ```bash
 /str transform toengpunct [content=it...]
@@ -311,7 +311,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 将字符串的标点符号全部改为英文标点。
 :::
 
-## `/str transform tochnpunct [content=it...]`
+## 将字符串的标点符号全部改为中文标点（`/str transform tochnpunct [content=it...]`）
 
 ```bash
 /str transform tochnpunct [content=it...]
@@ -321,7 +321,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 将字符串的标点符号全部改为中文标点。
 :::
 
-## `/str transform obfuscate <mode> [content=it...]`
+## 使用 mode 模式混淆字符串（`/str transform obfuscate <mode> [content=it...]`）
 
 ```bash
 /str transform obfuscate <mode> [content=it...]
@@ -331,7 +331,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 使用 mode 模式混淆字符串。
 :::
 
-## `/str transform quote [content=it...]`
+## 添加双引号（`/str transform quote [content=it...]`）
 
 ```bash
 /str transform quote [content=it...]
@@ -341,7 +341,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 添加双引号。
 :::
 
-## `/str transform unquote [content=it...]`
+## 移除首尾双引号（`/str transform unquote [content=it...]`）
 
 ```bash
 /str transform unquote [content=it...]
@@ -351,7 +351,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 移除首尾双引号。
 :::
 
-## `/str transform escape [content=it...]`
+## 转义字符串（`/str transform escape [content=it...]`）
 
 ```bash
 /str transform escape [content=it...]
@@ -361,7 +361,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 转义字符串。例如将换行符替换为\n（写成这样）。
 :::
 
-## `/str transform unescape [content=it...]`
+## 反转义字符串（`/str transform unescape [content=it...]`）
 
 ```bash
 /str transform unescape [content=it...]
@@ -371,7 +371,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 反转义字符串。
 :::
 
-## `/str transform escapehtml [content=it...]`
+## 转义字符串（`/str transform escapehtml [content=it...]`）
 
 ```bash
 /str transform escapehtml [content=it...]
@@ -381,7 +381,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 转义字符串。但是是 HTML 转义规则。
 :::
 
-## `/str transform unescapehtml [content=it...]`
+## 反转义字符串（`/str transform unescapehtml [content=it...]`）
 
 ```bash
 /str transform unescapehtml [content=it...]
@@ -391,7 +391,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 反转义字符串。但是是 HTML 转义规则。
 :::
 
-## `/str transform extractext [content=it...]`
+## 提取文件路径扩展名（`/str transform extractext [content=it...]`）
 
 ```bash
 /str transform extractext [content=it...]
@@ -401,7 +401,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 提取文件路径扩展名。
 :::
 
-## `/str transform delext [content=it...]`
+## 去除文件路径扩展名（`/str transform delext [content=it...]`）
 
 ```bash
 /str transform delext [content=it...]
@@ -411,7 +411,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 去除文件路径扩展名。
 :::
 
-## `/str transform filter [content=it...]`
+## 对字符串进行屏蔽词过滤（`/str transform filter [content=it...]`）
 
 ```bash
 /str transform filter [content=it...]
@@ -421,7 +421,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 对字符串进行屏蔽词过滤。
 :::
 
-## `/str transform cut [content=it...]`
+## 中文分词（`/str transform cut [content=it...]`）
 
 ```bash
 /str transform cut [content=it...]
@@ -431,7 +431,7 @@ getcalc 命令如果成功，将会将结果以字符串形式写入it
 中文分词。使用在线API。
 :::
 
-## `/str transform cut_bili [content=it...]`
+## 中文分词（`/str transform cut_bili [content=it...]`）
 
 ```bash
 /str transform cut_bili [content=it...]

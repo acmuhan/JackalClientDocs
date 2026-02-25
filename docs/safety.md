@@ -1,4 +1,4 @@
-﻿# 安全与使用边界
+﻿# 安全说明
 
 <TkTitleTag text="高优先级" type="vp-danger" /> <TkTitleTag text="必读" type="vp-warning" />
 

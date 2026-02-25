@@ -4,7 +4,7 @@
 
 共 32 组命令。
 
-## `/ls`
+## 枚举当前目录文件（`/ls`）
 
 ```bash
 /ls
@@ -14,7 +14,7 @@
 枚举当前目录文件。
 :::
 
-## `/interpret <path...>`
+## 同步解释执行一个客户端批处理文件(（`/interpret <path...>`）
 
 ```bash
 /interpret <path...>
@@ -24,7 +24,7 @@
 同步解释执行一个客户端批处理文件(.jbat)或者宏文件(.jm)。
 :::
 
-## `/perform <path...>`
+## 异步解释执行一个客户端批处理文件(（`/perform <path...>`）
 
 ```bash
 /perform <path...>
@@ -34,7 +34,7 @@
 异步解释执行一个客户端批处理文件(.jbat)或者宏文件(.jm)。
 :::
 
-## `/pwd`
+## 输出当前工作目录（`/pwd`）
 
 ```bash
 /pwd
@@ -44,7 +44,7 @@
 输出当前工作目录。
 :::
 
-## `/cd [path...]`
+## 切换当前工作目录（`/cd [path...]`）
 
 ```bash
 /cd [path...]
@@ -55,7 +55,7 @@
 切换当前工作目录。注意，不需要指定/d参数，如果有会自动去除。后面的路径可以不加双引号。如果要切换到上一个目录，可以使用 /chdir .. 命令。/chdir 命令成功执行后，会输出当前工作目录，而 /cd 不会。
 :::
 
-## `/rm <path...>`
+## 删除文件或目录（`/rm <path...>`）
 
 ```bash
 /rm <path...>
@@ -68,7 +68,7 @@
 删除文件或目录。后两个使用COM接口（支持撤销）。前两者如果目标为文件夹，则必须保证文件夹为空。
 :::
 
-## `/hexviewfile <filepath...>`
+## 十六进制查看指定文件（`/hexviewfile <filepath...>`）
 
 ```bash
 /hexviewfile <filepath...>
@@ -78,7 +78,7 @@
 十六进制查看指定文件。
 :::
 
-## `/hexviewproc <pid/hprocess/hwnd>`
+## 十六进制查看进程并输出到文件（`/hexviewproc <pid/hprocess/hwnd>`）
 
 ```bash
 /hexviewproc <pid/hprocess/hwnd>
@@ -88,7 +88,7 @@
 十六进制查看进程并输出到文件。
 :::
 
-## `/cleardumps`
+## 清空客户端崩溃转储文件 (crashlog\*（`/cleardumps`）
 
 ```bash
 /cleardumps
@@ -99,7 +99,7 @@
 清空客户端崩溃转储文件 (crashlog\*.dmp)
 :::
 
-## `/file <path...>`
+## 根据文件内容辨别文件类型，较为基础，只能判断一小…（`/file <path...>`）
 
 ```bash
 /file <path...>
@@ -109,7 +109,7 @@
 根据文件内容辨别文件类型，较为基础，只能判断一小部分类型。
 :::
 
-## `/findfile <keywords...>`
+## 通过 Everything 软件搜索指定的文件（`/findfile <keywords...>`）
 
 ```bash
 /findfile <keywords...>
@@ -120,7 +120,7 @@
 通过 Everything 软件搜索指定的文件。 /findfileb 命令只显示文件名， /findfile 显示文件名和绝对路径。
 :::
 
-## `/everything`
+## 切换 Everything 模块（`/everything`）
 
 ```bash
 /everything
@@ -130,7 +130,7 @@
 切换 Everything 模块。
 :::
 
-## `/everything status`
+## 查看 Everything 状态（进程、版本、请…（`/everything status`）
 
 ```bash
 /everything status
@@ -140,7 +140,7 @@
 【PRO】查看 Everything 状态（进程、版本、请求参数等）。
 :::
 
-## `/everything start`
+## 启动 Everything（`/everything start`）
 
 ```bash
 /everything start
@@ -150,7 +150,7 @@
 【PRO】启动 Everything.exe 并初始化接口。
 :::
 
-## `/everything exit`
+## 关闭 Everything 并清理接口（`/everything exit`）
 
 ```bash
 /everything exit
@@ -160,7 +160,7 @@
 【PRO】关闭 Everything 并清理接口。
 :::
 
-## `/everything search <keywords...>`
+## 通过 findfile 搜索指定文件（`/everything search <keywords...>`）
 
 ```bash
 /everything search <keywords...>
@@ -170,7 +170,7 @@
 【PRO】通过 /findfile 搜索指定文件。
 :::
 
-## `/everything reset`
+## 重置 Everything 搜索状态（`/everything reset`）
 
 ```bash
 /everything reset
@@ -180,7 +180,7 @@
 【PRO】重置 Everything 搜索状态。
 :::
 
-## `/everything rebuild`
+## 请求 Everything 重新建立索引数据库（`/everything rebuild`）
 
 ```bash
 /everything rebuild
@@ -190,7 +190,7 @@
 【PRO】请求 Everything 重新建立索引数据库。
 :::
 
-## `/everything update`
+## 请求 Everything 更新文件夹索引（`/everything update`）
 
 ```bash
 /everything update
@@ -200,7 +200,7 @@
 【PRO】请求 Everything 更新文件夹索引。
 :::
 
-## `/everything savedb`
+## 保存 Everything 数据库（`/everything savedb`）
 
 ```bash
 /everything savedb
@@ -210,7 +210,7 @@
 【PRO】保存 Everything 数据库。
 :::
 
-## `/everything savehistory`
+## 保存 Everything 运行历史（`/everything savehistory`）
 
 ```bash
 /everything savehistory
@@ -220,7 +220,7 @@
 【PRO】保存 Everything 运行历史。
 :::
 
-## `/everything clearhistory`
+## 清空 Everything 运行历史（`/everything clearhistory`）
 
 ```bash
 /everything clearhistory
@@ -230,7 +230,7 @@
 【PRO】清空 Everything 运行历史。
 :::
 
-## `/everything matchpath [on/off]`
+## 查看或设置匹配路径（Match Path）（`/everything matchpath [on/off]`）
 
 ```bash
 /everything matchpath [on/off]
@@ -240,7 +240,7 @@
 【PRO】查看或设置匹配路径（Match Path）。
 :::
 
-## `/everything matchcase [on/off]`
+## 查看或设置大小写匹配（Match Case）（`/everything matchcase [on/off]`）
 
 ```bash
 /everything matchcase [on/off]
@@ -250,7 +250,7 @@
 【PRO】查看或设置大小写匹配（Match Case）。
 :::
 
-## `/everything wholeword [on/off]`
+## 查看或设置全词匹配（Whole Word）（`/everything wholeword [on/off]`）
 
 ```bash
 /everything wholeword [on/off]
@@ -260,7 +260,7 @@
 【PRO】查看或设置全词匹配（Whole Word）。
 :::
 
-## `/everything regex [on/off]`
+## 查看或设置正则匹配（Regex）（`/everything regex [on/off]`）
 
 ```bash
 /everything regex [on/off]
@@ -270,7 +270,7 @@
 【PRO】查看或设置正则匹配（Regex）。
 :::
 
-## `/everything max [number]`
+## 查看或设置最大返回数量（`/everything max [number]`）
 
 ```bash
 /everything max [number]
@@ -280,7 +280,7 @@
 【PRO】查看或设置最大返回数量。
 :::
 
-## `/everything offset [number]`
+## 查看或设置结果偏移（`/everything offset [number]`）
 
 ```bash
 /everything offset [number]
@@ -290,7 +290,7 @@
 【PRO】查看或设置结果偏移。
 :::
 
-## `/everything sort [type]`
+## 查看或设置排序方式（`/everything sort [type]`）
 
 ```bash
 /everything sort [type]
@@ -300,7 +300,7 @@
 【PRO】查看或设置排序方式。示例：name-asc、name-desc、size-asc、size-desc。
 :::
 
-## `/everything request [default/all/flags...]`
+## 查看或设置请求字段（`/everything request [default/all/flags...]`）
 
 ```bash
 /everything request [default/all/flags...]
@@ -310,7 +310,7 @@
 【PRO】查看或设置请求字段。可选：name path full ext size created modified accessed attributes filelist runcount rundate recent hname hpath hfull
 :::
 
-## `/load <dllpath...>`
+## 加载指定位置的DLL（`/load <dllpath...>`）
 
 ```bash
 /load <dllpath...>
@@ -320,7 +320,7 @@
 加载指定位置的DLL。
 :::
 
-## `/unload <dllname>`
+## 卸载已加载的DLL（`/unload <dllname>`）
 
 ```bash
 /unload <dllname>

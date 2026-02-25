@@ -4,7 +4,7 @@
 
 共 62 组命令。
 
-## `/webpage <url...>`
+## 获取网页完整内容（`/webpage <url...>`）
 
 ```bash
 /webpage <url...>
@@ -17,7 +17,7 @@
 获取网页完整内容。/webpage /bilipage命令将解析格式以彩色输出，/webpageraw /bilipageraw 不会。/bilipage /bilipageraw 会携带对应的 Referer
 :::
 
-## `/bili [args...]`
+## 哔哩哔哩全套命令（`/bili [args...]`）
 
 ```bash
 /bili [args...]
@@ -29,7 +29,7 @@
 不指定参数时，进入主页。
 :::
 
-## `/bili login`
+## 扫码登录（`/bili login`）
 
 ```bash
 /bili login
@@ -39,7 +39,7 @@
 扫码登录。将会存储 Cookies 到 BiliSettings，请勿泄露以免被盗号。
 :::
 
-## `/bili relogin`
+## 重新扫码登录（`/bili relogin`）
 
 ```bash
 /bili relogin
@@ -49,7 +49,7 @@
 重新扫码登录。
 :::
 
-## `/bili logout`
+## 登出账号（`/bili logout`）
 
 ```bash
 /bili logout
@@ -59,7 +59,7 @@
 登出账号。清空 Cookies。
 :::
 
-## `/bili space [uid]`
+## 查看用户空间主页（`/bili space [uid]`）
 
 ```bash
 /bili space [uid]
@@ -69,7 +69,7 @@
 查看用户空间主页。如果不指定uid，则为当前登录账号的空间。
 :::
 
-## `/bili parse <shortlink>`
+## 解析B站短链接（`/bili parse <shortlink>`）
 
 ```bash
 /bili parse <shortlink>
@@ -79,7 +79,7 @@
 解析B站短链接。
 :::
 
-## `/bili fans`
+## 查看自己的粉丝列表（`/bili fans`）
 
 ```bash
 /bili fans
@@ -91,7 +91,7 @@
 查看自己的粉丝列表。limit 为数量限制。如果粉丝太多，你可能因B站限制无法全部看完。【PRO】版的输出会更详细。
 :::
 
-## `/bili fans find <kw...>`
+## 以昵称关键字kw搜索自己的粉丝（`/bili fans find <kw...>`）
 
 ```bash
 /bili fans find <kw...>
@@ -104,7 +104,7 @@
 【PRO】以昵称关键字kw搜索自己的粉丝。两个带f后缀的为快速模式，找到一个很符合的结果就会直接输出并停止。search(f)可以指定搜索范围limit（表示前limit个粉丝中搜索）, find 则为B站支持的最大搜索范围（可能为1000）中搜索。findf 为前 100 个中搜索。你可以使用UID=或UID:开头搜索指定UID的用户。
 :::
 
-## `/bili video <aid/bid/link>`
+## 查看B站视频信息（`/bili video <aid/bid/link>`）
 
 ```bash
 /bili video <aid/bid/link>
@@ -114,7 +114,7 @@
 查看B站视频信息。会进入一个可交互页面。
 :::
 
-## `/bili video <aid/bid/link> summary`
+## 使用人工智能总结视频信息（`/bili video <aid/bid/link> summary`）
 
 ```bash
 /bili video <aid/bid/link> summary
@@ -124,7 +124,7 @@
 使用人工智能总结视频信息。
 :::
 
-## `/bili video <aid/bid/link> comment`
+## 使用人工智能生成并发送一条类似的评论（`/bili video <aid/bid/link> comment`）
 
 ```bash
 /bili video <aid/bid/link> comment
@@ -134,7 +134,7 @@
 使用人工智能生成并发送一条类似的评论。
 :::
 
-## `/bili video <aid/bid/link> gencomment`
+## 使用人工智能生成一条类似的评论（`/bili video <aid/bid/link> gencomment`）
 
 ```bash
 /bili video <aid/bid/link> gencomment
@@ -144,7 +144,7 @@
 使用人工智能生成一条类似的评论。仅生成不发送。
 :::
 
-## `/bili comment add [type=1] <oid> <content...>`
+## 为指定评论区添加一条评论（`/bili comment add [type=1] <oid> <content...>`）
 
 ```bash
 /bili comment add [type=1] <oid> <content...>
@@ -154,7 +154,7 @@
 为指定评论区添加一条评论。type 为评论区类型代码（例如视频为1, 此时 oid 为 avid），oid 为目标评论区id。
 :::
 
-## `/bili comment reply [type=1] <oid> <root> <content...>`
+## 为指定评论区添加一条二级评论（仅二级）（`/bili comment reply [type=1] <oid> <root> <content...>`）
 
 ```bash
 /bili comment reply [type=1] <oid> <root> <content...>
@@ -164,7 +164,7 @@
 为指定评论区添加一条二级评论（仅二级）。root为要回复的评论的 rpid。
 :::
 
-## `/bili comment reply2 [type=1] <oid> <root> <parent> <content...>`
+## 为指定评论区添加一条大于二级的评论（`/bili comment reply2 [type=1] <oid> <root> <parent> <content...>`）
 
 ```bash
 /bili comment reply2 [type=1] <oid> <root> <parent> <content...>
@@ -174,7 +174,7 @@
 为指定评论区添加一条大于二级的评论。root为要回复的评论所在的楼层的 rpid。parent 为要回复的评论的 rpid。
 :::
 
-## `/bili comment recv [page=1]`
+## 查看“回复我的”消息列表（`/bili comment recv [page=1]`）
 
 ```bash
 /bili comment recv [page=1]
@@ -184,7 +184,7 @@
 【PRO】查看“回复我的”消息列表。page 为页码（每页固定显示若干条），用于快速浏览近期收到的评论回复。
 :::
 
-## `/bili comment recvui`
+## 进入交互式“回复我的”界面（`/bili comment recvui`）
 
 ```bash
 /bili comment recvui
@@ -194,7 +194,7 @@
 【PRO】进入交互式“回复我的”界面。支持方向键选择、回车直接回复、R 刷新、Q/Esc 退出。回复输入支持 cancel 或 /cancel 取消。
 :::
 
-## `/bili comment list/enum <type> <oid> [count=20] [page=1] [sort=1]`
+## 枚举评论区（单层，虽然可以显示部分子评论，但不会…（`/bili comment list/enum <type> <oid> [count=20] [page=1] [sort=1]`）
 
 ```bash
 /bili comment list/enum <type> <oid> [count=20] [page=1] [sort=1]
@@ -205,7 +205,7 @@
 枚举评论区（单层，虽然可以显示部分子评论，但不会显示完整，分页）。type 为评论区类型代码（例如视频为1, 此时 oid 为 avid），oid 为目标评论区id。count 为每页数量，page 为页码，sort 为排序。
 :::
 
-## `/bili comment listall <type> <oid> [sort=1]`
+## 枚举评论区（单层，虽然可以显示部分子评论，但不会…（`/bili comment listall <type> <oid> [sort=1]`）
 
 ```bash
 /bili comment listall <type> <oid> [sort=1]
@@ -215,7 +215,7 @@
 枚举评论区（单层，虽然可以显示部分子评论，但不会显示完整）。type 为评论区类型代码（例如视频为1, 此时 oid 为 avid），oid 为目标评论区id，sort 为排序。
 :::
 
-## `/bili comment tree <type> <oid> [sort=1]`
+## 枚举评论区（多层）（`/bili comment tree <type> <oid> [sort=1]`）
 
 ```bash
 /bili comment tree <type> <oid> [sort=1]
@@ -225,7 +225,7 @@
 枚举评论区（多层）。type 为评论区类型代码（例如视频为1, 此时 oid 为 avid），oid 为目标评论区id，sort 为排序。
 :::
 
-## `/bili comment like <type> <oid> [rpid1;rpid2;rpid3;...]`
+## 给若干评论点赞取消赞点踩取消踩（`/bili comment like <type> <oid> [rpid1;rpid2;rpid3;...]`）
 
 ```bash
 /bili comment like <type> <oid> [rpid1;rpid2;rpid3;...]
@@ -238,7 +238,7 @@
 给若干评论点赞/取消赞/点踩/取消踩。type 为评论区类型代码（例如视频为1, 此时 oid 为 avid），oid 为目标评论区id，rpid 为目标评论rpid。rpid 不填时，代表所有评论。
 :::
 
-## `/bili comment delete <type> <oid> [rpid1;rpid2;rpid3;...]`
+## 删除若干评论（`/bili comment delete <type> <oid> [rpid1;rpid2;rpid3;...]`）
 
 ```bash
 /bili comment delete <type> <oid> [rpid1;rpid2;rpid3;...]
@@ -248,7 +248,7 @@
 删除若干评论。type 为评论区类型代码（例如视频为1, 此时 oid 为 avid），oid 为目标评论区id，rpid 为目标评论rpid。rpid 不填时，代表所有评论。
 :::
 
-## `/bili comment topmost <type> <oid> [rpid1;rpid2;rpid3;...]`
+## 置顶取消置顶评论（`/bili comment topmost <type> <oid> [rpid1;rpid2;rpid3;...]`）
 
 ```bash
 /bili comment topmost <type> <oid> [rpid1;rpid2;rpid3;...]
@@ -259,7 +259,7 @@
 置顶/取消置顶评论。。type 为评论区类型代码（例如视频为1, 此时 oid 为 avid），oid 为目标评论区id, rpid 为目标评论rpid，支持并发置顶多个目标评论 （未成功）。rpid 不填时，代表所有评论。
 :::
 
-## `/bili dynamic list/enum`
+## 枚举编号为 uid 的用户动态（`/bili dynamic list/enum`）
 
 ```bash
 /bili dynamic list/enum
@@ -270,7 +270,7 @@
 枚举编号为 uid 的用户动态。limit 表示最大数量。如果填写offset_dynamic_id，则从编号为offset_dynamic_id的动态开始枚举。
 :::
 
-## `/bili dynamic likes <uid> [limit=8]`
+## 给指定用户动态点赞取消点赞，最多 limit 个…（`/bili dynamic likes <uid> [limit=8]`）
 
 ```bash
 /bili dynamic likes <uid> [limit=8]
@@ -281,7 +281,7 @@
 给指定用户动态点赞/取消点赞，最多 limit 个动态。
 :::
 
-## `/bili contribution [uid=own] [limit=30]`
+## 枚举指定用户的稿件列表（`/bili contribution [uid=own] [limit=30]`）
 
 ```bash
 /bili contribution [uid=own] [limit=30]
@@ -291,7 +291,7 @@
 枚举指定用户的稿件列表。uid如果不填则是当前登录的用户。limit为数量限制，显示前多少的稿件。
 :::
 
-## `/bili tag query <avid/bid/link...>`
+## 该命令已被废弃（`/bili tag query <avid/bid/link...>`）
 
 ```bash
 /bili tag query <avid/bid/link...>
@@ -301,7 +301,7 @@
 该命令已被废弃。
 :::
 
-## `/bili live`
+## 获得推荐的直播间列表（`/bili live`）
 
 ```bash
 /bili live
@@ -312,7 +312,7 @@
 获得推荐的直播间列表。limit 为数量限制。
 :::
 
-## `/bili live addchatter <room_id> <content...>`
+## 向 room_id 直播间发送弹幕（`/bili live addchatter <room_id> <content...>`）
 
 ```bash
 /bili live addchatter <room_id> <content...>
@@ -324,7 +324,7 @@
 向 room_id 直播间发送弹幕。如果 room_id 填为 ~ ，则会使用 LiveStream 模块中的 Room ID。/bili live leetchatter 则会先将文本交给 Clipboard Tweaks 模块处理再发送。
 :::
 
-## `/bili live go [roomId=~]`
+## go 打开直播间网页（`/bili live go [roomId=~]`）
 
 ```bash
 /bili live go [roomId=~]
@@ -335,7 +335,7 @@
 go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 LiveStream 模块的 Room ID。
 :::
 
-## `/bili live following`
+## 查询自己已关注的所有 up 的直播状态（`/bili live following`）
 
 ```bash
 /bili live following
@@ -345,7 +345,7 @@ go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 
 查询自己已关注的所有 up 的直播状态。
 :::
 
-## `/bili live audience [roomId=~]`
+## 输出现在的直播间观众信息（`/bili live audience [roomId=~]`）
 
 ```bash
 /bili live audience [roomId=~]
@@ -355,7 +355,7 @@ go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 
 输出现在的直播间观众信息。如果 roomId 不填，则为当前的缓存。如果填~，则取 LiveStream 模块的 Room ID。
 :::
 
-## `/bili live likeauds [roomId=~] [limit=5]`
+## 给现在的直播间观众的动态点赞（`/bili live likeauds [roomId=~] [limit=5]`）
 
 ```bash
 /bili live likeauds [roomId=~] [limit=5]
@@ -366,7 +366,7 @@ go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 
 给现在的直播间观众的动态点赞。limit 为点赞的动态数量。
 :::
 
-## `/bili live host [uid=~]`
+## 获取主播信息（`/bili live host [uid=~]`）
 
 ```bash
 /bili live host [uid=~]
@@ -377,7 +377,7 @@ go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 
 获取主播信息。
 :::
 
-## `/bili live fetch [limit=100]`
+## 获取并输出当前直播间弹幕列表的前limit个（`/bili live fetch [limit=100]`）
 
 ```bash
 /bili live fetch [limit=100]
@@ -388,7 +388,7 @@ go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 
 获取并输出当前直播间弹幕列表的前limit个。
 :::
 
-## `/bili live setroom [roomId=auto]`
+## 将有关模块的直播间ID选项全部设为roomId（`/bili live setroom [roomId=auto]`）
 
 ```bash
 /bili live setroom [roomId=auto]
@@ -398,7 +398,7 @@ go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 
 将有关模块的直播间ID选项全部设为roomId。如果不填，则为自己的直播间ID。
 :::
 
-## `/bili live info [roomId=~]`
+## 获得直播间原始信息JSON（`/bili live info [roomId=~]`）
 
 ```bash
 /bili live info [roomId=~]
@@ -408,7 +408,7 @@ go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 
 获得直播间原始信息JSON。
 :::
 
-## `/bili live create`
+## 为自己创建一个直播间（`/bili live create`）
 
 ```bash
 /bili live create
@@ -418,7 +418,7 @@ go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 
 为自己创建一个直播间。
 :::
 
-## `/bili live settitle <title...>`
+## 设置直播间标题为 title（`/bili live settitle <title...>`）
 
 ```bash
 /bili live settitle <title...>
@@ -428,7 +428,7 @@ go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 
 【PRO】设置直播间标题为 title。
 :::
 
-## `/bili live gettitle [roomId=~]`
+## 获取直播间标题（`/bili live gettitle [roomId=~]`）
 
 ```bash
 /bili live gettitle [roomId=~]
@@ -439,7 +439,7 @@ go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 
 获取直播间标题。
 :::
 
-## `/bili live areas`
+## 查看所有直播分区及其ID（`/bili live areas`）
 
 ```bash
 /bili live areas
@@ -449,7 +449,7 @@ go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 
 查看所有直播分区及其ID。
 :::
 
-## `/bili live area`
+## 获取直播间分区（`/bili live area`）
 
 ```bash
 /bili live area
@@ -460,7 +460,7 @@ go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 
 获取直播间分区。使用 /bili live areas 查看所有分区。
 :::
 
-## `/bili live area <area_id/area_name>`
+## 设置直播间分区（`/bili live area <area_id/area_name>`）
 
 ```bash
 /bili live area <area_id/area_name>
@@ -471,7 +471,7 @@ go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 
 设置直播间分区。可填分区ID或分区名。分区名将自动模糊匹配（命中规则：相似度&gt;0.8，或&gt;0.6且领先第二名&gt;0.2）；若匹配失败会输出候选分区。使用 /bili live areas 查看所有分区。
 :::
 
-## `/bili live start [area=current]`
+## 立即开播（`/bili live start [area=current]`）
 
 ```bash
 /bili live start [area=current]
@@ -482,7 +482,7 @@ go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 
 【PRO】立即开播。房间号将采用 LiveStream 直播间模块的房间号。area为分区ID，如果不填则为当前分区。startsilent 子命令是静默开播，不会提示任何信息。
 :::
 
-## `/bili live stop`
+## 关闭直播（`/bili live stop`）
 
 ```bash
 /bili live stop
@@ -492,7 +492,7 @@ go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 
 【PRO】关闭直播。房间号将采用 LiveStream 直播间模块的房间号。
 :::
 
-## `/bili live levelsystem list`
+## 枚举等级系统所有的观众档案数据（`/bili live levelsystem list`）
 
 ```bash
 /bili live levelsystem list
@@ -502,7 +502,7 @@ go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 
 枚举等级系统所有的观众档案数据。
 :::
 
-## `/bili live levelsystem save`
+## 立即保存等级系统所有的观众档案数据（`/bili live levelsystem save`）
 
 ```bash
 /bili live levelsystem save
@@ -512,7 +512,7 @@ go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 
 立即保存等级系统所有的观众档案数据。
 :::
 
-## `/bili live mute <uid/name> <duration_flag>`
+## 禁言指定的直播间用户（`/bili live mute <uid/name> <duration_flag>`）
 
 ```bash
 /bili live mute <uid/name> <duration_flag>
@@ -524,7 +524,7 @@ go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 
 	-1/permenant: 永久。
 :::
 
-## `/bili live muted`
+## 查看直播间已禁言列表（`/bili live muted`）
 
 ```bash
 /bili live muted
@@ -534,7 +534,7 @@ go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 
 查看直播间已禁言列表。
 :::
 
-## `/bili live unmute <uid/name>`
+## 取消指定用户的禁言（`/bili live unmute <uid/name>`）
 
 ```bash
 /bili live unmute <uid/name>
@@ -544,7 +544,7 @@ go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 
 取消指定用户的禁言。
 :::
 
-## `/bili opus <id>`
+## 阅读一个专栏（`/bili opus <id>`）
 
 ```bash
 /bili opus <id>
@@ -554,7 +554,7 @@ go 打开直播间网页。link 仅复制链接。如果 roomId 不填，则取 
 阅读一个专栏。
 :::
 
-## `/bili components <uid> [preset=for_speak]`
+## 查用户成分（`/bili components <uid> [preset=for_speak]`）
 
 ```bash
 /bili components <uid> [preset=for_speak]
@@ -566,7 +566,7 @@ for_speak: 只讲述，不输出。
 normal:	讲述并输出。
 :::
 
-## `/bili cookies`
+## 查看 Cookies（`/bili cookies`）
 
 ```bash
 /bili cookies
@@ -576,7 +576,7 @@ normal:	讲述并输出。
 查看 Cookies。请勿泄露以免被盗号。
 :::
 
-## `/bili setcookies [cookies.../cookiesjson...]`
+## 设置 Cookies 的必要项（`/bili setcookies [cookies.../cookiesjson...]`）
 
 ```bash
 /bili setcookies [cookies.../cookiesjson...]
@@ -586,7 +586,7 @@ normal:	讲述并输出。
 设置 Cookies 的必要项。如果只填前两项参数，则会提示分别输入 DedeUserID, DedeUserID__ckMd5, SESSDATA, bili_jct, sid。
 :::
 
-## `/bilinickname <uid>`
+## 查询B站用户昵称（`/bilinickname <uid>`）
 
 ```bash
 /bilinickname <uid>
@@ -597,7 +597,7 @@ normal:	讲述并输出。
 查询B站用户昵称。
 :::
 
-## `/biliuid <nickname>`
+## 根据一个用户昵称反查用户UID（`/biliuid <nickname>`）
 
 ```bash
 /biliuid <nickname>
@@ -608,7 +608,7 @@ normal:	讲述并输出。
 根据一个用户昵称反查用户UID。如果找不到精确的就输出相似的。/biliuid如果遇到空回复会多尝试几次，/biliuid1并不会。
 :::
 
-## `/bilihot [limit]`
+## 显示B站热搜（`/bilihot [limit]`）
 
 ```bash
 /bilihot [limit]
@@ -618,7 +618,7 @@ normal:	讲述并输出。
 显示B站热搜。
 :::
 
-## `/bilisuggest <keyword>`
+## 显示关于关键词 keyword 的哔哩哔哩搜索建…（`/bilisuggest <keyword>`）
 
 ```bash
 /bilisuggest <keyword>
@@ -628,7 +628,7 @@ normal:	讲述并输出。
 显示关于关键词 keyword 的哔哩哔哩搜索建议。一次会输出很多。
 :::
 
-## `/bilivideo <aid/bid/link>`
+## 输出指定B站视频相关信息（`/bilivideo <aid/bid/link>`）
 
 ```bash
 /bilivideo <aid/bid/link>
@@ -638,7 +638,7 @@ normal:	讲述并输出。
 输出指定B站视频相关信息。
 :::
 
-## `/bilivideocover <get/download/forward> <aid/bid/link>`
+## B站视频封面提取（`/bilivideocover <get/download/forward> <aid/bid/link>`）
 
 ```bash
 /bilivideocover <get/download/forward> <aid/bid/link>
@@ -649,7 +649,7 @@ B站视频封面提取。
 get输出图片链接，download下载至output\Cover，forward直接在浏览器在线查看此图片。
 :::
 
-## `/biliprofile [uid1;uid2;...]`
+## 获取指定B站用户完整档案（`/biliprofile [uid1;uid2;...]`）
 
 ```bash
 /biliprofile [uid1;uid2;...]
