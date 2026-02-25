@@ -1,10 +1,10 @@
 ﻿# 功能与模块地图
 
-<TkTitleTag text="模块视图" type="vp-info" /> <TkTitleTag text="按场景组织" type="vp-success" /> <TkTitleTag text="普通 / PRO 分级" type="vp-warning" />
+<TkTitleTag text="模块视图" type="vp-info" /> <TkTitleTag text="按场景组织" type="vp-success" /> <TkTitleTag text="普通版 / 专业版（Pro） 分级" type="vp-warning" />
 
-<TkVpContainer type="info" title="如何使用本页" text="按场景找到模块后，先确认普通/PRO可用性，再去完整命令手册检索对应命令。" />
+<TkVpContainer type="info" title="如何使用本页" text="按场景找到模块后，先确认普通版/专业版（Pro）可用性，再去完整命令手册检索对应命令。" />
 
-## 模块分级速查（普通 / PRO）
+## 模块分级速查（普通版 / 专业版（Pro））
 
 | 场景 | 代表能力 | 普通版覆盖 | PRO增强 |
 | :-- | :-- | :-- | :-- |
@@ -60,9 +60,9 @@
 - 内容创作辅助
 - 在线信息聚合
 
-## E. 专业版（PRO）能力
+## E. 专业版（Pro）能力
 
-历史记录显示存在大量 PRO 专属命令与模块扩展，例如：
+历史记录显示存在大量 专业版（Pro） 专属命令与模块扩展，例如：
 
 - 更完整的在线接口能力
 - 扩展 GUI 与动画能力

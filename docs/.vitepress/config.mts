@@ -46,12 +46,10 @@ const sidebarGroups = [
     items: [
       { text: '功能与模块地图', link: '/module-map' },
       { text: '模块介绍', link: '/modules/' },
-      { text: '完整命令手册', link: '/commands/' },
-      { text: '按用途选命令', link: '/commands/usage-guide' },
       { text: '命令目录页', link: '/commands-catalogue' },
-      { text: '安全与使用边界', link: '/safety' },
-      { text: '版本与演进', link: '/history-summary' },
-      { text: '文档美化组件建议', link: '/ui-components' }
+      { text: '完整命令手册（分章节）', link: '/commands/' },
+      { text: '安全说明', link: '/safety' },
+      { text: '版本与演进', link: '/history-summary' }
     ]
   },
   {
@@ -108,11 +106,8 @@ const teekConfig = defineTeekConfig({
     { text: '首页', link: '/' },
     { text: '快速开始', link: '/quick-start' },
     { text: '模块介绍', link: '/modules/' },
-    { text: '完整命令手册', link: '/commands/' },
-    { text: '按用途选命令', link: '/commands/usage-guide' },
-    { text: '命令目录页', link: '/commands-catalogue' },
-    { text: '安全边界', link: '/safety' },
-    { text: '文档美化组件', link: '/ui-components' }
+    { text: '安全说明', link: '/safety' },
+    { text: '官网', link: 'https://www.wormwake.com/jackalclient/' }
   ],
   sidebar: {
     '/': sidebarGroups

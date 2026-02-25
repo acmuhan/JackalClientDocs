@@ -1,18 +1,12 @@
-﻿# 完整命令手册
+# 命令手册总览
 
-> 本手册由 `test/COMMANDS.txt` 自动拆分生成，并按「用途 + 风险 + 可用版本」进行阅读引导。
+> 本手册由 `test/COMMANDS.txt` 自动拆分生成，按章节收录全部命令。
 
-<TkTitleTag text="按用途导航" type="vp-info" /> <TkTitleTag text="区分普通/PRO" type="vp-success" />
+<TkTitleTag text="章节导航" type="vp-info" /> <TkTitleTag text="普通版 / 专业版（Pro）" type="vp-success" />
 
-<TkVpContainer
-  type="tip"
-  title="先看这个"
-  text="如果你觉得命令太多、看不懂先用哪条，请先看《按用途选命令》，再进入具体章节。" />
-
-- 👉 [按用途选命令（新）](/commands/usage-guide)
 - 👉 [命令目录页（全章节入口）](/commands-catalogue)
 
-## 快速分流（按目标）
+## 章节快速入口（按用途）
 
 | 你的目标 | 先看章节 | 风险等级 | 适合人群 |
 | :-- | :-- | :-- | :-- |
@@ -22,11 +16,11 @@
 | B站账号/视频/评论/直播流程 | [B站命令](/commands/bili-commands) | 低-中 | 新手/内容创作 |
 | 文本转换、提取、批处理 | [文本处理命令](/commands/text-processing-commands) | 低 | 新手 |
 
-## 版本分级说明（普通 / PRO）
+## 版本分级说明（普通版 / 专业版（Pro））
 
 - <Badge type="tip" text="普通可用" /> 默认版本可直接使用。
-- <Badge type="warning" text="PRO" /> 需要专业版或特定构建支持。
-- <Badge type="danger" text="高风险" /> 涉及系统策略、权限、进程注入等，建议先阅读 [安全边界](/safety)。
+- <Badge type="warning" text="专业版（Pro）" /> 需要专业版（Pro）或特定构建支持。
+- <Badge type="danger" text="高风险" /> 涉及系统策略、权限、进程注入等，建议先阅读 [安全说明](/safety)。
 
 ::: details 为什么要做分级？
 命令原始数据量大、历史跨度长。直接按字母或原文阅读，难以判断“我该先看哪段”。
@@ -37,7 +31,7 @@
 
 <div class="command-card-grid">
   <a href="/commands/system-commands" class="command-card">
-    <div class="command-card-title">系统命令 <Badge type="warning" text="含PRO" /></div>
+    <div class="command-card-title">系统命令 <Badge type="warning" text="含专业版（Pro）" /></div>
     <div class="command-card-count">📎 共 322 组命令</div>
   </a>
   <a href="/commands/file-commands" class="command-card">
