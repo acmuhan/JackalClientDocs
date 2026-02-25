@@ -106,10 +106,8 @@ const teekConfig = defineTeekConfig({
     { text: '首页', link: '/' },
     { text: '快速开始', link: '/quick-start' },
     { text: '模块介绍', link: '/modules/' },
-    { text: '命令目录', link: '/commands-catalogue' },
     { text: '安全说明', link: '/safety' },
-    { text: '官网', link: 'https://www.wormwake.com/jackalclient/' },
-    { text: '购买专业版（Pro）', link: 'https://www.wormwake.com/jackalclient/' }
+    { text: '官网', link: 'https://www.wormwake.com/jackalclient/' }
   ],
   sidebar: {
     '/': sidebarGroups
