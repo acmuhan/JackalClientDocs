@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "JackalClient Docs"
   text: "Windows 客户端工具箱文档"
-  tagline: "全能型 Windows 工具箱，拥有 Minecraft 渲染视觉，从系统优化到视觉优化的一站式解决方案"
+  tagline: "全能型 Windows 工具箱，拥有 Minecraft 作弊端渲染视觉，从桌面美化到系统辅助的一站式解决方案"
   actions:
     - theme: brand
       text: 快速开始
@@ -37,4 +37,4 @@ features:
     link: /safety/
 ---
 
-<TkVpContainer type="tip" title="推荐阅读顺序" text="新手建议优先阅读 **快速开始**，随后浏览 **模块地图** 了解功能全貌，最后查阅 **命令目录** 与 **安全说明**。" />
+<TkVpContainer type="tip" title="推荐阅读顺序" text="新手建议优先阅读「快速开始」，随后浏览「模块地图」了解功能全貌，最后查阅 「命令目录」与 「安全说明」。" />

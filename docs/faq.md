@@ -1,6 +1,6 @@
 # JackalClient 常见问题
 
-> 来源：[https://www.yuque.com/wormwaker/tkpgqw/yc5y1ty9pg215me1?singleDoc](https://www.yuque.com/wormwaker/tkpgqw/yc5y1ty9pg215me1?singleDoc)
+> 最新修订版本请查看此处：[https://www.yuque.com/wormwaker/tkpgqw/yc5y1ty9pg215me1?singleDoc](https://www.yuque.com/wormwaker/tkpgqw/yc5y1ty9pg215me1?singleDoc)
 
 JackalClient 常见问题
 
