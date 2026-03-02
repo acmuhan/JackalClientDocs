@@ -15,6 +15,7 @@ Speedhack
 - 版本属性：普通可用
 
 介绍
+[观看视频 Timer/Speedhack | 任意应用的基础变速 [ft.Jackal]](https://www.bilibili.com/video/BV1LTMPzCEXK)
 Speedhack 会向目标进程注入 `JDSpeedhack` 组件，让目标运行速度加快或减慢。启用时会先写入 `JDSpeedhack.ini`（速率与反卸载参数），再按目标位数注入 32/64 位 DLL；关闭时执行反向卸载。
 模块开启后，`加速按键`/`减速按键`会在运行中动态改速。每次改速本质是“先卸载旧参数，再写新参数，再重新注入”，所以改速会有一次短暂重载过程。
 

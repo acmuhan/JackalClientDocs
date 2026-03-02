@@ -31,7 +31,8 @@ Encryptor（加密器）用于帮助你加密指定的文本。
 - Method（方法）
  类型：枚举；默认："beast"
  说明：这是该模块的核心行为开关，不同选项对应不同执行策略。建议先保持默认 beast ，确认稳定后再逐项切换比较效果。
- 可选：base64（未收录）；crc32（未收录）；md5（未收录）；sha1（未收录）；beast（兽语）；abracadabra（魔曰。由于开源协议影响，该方法需要你外部下载魔曰加密器并配置好 Encryptor 模块的路径。我已经尝试将原仓库移植为C++，点击链接查看仓库：https://github.com/noexcept2005/AbracadabraCpp 编译后将moyue.exe的绝对路径输入到 Encryptor 的 Abracadabra Encryptor Path 中。）；pipa（未收录）；pipaplus（未收录）；pipasimp（未收录）；pipatrad（未收录）；pipasimpplus（未收录）；pipatradplus（未收录）；pipasimpplus2（未收录）；pipatradplus2（未收录）
+ 可选：base64（未收录）；crc32（未收录）；md5（未收录）；sha1（未收录）；beast（兽语）；abracadabra（魔曰。由于开源协议影响，该方法需要你外部下载魔曰加密器并配置好 Encryptor 模块的路径。我已经尝试将原仓库移植为C++，点击链接查看仓库：[https://github.com/noexcept2005/AbracadabraCpp](https://github.com/noexcept2005/AbracadabraCpp) 编译后将moyue.exe的绝对路径输入到 Encryptor 的 Abracadabra Encryptor Path 中。）；pipa（未收录）；pipaplus（未收录）；pipasimp（未收录）；pipatrad（未收录）；pipasimpplus（未收录）；pipatradplus（未收录）；pipasimpplus2（未收录）；pipatradplus2（未收录）
+ 
 - Copy to Clipboard（复制到剪贴板）
  类型：布尔；默认：true
  说明：这是开关型配置。默认值 true 代表作者推荐的初始行为；若要改动，建议一次只改一个开关便于观察影响。
@@ -96,15 +97,8 @@ Encryptor（加密器）用于帮助你加密指定的文本。
 无
 
 相关模块
-- [Active (活动)](./Active.md)
-- [AutoSpeak (自动讲述)](./AutoSpeak.md)
-- [AntiMicrophone (反麦克风)](./AntiMicrophone.md)
-- [Console (控制台)](./Console.md)
-- [Shell (命令行)](./Shell.md)
-- [QuickCommand (快速命令)](./QuickCommand.md)
-- [ForceTopmost (强制置顶)](./ForceTopmost.md)
-- [MemeTrigger (梗触发)](./MemeTrigger.md)
+- [ClipboardTweaks 剪贴板功能](./ClipboardTweaks.md)
 
 相关资料
-无
+[AbracadabraCpp - Github](https://github.com/noexcept2005/AbracadabraCpp)
 

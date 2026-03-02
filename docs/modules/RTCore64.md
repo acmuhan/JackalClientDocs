@@ -12,7 +12,7 @@ RTCore64
 - 版本属性：普通可用
 
 介绍
-RTCore64（RTCore64）用于暂无描述。
+RTCore64（RTCore64）是一个有名的驱动程序，利用漏洞读写系统内存。会被很多杀软报毒，所以需要添加信任。
 适合在日常管理与自动化场景中按需启用。
 
 配置项
@@ -28,7 +28,9 @@ RTCore64（RTCore64）用于暂无描述。
 无
 
 相关模块
-无
+PPLESP
+PPLButcher
+Protection
 
 相关资料
 无

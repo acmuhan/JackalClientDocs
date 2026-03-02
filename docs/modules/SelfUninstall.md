@@ -12,8 +12,8 @@ SelfUninstall
 - 版本属性：普通可用
 
 介绍
-SelfUninstall（自我卸载）用于立即卸载整个客户端。
-适合在日常管理与自动化场景中按需启用。
+SelfUninstall（自我卸载）立即卸载整个客户端。
+适合自证用，一键摧毁客户端。
 初次使用可优先调整：Batch Terminal。
 该模块属于不安全能力，建议先备份关键数据并确认回滚路径。
 
@@ -32,7 +32,7 @@ SelfUninstall（自我卸载）用于立即卸载整个客户端。
 无
 
 相关模块
-无
+[SelfDestruct](./SelfDestruct.md)
 
 相关资料
 无

@@ -12,6 +12,7 @@ MacroPlayer
 - 版本属性：普通可用
 
 介绍
+观看视频 [\[ft.Jackal\] 使用「宏」在丝之歌进行自动刷念珠操作](https://www.bilibili.com/video/BV1VWpdz9EWp)
 MacroPlayer（宏播放）用于播放键盘和鼠标操作的宏。
 适合键鼠行为控制、输入增强和自动化操作场景。
 初次使用可优先调整：Notify、Actionbar Display Key Press、Actionbar Display Mouse Move。

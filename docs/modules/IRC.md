@@ -15,7 +15,7 @@ IRC
 IRC（聊天室）用于一个简单的在线聊天系统。
 适合联网信息获取、账号联动和在线交互场景。
 初次使用可优先调整：Notify My Mentions、Message Notify Type、Text Database Update Method。
-使用前请确认网络可用及相关 API/平台账号配置完整。
+请用 `/irc setname` 设置你的IRC用户名。
 
 配置项
 - Async While Getting Username（异步获取用户名）

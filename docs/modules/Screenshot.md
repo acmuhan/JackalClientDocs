@@ -1,7 +1,7 @@
 Screenshot
 截图工具
 分类：Misc
-描述：你可以用PrtScr键打开截图工具。
+描述：截图工具。
 
 需求
 - 安全级别：常规模块
@@ -12,7 +12,7 @@ Screenshot
 - 版本属性：普通可用
 
 介绍
-Screenshot（截图工具）用于你可以用PrtScr键打开截图工具。
+Screenshot（截图工具）
 适合在日常管理与自动化场景中按需启用。
 初次使用可优先调整：Mode、Notify Close、HUD Font Size。
 
@@ -77,8 +77,7 @@ Screenshot（截图工具）用于你可以用PrtScr键打开截图工具。
 
 相关模块
 - [Active (活动)](./Active.md)
-- [AutoSpeak (自动讲述)](./AutoSpeak.md)
-- [AntiMicrophone (反麦克风)](./AntiMicrophone.md)
+- [AntiCapture](./AntiCapture.md)
 - [Console (控制台)](./Console.md)
 - [Shell (命令行)](./Shell.md)
 - [QuickCommand (快速命令)](./QuickCommand.md)

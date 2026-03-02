@@ -13,6 +13,7 @@ PrivateWindow
 - 版本属性：普通可用
 
 介绍
+适合直播使用，防止私密信息泄露。
 PrivateWindow 会按应用预设筛选窗口，然后为目标窗口设置显示亲和（黑屏或从捕获中排除），以减少被截图/录屏捕获的风险。
 模块包含窗口跳过策略，会主动避开一批高风险临时窗口（例如无激活浮层、输入法/阴影视窗），以降低白色幽灵窗等副作用。
 
@@ -76,7 +77,6 @@ PrivateWindow 会按应用预设筛选窗口，然后为目标窗口设置显示
 
 相关模块
 - [WindowMaster (窗口大师)](./WindowMaster.md)
-- [AutoTranslate (自动翻译)](./AutoTranslate.md)
 - [WindowTags (窗口标签)](./WindowTags.md)
 - [WindowHighlight (窗口高亮)](./WindowHighlight.md)
 

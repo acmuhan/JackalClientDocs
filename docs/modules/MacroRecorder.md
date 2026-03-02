@@ -12,6 +12,7 @@ MacroRecorder
 - 版本属性：普通可用
 
 介绍
+观看视频 [\[ft.Jackal\] 使用「宏」在丝之歌进行自动刷念珠操作](https://www.bilibili.com/video/BV1VWpdz9EWp)
 MacroRecorder（宏录制）用于录制键盘和鼠标操作的宏。
 适合键鼠行为控制、输入增强和自动化操作场景。
 初次使用可优先调整：Recording HUD、Recording HUD Font Size、Recording HUD X Rate。

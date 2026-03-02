@@ -12,8 +12,8 @@ Keystrokes2
 - 版本属性：普通可用
 
 介绍
-Keystrokes2（按键显示II）用于暂无描述。
-适合键鼠行为控制、输入增强和自动化操作场景。
+很多人喜欢的一个模块，动态显示你按下的键，有丝滑的入场和退场动画，还可以打开雨效果，冰火玩家狂喜
+Keystrokes2（按键显示II）用于动态显示按键。
 初次使用可优先调整：Multi Row Mode、Toggle KeyReaction Module、Rain Effect Coordinate Mode。
 
 配置项

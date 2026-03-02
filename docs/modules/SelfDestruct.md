@@ -12,9 +12,9 @@ SelfDestruct
 - 版本属性：普通可用
 
 介绍
-SelfDestruct（自我删除）用于立即删除客户端自身EXE。
+SelfDestruct（自我删除）立即删除客户端自身EXE。
 适合在日常管理与自动化场景中按需启用。
-该模块属于不安全能力，建议先备份关键数据并确认回滚路径。
+该模块属于不安全模块，建议先备份关键数据并确认回滚路径。
 
 配置项
 无（该模块在 default_settings.h 中未定义独立配置项）
@@ -29,7 +29,7 @@ SelfDestruct（自我删除）用于立即删除客户端自身EXE。
 无
 
 相关模块
-无
+[SelfUninstall](./SelfUninstall.md)
 
 相关资料
 无

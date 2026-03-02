@@ -12,6 +12,8 @@ Arraylist
 - 版本属性：普通可用
 
 介绍
+Minecraft作弊端的核心视觉之一。在右侧显示一个花里胡哨的列表，显示启用的模块。
+如果想在从中隐藏模块显示，可以在对应的模块的配置项里找到 `hidden隐藏`，打开就行了。或者使用 `/arraylist hide` 命令。
 Arraylist（模块列表）用于显示已启用模块列表。
 适合在日常管理与自动化场景中按需启用。
 初次使用可优先调整：Background Height Mode。
@@ -204,14 +206,7 @@ Arraylist（模块列表）用于显示已启用模块列表。
 无
 
 相关模块
-- [Ambience (环境气氛)](./Ambience.md)
-- [AutoDanmaku (自动弹幕)](./AutoDanmaku.md)
-- [AutoTitle (自动标题)](./AutoTitle.md)
-- [AutoTotem (自动图腾)](./AutoTotem.md)
-- [AudioVisualizer (音频可视化)](./AudioVisualizer.md)
-- [LyricsPhysics (物理歌词)](./LyricsPhysics.md)
-- [BetterLyrics (更好的歌词)](./BetterLyrics.md)
-- [MusicOverlay (音乐信息)](./MusicOverlay.md)
+- [Shell (命令行)](./Shell.md)
 
 相关资料
 无

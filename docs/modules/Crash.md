@@ -12,7 +12,8 @@ Crash
 - 版本属性：普通可用
 
 介绍
-Crash（蓝屏）建议先按默认配置运行一段时间，确认对目标窗口/系统行为的影响后，再从关键开关项开始逐步微调。
+Crash（蓝屏）对。就是蓝屏。不需要管理员。
+
 配置项
 - Custom Win32 Error Code（自定义Win32错误码）
  类型：数值；默认：28
@@ -27,14 +28,7 @@ Crash（蓝屏）建议先按默认配置运行一段时间，确认对目标窗
 无
 
 相关模块
-- [AntiCapture (反捕获)](./AntiCapture.md)
-- [AntiClose (反关闭)](./AntiClose.md)
-- [AntiDebug (反调试)](./AntiDebug.md)
-- [AntiIntercept (反拦截)](./AntiIntercept.md)
-- [AntiSpy (反间谍)](./AntiSpy.md)
-- [AntiTaskkill (反进程杀手)](./AntiTaskkill.md)
-- [AntiMouseHook (反鼠标钩子)](./AntiMouseHook.md)
-- [AntiKeyHook (反键盘钩子)](./AntiKeyHook.md)
+- [CrashKey (快捷蓝屏)](./CrashKey.md)
 
 相关资料
 无

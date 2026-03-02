@@ -12,6 +12,7 @@ DebugESP
 - 版本属性：普通可用
 
 介绍
+和软件 `dbgview` 一个功能。
 DebugESP 会监听 Windows 的 DBWIN 调试输出通道，把 `OutputDebugString` 一类调试文本转成客户端可见的输出。
 它支持本地 Win32 通道，以及可选的 Global 通道。Global 通道能看到更多跨会话调试输出，但系统会要求管理员权限。
 这个模块适合做运行期排障、观察第三方程序行为，或者配合 `/debugstr` 做链路自测。

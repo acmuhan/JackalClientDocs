@@ -13,7 +13,6 @@ TesseractOCR
 
 介绍
 TesseractOCR（TesseractOCR）用于Tesseract 文字识别设置。
-适合在日常管理与自动化场景中按需启用。
 初次使用可优先调整：Executable Path、Language。
 
 配置项
@@ -34,14 +33,9 @@ TesseractOCR（TesseractOCR）用于Tesseract 文字识别设置。
 无
 
 相关模块
-- [Active (活动)](./Active.md)
-- [AutoSpeak (自动讲述)](./AutoSpeak.md)
-- [AntiMicrophone (反麦克风)](./AntiMicrophone.md)
-- [Console (控制台)](./Console.md)
-- [Shell (命令行)](./Shell.md)
-- [QuickCommand (快速命令)](./QuickCommand.md)
-- [ForceTopmost (强制置顶)](./ForceTopmost.md)
-- [MemeTrigger (梗触发)](./MemeTrigger.md)
+- [AutoTranslate (自动翻译)](./AutoTranslate.md)
+- [BetterLyrics (更好的歌词)](./BetterLyrics.md)
+- [Screenshot (截图工具)](./Screenshot.md)
 
 相关资料
 无

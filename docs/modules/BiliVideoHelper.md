@@ -12,6 +12,7 @@ BiliVideoHelper
 - 版本属性：普通可用
 
 介绍
+该模块已被废弃。
 BiliVideoHelper（BiliVideoHelper）用于暂无描述。
 适合在日常管理与自动化场景中按需启用。
 初次使用可优先调整：Update Cooldown (ms)、HUD、HUD Opacity (0~1)。

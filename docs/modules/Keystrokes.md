@@ -12,7 +12,7 @@ Keystrokes
 - 版本属性：普通可用
 
 介绍
-Keystrokes（按键显示）用于暂无描述。
+Keystrokes（按键显示）用于显示游戏按键（AWSD空格Shift以及鼠标左右键）
 适合键鼠行为控制、输入增强和自动化操作场景。
 初次使用可优先调整：Text Color、Outline Color、Background Color。
 

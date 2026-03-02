@@ -12,8 +12,8 @@ FileManager
 - 版本属性：普通可用
 
 介绍
-FileManager（文件管理器）用于暂无描述。
-适合在日常管理与自动化场景中按需启用。
+FileManager（文件管理器）启用后进入文件管理器界面。（也可以在「应用」找到它）
+我做的内置资源管理器。你可以使用它操作计算机上的文件。
 初次使用可优先调整：File Enum Min Cooldown (ms)、File Enum Max Cooldown (ms)、File Attributes Update Cooldown (ms)。
 
 配置项
@@ -302,10 +302,7 @@ FileManager（文件管理器）用于暂无描述。
 - [FileDelete (文件删除)](./FileDelete.md)
 - [FileCreate (文件创建)](./FileCreate.md)
 - [FileMonitor (文件监视)](./FileMonitor.md)
-- [FolderClear (目录清空)](./FolderClear.md)
-- [TempClear (临时清空)](./TempClear.md)
-- [RecyclerClear (回收站清空)](./RecyclerClear.md)
-- [DiskMissing (磁盘丢失)](./DiskMissing.md)
+- [ProcessManager (进程管理器)](./ProcessManager.md)
 
 相关资料
 无

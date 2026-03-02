@@ -13,7 +13,7 @@ GUIBlur
 
 介绍
 GUIBlur（界面模糊）用于应用模糊效果到GUI。
-适合在日常管理与自动化场景中按需启用。
+用到了DWMAPI。
 初次使用可优先调整：Dark Mode。
 
 配置项
@@ -44,14 +44,7 @@ GUIBlur（界面模糊）用于应用模糊效果到GUI。
 无
 
 相关模块
-- [Arraylist (模块列表)](./Arraylist.md)
-- [Ambience (环境气氛)](./Ambience.md)
-- [AutoDanmaku (自动弹幕)](./AutoDanmaku.md)
-- [AutoTitle (自动标题)](./AutoTitle.md)
-- [AutoTotem (自动图腾)](./AutoTotem.md)
-- [AudioVisualizer (音频可视化)](./AudioVisualizer.md)
-- [LyricsPhysics (物理歌词)](./LyricsPhysics.md)
-- [BetterLyrics (更好的歌词)](./BetterLyrics.md)
+- [HUDBlur](./HUDBlur.md)
 
 相关资料
 无

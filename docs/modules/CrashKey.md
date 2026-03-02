@@ -33,14 +33,7 @@ CrashKey（快捷蓝屏）用于开启蓝屏快捷键（按两次 右Ctrl + Scro
 无
 
 相关模块
-- [SecureLogin (安全登录)](./SecureLogin.md)
-- [ListHijacks (劫持调查)](./ListHijacks.md)
-- [KillHijacks (清除劫持)](./KillHijacks.md)
-- [NoCmd (禁命令提示符)](./NoCmd.md)
-- [NoPowerShell (禁PowerShell)](./NoPowerShell.md)
-- [NoTaskmgr (禁任务管理器)](./NoTaskmgr.md)
-- [NoRegedit (禁注册表编辑器)](./NoRegedit.md)
-- [NoDefender (解除防御)](./NoDefender.md)
+- [Crash (蓝屏)](./Crash.md)
 
 相关资料
 无

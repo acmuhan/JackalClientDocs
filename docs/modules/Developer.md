@@ -12,7 +12,7 @@ Developer
 - 版本属性：普通可用
 
 介绍
-Developer（开发者）用于开发者模式。
+Developer（开发者）用于开发者调试使用。普通用户不用动它，反正你也开不起来 :(
 适合在日常管理与自动化场景中按需启用。
 初次使用可优先调整：Level System Profiles HUD。
 
